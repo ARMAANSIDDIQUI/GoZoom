@@ -1,0 +1,829 @@
+@import "tailwindcss";
+
+/* =========================================================
+   REFINED SHARED PAGE STYLES — based on legacy CSS auditing
+   ========================================================= */
+
+/* --- Base Layout --- */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row::after,
+.container::after,
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+[class*="col-sm-"],
+[class*="col-md-"],
+[class*="col-lg-"] {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-7 {
+        width: 58.33333333%;
+    }
+
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+
+    .col-sm-9 {
+        width: 75%;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+
+    .flft {
+        float: left;
+    }
+
+    .flrt {
+        float: right;
+    }
+}
+
+/* --- Banner Base --- */
+.banner-top {
+    min-height: 520px;
+    padding: 160px 0 100px !important;
+    /* Refined for header overlap */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.heading-in {
+    margin-top: 45px;
+}
+
+.heading-in h1 {
+    color: #fff;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.heading-in p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.st-cst-btn-area {
+    margin-top: 50px;
+}
+
+/* --- Individual Banner Colors & Backgrounds --- */
+.page-angular-banner {
+    background: linear-gradient(135deg, #c3002f 0%, #7b0020 100%);
+}
+
+.laravel-banner {
+    background: linear-gradient(135deg, #ef3b2c 0%, #8b0000 100%);
+}
+
+.react-js-next-banner {
+    background: linear-gradient(135deg, #00b4d8 0%, #023e8a 100%);
+}
+
+.seo-banner {
+    background: linear-gradient(135deg, #f77f00 0%, #c44d00 100%);
+}
+
+.page-php-banner {
+    background: linear-gradient(135deg, #6c63ff 0%, #2d1b69 100%);
+}
+
+.page-jquery-banner {
+    background: linear-gradient(135deg, #a2a2a2 0%, #1c1c1e 100%);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.starBtn {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Angular buttons */
+.page-angular-btn-default {
+    background: #fff;
+    color: #dd0031;
+    border-color: #fff;
+}
+
+.page-angular-btn-default:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.page-angular-btn {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    margin-left: 20px;
+}
+
+.page-angular-btn:hover {
+    background: #fff;
+    color: #dd0031;
+}
+
+/* Laravel buttons */
+.laraBtn {
+    background: #fff;
+    color: #e64a39;
+    border-color: #fff;
+}
+
+.laraBtn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.laraBtn1 {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    margin-left: 20px;
+}
+
+.laraBtn1:hover {
+    background: #fff;
+    color: #e64a39;
+}
+
+/* SEO / Generic Banners */
+.aboutBtn {
+    margin-left: 25px;
+}
+
+/* --- Sections --- */
+.whiteSection {
+    background: #fff;
+    padding: 60px 0;
+    position: relative;
+}
+
+.whiteSection.flat-gray {
+    background: #f7f9fe !important;
+}
+
+.blueSection {
+    background: #ddf3ff;
+    padding: 100px 0;
+}
+
+.violet-bg {
+    background: #f5f0ff;
+}
+
+.dp-red {
+    background: #fa503a !important;
+    color: #fff;
+}
+
+/* --- Typography --- */
+.long-lg-text {
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #373645;
+    margin-bottom: 30px;
+}
+
+.long-sm-text {
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #373645;
+    margin-bottom: 30px;
+}
+
+.red-fc-text {
+    color: #f4645f;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.lg-gap-wt-txt {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+/* --- Specific Page Components --- */
+.prof-point {
+    width: 50%;
+    float: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style: circle !important;
+}
+
+.prof-point li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #373645;
+}
+
+.prof-point li h4 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.laravel-mascot,
+.laravel-char-inst {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dev-off-gap-col {
+    padding-left: 45px;
+}
+
+.in-cont-feature {
+    padding-top: 24px;
+}
+
+.mg-bot54 {
+    margin-bottom: 54px;
+}
+
+.skilled-angular-developement-blocks {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skilled-angular-developement-blocks-textConent {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Form styles */
+.wpcf7-form input,
+.wpcf7-form textarea,
+.flc_in {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    background: #fff;
+}
+
+.wpcf7-submit {
+    background: #fff !important;
+    color: #fa503a !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+}
+
+/* Spacing Helpers */
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.pd-left30 {
+    padding-left: 30px;
+}
+
+.pd-right30 {
+    padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: 33.333%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.mr20 {
+    margin-right: 1.25rem;
+}
+
+.pad-top-60 {
+    padding-top: 60px;
+}
+
+.m-mt20 {
+    margin-top: 1.25rem;
+}
+
+.m-mt30 {
+    margin-top: 1.875rem;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile App Development */
+.hero-sec.r-bg-x,
+.home-app.hero-sec {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 60%, #415a77 100%);
+    padding: 180px 0 60px;
+    /* Increased top padding from 100px to 180px for header */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content-a h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hero-content-a p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1rem;
+}
+
+.sol-image img {
+    width: 100%;
+    max-width: 480px;
+}
+
+.uniq-points {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.uniq-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    color: #fff;
+    min-width: 120px;
+}
+
+.uniq-card i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.uniq-card p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.ree-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.ree-btn:hover {
+    transform: translateY(-2px);
+}
+
+.ree-btn-grdt1 {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: #fff;
+}
+
+.ree-btn-grdt2 {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.mw-80 {
+    min-width: 160px;
+    text-align: center;
+}
+
+.btn-sets2 {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sol-image {
+    text-align: center;
+}
+
+.ree-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.ree-card-s {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.r-title h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1b263b;
+}
+
+.r-title p {
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.r-bg-1 {
+    background: #f0f8ff;
+    padding: 5rem 0;
+}
+
+.r-bg-2 {
+    background: #fff;
+    padding: 5rem 0;
+}
+
+.r-bg-3 {
+    background: #f5f0ff;
+    padding: 5rem 0;
+}
+
+.rgiht-img {
+    text-align: center;
+}
+
+/* Android/iOS/Chatbot shared banners */
+.android-banner,
+.page-android-banner {
+    min-height: 420px;
+    background: linear-gradient(135deg, #3ddc84 0%, #073763 100%);
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    padding-top: calc(5rem + 80px);
+}
+
+.ios-banner,
+.page-ios-banner {
+    min-height: 420px;
+    background: linear-gradient(135deg, #a2a2a2 0%, #1c1c1e 100%);
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    padding-top: calc(5rem + 80px);
+}
+
+.chatbot-banner,
+.page-chatbot-banner {
+    min-height: 420px;
+    background: linear-gradient(135deg, #6c63ff 0%, #2d1b69 100%);
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    padding-top: calc(5rem + 80px);
+}
+
+.banner-inner,
+.banner-overlay1,
+.banner-overlay-shape1,
+.banner-overlay-shape2 {
+    display: none;
+}
+
+/* --- Type / content styles --- */
+.whoText p {
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.whoText strong {
+    color: #1b263b;
+}
+
+/* Angular services split layout */
+.page-angular-services {
+    background: #1b263b;
+    padding: 5rem 0;
+}
+
+.page-angular-services-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.app-development-expert-left {
+    flex: 0 0 200px;
+}
+
+.app-development-expert-right {
+    flex: 1;
+}
+
+.angular-support-content h3 {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.support-list {
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style: disc;
+    line-height: 2;
+}
+
+/* Talk to expert — step arrows */
+.arrows {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.arrows li {
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.arrows .blue {
+    background: #0077b6;
+}
+
+.arrows .gray-first {
+    background: #6c757d;
+}
+
+.arrows .gray-second {
+    background: #495057;
+}
+
+.arrows .red {
+    background: #e63946;
+}
+
+/* Contact form in page context */
+.talk-to-codecloud-ng-experts {
+    padding: 5rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0077b6;
+}
+
+.wpcf7-form-control.has-spinner {
+    background: #e63946;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.expertAngulardevelopers {
+    background: #c3002f;
+}
+
+/* Why choose blocks */
+.why-chose-ndDeveloper-block {
+    padding: 1.5rem;
+}
+
+.why-chose-header {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.why-chose-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Section padding */
+.page-angular,
+.page-laravel,
+.page-seo,
+.page-react,
+.page-android,
+.page-ios,
+.page-chatbot {
+    padding: 5rem 0;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Sticky get started */
+.stickyIO-get-started a {
+    display: inline-block;
+    background: #0077b6;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* PHP/hire pages */
+.amazing-idea-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.amazing-idea-text p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.team-specialize-part {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    margin-bottom: 1.5rem;
+}
+
+.team-specialize-heading-text {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.team-specialize-column-3-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choose-our-designers-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #555;
+    line-height: 2;
+}
+
+.php-professionals-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.package-get-started .btn {
+    background: #5c0099;
+    color: #fff;
+}
+
+.php-professional-text {
+    margin-top: 1.5rem;
+}
+
+.team-specialize-img-part {
+    margin-bottom: 1rem;
+}
+
+.team-specialize-img-part img {
+    height: 80px;
+    object-fit: contain;
+}
