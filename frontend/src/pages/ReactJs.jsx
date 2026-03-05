@@ -25,7 +25,7 @@ const ReactJs = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
+            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
                 {/* Handcrafted Decorative Elements (matching Hire style) */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
@@ -33,8 +33,8 @@ const ReactJs = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#61dafb 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                <div className="container mx-auto relative z-10">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">React Framework</span>
                             <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.1] uppercase">

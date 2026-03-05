@@ -46,7 +46,7 @@ const WebDevelopment = () => {
                     <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-indigo-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
                 </div>
 
-                <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+                <div className="container relative z-10 flex flex-col items-center justify-center min-h-[85vh] lg:min-h-screen py-16 lg:py-24">
                     <div className="max-w-4xl text-center mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>

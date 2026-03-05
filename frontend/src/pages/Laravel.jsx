@@ -21,7 +21,7 @@ const Laravel = () => {
 
 
 
-      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
+      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
         {/* Custom Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
@@ -29,27 +29,27 @@ const Laravel = () => {
           <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="container mx-auto px-6 lg:px-16 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
-            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
-              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Laravel Framework</span>
-              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+              <span className="inline-block py-1 px-4 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">Laravel Framework</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
                 Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
               </h1>
-              <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto font-medium">
+              <p className="text-lg sm:text-xl text-red-100 mb-12 max-w-2xl mx-auto font-medium">
                 We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-center text-base lg:text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">
                   About Us
                 </Link>
               </div>
             </div>
-            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
+            <div className="w-full lg:flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[2rem] sm:rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[320px] lg:max-w-[400px] shadow-2xl animate-float">
                 <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]" />
               </div>
             </div>

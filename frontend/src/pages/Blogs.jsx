@@ -23,7 +23,7 @@ const Blogs = () => {
     return (
         <div className="font-['Lato',sans-serif] overflow-x-hidden bg-white">
 
-            <section className="relative w-full min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden">
+            <section className="relative w-full min-h-[85vh] lg:min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden pt-24 pb-16">
                 <div className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
 
                 {/* Physics Engine Animation */}
@@ -31,9 +31,9 @@ const Blogs = () => {
                 <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-cyan-500/20 blur-[120px] animate-pulse"></div>
                 <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-                <div className="relative z-10 text-center pt-[72px]">
-                    <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Insights & News</span>
-                    <h2 className="text-white text-[2.5rem] md:text-6xl font-extrabold text-center drop-shadow-lg">
+                <div className="container relative z-10 text-center">
+                    <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">Insights & News</span>
+                    <h2 className="text-hero-title text-white font-extrabold text-center drop-shadow-lg leading-tight">
                         Our Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blogs</span>
                     </h2>
                 </div>

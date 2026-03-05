@@ -24,42 +24,44 @@ const MobileAppDev = () => {
                     <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-pink-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
                 </div>
 
-                <div className="container relative z-10 block py-24">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="text-center flex flex-col items-center">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
+                <div className="container relative z-10 block py-16 lg:py-24">
+                    <div className="flex flex-col-reverse lg:flex-row gap-12 items-center">
+                        <div className="w-full lg:w-1/2 text-center flex flex-col items-center">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
                                 Mobile Development
                             </div>
-                            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
                                 Top Mobile App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Company</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
+                            <p className="text-hero-desc text-slate-400 mb-8 lg:mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                                 Crafting secure, dynamic solutions for iOS, Android, and Cross-Platform, ensuring robustness and performance.
                             </p>
 
                             {/* Stats Grid - Glassmorphism */}
-                            <div className="grid grid-cols-3 gap-4 mb-10 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="500">
+                            <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8 lg:mb-10 w-full max-w-md mx-auto" data-aos="fade-up" data-aos-delay="500">
                                 {[
-                                    { label: 'User Engagement', value: '100k' },
-                                    { label: 'Featured Apps', value: '100+' },
-                                    { label: 'Apps Published', value: '600+' },
+                                    { label: 'Users', value: '100k' },
+                                    { label: 'Featured', value: '100+' },
+                                    { label: 'Published', value: '600+' },
                                 ].map((stat, i) => (
-                                    <div key={i} className="glass-card p-4 text-center">
-                                        <p className="text-xl lg:text-2xl font-black text-white">{stat.value}</p>
-                                        <p className="text-slate-400 text-[10px] uppercase tracking-wider mt-1">{stat.label}</p>
+                                    <div key={i} className="glass-card p-3 sm:p-4 text-center">
+                                        <p className="text-lg lg:text-2xl font-black text-white">{stat.value}</p>
+                                        <p className="text-slate-400 text-[9px] sm:text-[10px] uppercase tracking-wider mt-1">{stat.label}</p>
                                     </div>
                                 ))}
                             </div>
 
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="700">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">Talk to Our Expert <FaArrowRight className="group-hover:translate-x-1 transition-transform" /></Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-white/5 text-white text-center font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">Know More</Link>
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-base lg:text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">Talk to Our Expert <FaArrowRight className="group-hover:translate-x-1 transition-transform" /></Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white text-center font-black text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">Know More</Link>
                             </div>
                         </div>
-                        <div className="relative flex justify-center items-center" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[80px]"></div>
-                            <img src="../images/app-mockup.png" alt="App development" className="w-full max-w-lg mx-auto relative z-10 animate-float drop-shadow-2xl" />
+                        <div className="w-full lg:w-1/2 relative flex justify-center items-center h-full" data-aos="fade-left">
+                            <div className="relative group w-full max-w-[300px] lg:max-w-none">
+                                <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[60px] lg:blur-[80px] group-hover:bg-purple-500/30 transition-all duration-700"></div>
+                                <img src="../images/app-mockup.png" alt="App development" className="w-full h-auto relative z-10 animate-float drop-shadow-2xl" />
+                            </div>
                         </div>
                     </div>
                 </div>

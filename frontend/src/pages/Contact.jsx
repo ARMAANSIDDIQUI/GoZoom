@@ -62,7 +62,7 @@ const Contact = () => {
     <div className="font-['Outfit',sans-serif] overflow-x-hidden bg-slate-50 text-slate-900">
 
       {/* Hero with floating form */}
-      <section className="relative w-full min-h-[110vh] lg:min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+      <section className="relative w-full min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
         {/* Background Image & Overlays */}
         <div className="absolute inset-0 z-0">
           <img
@@ -76,7 +76,7 @@ const Contact = () => {
           <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-cyan-400/20 rounded-full blur-[100px]"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 max-w-7xl">
+        <div className="relative z-10 container mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
 
             {/* Left Content */}
@@ -139,8 +139,8 @@ const Contact = () => {
               <div className="glass-premium p-2 sm:p-3 bg-white/95 backdrop-blur-3xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] !rounded-[2.5rem]">
                 <div className="px-8 md:px-14 py-16 md:py-20">
                   <div className="text-center mb-10">
-                    <h2 className="text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Request a Quote</h2>
-                    <p className="text-slate-500 text-sm">Tell us about your project and we'll get back to you shortly.</p>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Request a Quote</h2>
+                    <p className="text-slate-500 text-xs sm:text-sm">Tell us about your project and we'll get back to you shortly.</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -249,7 +249,7 @@ const Contact = () => {
       </section>
 
       {/* We're Here to Help - Upgraded Section */}
-      <section className="py-28 px-6 bg-white relative overflow-hidden">
+      <section className="py-16 lg:py-28 bg-white relative overflow-hidden">
         {/* Subtle background patterns */}
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#0ea5e9 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 

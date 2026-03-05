@@ -5,14 +5,16 @@
    ========================================================= */
 
 /* Hide scrollbar everywhere */
-* {
+html,
+body {
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
     /* IE / Edge */
 }
 
-*::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
     display: none;
     /* Chrome / Safari / Opera */
 }
@@ -76,22 +78,25 @@
     --color-gold-500: #ffb703;
     --color-slate-950: #020617;
     --font-heading: 'Outfit', 'Inter', sans-serif;
+
+    /* Shadow tokens */
+    --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 @layer components {
 
     /* Retain base layout aliases to avoid breaking non-migrated pages during transition */
     .container {
-        @apply max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 w-full;
+        @apply max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 relative z-10 w-full;
     }
 
     .row {
-        @apply flex flex-wrap -mx-4;
+        @apply flex flex-wrap -mx-2 md:-mx-4;
     }
 
     /* Premium Hero Base */
     .hero-premium {
-        @apply relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-slate-950;
+        @apply relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-slate-950;
     }
 }
 
@@ -109,7 +114,7 @@
     }
 
     .glass-premium {
-        @apply bg-white/90 backdrop-blur-2xl border border-white/30 rounded-3xl shadow-[0_20px_50px_rgba(0, 0, 0, 0.15)];
+        @apply bg-white/90 backdrop-blur-2xl border border-white/30 rounded-3xl shadow-premium;
     }
 
     .text-gradient {
@@ -126,13 +131,13 @@
 
     /* Zoom Responsive Typography */
     .text-hero-title {
-        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-size: clamp(2.25rem, 10vw, 5rem);
         line-height: 1.1;
         font-weight: 800;
     }
 
     .text-hero-desc {
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
         line-height: 1.6;
     }
 
@@ -391,8 +396,8 @@
 
 /* --- Specific Page Components --- */
 .prof-point {
-    width: 50%;
-    float: left;
+    width: 100%;
+    @apply md:w-1/2 md:float-left;
     padding-left: 20px;
     margin-bottom: 20px;
     list-style: circle !important;

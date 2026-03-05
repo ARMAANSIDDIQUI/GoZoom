@@ -94,38 +94,38 @@ const Home = () => {
                 >
                     {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
-                            <div className="container min-h-[90vh] lg:min-h-screen py-24 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
-                                <div className="lg:w-3/5 text-center z-10 flex flex-col items-center">
+                            <div className="container min-h-[85vh] lg:min-h-screen py-16 lg:py-24 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
+                                <div className="w-full lg:w-3/5 text-center z-10 flex flex-col items-center">
                                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-6" data-aos="fade-down">
                                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                         {slide.tagline}
                                     </div>
                                     <h1
-                                        className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight drop-shadow-sm"
+                                        className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight drop-shadow-sm"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                         data-aos="fade-up" data-aos-delay="200"
                                     />
                                     <p
-                                        className="text-hero-desc text-slate-400 mb-6 max-w-2xl mx-auto font-medium"
+                                        className="text-hero-desc text-slate-400 mb-8 max-w-2xl mx-auto font-medium"
                                         dangerouslySetInnerHTML={{ __html: slide.desc }}
                                         data-aos="fade-up" data-aos-delay="400"
                                     />
                                     <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
-                                        <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                        <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-center text-base lg:text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                             Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                         </Link>
-                                        <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                        <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
                                             Learn More
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="lg:w-2/5 relative flex justify-center items-center h-full">
-                                    <div className="relative group">
-                                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[80px] group-hover:bg-blue-500/30 transition-all duration-700"></div>
+                                <div className="w-full lg:w-2/5 relative flex justify-center items-center h-full">
+                                    <div className="relative group w-full max-w-[300px] lg:max-w-none">
+                                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[60px] lg:blur-[80px] group-hover:bg-blue-500/30 transition-all duration-700"></div>
                                         <img
                                             src={slide.img}
                                             alt="Hero Banner"
-                                            className="w-full max-w-[450px] lg:max-w-none h-auto relative z-10 animate-float drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
+                                            className="w-full h-auto relative z-10 animate-float drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
                                         />
                                     </div>
                                 </div>

@@ -186,7 +186,7 @@ const InteractiveGeometricBg = () => {
 };
 
 const ValueCard = ({ img, title, items }) => (
-  <div className="relative w-full max-w-[360px] h-[250px] inline-block m-[10px] mx-auto group overflow-hidden">
+  <div className="relative w-full max-w-[320px] sm:max-w-[360px] h-[250px] inline-block m-[10px] mx-auto group overflow-hidden rounded-xl shadow-lg">
     <img src={img} alt={title} className="block w-full h-[250px] object-cover" />
     {/* Always-visible label bar */}
     <div className="flex justify-center items-center bg-black py-2">
@@ -227,7 +227,7 @@ const About = () => {
           <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-indigo-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[85vh] lg:min-h-screen py-16 lg:py-24">
           <div className="max-w-4xl text-center mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
@@ -245,7 +245,7 @@ const About = () => {
 
       {/* Our Story Section */}
       <section className="py-10">
-        <div className="container mx-auto px-4 max-w-6xl py-[40px]">
+        <div className="container mx-auto max-w-6xl py-10 lg:py-20">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Image */}
             <div className="w-full md:w-1/2 px-[15px] pt-[55px]" data-aos="fade-right">
@@ -270,7 +270,7 @@ const About = () => {
 
       {/* What We Stand For */}
       <section className="py-16">
-        <div className="px-[8%] pt-0 pb-0 mx-0">
+        <div className="container mx-auto pt-0 pb-0">
           <div className="mb-[15px] w-[80%] mx-auto text-center" data-aos="fade-up">
             <h1 className="w-full text-[#00a2fe] text-[32px] font-bold mb-[15px] tracking-wide">WHAT WE STAND FOR</h1>
             <p className="text-[18px] text-gray-700 leading-relaxed max-w-4xl mx-auto">

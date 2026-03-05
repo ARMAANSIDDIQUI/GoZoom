@@ -44,7 +44,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <ScrollToTopButton />
       <Routes>
         {/* Main Website Routes */}
         <Route path="/" element={<Layout />}>

@@ -192,23 +192,23 @@ const Integration = () => {
           <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-blue-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[85vh] lg:min-h-screen py-16 lg:py-24">
           <div className="max-w-4xl text-center mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down" data-aos="fade-down">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
               Enterprise Integration
             </div>
-            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
+            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
               INTEGRATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Solutions</span>
             </h1>
-            <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
+            <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
               Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+              <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-base lg:text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                 Connect Systems <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
               </Link>
-              <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
+              <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
                 Capabilities
               </a>
             </div>
@@ -225,13 +225,13 @@ const Integration = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-slate-800">GZ Integration <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">Expertise</span></h2>
             <p className="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">Our proficiency in integration is evidenced by our experience of over 1800 cross-consulting hours, working with all major integration tools, whether on-premises or in the cloud.</p>
           </div>
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-9 gap-4 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-3 sm:gap-4 mb-12">
             {partners.map((p, i) => (
-              <div key={i} className="glass-card bg-white border border-slate-100 p-4 rounded-2xl text-center hover:bg-sky-50 hover:border-sky-200 hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 60}>
-                <div className="h-16 flex items-center justify-center mb-2">
-                  <img src={p.img} alt={p.name} className="max-h-12 w-auto group-hover:scale-110 transition-transform" />
+              <div key={i} className="glass-card bg-white border border-slate-100 p-3 sm:p-4 rounded-2xl text-center hover:bg-sky-50 hover:border-sky-200 hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 60}>
+                <div className="h-12 sm:h-16 flex items-center justify-center mb-2">
+                  <img src={p.img} alt={p.name} className="max-h-8 sm:max-h-12 w-auto group-hover:scale-110 transition-transform" />
                 </div>
-                <p className="text-xs font-semibold text-slate-600 group-hover:text-sky-600">{p.name}</p>
+                <p className="text-[10px] sm:text-xs font-semibold text-slate-600 group-hover:text-sky-600">{p.name}</p>
               </div>
             ))}
           </div>

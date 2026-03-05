@@ -67,8 +67,24 @@ const GlobalChatbot = () => {
             response: "Goodbye! It was a pleasure chatting. Feel free to reach out anytime you need assistance. Have an amazing day!"
         },
         {
+            pattern: /why choose|why gozoom|benefits|advantages|reliable|trust|different|unique|select|pick|reason/i,
+            response: "Choosing GoZoom means choosing excellence. We offer:\n• Deep Technical Expertise: 30+ specialists across modern stacks.\n• Global Delivery: 100+ successful projects for international clients.\n• Agile Speed: Fast turnarounds without compromising on quality.\n• Cost-Effective: High-end solutions tailored to your budget.\n• Long-term Partnership: We don't just build; we scale with you."
+        },
+        {
+            pattern: /process|methodology|how you work|workflow|steps|lifecycle|sprint|agile|managed|delivery|timeline/i,
+            response: "We follow a transparent, Agile-driven process:\n1. Discovery: Understanding your vision.\n2. Design: Creating intuitive UI/UX.\n3. Development: Sprints with regular updates.\n4. Testing: Rigorous QA for bug-free code.\n5. Launch & Support: Seamless deployment and ongoing maintenance."
+        },
+        {
+            pattern: /security|privacy|data|safe|secure|nda|confidential|protection|legal|compliance/i,
+            response: "Your data is our priority. We sign strict NDAs (Non-Disclosure Agreements) with all clients, use secure encrypted servers, and follow industry-best practices for code security and data protection."
+        },
+        {
+            pattern: /support|maintenance|after sales|update|fix|bug|warranty|uptime|hosting/i,
+            response: "Our relationship doesn't end at launch! We provide dedicated post-launch support, 24/7 monitoring, and scalable maintenance packages to ensure your application stays modern and bug-free."
+        },
+        {
             pattern: /help|guide|manual|instructions|how to/i,
-            response: "I can help you navigate our services, find contact info, or explain our hiring process. Just type a keyword like 'Services', 'Pricing', or 'Hire React' to get started!"
+            response: "I can help you navigate our services, explain why to choose us, or walk you through our development process. Just type a keyword like 'Process', 'Security', or 'Hiring' to get started!"
         }
     ];
 
@@ -109,23 +125,23 @@ const GlobalChatbot = () => {
     };
 
     const suggestedQuestions = [
+        "Why should I choose GoZoom?",
         "What services do you provide?",
+        "Tell me about your process.",
         "How can I contact you?",
-        "Tell me about your pricing.",
+        "What is your tech stack?",
+        "Is my data secure?",
+        "Tell me about pricing.",
+        "Do you provide support?",
         "I want to hire a developer.",
-        "What tech stack do you use?",
         "Do you build mobile apps?",
-        "Tell me about your AI solutions.",
-        "Who is Gozoom Technologies?",
-        "Can you help with SEO?",
-        "How do I join the team?",
     ];
 
     return (
-        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end chatbot-area">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end chatbot-area">
             {/* Chat Window */}
             {isOpen && (
-                <div className="mb-4 w-[350px] sm:w-[400px] h-[500px] bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(0,0,0,0.5)] animate-fade-up">
+                <div className="mb-4 w-[calc(100vw-2rem)] sm:w-[400px] h-[500px] max-h-[80vh] bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(0,0,0,0.5)] animate-fade-up">
                     {/* Header */}
                     <div className="p-5 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-between">
                         <div className="flex items-center gap-3">
