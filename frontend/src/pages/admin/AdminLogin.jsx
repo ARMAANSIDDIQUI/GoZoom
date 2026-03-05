@@ -80,11 +80,11 @@ const AdminLogin = () => {
                         </button>
                     </form>
 
-                    <div className="mt-10 text-center">
+                    {/* <div className="mt-10 text-center">
                         <p className="text-slate-400 text-xs font-bold tracking-widest uppercase">
                             Enterprise Security Layer
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
