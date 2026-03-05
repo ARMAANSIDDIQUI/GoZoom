@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
+    const { logout } = useAuth();
 
     const handleLogout = () => {
+        logout();
         navigate('/admin');
     };
 
@@ -100,16 +103,6 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                {/* System Message */}
-                <div className="bg-blue-600 text-white rounded-[2rem] p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 shadow-xl shadow-blue-500/20">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <div className="text-center md:text-left">
-                        <h4 className="text-xl font-black mb-1">System Operational</h4>
-                        <p className="text-blue-100 font-medium">Cloud services are synced. All visitor enquiries are being tracked in real-time.</p>
-                    </div>
-                </div>
             </main>
         </div>
     );

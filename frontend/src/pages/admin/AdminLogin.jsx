@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const AdminLogin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const { login, isAuthenticated } = useAuth();
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/admin/dashboard', { replace: true });
+        }
+    }, [isAuthenticated, navigate]);
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Default admin simulation
-        if (username === 'admin' && password === 'admin123') {
+        const success = login(username, password);
+        if (success) {
             navigate('/admin/dashboard');
         } else {
             setError('Invalid username or password');
