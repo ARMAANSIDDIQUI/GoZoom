@@ -38,7 +38,6 @@ import AdminAddBlog from './pages/admin/AdminAddBlog';
 
 // Components
 import ScrollToTop from './components/ScrollToTop';
-import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
