@@ -22,14 +22,21 @@ import AndroidDev from './pages/AndroidDev';
 import IosDev from './pages/IosDev';
 import Chatbot from './pages/Chatbot';
 import SeoServices from './pages/SeoServices';
-import HirePage from './pages/HirePage';
+// Hiring Developer Pages (Premium Separate Pages)
+import HireAngular from './pages/hire/HireAngular';
+import HireCodeIgniter from './pages/hire/HireCodeIgniter';
+import HireHtml from './pages/hire/HireHtml';
+import HireJquery from './pages/hire/HireJquery';
+import HirePhp from './pages/hire/HirePhp';
+import HireReact from './pages/hire/HireReact';
+import HireLaravel from './pages/hire/HireLaravel';
 
 // Admin Pages
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminAddBlog from './pages/admin/AdminAddBlog';
 
-// Utility Components
+// Components
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -69,14 +76,15 @@ function App() {
           <Route path="react-development" element={<ReactJs />} />
           <Route path="laravel-development" element={<Laravel />} />
           <Route path="seo-services" element={<SeoServices />} />
-          {/* Hiring Developer Pages using Reusable Component */}
-          <Route path="hire-angular-developer" element={<HirePage title="Hire Angular Developers" bgFrom="from-red-600" bgTo="to-red-800" />} />
-          <Route path="hire-codeIgniter-developers" element={<HirePage title="Hire CodeIgniter Developers" bgFrom="from-orange-500" bgTo="to-red-600" />} />
-          <Route path="hire-html-developer" element={<HirePage title="Hire HTML Developers" bgFrom="from-orange-400" bgTo="to-orange-600" />} />
-          <Route path="hire-jquery-developers" element={<HirePage title="Hire jQuery Developers" bgFrom="from-blue-400" bgTo="to-blue-600" />} />
-          <Route path="hire-php-developer" element={<HirePage title="Hire PHP Developers" bgFrom="from-indigo-500" bgTo="to-purple-700" />} />
-          <Route path="hire-react-developer" element={<HirePage title="Hire React Developers" bgFrom="from-cyan-600" bgTo="to-blue-800" />} />
-          <Route path="laravel-development-company" element={<HirePage title="Laravel Development Company" bgFrom="from-red-500" bgTo="to-red-700" />} />
+
+          {/* Hiring Developer Pages - Premium Dedicated Pages */}
+          <Route path="hire-angular-developer" element={<HireAngular />} />
+          <Route path="hire-codeIgniter-developers" element={<HireCodeIgniter />} />
+          <Route path="hire-html-developer" element={<HireHtml />} />
+          <Route path="hire-jquery-developers" element={<HireJquery />} />
+          <Route path="hire-php-developer" element={<HirePhp />} />
+          <Route path="hire-react-developer" element={<HireReact />} />
+          <Route path="laravel-development-company" element={<HireLaravel />} />
         </Route>
 
         {/* Admin Portal Routes (No Global Header/Footer Layout) */}

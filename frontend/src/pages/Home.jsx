@@ -59,10 +59,13 @@ const Home = () => {
     return (
         <div className="w-full font-sans">
             {/* Hero Banner with Swiper */}
-            <section className="bg-slate-900 text-white w-full min-h-[80vh] lg:min-h-screen relative overflow-hidden flex items-center">
-                {/* Global Hero Animated Blobs */}
-                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px] animate-pulse pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-purple-600/20 blur-[100px] animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
+            <section className="hero-premium">
+                {/* Layered Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+                    <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-indigo-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                </div>
 
                 <Swiper
                     modules={[EffectFade, Autoplay, Pagination]}
@@ -70,28 +73,49 @@ const Home = () => {
                     fadeEffect={{ crossFade: true }}
                     slidesPerView={1}
                     loop={true}
-                    autoplay={{ delay: 3500, disableOnInteraction: false }}
-                    pagination={{ clickable: true }}
-                    className="w-full h-full min-h-[80vh] lg:min-h-screen"
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    pagination={{
+                        clickable: true,
+                        renderBullet: (index, className) => {
+                            return `<span class="${className} !w-8 !h-1 !rounded-full transition-all duration-500 !bg-white/30 hover:!bg-white/60"></span>`;
+                        }
+                    }}
+                    className="w-full h-full"
                 >
                     {slides.map((slide) => (
-                        <SwiperSlide key={slide.id} className="w-full flex items-center justify-center bg-transparent">
-                            <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse lg:flex-row items-center justify-center min-h-[80vh] lg:min-h-screen gap-10 lg:gap-0 py-24 pb-16 lg:py-0">
-                                <div className="md:w-1/2 flex flex-col justify-center space-y-4 z-10">
-                                    <span className="text-blue-500 uppercase tracking-widest text-sm font-bold">
+                        <SwiperSlide key={slide.id}>
+                            <div className="container min-h-[90vh] lg:min-h-screen py-24 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
+                                <div className="lg:w-3/5 text-center lg:text-left z-10">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-6 animate-fade-down">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                         {slide.tagline}
-                                    </span>
+                                    </div>
                                     <h1
-                                        className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+                                        className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight drop-shadow-sm"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                     />
                                     <p
-                                        className="text-gray-300 text-lg md:text-xl"
+                                        className="text-hero-desc text-slate-400 mb-6 max-w-2xl mx-auto lg:mx-0 font-medium"
                                         dangerouslySetInnerHTML={{ __html: slide.desc }}
                                     />
+                                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                                        <Link to="/contact" className="h-[60px] lg:h-[70px] px-10 lg:px-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-3 group shrink-0">
+                                            Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                        </Link>
+                                        <Link to="/about" className="h-[60px] lg:h-[70px] px-10 lg:px-12 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 backdrop-blur-md transition-all flex items-center justify-center shrink-0">
+                                            Learn More
+                                        </Link>
+                                    </div>
                                 </div>
-                                <div className="md:w-1/2 flex justify-end items-center h-full">
-                                    <img src={slide.img} alt="Banner" className="max-h-[80%] object-contain drop-shadow-2xl" />
+                                <div className="lg:w-2/5 relative flex justify-center items-center h-full">
+                                    <div className="relative group">
+                                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[80px] group-hover:bg-blue-500/30 transition-all duration-700"></div>
+                                        <img
+                                            src={slide.img}
+                                            alt="Hero Banner"
+                                            className="w-full max-w-[450px] lg:max-w-none h-auto relative z-10 animate-float drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -144,7 +168,7 @@ const Home = () => {
             </section>
 
             {/* Services Section */}
-            <section className="py-20 bg-white">
+            <section className="pt-20 pb-0 bg-white">
                 <div className="container mx-auto px-8 md:px-16 mb-12">
                     <span className="text-gray-500 uppercase tracking-wider text-sm font-semibold block mb-2">Our Services</span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 lg:w-2/3">Accelerate technology innovation with software development services</h2>
@@ -164,7 +188,7 @@ const Home = () => {
                         }}
                         loop={true}
                         autoplay={{ delay: 3500 }}
-                        className="pb-12"
+                        className="pb-0"
                     >
                         {services.map((srv, idx) => (
                             <SwiperSlide key={idx} className="h-auto">

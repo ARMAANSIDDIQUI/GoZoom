@@ -43,25 +43,29 @@ const Retail = () => {
     return (
         <div>
             {/* Hero Banner — Emerald Retail colors */}
-            <section className="relative min-h-[85vh] flex items-center pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/retail.webp")' }}></div>
-                <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
-                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-emerald-500/25 blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-teal-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-green-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <section className="hero-premium">
+                <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: 'url("/images/retail.webp")' }}></div>
+                {/* Layered Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-emerald-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+                    <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-teal-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+                </div>
 
-                <div className="container relative z-10 block">
-                    <div className="max-w-3xl">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Retail Technology</span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+                    <div className="max-w-4xl text-center mx-auto">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Retail Technology
+                        </div>
+                        <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
                             Beyond <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Retail</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                        <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                             We aim to revolutionize and enhance the retail experience like never before through innovation and transformation.
                         </p>
-                        <div className="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold hover:shadow-lg hover:shadow-emerald-500/30 transition-all hover:-translate-y-1">Get In Touch</Link>
-                            <Link to="/integration" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Integration</Link>
+                        <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+                            <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-lg hover:shadow-2xl hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get In Touch</Link>
+                            <Link to="/integration" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Integration</Link>
                         </div>
                     </div>
                 </div>

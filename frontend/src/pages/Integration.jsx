@@ -1,10 +1,158 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
-import { FaCheckCircle } from 'react-icons/fa';
+
+const GeometricBackground = () => {
+  const shapes = [
+    { type: 'square', size: 'w-12 h-12', top: '20%', delay: '0s', duration: '20s' },
+    { type: 'circle', size: 'w-16 h-16', top: '60%', delay: '5s', duration: '28s' },
+    { type: 'triangle', size: 'w-10 h-10', top: '40%', delay: '2s', duration: '24s' },
+    { type: 'square', size: 'w-8 h-8', top: '80%', delay: '12s', duration: '30s' },
+    { type: 'circle', size: 'w-20 h-20', top: '10%', delay: '8s', duration: '35s' },
+  ];
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      {shapes.map((shape, i) => (
+        <div
+          key={i}
+          className={`absolute animate-geometric border border-sky-400/30 ${shape.size} ${shape.type === 'circle' ? 'rounded-full' : ''}`}
+          style={{
+            top: shape.top,
+            left: '-100px',
+            animationDelay: shape.delay,
+            animationDuration: shape.duration,
+            transform: shape.type === 'triangle' ? 'rotate(45deg)' : 'none'
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+const ConstellationBackground = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+    let particles = [];
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+    };
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        // Systemic drift to the right
+        this.vx = (Math.random() * 0.8) + 0.5;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        // Orbital revolving parameters
+        this.angle = Math.random() * Math.PI * 2;
+        this.angularSpeed = (Math.random() - 0.5) * 0.015;
+        this.orbitRadius = Math.random() * 3 + 2;
+        this.color = `rgba(14, 165, 233, ${Math.random() * 0.4 + 0.3})`;
+
+        // Pixel positions for drawing
+        this.px = this.x;
+        this.py = this.y;
+      }
+      update() {
+        // Move base position linearly (drift)
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Add orbital revolution on top of drift
+        this.angle += this.angularSpeed;
+        this.px = this.x + Math.cos(this.angle) * this.orbitRadius;
+        this.py = this.y + Math.sin(this.angle) * this.orbitRadius;
+
+        // Wrap around vertically
+        if (this.y < -50) this.y = canvas.height + 50;
+        if (this.y > canvas.height + 50) this.y = -50;
+
+        // Wrap around horizontally for continuous left-to-right movement
+        if (this.x > canvas.width + 100) {
+          this.x = -100;
+          this.y = Math.random() * canvas.height;
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.px, this.py, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        // Removed expensive shadowBlur from per-particle draw
+      }
+    }
+
+    const init = () => {
+      particles = [];
+      // Reduced density for performance (O(n^2) complexity optimization)
+      const density = (canvas.width * canvas.height) / 12000;
+      for (let i = 0; i < density; i++) {
+        particles.push(new Particle());
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      // Optimized distance checks
+      ctx.lineWidth = 0.6;
+      for (let i = 0; i < particles.length; i++) {
+        const p1 = particles[i];
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dx = p1.px - p2.px;
+          const dy = p1.py - p2.py;
+
+          // Fast distance squared check first
+          const distSq = dx * dx + dy * dy;
+          if (distSq < 22500) { // 150*150
+            const distance = Math.sqrt(distSq);
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(14, 165, 233, ${(1 - distance / 150) * 0.2})`;
+            ctx.moveTo(p1.px, p1.py);
+            ctx.lineTo(p2.px, p2.py);
+            ctx.stroke();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    window.addEventListener('resize', resize);
+    resize();
+    init();
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none opacity-60" />;
+};
 
 const Integration = () => {
   useEffect(() => {
@@ -28,25 +176,36 @@ const Integration = () => {
   return (
     <div>
       {/* Hero Banner — Sky Blue Integration colors */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
-        <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm"></div>
-        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-sky-500/25 blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-cyan-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="hero-premium">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
 
-        <div className="container relative z-10 block">
-          <div className="max-w-3xl text-center mx-auto">
-            <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Enterprise Integration</span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+        {/* Geometric Background Layer (Lightweight) */}
+        <GeometricBackground />
+
+        {/* Constellation Canvas Animation */}
+        <ConstellationBackground />
+
+        {/* Layered Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-sky-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-blue-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+          <div className="max-w-4xl text-center mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
+              Enterprise Integration
+            </div>
+            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
               INTEGRATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Solutions</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+            <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
               Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-sky-600 to-blue-600 text-white font-bold hover:shadow-lg hover:shadow-sky-500/30 transition-all hover:-translate-y-1">Discover More</Link>
-              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
+            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-sky-600 to-blue-600 text-white font-black text-lg hover:shadow-2xl hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Discover More</Link>
+              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
             </div>
           </div>
         </div>

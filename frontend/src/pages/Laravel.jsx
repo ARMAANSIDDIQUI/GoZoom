@@ -25,18 +25,18 @@ const Laravel = () => {
         <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
         <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-rose-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="container relative z-10 block">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Laravel Framework</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-in" data-aos-delay="200">Get an Application Made by an Expert <span className="text-gradient-red">Laravel</span> Development Company</h1>
-              <p className="text-xl text-red-100 mb-8" data-aos="fade-in" data-aos-delay="500">
-                We provide dedicated Laravel developers for your company's projects
-              </p>
-              <div className="flex flex-wrap gap-4" data-aos="fade-in" data-aos-delay="800">
-                <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-red-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1 flex items-center">Get Started</Link>
-                <Link to="/about" className="px-8 py-4 rounded-full glass text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 flex items-center">About Us</Link>
-              </div>
+        <div className="container relative z-10 flex flex-col items-center justify-center min-min-h-[90vh] lg:min-h-screen py-24">
+          <div className="max-w-4xl text-center mx-auto">
+            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Laravel Framework</span>
+            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-in" data-aos-delay="200">
+              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
+            </h1>
+            <p className="text-hero-desc text-red-100 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-in" data-aos-delay="500">
+              We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
+            </p>
+            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-in" data-aos-delay="800">
+              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
+              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">About Us</Link>
             </div>
           </div>
         </div>

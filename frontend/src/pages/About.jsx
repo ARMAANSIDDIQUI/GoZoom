@@ -1,8 +1,189 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+
+const InteractiveGeometricBg = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+    let mouse = { x: -1000, y: -1000 };
+    let particles = [];
+    let clickShapes = [];
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.baseX = this.x;
+        this.baseY = this.y;
+        this.density = (Math.random() * 30) + 1;
+        this.color = `rgba(59, 130, 246, ${Math.random() * 0.3 + 0.1})`;
+      }
+      update() {
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        let forceDirectionX = dx / distance;
+        let forceDirectionY = dy / distance;
+        let maxDistance = 150 * (window.devicePixelRatio || 1);
+        let force = (maxDistance - distance) / maxDistance;
+        let directionX = forceDirectionX * force * this.density;
+        let directionY = forceDirectionY * force * this.density;
+
+        if (distance < maxDistance) {
+          this.x -= directionX;
+          this.y -= directionY;
+        } else {
+          if (this.x !== this.baseX) {
+            let dx = this.x - this.baseX;
+            this.x -= dx / 10;
+          }
+          if (this.y !== this.baseY) {
+            let dy = this.y - this.baseY;
+            this.y -= dy / 10;
+          }
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+
+    class ClickShape {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 40 + 20;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.alpha = 1;
+        this.decay = Math.random() * 0.02 + 0.01;
+        this.velocity = {
+          x: (Math.random() - 0.5) * 4,
+          y: (Math.random() - 0.5) * 4
+        };
+        this.points = Math.floor(Math.random() * 3) + 3; // Triangle to Pentagon
+      }
+      update() {
+        this.x += this.velocity.x;
+        this.y += this.velocity.y;
+        this.alpha -= this.decay;
+        this.rotation += 0.02;
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.strokeStyle = `rgba(96, 165, 250, ${this.alpha})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        for (let i = 0; i < this.points; i++) {
+          const angle = (i * 2 * Math.PI) / this.points;
+          const px = Math.cos(angle) * this.size;
+          const py = Math.sin(angle) * this.size;
+          if (i === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    const init = () => {
+      particles = [];
+      const numberOfLines = (canvas.width * canvas.height) / 15000;
+      for (let i = 0; i < numberOfLines; i++) {
+        particles.push(new Particle());
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      clickShapes = clickShapes.filter(s => s.alpha > 0);
+      clickShapes.forEach(s => {
+        s.update();
+        s.draw();
+      });
+
+      // Connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i; j < particles.length; j++) {
+          let dx = particles[i].x - particles[j].x;
+          let dy = particles[i].y - particles[j].y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 120) {
+            ctx.strokeStyle = `rgba(59, 130, 246, ${(1 - (distance / 120)) * 0.15})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    const handleMouseMove = (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
+
+    const handleClick = (e) => {
+      for (let i = 0; i < 3; i++) {
+        clickShapes.push(new ClickShape(e.clientX, e.clientY));
+      }
+    };
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mousedown', handleClick);
+
+    resize();
+    init();
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mousedown', handleClick);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 z-0 bg-transparent cursor-crosshair active:scale-[0.99] transition-transform duration-300"
+    />
+  );
+};
 
 const ValueCard = ({ img, title, items }) => (
   <div className="relative w-full max-w-[360px] h-[250px] inline-block m-[10px] mx-auto group overflow-hidden">
@@ -35,22 +216,30 @@ const About = () => {
   return (
     <div className="font-['Lato',sans-serif] overflow-x-hidden">
 
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[100vh] bg-slate-900 bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: 'url("/images/about2.webp")' }}>
-        <div className="absolute inset-0 bg-black/50 mix-blend-overlay"></div>
-        {/* Animated Blobs */}
-        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px] animate-pulse pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-indigo-500/25 blur-[100px] animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
+      <section className="hero-premium relative group overflow-hidden">
+        {/* Interactive Canvas Animation */}
+        <InteractiveGeometricBg />
 
-        <div className="relative z-10 text-center pt-[72px] px-6">
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Our Story</span>
-          <h2 className="text-white text-4xl md:text-5xl lg:text-7xl font-extrabold text-center drop-shadow-lg mb-4" data-aos="fade-up" data-aos-delay="200">
-            ABOUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">US</span>
-          </h2>
-          <p className="text-blue-100 text-xl md:text-2xl font-medium text-center max-w-2xl mx-auto drop-shadow-md" data-aos="fade-up" data-aos-delay="400">
-            Delivering Innovation and Excellence beyond Expectation
-          </p>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("/images/about2.webp")' }}></div>
+        {/* Layered Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-indigo-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+          <div className="max-w-4xl text-center mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+              Our Story
+            </div>
+            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
+              ABOUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">US</span>
+            </h1>
+            <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
+              Delivering Innovation and Excellence beyond Expectation
+            </p>
+          </div>
         </div>
       </section>
 
@@ -123,9 +312,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Counter Section */}
-      <section className="mt-10 mb-20 relative overflow-hidden" data-aos="fade-up">
-        <div className="bg-gradient-to-r from-slate-900 to-[#0a0f25] text-center py-16 relative">
+      <section className="mt-0 mb-0 !pb-0 relative overflow-hidden bg-gradient-to-r from-slate-900 to-[#0a0f25]" data-aos="fade-up">
+        <div className="text-center pt-16 pb-0 relative">
           <div className="absolute top-0 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px]"></div>
 
           <div className="container mx-auto px-4 relative z-10">

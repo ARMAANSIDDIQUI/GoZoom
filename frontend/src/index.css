@@ -49,17 +49,27 @@
     --color-primary-600: #0077b6;
     --color-secondary-500: #1b263b;
     --color-accent-500: #e63946;
+
+    /* New Premium Tokens */
+    --color-gold-500: #ffb703;
+    --color-slate-950: #020617;
+    --font-heading: 'Outfit', 'Inter', sans-serif;
 }
 
 @layer components {
 
     /* Retain base layout aliases to avoid breaking non-migrated pages during transition */
     .container {
-        @apply max-w-[1200px] mx-auto px-4 relative z-10 w-full;
+        @apply max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 w-full;
     }
 
     .row {
         @apply flex flex-wrap -mx-4;
+    }
+
+    /* Premium Hero Base */
+    .hero-premium {
+        @apply relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-slate-950;
     }
 }
 
@@ -76,16 +86,40 @@
         @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-primary-500/20 hover:bg-white/10;
     }
 
+    .glass-premium {
+        @apply bg-white/90 backdrop-blur-2xl border border-white/30 rounded-3xl shadow-[0_20px_50px_rgba(0, 0, 0, 0.15)];
+    }
+
     .text-gradient {
         @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300;
+    }
+
+    .text-gradient-premium {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600;
     }
 
     .text-gradient-red {
         @apply text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400;
     }
 
+    /* Zoom Responsive Typography */
+    .text-hero-title {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        line-height: 1.1;
+        font-weight: 800;
+    }
+
+    .text-hero-desc {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.6;
+    }
+
     .animate-float {
         animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-pulse-slow {
+        animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
 
     @keyframes float {
@@ -100,6 +134,31 @@
         100% {
             transform: translateY(0px);
         }
+    }
+
+    @keyframes geometric-move {
+        from {
+            transform: translateX(-100px) rotate(0deg);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 0.15;
+        }
+
+        90% {
+            opacity: 0.15;
+        }
+
+        to {
+            transform: translateX(calc(100vw + 100px)) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .animate-geometric {
+        animation: geometric-move 25s linear infinite;
+        will-change: transform, opacity;
     }
 }
 

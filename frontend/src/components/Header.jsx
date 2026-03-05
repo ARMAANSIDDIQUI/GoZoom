@@ -4,6 +4,7 @@ import { FaGlobe, FaCode } from 'react-icons/fa';
 
 const webDropdownSections = [
     {
+        id: 'services',
         heading: <span className="flex items-center gap-1.5"><FaGlobe className="text-cyan-500" /> Our Services</span>,
         links: [
             { to: '/web-development', label: 'Web Development' },
@@ -19,6 +20,7 @@ const webDropdownSections = [
         ],
     },
     {
+        id: 'hire',
         heading: <span className="flex items-center gap-1.5"><FaCode className="text-purple-500" /> Hire Developers</span>,
         links: [
             { to: '/hire-react-developer', label: 'Hire React Developers' },
@@ -145,7 +147,7 @@ const Header = () => {
                                 }`}>
                                 <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown">
                                     {webDropdownSections.map((section) => (
-                                        <div key={section.heading} className="mb-1">
+                                        <div key={section.id} className="mb-1">
                                             <p className="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
                                             {section.links.map(({ to, label }) => (
                                                 <Link
@@ -260,7 +262,7 @@ const Header = () => {
                             {webOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
                                     {webDropdownSections.map((section) => (
-                                        <div key={section.heading}>
+                                        <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
                                             {section.links.map(({ to, label }) => (
                                                 <Link

@@ -21,18 +21,18 @@ const Angular = () => {
         <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/20 blur-[120px] animate-pulse"></div>
         <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-orange-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-        <div className="container relative z-10 block">
-          <div className="max-w-3xl">
+        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
+          <div className="max-w-4xl text-center mx-auto">
             <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Angular Framework</span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
               Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-10" data-aos="fade-up" data-aos-delay="400">
-              Everything you need to get your project started in 24 hours
+            <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
+              Everything you need to get your project started in 24 hours — architecture, speed, and reliability.
             </p>
-            <div className="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">Get Started</Link>
-              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
+            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
+              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
             </div>
           </div>
         </div>

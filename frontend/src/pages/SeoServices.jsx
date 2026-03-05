@@ -24,15 +24,15 @@ const SeoServices = () => {
         <div className="container relative z-10 block">
           <div className="max-w-3xl text-center mx-auto">
             <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Digital Marketing</span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-              Transform Your Online Presence with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
+            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
+              Transform Your Online Presence with <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+            <p className="text-hero-desc text-slate-300 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
               Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all hover:-translate-y-1">Get Started</Link>
-              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
+            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
+              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
             </div>
           </div>
         </div>

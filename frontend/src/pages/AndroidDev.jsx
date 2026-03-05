@@ -25,15 +25,15 @@ const AndroidDev = () => {
                 <div className="container relative z-10 block">
                     <div className="max-w-3xl text-center mx-auto">
                         <span className="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 border border-green-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Android Development</span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-                            Hire Talented <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Android Developers</span>
+                        <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
+                            Leading Android App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Experts</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                            Discover how we can help make your Android App successful
+                        <p className="text-hero-desc text-slate-300 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
+                            Build powerful, native Android experiences that engage users and drive business growth through innovative engineering.
                         </p>
-                        <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 text-white font-bold hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-1">Enquire Now</Link>
-                            <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Learn More</Link>
+                        <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+                            <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
+                            <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
                         </div>
                     </div>
                 </div>
