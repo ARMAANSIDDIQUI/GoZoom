@@ -59,20 +59,24 @@ const Home = () => {
     return (
         <div className="w-full font-sans">
             {/* Hero Banner with Swiper */}
-            <section className="bg-black text-white w-full h-[600px] relative overflow-hidden">
+            <section className="bg-slate-900 text-white w-full min-h-[80vh] lg:min-h-screen relative overflow-hidden flex items-center">
+                {/* Global Hero Animated Blobs */}
+                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px] animate-pulse pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-purple-600/20 blur-[100px] animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
+
                 <Swiper
                     modules={[EffectFade, Autoplay, Pagination]}
                     effect="fade"
                     fadeEffect={{ crossFade: true }}
                     slidesPerView={1}
                     loop={true}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 3500, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
-                    className="h-full w-full"
+                    className="w-full h-full min-h-[80vh] lg:min-h-screen"
                 >
                     {slides.map((slide) => (
-                        <SwiperSlide key={slide.id} className="h-full w-full flex items-center bg-black">
-                            <div className="container mx-auto px-8 md:px-[45px] flex flex-col md:flex-row items-center h-full">
+                        <SwiperSlide key={slide.id} className="w-full flex items-center justify-center bg-transparent">
+                            <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse lg:flex-row items-center justify-center min-h-[80vh] lg:min-h-screen gap-10 lg:gap-0 py-24 pb-16 lg:py-0">
                                 <div className="md:w-1/2 flex flex-col justify-center space-y-4 z-10">
                                     <span className="text-blue-500 uppercase tracking-widest text-sm font-bold">
                                         {slide.tagline}

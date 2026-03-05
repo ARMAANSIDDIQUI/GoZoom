@@ -16,11 +16,11 @@ export const usePhoneCountry = () => {
     const [country, setCountry] = useState('us');
 
     useEffect(() => {
-        fetch('https://ipapi.co/json/')
+        fetch('https://ipinfo.io/json')
             .then(r => r.json())
             .then(data => {
-                if (data.country_code) {
-                    setCountry(data.country_code.toLowerCase());
+                if (data.country) {
+                    setCountry(data.country.toLowerCase());
                 }
             })
             .catch(() => { }); // silently fall back to 'us'

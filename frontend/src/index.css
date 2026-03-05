@@ -1,84 +1,105 @@
 @import "tailwindcss";
 
 /* =========================================================
+   SCROLLBAR — Hidden but scrollable
+   ========================================================= */
+
+/* Hide scrollbar everywhere */
+* {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE / Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome / Safari / Opera */
+}
+
+/* Exception: thin visible scrollbar for nav dropdown */
+.scrollable-dropdown {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+    -ms-overflow-style: auto;
+}
+
+.scrollable-dropdown::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-dropdown::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 99px;
+}
+
+/* =========================================================
    REFINED SHARED PAGE STYLES — based on legacy CSS auditing
    ========================================================= */
 
 /* --- Base Layout --- */
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    z-index: 1;
+/* --- Premium Design Tokens --- */
+@theme {
+    --color-primary-500: #00b4d8;
+    --color-primary-600: #0077b6;
+    --color-secondary-500: #1b263b;
+    --color-accent-500: #e63946;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+@layer components {
+
+    /* Retain base layout aliases to avoid breaking non-migrated pages during transition */
+    .container {
+        @apply max-w-[1200px] mx-auto px-4 relative z-10 w-full;
+    }
+
+    .row {
+        @apply flex flex-wrap -mx-4;
+    }
 }
 
-.row::after,
-.container::after,
-.clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
-[class*="col-sm-"],
-[class*="col-md-"],
-[class*="col-lg-"] {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    .col-sm-3 {
-        width: 25%;
+@layer utilities {
+    .glass {
+        @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
     }
 
-    .col-sm-4 {
-        width: 33.33333333%;
+    .glass-dark {
+        @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl;
     }
 
-    .col-sm-5 {
-        width: 41.66666667%;
+    .glass-card {
+        @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-primary-500/20 hover:bg-white/10;
     }
 
-    .col-sm-6 {
-        width: 50%;
+    .text-gradient {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300;
     }
 
-    .col-sm-7 {
-        width: 58.33333333%;
+    .text-gradient-red {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400;
     }
 
-    .col-sm-8 {
-        width: 66.66666667%;
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
     }
 
-    .col-sm-9 {
-        width: 75%;
-    }
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
 
-    .col-sm-12 {
-        width: 100%;
-    }
+        50% {
+            transform: translateY(-20px);
+        }
 
-    .flft {
-        float: left;
-    }
-
-    .flrt {
-        float: right;
+        100% {
+            transform: translateY(0px);
+        }
     }
 }
 
@@ -378,19 +399,6 @@
     padding-right: 30px;
 }
 
-@media (min-width: 992px) {
-    .col-lg-4 {
-        width: 33.333%;
-    }
-
-    .col-lg-6 {
-        width: 50%;
-    }
-
-    .col-lg-12 {
-        width: 100%;
-    }
-}
 
 .text-center {
     text-align: center;

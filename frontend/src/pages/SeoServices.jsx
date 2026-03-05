@@ -14,250 +14,123 @@ const SeoServices = () => {
 
   return (
     <div>
-      {/* EXACT MIGRATED CONTENT BEGIN */}
+      {/* Hero Banner — Orange SEO colors */}
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #431407 50%, #0f172a 100%)' }}></div>
+        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-orange-500/25 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-amber-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/4 w-48 h-48 rounded-full bg-yellow-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-
-
-
-
-      <section className="banner-top laravel-banner">
-        <div className="banner-inner min-adj">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="heading-in laravel">
-                  <h1>Transform Your Online Presence with Expert SEO Services <br />Unlock tailored solutions for your
-                    company's projects by engaging our dedicated SEO specialists. <br /></h1>
-                  <p>Elevate your visibility and success with top-notch SEO assistance.</p>
-                  <p className="st-cst-btn-area"><Link to="/contact" className="btn starBtn laraBtn">Get Started</Link><Link to="/about" className="btn starBtn aboutBtn laraBtn1">About Us</Link></p>
-                </div>
-              </div>
+        <div className="container relative z-10 block">
+          <div className="max-w-3xl text-center mx-auto">
+            <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Digital Marketing</span>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+              Transform Your Online Presence with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+              Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all hover:-translate-y-1">Get Started</Link>
+              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
             </div>
           </div>
         </div>
-        <div className="banner-overlay1"></div>
-        <div className="banner-overlay-shape1"></div>
-        <div className="banner-overlay-shape2"></div>
       </section>
 
-      <section className="laravel-pg whiteSection top no-after">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-7">
-              <div className="hire-txt-top-left">
-                <h2 className="long-sm-text">Optimize Your Online Impact with Professional SEO Services in Canada</h2>
-                <p>In the dynamic digital landscape, effective SEO is the key to unlocking unparalleled online visibility
-                  and success. Our expert SEO services are meticulously crafted to propel your business to new heights,
-                  ensuring that your website not only ranks higher on search engines but also resonates with your target
-                  audience.</p>
-                <p>
-                  Harnessing the power of cutting-edge SEO strategies, we navigate the complexities of search algorithms,
-                  keyword optimization, and content enhancement to ensure your brand emerges prominently in search results.
-                  Our dedicated SEO specialists, part of our digital marketing agency, work collaboratively with you to tailor strategies that align with your business objectives, providing a holistic approach that goes beyond rankings—ultimately driving organic traffic, fostering brand authority, and maximizing your online impact. Let us be your strategic partner in the ever-evolving realm of SEO, where visibility transforms into sustained digital success.
+      {/* About Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-50 rounded-full blur-[80px] -ml-32 -mb-32"></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-orange-50 text-orange-600 font-bold text-sm mb-4">Our Approach</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
+                Optimize Your Online Impact with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Professional SEO Services</span>
+              </h2>
+              <div className="space-y-5">
+                <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-orange-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
+                  In the dynamic digital landscape, effective SEO is the key to unlocking unparalleled online visibility and success. Our expert SEO services are meticulously crafted to propel your business to new heights.
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Harnessing the power of cutting-edge SEO strategies, we navigate the complexities of search algorithms, keyword optimization, and content enhancement. Our dedicated specialists work collaboratively with you to drive organic traffic, foster brand authority, and maximize your impact.
                 </p>
               </div>
             </div>
-            <div className="col-sm-5">
-              <div className="laravel-mascot"> <img src="../images/seo1.png" alt="https://www.codeclouds.com/wp-content/uploads/2018/11/laravel-mascot-balance.svg" /></div>
+            <div className="relative" data-aos="fade-left">
+              <div className="absolute inset-0 bg-orange-100 rounded-full blur-[80px] opacity-60"></div>
+              <img src="../images/seo1.png" alt="SEO Mascot" className="w-full max-w-md mx-auto relative z-10 animate-float drop-shadow-2xl" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="laravel whiteSection flat-gray">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-3">
-              <div className="laravel-char-inst"> <img src="../images/seo2.png" alt="https://www.codeclouds.com/wp-content/uploads/2018/11/char-laravel-nw.svg" /></div>
-            </div>
-            <div className="col-sm-9">
-              <div className="dev-off-gap-col clearfix">
-                <h3 className="long-sm-text">What Our SEO Experts Offer</h3>
-                <ul className="prof-point">
-                  <li>
-                    <h4>Strategic Keyword Research</h4>
-                  </li>
-                  <li>
-                    <h4>Comprehensive On-Page Optimization</h4>
-                  </li>
-                  <li>
-                    <h4>Quality Content Creation</h4>
-                  </li>
-                  <li>
-                    <h4>Technical SEO Excellence</h4>
-                  </li>
-                </ul>
-                <ul className="prof-point">
-                  <li>
-                    <h4>Local SEO Strategies</h4>
-                  </li>
-                  <li>
-                    <h4>Strategic Link Building</h4>
-                  </li>
-                  <li>
-                    <h4>Data-Driven Analytics</h4>
-                  </li>
-                  <li>
-                    <h4>Transparent Reporting</h4>
-                  </li>
-                </ul>
+      {/* Features Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-orange-950/50 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(249,115,22,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(245,158,11,0.5) 0%, transparent 50%)' }}></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Expertise</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-white mb-8">What Our SEO Experts <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Offer</span></h3>
+              <div className="grid grid-cols-2 gap-4">
+                {['Strategic Keyword Research', 'Comprehensive On-Page Optimization', 'Quality Content Creation', 'Technical SEO Excellence', 'Local SEO Strategies', 'Strategic Link Building', 'Data-Driven Analytics', 'Transparent Reporting'].map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-orange-500/10 transition-colors">
+                    <div className="flex-shrink-0 w-6 h-6 bg-orange-500/30 rounded-lg flex items-center justify-center">
+                      <svg className="w-3 h-3 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <span className="text-slate-300 text-sm font-medium">{feature}</span>
+                  </div>
+                ))}
               </div>
+            </div>
+            <div className="relative hidden lg:block" data-aos="fade-left">
+              <div className="absolute inset-0 bg-orange-500/10 rounded-full blur-[80px]"></div>
+              <img src="../images/seo2.png" alt="SEO Features" className="w-full max-w-md mx-auto relative z-10 drop-shadow-xl animate-float" />
             </div>
           </div>
         </div>
       </section>
 
-
-
-
-
-      <section className="laravel blueSection white">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-6">
-              <div className="inner-dev-dp-box pd-right30">
-                <div className="left-in-pt-lg-text">
-                  <h3 className="lg-gap-wt-txt">Why Choose Our SEO <br />Experts?</h3>
-                  <div className="in-cont-feature sec-left">
-                    <h4 className="red-fc-text">Proven Track Record</h4>
-                    <p>Rely on our seasoned SEO experts with an extensive track record of successfully delivering measurable
-                      results, ensuring your online success and heightened visibility in the digital landscape.</p>
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-orange-700 font-bold text-sm mb-4">Why Us</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">SEO Experts?</span></h3>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4" data-aos="fade-right">
+              {[
+                { title: 'Proven Track Record', desc: 'Rely on our seasoned SEO experts with an extensive track record of successfully delivering measurable results.' },
+                { title: 'Tailored Strategies', desc: 'Crafting personalized SEO strategies tailored to align with your unique business objectives, providing a distinct competitive advantage.' },
+                { title: 'Cutting-Edge Expertise', desc: 'Stay at the forefront of industry trends and technologies, allowing us to optimize your digital footprint for sustained growth.' },
+                { title: 'Transparent Reporting', desc: 'Get regular, clear reports on your campaign performance with data-driven insights to guide ongoing optimization.' },
+                { title: 'Long-Term Growth', desc: 'We focus on sustainable, organic growth strategies that deliver lasting results and continuously improve your rankings.' },
+                { title: 'Dedicated Support', desc: 'A committed team available to answer questions, provide updates, and refine strategies as your business evolves.' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+                  <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-800">{item.title}</p>
+                    <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-            <div className="col-sm-6">
-              <div className="right-in-pt-lg-text pd-left30">
-                <div className="in-cont-feature mg-bot54">
-                  <h4 className="red-fc-text">Tailored Strategies</h4>
-                  <p>Harness the prowess of our experienced team, dedicated to crafting personalized SEO strategies
-                    meticulously tailored to align with your unique business objectives. This approach provides you with a
-                    distinct competitive advantage, positioning your brand strategically in the ever-evolving digital
-                    landscape.</p>
-                </div>
-                <div className="">
-                  <h4 className="red-fc-text">Cutting-Edge Expertise</h4>
-                  <p> Propel your online presence forward with our SEO team's unparalleled cutting-edge expertise. Stay at
-                    the forefront of industry trends and technologies, allowing us to optimize your digital footprint for
-                    sustained growth, maximum impact, and enduring success.</p>
-                </div>
+            <div className="text-center" data-aos="fade-left">
+              <div className="glass-card bg-white rounded-3xl p-10 shadow-2xl border border-slate-100 inline-block">
+                <img src="../images/laravelboy2.svg" className="w-40 mx-auto mb-6 animate-float" alt="SEO Experts" />
+                <p className="text-2xl font-bold text-slate-800 mb-6">Get in touch with our<br /><span className="text-orange-600">SEO Experts Today!</span></p>
+                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all hover:-translate-y-1">Get Started</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="laravel whiteSection dp-red no-after">
-        <div className="container">
-          <div className="wpcf7 js" id="wpcf7-f16439-o1" lang="en-US" dir="ltr">
-            <div className="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
-            </div>
-            <form action="../laravel.php" method="post" className="wpcf7-form init salesBtn theme_1 noErrorMsg" id="contactform7" aria-label="Contact form" novalidate="novalidate" data-status="init">
-              <div style={{ "display": "none" }}> <input type="hidden" name="_wpcf7" value="16439" /> <input type="hidden" name="_wpcf7_version" value="5.7.6" /> <input type="hidden" name="_wpcf7_locale" value="en_US" /> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f16439-o1" /> <input type="hidden" name="_wpcf7_container_post" value="0" /> <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]" /> <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]" /> <input type="hidden" name="_wpcf7cf_visible_groups" value="[]" />
-                <input type="hidden" name="_wpcf7cf_repeaters" value="[]" /> <input type="hidden" name="_wpcf7cf_steps" value="{}" /> <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:16439,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:false,&quot;notice_dismissed_update-cf7-5.6&quot;:true,&quot;notice_dismissed_update-cf7-5.6.2&quot;:true,&quot;notice_dismissed_update-cf7-5.6.4&quot;:true}}" />
-              </div>
-
-              <div className="col-sm-6">
-                <div className="laravel-form">
-                  <div className="block-top">
-                    <div className="hlf_cnt clearfix">
-                      <div className="ct_frm half half flft">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Name"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required error" tabindex="1" aria-required="true" aria-invalid="true" placeholder="Name" value="" type="text" name="laravelName" /><label id="Name-error" className="error" htmlFor="Name" style={{ "display": "inline-block" }}>This field is required.</label></span></span></p>
-                        </div>
-                      </div>
-                      <div className="ct_frm half half flrt">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Business"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required" tabindex="2" aria-required="true" aria-invalid="false" placeholder="Business/Organization" value="" type="text" name="laravelBusiness" /></span></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="hlf_cnt clearfix">
-                      <div className="ct_frm half half flft">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Email"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email flc_in required email" tabindex="3" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="laravelEmail" /><label id="Email-error" className="error" htmlFor="Email" style={{ "display": "inline-block" }}>This field is required.</label></span></span></p>
-                        </div>
-                      </div>
-                      <div className="ct_frm half half flrt">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Phone no"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email flc_in required Phone no" tabindex="4" aria-required="true" aria-invalid="false" placeholder="Phone No" value="" type="tel" name="laravelPhoneNo" /></span></span></p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="full_ed">
-                      <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Subject"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required" tabindex="5" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="laravelSubject" /></span></span></p>
-                    </div>
-                    <div className="full_ed">
-                      <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Enquiry"><textarea cols="50" rows="5" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required required" tabindex="6" aria-required="true" aria-invalid="false" placeholder="Tell us more about your enquiry" name="laravelTextArea"></textarea></span></span>
-                      </p>
-                    </div>
-                    <div className="full_ed accept laravel-in-frm">
-                      <p><span className="laravel-agree"><span className="wpcf7-form-control-wrap" data-name="AgreePrivacyPolicy"><span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required agree_cnd hide-cf7-label required" id="contact_form_chkbox"><span className="wpcf7-list-item first last"><input type="checkbox" name="AgreePrivacyPolicy[]" value="1" tabindex="7" checked="checked" className="required" /><span className="wpcf7-list-item-label">1</span></span></span></span> I
-                        have read and agree to the <a href="#" target="_blank" rel="nofollow">Privacy
-                          Policy</a></span></p>
-                      <div id="error_msg" style={{ "display": "none" }}>
-                        <p><strong>This field is required</strong></p>
-                      </div>
-                      <p><span className="laravel-agree subscrb-check"><span className="wpcf7-form-control-wrap" data-name="subscribeCheck"><span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required agree_cnd hide-cf7-label required"><span className="wpcf7-list-item first last"><input type="checkbox" name="subscribeCheck[]" value="yes" checked="checked" tabindex="8" /><span className="wpcf7-list-item-label">yes</span></span></span></span> I would like to receive
-                        information about GoZooms’ products, services and newsletters.</span></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="block-c wt-color">
-                  <p className="bld-head"><strong>Why we collect this information and how we use it</strong></p>
-                  <p>We treat your information with respect, and we will never sell it to other companies. This
-                    information is collected out of necessity for basic account creation, billing, and support purposes.
-                    We will only email you for support.</p>
-                  <div className="l_submit">
-                    <p><input className="wpcf7-form-control has-spinner wpcf7-submit btn starBtn" tabindex="8" type="submit" value="Submit" /><span className="wpcf7-spinner"></span></p>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="col-sm-6">
-                <div className="inner-mascot-block gap-80-lft">
-                  <h3 className="lg-white-txt-nrm mg-bot50">Get in touch with our SEO Experts Today!</h3>
-                  <p><img src="../images/laravelboy2.svg" alt="gozoom Mascot" /></p>
-                </div>
-              </div>
-            </form></div> <input className="wpcf7-form-control wpcf7-hidden" id="current_url" value="https://www.codeclouds.com/web-development/laravel/" type="hidden" name="pageUrl" /> <input className="wpcf7-form-control wpcf7-hidden" id="source_url" value="Organic" type="hidden" name="sourceUrl" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="campain_url" value="" type="hidden" name="campainUrl" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="device_url" value="Desktop" type="hidden" name="urlDevice" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="user_country" value="India" type="hidden" name="userCountry" />
-          <p style={{ "display": "none !important" }}><label>Δ<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="1686942297807" />
-
-          </p>
-          <div className="wpcf7-response-output" aria-hidden="true"></div>
-
-        </div>
-
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* EXACT MIGRATED CONTENT END */}
     </div>
   );
 };

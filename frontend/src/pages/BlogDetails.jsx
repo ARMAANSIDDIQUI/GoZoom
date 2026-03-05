@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import ShootingStars from '../components/ShootingStars';
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -27,15 +28,19 @@ const BlogDetails = () => {
     if (error) return <div className="text-center py-20 text-2xl text-red-500">Blog not found.</div>;
     if (!blog) return <div className="text-center py-20 text-2xl">Loading...</div>;
     return (
-        <div className="pt-[80px] w-full bg-white font-sans">
-            <div className="absolute w-full z-10 pt-48 flex justify-center pointer-events-none px-4">
-                <h2 className="text-white text-3xl md:text-5xl font-light text-center drop-shadow-md">
-                    {blog.title}
-                </h2>
-            </div>
+        <div className="w-full bg-white font-sans">
+            <section className="relative w-full min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
+                <ShootingStars />
+                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-cyan-500/20 blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-            <section className="w-full min-h-[50vh] bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: 'url("/images/20.png")' }}>
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="relative z-10 text-center pt-[72px] px-4 max-w-4xl">
+                    <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Blog Post</span>
+                    <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold text-center drop-shadow-lg leading-tight">
+                        {blog.title}
+                    </h2>
+                </div>
             </section>
 
             <section className="py-16">

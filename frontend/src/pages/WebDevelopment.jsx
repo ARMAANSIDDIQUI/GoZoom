@@ -1,83 +1,86 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
-import { FaCheck, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 const WebDevelopment = () => {
     useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
         wow.init();
     }, []);
 
-
     const services = [
         { img: './images/PHP-logo.svg', title: 'PHP', desc: 'PHP is a popular general-purpose scripting language powering everything from your blog to the most popular websites in the world.', link: '/hire-php-developer', linkText: 'Hire PHP Developers' },
-        { img: './images/laravel-icon.svg', title: 'Laravel', desc: 'Laravel is an accessible and powerful web application framework with expressive and elegant syntax.', link: '/laravel-development-company', linkText: 'Learn More About Laravel Developers' },
-        { img: './images/codeigniter-icon.svg', title: 'CodeIgniter', desc: 'A powerful PHP framework with a tiny footprint, built for developers who need a simple toolkit to create full-featured web apps.', link: '/hire-codeIgniter-developers', linkText: 'Hire Our CodeIgniter Developers' },
-        { img: './images/angular-icon.svg', title: 'Angular', desc: 'Angular is an extensive platform for building expressive mobile and desktop web applications with compelling user interfaces.', link: '/hire-angular-developer', linkText: 'Hire our Full-Stack Angular Developers' },
-        { img: './images/jquery-icon.svg', title: 'jQuery', desc: "jQuery is a popular, light-weight and easy-to-use JS library which allows developers to quickly learn and accomplish tasks faster.", link: '/hire-jquery-developers', linkText: 'Hire our Expert jQuery Developers' },
-        { img: './images/html-icon.svg', title: 'Design to HTML Conversion', desc: 'Convert your custom web designs to HTML with enhanced performance, rich user interfaces and a smooth user experience.', link: '/hire-html-developer', linkText: 'Hire Our Front-End HTML Developers' },
-        { img: './images/react-js-icon.svg', title: 'React', desc: 'A flexible JavaScript library for building remarkable user interfaces for web applications and native mobile applications.', link: '/hire-react-developer', linkText: 'Hire Our Dedicated React Developers' },
-        { img: './images/mobile.png', title: 'Mobile Apps', desc: 'Provide the state of the art Technologies to develop the modern mobile apps, designed & powered by new emerging technologies.', link: '/mobile-application-development', linkText: 'Hire Our Dedicated Mobile App Developers', style: { maxWidth: '48px' } },
-        { img: './images/seo.png', title: 'SEO, Digital Marketing', desc: 'Are you ready to skyrocket your online presence and reach your target audience like never before?', link: '/expert-seo-services', linkText: 'Get Connected to our SEO Experts', style: { maxWidth: '48px' } },
+        { img: './images/laravel-icon.svg', title: 'Laravel', desc: 'Laravel is an accessible and powerful web application framework with expressive and elegant syntax.', link: '/laravel-development-company', linkText: 'Hire Laravel Developers' },
+        { img: './images/angular-icon.svg', title: 'Angular', desc: 'Angular is an extensive platform for building expressive mobile and desktop web applications with compelling user interfaces.', link: '/hire-angular-developer', linkText: 'Hire Angular Developers' },
+        { img: './images/react-js-icon.svg', title: 'React', desc: 'A flexible JavaScript library for building remarkable user interfaces for web applications and native mobile applications.', link: '/hire-react-developer', linkText: 'Hire React Developers' },
+        { img: './images/html-icon.svg', title: 'HTML/CSS', desc: 'Convert your custom web designs to HTML with enhanced performance, rich user interfaces and a smooth user experience.', link: '/hire-html-developer', linkText: 'Hire Front-End Developers' },
+        { img: './images/jquery-icon.svg', title: 'jQuery', desc: "jQuery is a popular, light-weight and easy-to-use JS library which allows developers to quickly learn and accomplish tasks faster.", link: '/hire-jquery-developers', linkText: 'Hire jQuery Developers' },
+        { img: './images/mobile.png', title: 'Mobile Apps', desc: 'Provide the state of the art Technologies to develop the modern mobile apps, designed & powered by new emerging technologies.', link: '/mobile-application-development', linkText: 'Hire Mobile Developers' },
+        { img: '/images/android-icon.svg', title: 'Android App', desc: 'Secure and scalable Android application development utilizing the latest architecture and Android SDKs.', link: '/android-development', linkText: 'Hire Android Developers' },
+        { img: '/images/apple-icon.svg', title: 'iOS App', desc: 'Premium, native iOS application development tailored for enterprises and consumer markets.', link: '/ios-development', linkText: 'Hire iOS Developers' },
+        { img: './images/chatbot-icon.svg', title: 'Chatbot', desc: 'Intelligent AI-powered bots that automate customer interaction and elevate the customer service experience.', link: '/chatbot', linkText: 'Hire Chatbot Developers' },
+        { img: './images/seo.png', title: 'SEO & Marketing', desc: 'Are you ready to skyrocket your online presence and reach your target audience like never before?', link: '/expert-seo-services', linkText: 'Talk to SEO Experts' },
+        { img: './images/kiosk-icon.svg', title: 'Kiosk Solutions', desc: 'Interactive kiosk software solutions that enhance customer experience and streamline operations.', link: '/kiosks', linkText: 'Explore Kiosks' },
+        { img: './images/codeigniter-icon.svg', title: 'CodeIgniter', desc: 'A powerful PHP framework with a tiny footprint, built for developers who need a simple toolkit to create full-featured web apps.', link: '/hire-codeIgniter-developers', linkText: 'Hire CodeIgniter Developers' },
     ];
 
     const testimonials = [
-        { name: 'Aditya Rathor', company: 'Maison Infra', text: "We engaged with Gozoom Web Development for our company's website overhaul, and the results were exceptional. Their team exhibited profound technical expertise, delivering a modern and user-friendly website that perfectly aligned with our brand." },
+        { name: 'Aditya Rathor', company: 'Maison Infra', text: "We engaged with Gozoom Web Development for our company's website overhaul, and the results were exceptional. Their team exhibited profound technical expertise, delivering a modern and user-friendly website." },
         { name: 'Rishabh', company: 'Bucket Bun', text: "Working with Gozoom Web Development was a game-changer for our business. Their team of developers demonstrated unparalleled skill and creativity in bringing our vision to life." },
         { name: 'Himanshu Singh', company: 'Exon SAHA', text: "We partnered with Gozoom Web Development to revamp our company's online presence, and the outcome exceeded our expectations. Their technical prowess and innovative approach transformed our website." },
-        { name: 'Ravi Kumar', company: 'Sokkiefy', text: "Hiring GHI Web Development was one of the best decisions we made for our e-commerce venture. Their expertise in web development and e-commerce solutions helped us create a robust online store." },
+        { name: 'Ravi Kumar', company: 'Sokkiefy', text: "Hiring Gozoom Web Development was one of the best decisions we made for our e-commerce venture. Their expertise in web development and e-commerce solutions helped us create a robust online store." },
     ];
 
     return (
-        <div className="font-['Lato',sans-serif] overflow-x-hidden">
+        <div>
+            {/* Hero Banner — Blue Web colors */}
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%)' }}></div>
+                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-600/25 blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-indigo-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full bg-sky-500/15 blur-[80px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-            {/* Hero Banner */}
-            <section className="relative min-h-[680px] h-[680px] bg-cover bg-center bg-no-repeat overflow-hidden flex items-center"
-                style={{ background: 'linear-gradient(to right, #0012c4 0%, #62cff1 100%)' }}>
-                <div className="absolute inset-0 opacity-60" style={{ background: 'linear-gradient(to right, #0012c4 0%, #62cff1 100%)' }}></div>
-                {/* Decorative shapes */}
-                <div className="absolute left-[9%] top-[-58%] w-[144%] h-[860px] bg-white opacity-20 origin-top-left" style={{ transform: 'rotate(49deg)', minHeight: '1395px' }}></div>
-                <div className="absolute w-[69%] h-[1436px] bg-white opacity-[0.078] left-[-1103px] top-[-259px]" style={{ transform: 'skew(-247deg)', transformOrigin: 'left' }}></div>
-                <div className="relative z-10 container mx-auto px-4 mt-[80px]">
-                    <div className="mt-[60px] mb-[27px]">
-                        <h1 className="text-white font-['Lato',sans-serif] text-[43px] font-normal leading-none m-0 mb-[25px]">Web Development Services You Can Trust</h1>
-                        <h2 className="text-white font-normal text-[20px] m-0 mb-[30px]">Creating powerful, effective, and engaging web experiences</h2>
-                        <p className="text-[20px] text-white mb-[30px] font-normal">
-                            <a id="explore-btn" href="#explore"
-                                className="inline-block bg-white text-[#014e72] px-[30px] py-[13px] text-[16px] font-medium rounded-[100px] hover:bg-[#014e72] hover:text-white transition-colors mr-[15px]">
-                                Explore
-                            </a>
-                            <a href="/contact"
-                                className="inline-block bg-transparent border-[2px] border-white text-white px-[32px] py-[12px] text-[16px] font-medium rounded-[100px] hover:bg-[#014e72] hover:border-[#014e72] transition-colors">
-                                Enquire Now
-                            </a>
+                <div className="container relative z-10 block">
+                    <div className="max-w-3xl text-center mx-auto">
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Web Development</span>
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                            Web Development Services <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">You Can Trust</span>
+                        </h1>
+                        <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                            Creating powerful, effective, and engaging web experiences for businesses of all sizes
                         </p>
+                        <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#explore" className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Explore Services</a>
+                            <Link to="/contact" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Enquire Now</Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Services Section */}
-            <section id="explore" className="bg-white py-[30px] pb-[100px]">
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-[50px]">
-                        <h2 className="text-[30px] font-normal text-[#252525] text-center">Our Website Development Services</h2>
+            <section id="explore" className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-blue-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
+                <div className="container relative z-10 block">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">What We Offer</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">Our Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Development Services</span></h2>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-[50px] mt-[20px]">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((svc, i) => (
-                            <div key={i} className="text-center px-[15px]">
-                                <div className="relative h-[70px] mb-[5px] flex justify-center items-center">
-                                    <img src={svc.img} className="w-[140px] max-h-[45px] mt-[15px]" alt={svc.title} style={svc.style || {}} />
+                            <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group text-center" data-aos="fade-up" data-aos-delay={i * 80}>
+                                <div className="h-20 flex items-center justify-center mb-5">
+                                    <img src={svc.img} className="max-h-14 w-auto group-hover:scale-110 transition-transform" alt={svc.title} />
                                 </div>
-                                <h3 className="text-[#252525] text-[20px] leading-none m-0 mb-[20px] font-medium">{svc.title}</h3>
-                                <p className="max-w-[325px] w-full mx-auto mb-[20px] text-[15px] leading-[21px] font-normal text-[#373645]">{svc.desc}</p>
-                                <div>
-                                    <Link to={svc.link} className="text-[#0e90d0] text-[16px] cursor-pointer hover:underline inline-flex items-center gap-1">
-                                        {svc.linkText} <FaArrowRight className="text-sm" />
-                                    </Link>
-                                </div>
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">{svc.title}</h3>
+                                <p className="text-slate-600 text-sm leading-relaxed mb-5">{svc.desc}</p>
+                                <Link to={svc.link} className="text-blue-600 font-bold hover:text-indigo-600 inline-flex items-center gap-1 transition-colors">
+                                    {svc.linkText} <FaArrowRight className="text-sm" />
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -85,95 +88,103 @@ const WebDevelopment = () => {
             </section>
 
             {/* Why Choose Section */}
-            <div className="py-[5rem]">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h2 className="font-['Poppins',sans-serif] font-normal text-[#282d30] text-[2.625rem] mb-[3rem] leading-[1.4]">
-                                Why Brands Choose Gozoom for their Web Development Services
-                            </h2>
-                            <img src="/images/web-client.png" alt="" className="max-w-full h-auto" />
-                        </div>
-                        <div className="pl-[2rem]">
-                            <div className="text-[1.25rem] leading-[2rem] text-[#332a31] mb-[1em]">
-                                Here are several aspects that make us unique in our approach to creative website design and development services.
-                            </div>
-                            <ul className="list-none pl-[25px] mt-[2.5rem] space-y-4">
+            <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-950/50 to-slate-900 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(37,99,235,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(99,102,241,0.5) 0%, transparent 50%)' }}></div>
+                <div className="container relative z-10 block">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Why Choose Us</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Why Brands Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Gozoom</span> for Web Development</h2>
+                            <div className="space-y-4">
                                 {[
                                     'Custom web design and development methodology',
                                     'Recognized as an award-winning website development firm',
                                     'Affordable rates for website design and development expertise',
-                                    'Diverse team of over 300 experts located in Canada & India',
-                                    'In-house front-end specialists: Business Analysts, UX/UI Design Experts, and Responsive Web Developers',
+                                    'In-house front-end specialists: BA, UX/UI Design, Responsive Dev',
                                     'A friendly, open, communicative, and collaborative client approach',
-                                    'Demonstrated history of successful delivery of web design and development projects',
+                                    'Demonstrated history of successful project delivery',
                                     'Thorough quality assurance (QA) testing prior to launch',
                                     'Reduced development times leading to cost savings',
-                                    'Unrivaled open technology knowledge and background',
                                 ].map((item, i) => (
-                                    <li key={i} className="mb-[1rem] text-[1.25rem] leading-[2rem] text-[#332a31] flex items-start gap-2">
-                                        <FaCheck className="mt-2 shrink-0 text-blue-500" />{item}
-                                    </li>
+                                    <div key={i} className="flex gap-3 p-4 bg-white/5 rounded-xl hover:bg-blue-500/10 transition-colors">
+                                        <div className="flex-shrink-0 w-6 h-6 bg-blue-500/30 rounded-lg flex items-center justify-center mt-0.5">
+                                            <svg className="w-3 h-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                        </div>
+                                        <span className="text-slate-300">{item}</span>
+                                    </div>
                                 ))}
-                            </ul>
-                            <a href="/contact">
-                                <button type="button" className="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded font-medium transition-colors">Get In Touch</button>
-                            </a>
+                            </div>
+                            <div className="mt-8">
+                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Get In Touch</Link>
+                            </div>
+                        </div>
+                        <div className="relative hidden lg:block" data-aos="fade-left">
+                            <div className="absolute inset-0 bg-blue-500/10 rounded-3xl blur-[40px]"></div>
+                            <img src="/images/web-client.png" alt="Web Clients" className="w-full relative z-10 rounded-3xl shadow-2xl" />
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* In-House Team Section */}
-            <section className="bg-black py-[30px] pb-[170px]">
-                <div className="container mx-auto px-4">
-                    <div>
-                        <div className="text-white text-[30px] font-normal m-0 mb-[15px] pt-0 pl-0">Our Team of In-House Developers</div>
-                        <div className="text-white font-medium italic text-[20px] leading-[1.4] m-0 mb-[20px]">Have peace of mind knowing we'll deliver outstanding solutions with affordability in mind!</div>
-                        <div className="w-full">
-                            <p className="text-white leading-[1.4] text-[16px] font-normal m-0 mb-[20px]">
-                                Our team of web development professionals is ready to bring your dream website, online store, or custom web application to life with speed and precision. With decades of collective experience and unparalleled technical expertise, we ensure your project is executed flawlessly
-                            </p>
-                            <p className="text-white leading-[1.4] text-[16px] font-normal m-0 mb-[20px]">
-                                Leave it up to us to provide solutions that exceed your expectations and help your business grow online!
-                            </p>
+            <section className="py-24 bg-slate-50 relative">
+                <div className="container relative z-10 block">
+                    <div className="bg-gradient-to-r from-slate-900 to-blue-900 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px]"></div>
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-[80px]"></div>
+                        <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Our Team</span>
+                                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Team of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">In-House Developers</span></h3>
+                                <p className="text-slate-300 text-lg italic mb-4">Have peace of mind knowing we'll deliver outstanding solutions with affordability in mind!</p>
+                                <p className="text-slate-400 mb-6">Our team of web development professionals is ready to bring your dream website, online store, or custom web application to life with speed and precision.</p>
+                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Get Developers Today</Link>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    { num: '3000+', label: 'Projects Delivered', color: 'blue' },
+                                    { num: '100+', label: 'Enterprise Clients', color: 'indigo' },
+                                    { num: '300+', label: 'Expert Developers', color: 'sky' },
+                                    { num: '7+', label: 'Years Experience', color: 'cyan' },
+                                ].map((stat, i) => (
+                                    <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
+                                        <p className="text-3xl font-extrabold text-white mb-1">{stat.num}</p>
+                                        <p className="text-slate-400 text-sm">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <a href="/contact"
-                            className="inline-block mt-[10px] bg-[#0e90d0] hover:bg-white hover:text-[#0e90d0] text-white px-[32px] py-[14px] rounded-[100px] font-medium text-[15px] leading-none transition-colors">
-                            Get Developers Today
-                        </a>
                     </div>
                 </div>
             </section>
 
             {/* Testimonials */}
-            <section className="py-10">
-                <div className="container mx-auto px-4 max-w-7xl">
-                    <div className="text-center max-w-[600px] mx-auto mb-[3rem]">
-                        <h6 className="text-blue-500 font-semibold uppercase tracking-widest text-sm bg-white px-3 inline-block">Testimonial</h6>
-                        <h1 className="text-[2.5rem] font-bold mt-2">What Our Clients Say!</h1>
+            <section className="py-24 bg-white relative">
+                <div className="container relative z-10 block">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 uppercase tracking-wider">Testimonials</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Clients Say!</span></h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-6">
                         {testimonials.map((t, i) => (
-                            <div key={i} className="bg-gray-100 rounded-lg p-6">
-                                <div className="flex items-center mb-4">
-                                    <img src="./images/profile.jpg" alt="" className="shrink-0 rounded-full border p-1 w-[50px] h-[50px] object-cover" />
-                                    <div className="ml-4">
-                                        <h5 className="font-semibold m-0">{t.name}</h5>
-                                        <span className="text-gray-500 text-sm">{t.company}</span>
+                            <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <span className="text-xl font-bold text-blue-600">{t.name[0]}</span>
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-slate-800">{t.name}</h5>
+                                        <span className="text-slate-500 text-sm">{t.company}</span>
                                     </div>
                                 </div>
-                                <p className="m-0 text-[#373645] text-[15px] leading-relaxed">{t.text}</p>
+                                <p className="text-slate-600 leading-relaxed italic">"{t.text}"</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
-
-            {/* EXACT MIGRATED CONTENT END */}
         </div>
     );
 };
 
 export default WebDevelopment;
-

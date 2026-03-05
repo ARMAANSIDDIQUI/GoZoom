@@ -15,429 +15,128 @@ const MobileAppDev = () => {
 
     return (
         <div>
-            {/* EXACT MIGRATED CONTENT BEGIN */}
+            {/* Hero Banner — Purple Mobile colors */}
+            <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #2e1065 50%, #0f172a 100%)' }}></div>
+                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-purple-600/30 blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-violet-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-pink-500/15 blur-[80px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-
-
-
-
-            <section className="home-app hero-sec r-bg-x">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 vcenter">
-                            <div className="hero-content-a">
-
-                                <h1 className="mb30 zup" data-aos="fade-in" data-aos-delay="200">Top Mobile Application Development Company in Canada</h1>
-                                <p className="zup" data-aos="fade-in" data-aos-delay="500">
-                                    Canada's top mobile app developer crafting secure, dynamic solutions for iOS, Android, and Cross-Platform, ensuring robustness.</p>
-
-                                <div className="uniq-points mt40" data-aos="fade-in" data-aos-delay="800">
-                                    <div className="uniq-card uca">
-                                        <i className="fas fa-users"></i>
-                                        <p>100k User Engagement</p>
+                <div className="container relative z-10 block">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Mobile Development</span>
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                                Top Mobile App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Company</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                                Crafting secure, dynamic solutions for iOS, Android, and Cross-Platform, ensuring robustness and performance.
+                            </p>
+                            <div className="grid grid-cols-3 gap-4 mb-10" data-aos="fade-up" data-aos-delay="500">
+                                {[
+                                    { label: 'User Engagement', value: '100k', color: 'purple' },
+                                    { label: 'Featured Apps', value: '100+', color: 'violet' },
+                                    { label: 'Apps Published', value: '600+', color: 'pink' },
+                                ].map((stat, i) => (
+                                    <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center">
+                                        <p className="text-2xl font-extrabold text-white">{stat.value}</p>
+                                        <p className="text-slate-400 text-xs mt-1">{stat.label}</p>
                                     </div>
-                                    <div className="uniq-card ucb">
-                                        <i className="fab fa-app-store-ios"></i>
-                                        <p>100+ Featured App</p>
-                                    </div>
-                                    <div className="uniq-card ucc">
-                                        <i className="fas fa-rocket"></i>
-                                        <p>600+ App Published</p>
-                                    </div>
-                                </div>
-                                <div className="btn-sets2 vcenter  mt20" data-aos="fade-in" data-aos-delay="1100">
-                                    <Link to="/contact" className="ree-btn  ree-btn-grdt1 mw-80 mr20 mt20">Talk to Our Expert <FaArrowRight className="inline ml-1" /></Link>
-                                    <div className="media vcenter mt20">
-                                        <div className="btnctm">
-                                            <Link to="/about" className="ree-btn ree-btn-grdt2 mw-80 m-mt30">Know More  <FaArrowRight className="inline ml-1" /></Link>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="700">
+                                <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/30 transition-all hover:-translate-y-1 flex items-center gap-2">Talk to Our Expert <FaArrowRight /></Link>
+                                <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 flex items-center gap-2">Know More <FaArrowRight /></Link>
                             </div>
                         </div>
-                        <div className="col-lg-6 vcenterYU">
-                            <div className="sol-image m-mt20">
-                                <img src="../images/app-mockup.png" alt="App development" className="img-fluid" data-aos="fade-in" data-aos-delay="400" />
-                            </div>
+                        <div className="relative" data-aos="fade-left">
+                            <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[80px]"></div>
+                            <img src="../images/app-mockup.png" alt="App development" className="w-full max-w-lg mx-auto relative z-10 animate-float drop-shadow-2xl" />
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-            <section className="home-about sec-pad r-bg-a">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-10">
-                            <div className="about-content-home m-mb60 text-center">
-                                <span className="sub-heading mb15">We Are Gozoom Technologies</span>
-                                <h2 className="mb15"><span className="ree-text rt40">Award</span> Winning App Development Company</h2>
-                                <h4 className="mb15">#1 Mobile App Company, Awarded for its Top Features/Editor Apps Delivered.</h4>
-                                <p>Gozoom Technologies is a leading global player in Web, App, and Digital Marketing services. Specializing in Web Design, App Development, Digital Marketing, Product Design, and Cloud Services, we prioritize affordability while delivering top-quality solutions. With a strong focus on customer satisfaction and high repeat business rates, we stand out in the industry. Don't hesitate any longer – let's transform your ideas into reality with our innovative approach. Your success is our ultimate goal.
-                                </p>
-                            </div>
-                        </div>
+            {/* About Section */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-purple-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
+                <div className="container relative z-10 block">
+                    <div className="max-w-4xl mx-auto text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-50 text-purple-600 font-bold text-sm mb-4">We Are Gozoom Technologies</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Award</span> Winning App Development Company</h2>
+                        <p className="text-xl text-slate-600 font-semibold mb-4">#1 Mobile App Company, Awarded for its Top Features/Editor Apps Delivered.</p>
+                        <p className="text-lg text-slate-600 leading-relaxed">Gozoom Technologies is a leading global player in Web, App, and Digital Marketing services. Specializing in Web Design, App Development, Digital Marketing, Product Design, and Cloud Services, we prioritize affordability while delivering top-quality solutions.</p>
                     </div>
-                </div>
-                <div className="agency-info-ree mt100">
-                    <div className="agency-picture"><img src="../images/office-view.jpg" alt="img" className="img-fluid" /></div>
-                    <div className="container">
-                        <div className="row key-and-award">
-                            <div className="ree-app-st-a flx-end m-order2">
-                                <div className="btnctm">
-                                    <Link to="/contact" className="ree-btn ree-btn-grdt2 mw-80 m-mt30">Connect with Us <FaArrowRight className="inline ml-1" /></Link>
-                                </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {[
+                            { num: '3000+', label: 'Projects Delivered', color: 'purple' },
+                            { num: '100+', label: 'Enterprise Clients', color: 'violet' },
+                            { num: '30+', label: 'Expert Team', color: 'pink' },
+                            { num: '7+', label: 'Success Years', color: 'fuchsia' },
+                        ].map((stat, i) => (
+                            <div key={i} className="glass-card bg-white p-6 rounded-2xl text-center shadow-xl border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <h3 className="text-3xl font-extrabold text-slate-800 mb-2">{stat.num}</h3>
+                                <p className="text-slate-600 font-semibold">{stat.label}</p>
                             </div>
-                            <div className="ree-app-st-b m-order1">
-                                <div className="quick-key-points">
-                                    <div className="key-highlights">
-                                        <div className="key-highlt-b">
-                                            <h3><span>3000</span> <span>+</span></h3>
-                                            <p>Project Delivered</p>
-                                        </div>
-                                        <div className="key-highlt-b">
-                                            <h3><span>100 </span> <span>+</span></h3>
-                                            <p>Enterprise Clients</p>
-                                        </div>
-                                        <div className="key-highlt-b">
-                                            <h3><span>30 </span> <span>+</span></h3>
-                                            <p>Experts Team</p>
-                                        </div>
-                                        <div className="key-highlt-b">
-                                            <h3><span>7 </span> <span>+</span></h3>
-                                            <p>Success Years</p>
-                                        </div>
-                                    </div>
-                                    <div className="agency-info-anim text-center">
-                                        <div className="animated-logo">
-                                            <img src="../images/logo2.webp" alt="gozoom tech logo" className="logo-anim" />
-                                            <img src="../images/app-development.webp" alt="gozoom logo" className="circle-anim" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-
-            <section className="r-bg-i sec-pad">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="sec-heading text-center ">
-                                <span className="sub-heading mb15">Ous Services</span>
-                                <h2>We build modern <span className="ree-text rt40">creative</span> <span className="ree-text rt40">mobile</span> experiences.</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt30">
-                        <div className="col-lg-4 col-sm-4" data-aos="fade-up" data-aos-delay="100">
-                            <div className="ree-card r-bg-c mt60">
-                                <div className="ree-card-img shadows"><img src="../images/icons/android.svg" alt="services" /> </div>
-                                <div className="ree-card-content mt40">
-                                    <h3 className="mb15"><Link to="/android-development"> Android Development</Link></h3>
-                                    <p>Elevate your business with our expert Android development services. We create cutting-edge apps for optimal performance and user satisfaction.</p>
-                                </div>
-                                <div className="ree-card-content-link">
-                                    <Link to="/android-development" className="ree-card-link mt40">Read More <FaArrowRight className="inline ml-1" /></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-sm-4" data-aos="fade-up" data-aos-delay="300">
-                            <div className="ree-card r-bg-c  mt60">
-                                <div className="ree-card-img"><img src="../images/icons/apple.svg" alt="services" /> </div>
-                                <div className="ree-card-content mt40">
-                                    <h3 className="mb15"><Link to="/ios-development">iOS Development</Link></h3>
-                                    <p>Transform your vision into reality with our iOS development expertise. From concept to launch, we craft sleek, intuitive apps that captivate users and elevate your brand.</p>
-                                </div>
-                                <div className="ree-card-content-link">
-                                    <Link to="/ios-development" className="ree-card-link mt40">Read More <FaArrowRight className="inline ml-1" /></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-sm-4" data-aos="fade-up" data-aos-delay="500">
-                            <div className="ree-card r-bg-c  mt60">
-                                <div className="ree-card-img"><img src="../images/icons/cube.svg" alt="services" /> </div>
-                                <div className="ree-card-content mt40">
-                                    <h3 className="mb15"><a href="#">Hybrid App Development</a></h3>
-                                    <p>Hybrid apps offer cost-effective solutions, reaching wider audiences with seamless performance across platforms, saving time and resources for businesses.</p>
-                                </div>
-                                <div className="ree-card-content-link">
-                                    <a href="#" className="ree-card-link mt40">Read More <i className="fas fa-arrow-right fa-btn"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div className="cta-block-wide mt100">
-                        <div className="row justify-content-center text-center">
-                            <div className="col-lg-10 vcenter">
-                                <div className="cta-heading-wide-bt">
-                                    <h3>Hire World-Class <span className="ree-text rt40">Mobile App Developers</span></h3>
-                                    <Link to="/contact" className="ree-btn  ree-btn-grdt1 mw-80">Hire Now <FaArrowRight className="inline ml-1" /></Link>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-
-
-
-
-            <section className="r-bg-x zup sec-pad">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="sec-heading text-center blck">
-                                <h2>Technologies  we work with</h2>
-                            </div>
-                        </div>
+            {/* App Types Section */}
+            <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-950/50 to-slate-900 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(147,51,234,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(236,72,153,0.5) 0%, transparent 50%)' }}></div>
+                <div className="container relative z-10 block">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Our Services</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-white">We build modern <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">mobile experiences</span></h3>
                     </div>
-                    <div className="row justify-content-center mt30">
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/apple.svg" alt="Apple" /> </div>
-                                    <div className="iwt-content">
-                                        <p>iOS</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/android.svg" alt="Android" /> </div>
-                                    <div className="iwt-content">
-                                        <p>Android</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/flutterio-icon.svg" alt="Flutter" /> </div>
-                                    <div className="iwt-content">
-                                        <p>Flutter</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/java.svg" alt="Java" />
-                                    </div>
-                                    <div className="iwt-content">
-                                        <p>Java</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/physics.svg" alt="React Native" /> </div>
-                                    <div className="iwt-content">
-                                        <p>React Native</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/kotlin.png" alt="python" /> </div>
-                                    <div className="iwt-content">
-                                        <p>Kotlin</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/java.svg" alt="Java" />
-                                    </div>
-                                    <div className="iwt-content">
-                                        <p>Java</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/icons/swift.svg" alt="Apswiftple" /> </div>
-                                    <div className="iwt-content">
-                                        <p>Swift</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-2 col-6">
-                            <div className="icon-with-title">
-                                <a href="javascript:void(0)">
-                                    <div className="iwt-icon"> <img src="../images/dart.png" alt="pwa" />
-                                    </div>
-                                    <div className="iwt-content">
-                                        <p>Dart</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-            <section className="mobile-container">
-                <div className="bg_wrapper">
-                    <div className="container">
-                        <div className="cl_serv_part">
-                            <h2 className="heading2"> Why Choose Us for Custom
-                                Mobile <br />Gozoom Development Services?</h2>
-                            <div className="app__subhead para"> Gozoom is an excellent native and cross-platform mobile app
-                                development service <br /> provider. With over three years of experience, an expert team of over
-                                1,200 professionals, and
-                                an <br /> impressive portfolio of over 3,000 successful projects, our team is capable of
-                                delivering
-                                top-notch <br /> next-generation mobile apps that guarantee highest ROI.</div>
-                            <div className="parter_tab_panel">
-                                <div className="ds_flex flex_spc_btw">
-                                    <div className="container">
-                                        <div className="row">
-                                            <div className="col">
-                                                <div className="tab__head_panel">
-                                                    <ul>
-                                                        <li className="tab-link-wrapper active" rel="tab1"> <span>Security- and <br />
-                                                            Compliance-First Approach</span></li>
-                                                        <li className="tab-link-wrapper" rel="tab2"> <span>4.5/5 Average Rating</span></li>
-                                                        <li className="tab-link-wrapper" rel="tab3"> <span>Advanced Technical <br />
-                                                            Expertise</span></li>
-                                                        <li className="tab-link-wrapper" rel="tab4"> <span>Faster Delivery</span></li>
-                                                    </ul>
-                                                </div>
-
-
-                                            </div>
-                                            <div className="col">
-                                                <div className="part_rght_panel ds_flex flex_spc_btw">
-                                                    <div className="tab-detail block" id="tab1" style={{ "display": "block" }}>
-                                                        <div className="tab_detl_inner ds_flex flex_spc_btw flex_al_start">
-                                                            <div className="tab_img_wrap">
-                                                                <figure> <img src="../images/young-business-team.webp" alt="" /></figure>
-                                                            </div>
-                                                            <p className="para text"> By prioritizing data encryption and strictly following all
-                                                                compliances and
-                                                                regulations
-                                                                we cater to secure mobile
-                                                                application development for our esteemed clients. Our commitment to
-                                                                implement robust security measures help businesses mitigate risks and
-                                                                establish customer trust, ensuring a more substantial online presence and
-                                                                enhanced business agility.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tab-detail" id="tab2">
-                                                        <div className="tab_detl_inner ds_flex flex_spc_btw flex_al_start">
-                                                            <div className="tab_img_wrap">
-                                                                <figure> <img src="../images/business-people.webp" alt="" /></figure>
-                                                            </div>
-                                                            <p className="para"> Custom mobile apps developed for our client base witness an
-                                                                exceptional
-                                                                average rating of 4.5/5 at both the Google Play Store and App Store. The
-                                                                positive feedback and excellent ratings for our app’s performance, features,
-                                                                and overall UX are a testimony to the level of perfection we achieve for our
-                                                                clients’ projects.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tab-detail" id="tab3">
-                                                        <div className="tab_detl_inner ds_flex flex_spc_btw flex_al_start">
-                                                            <div className="tab_img_wrap">
-                                                                <figure> <img src="../images/programmer-working-with-software.webp" alt="" /></figure>
-                                                            </div>
-                                                            <p className="para"> Our skilled team is highly proficient in an extensive array of
-                                                                technologies,
-                                                                encompassing
-                                                                Artificial
-                                                                Intelligence, Cloud Computing, IoT, and more. Each member of our team
-                                                                contributes a distinct skill set and valuable experience in offering custom
-                                                                mobile apps services to our client base.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tab-detail" id="tab4">
-                                                        <div className="tab_detl_inner ds_flex flex_spc_btw flex_al_start">
-                                                            <div className="tab_img_wrap">
-                                                                <figure> <img src="../images/software-developers.webp" alt="" /></figure>
-                                                            </div>
-                                                            <p className="para">we consistently deliver
-                                                                projects 57%
-                                                                faster compared to traditional delivery methods. Our dedicated mobile
-                                                                software development services and efficient project management techniques
-                                                                enable us to accelerate development timelines while maintaining high quality
-                                                                and client satisfaction.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div className="grid md:grid-cols-3 gap-8 mb-12">
+                        {[
+                            { img: '../images/icons/android.svg', title: 'Android Development', desc: 'Elevate your business with our expert Android development services. We create cutting-edge apps for optimal performance and user satisfaction.', link: '/android-development', color: 'green' },
+                            { img: '../images/icons/apple.svg', title: 'iOS Development', desc: 'Transform your vision into reality with our iOS development expertise. From concept to launch, we craft sleek, intuitive apps that captivate users.', link: '/ios-development', color: 'slate' },
+                            { img: '../images/icons/cube.svg', title: 'Hybrid App Development', desc: 'Hybrid apps offer cost-effective solutions, reaching wider audiences with seamless performance across platforms, saving time and resources.', link: '#', color: 'indigo' },
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay={i * 150}>
+                                <div className="w-20 h-20 mx-auto mb-6 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <img src={item.img} alt={item.title} className="w-10 h-10" />
                                 </div>
+                                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                                <p className="text-slate-300 leading-relaxed text-sm mb-5">{item.desc}</p>
+                                <Link to={item.link} className="text-purple-400 font-bold hover:text-pink-400 inline-flex items-center gap-1 transition-colors">Read More <FaArrowRight className="text-sm" /></Link>
                             </div>
-                        </div>
+                        ))}
+                    </div>
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <h3 className="text-3xl md:text-4xl font-bold text-white">Hire World-Class <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Mobile App Developers</span></h3>
+                        <Link to="/contact" className="flex-shrink-0 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:-translate-y-1 flex items-center gap-2">Hire Now <FaArrowRight /></Link>
                     </div>
                 </div>
-
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* EXACT MIGRATED CONTENT END */}
+            {/* Technologies Section */}
+            <section className="py-24 bg-slate-50 relative">
+                <div className="container relative z-10 block">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 font-bold text-sm mb-4">Tech Stack</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Technologies <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">We Work With</span></h3>
+                    </div>
+                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4">
+                        {[
+                            { name: 'iOS', img: 'apple.svg' }, { name: 'Android', img: 'android.svg' }, { name: 'Flutter', img: 'flutterio-icon.svg' },
+                            { name: 'Java', img: 'java.svg' }, { name: 'React Native', img: 'physics.svg' }, { name: 'Kotlin', img: '../kotlin.png', rel: true },
+                            { name: 'Swift', img: 'swift.svg' }, { name: 'Dart', img: '../dart.png', rel: true }, { name: 'Java', img: 'java.svg' }
+                        ].map((tech, i) => (
+                            <div key={i} className="glass-card bg-white border border-slate-100 p-4 rounded-2xl text-center hover:bg-purple-50 hover:border-purple-200 hover:-translate-y-2 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay={i * 50}>
+                                <div className="h-12 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                                    <img src={tech.rel ? tech.img : `../images/icons/${tech.img}`} alt={tech.name} className="max-h-10 w-auto" />
+                                </div>
+                                <p className="font-semibold text-slate-700 group-hover:text-purple-600 text-xs">{tech.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

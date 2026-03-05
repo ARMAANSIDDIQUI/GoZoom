@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCheckCircle, FaArrowRight, FaUsers, FaStar, FaRocket, FaBolt, FaTag, FaHeadset } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import WOW from 'wow.js';
+import 'animate.css';
 
 // Data for each hire page variant
 const pageData = {
@@ -59,7 +63,7 @@ const pageData = {
         pageImg: '/images/react11.png',
     },
     'Hire Angular Developers': {
-        bannerClass: 'from-red-600 to-red-900',
+        bannerClass: 'from-red-600 to-rose-900',
         tagline: 'Hire Dedicated Angular Developers',
         subtitle: 'Everything you need to get your project started in 24 hours',
         heroImg: '/images/angularboy.svg',
@@ -83,13 +87,13 @@ const pageData = {
         ],
         ctaTitle: 'Ask our Angular professionals about their services today!',
         formName: 'angularHireForm',
-        pageImg: '/images/angular-icon.svg',
+        pageImg: '/images/angularbg.webp',
     },
     'Hire jQuery Developers': {
-        bannerClass: 'from-blue-500 to-blue-800',
+        bannerClass: 'from-blue-600 to-slate-900',
         tagline: 'Hire Expert jQuery Developers',
         subtitle: 'Fast, lightweight JavaScript solutions for your web projects',
-        heroImg: '/images/jquery-icon.svg',
+        heroImg: '/images/programmer-working-with-software.webp',
         introTitle: 'Expert jQuery Development for Fast, Efficient Web Applications',
         introText: `jQuery is a popular, light-weight and easy-to-use JavaScript library which allows developers to quickly learn and accomplish tasks faster. It simplifies HTML document traversal, event handling, animation, and Ajax interaction.`,
         introText2: `Our jQuery developers are skilled in building interactive, responsive websites and web applications that function flawlessly across all browsers and devices. Let GoZooms handle your jQuery development needs.`,
@@ -110,13 +114,13 @@ const pageData = {
         ],
         ctaTitle: 'Ask our jQuery experts about their services today!',
         formName: 'jqueryHireForm',
-        pageImg: '/images/jquery-icon.svg',
+        pageImg: '/images/jquerybgg.webp',
     },
     'Hire HTML Developers': {
-        bannerClass: 'from-orange-500 to-orange-700',
+        bannerClass: 'from-orange-500 to-amber-700',
         tagline: 'Hire Front-End HTML Developers',
         subtitle: 'Convert your designs into pixel-perfect HTML/CSS websites',
-        heroImg: '/images/html-icon.svg',
+        heroImg: '/images/software-developers.webp',
         introTitle: 'Design to HTML Conversion — Pixel-Perfect Results Every Time',
         introText: `Our HTML developers specialize in converting custom web designs to HTML with enhanced performance, rich user interfaces, and a smooth user experience. We work with PSD, Figma, XD, and Sketch files.`,
         introText2: `GoZooms front-end HTML developers are experienced in building responsive, cross-browser compatible HTML5/CSS3 websites that look great on all devices and deliver fast load times.`,
@@ -137,13 +141,13 @@ const pageData = {
         ],
         ctaTitle: 'Ask our HTML experts about their services today!',
         formName: 'htmlHireForm',
-        pageImg: '/images/html-icon.svg',
+        pageImg: '/images/webdevbg.webp',
     },
     'Hire CodeIgniter Developers': {
-        bannerClass: 'from-orange-600 to-red-700',
+        bannerClass: 'from-orange-600 to-rose-800',
         tagline: 'Hire Expert CodeIgniter Developers',
         subtitle: 'Powerful PHP framework solutions for your web applications',
-        heroImg: '/images/codeigniter-icon.svg',
+        heroImg: '/images/codeignitorboy1.svg',
         introTitle: 'CodeIgniter Development — Speed, Performance, and Elegance',
         introText: `CodeIgniter is a powerful PHP framework with a tiny footprint, built for developers who need a simple toolkit to create full-featured web apps. It has a small footprint, exceptional performance, and near-zero configuration.`,
         introText2: `Our CodeIgniter developers have extensive experience building web applications with this PHP framework. We deliver robust, scalable, and maintainable applications with clean code architecture and best practices.`,
@@ -164,13 +168,13 @@ const pageData = {
         ],
         ctaTitle: 'Ask our CodeIgniter experts about their services today!',
         formName: 'codeigniterHireForm',
-        pageImg: '/images/codeigniter-icon.svg',
+        pageImg: '/images/codeignitor2.svg',
     },
     'Laravel Development Company': {
-        bannerClass: 'from-red-500 to-red-800',
+        bannerClass: 'from-rose-500 to-red-900',
         tagline: 'Expert Laravel Development Company',
         subtitle: 'Get an Application Made by an Expert Laravel Development Company',
-        heroImg: '/images/laravel-icon.svg',
+        heroImg: '/images/laravelboy1.svg',
         introTitle: 'Laravel — Elegant Web Application Framework',
         introText: `Laravel is an accessible and powerful web application framework with expressive and elegant syntax. It takes the pain out of development by easing common tasks such as routing, sessions, caching, and authentication.`,
         introText2: `GoZooms provides dedicated Laravel developers with deep framework knowledge for building secure, scalable web applications. From APIs to full-stack Laravel solutions, our team delivers excellence on every project.`,
@@ -191,7 +195,7 @@ const pageData = {
         ],
         ctaTitle: 'Ask our Laravel professionals about their services today!',
         formName: 'laravelHireForm',
-        pageImg: '/images/laravel-icon.svg',
+        pageImg: '/images/laravelbg.webp',
     },
 };
 
@@ -227,6 +231,13 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
     const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        AOS.init({ duration: 1000, once: true });
+        const wow = new WOW({ live: false });
+        wow.init();
+    }, [title]); // re-run animation on page title change
+
     const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -243,43 +254,49 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
     ];
 
     return (
-        <div className="font-sans">
+        <div>
             {/* Hero Banner */}
-            <section className={`bg-gradient-to-r ${data.bannerClass} relative overflow-hidden`}>
-                <div className="container mx-auto px-6 lg:px-16 py-20 lg:py-28 flex flex-col lg:flex-row items-center gap-10">
-                    <div className="flex-1 text-white z-10">
-                        <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">{data.tagline}</h1>
-                        <p className="text-lg lg:text-xl opacity-90 font-light mb-8">{data.subtitle}</p>
-                        <div className="flex flex-wrap gap-4">
-                            <Link to="/contact" className="bg-white text-gray-900 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors inline-flex items-center gap-2">
+            <section className={`bg-gradient-to-r ${data.bannerClass} relative min-h-screen flex items-center justify-center overflow-hidden`}>
+                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-white/10 blur-[120px] animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-black/10 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+                <div className="container mx-auto px-6 lg:px-16 pt-[112px] pb-20 lg:pb-28 flex flex-col lg:flex-row items-center gap-10">
+                    <div className="flex-1 text-white z-10" data-aos="fade-right">
+                        <span className="inline-block py-1 px-3 rounded-full bg-white/20 border border-white/30 font-bold text-sm mb-6 uppercase tracking-wider">Expert Talent</span>
+                        <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">{data.tagline}</h1>
+                        <p className="text-xl lg:text-2xl opacity-90 font-medium mb-10 text-shadow-sm">{data.subtitle}</p>
+                        <div className="flex flex-wrap gap-4 pt-2">
+                            <Link to="/contact" className="bg-white text-gray-900 font-extrabold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-flex items-center gap-2">
                                 Enquire Now <FaArrowRight className="text-sm" />
                             </Link>
-                            <Link to="/about" className="border-2 border-white text-white font-bold px-8 py-3 rounded hover:bg-white/10 transition-colors">
+                            <Link to="/about" className="glass bg-white/10 border border-white/30 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition-all hover:-translate-y-1">
                                 Learn More
                             </Link>
                         </div>
                     </div>
                     {data.heroImg && (
-                        <div className="flex-shrink-0 z-10">
-                            <img src={data.heroImg} alt={data.tagline} className="h-[240px] lg:h-[300px] object-contain drop-shadow-xl" />
+                        <div className="flex-shrink-0 z-10" data-aos="zoom-in" data-aos-delay="200">
+                            <img src={data.heroImg} alt={data.tagline} className="h-[280px] lg:h-[400px] object-contain drop-shadow-2xl wow pulse" data-wow-iteration="infinite" data-wow-duration="3s" />
                         </div>
                     )}
                 </div>
-                <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-white to-transparent pointer-events-none" />
+                <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-white to-transparent pointer-events-none mix-blend-overlay" />
             </section>
 
             {/* Intro Section */}
-            <section className="py-16 lg:py-20 bg-white">
-                <div className="container mx-auto px-6 lg:px-16">
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-blue-50/50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
-                        <div className="flex-1">
-                            <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-snug">{data.introTitle}</h2>
-                            <p className="text-gray-600 leading-relaxed mb-4">{data.introText}</p>
-                            <p className="text-gray-600 leading-relaxed">{data.introText2}</p>
+                        <div className="flex-1" data-aos="fade-up">
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">Core Competence</span>
+                            <h2 className="text-3xl lg:text-5xl font-bold text-slate-800 mb-8 leading-snug">{data.introTitle}</h2>
+                            <p className="text-lg text-slate-600 leading-relaxed mb-6">{data.introText}</p>
+                            <p className="text-lg text-slate-600 leading-relaxed">{data.introText2}</p>
                         </div>
                         {data.pageImg && (
-                            <div className="flex-shrink-0 text-center">
-                                <img src={data.pageImg} alt={title} className="h-[200px] object-contain mx-auto" />
+                            <div className="flex-shrink-0 text-center" data-aos="fade-left" data-aos-delay="200">
+                                <img src={data.pageImg} alt={title} className="h-[250px] lg:h-[300px] object-contain mx-auto filter drop-shadow-xl hover:scale-105 transition-transform duration-500" />
                             </div>
                         )}
                     </div>
@@ -287,14 +304,17 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
             </section>
 
             {/* Specializations */}
-            <section className="py-16 lg:py-20 bg-blue-50">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-12">{data.sectionTitle}</h2>
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="text-center mb-16" data-aos="fade-up">
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">{data.sectionTitle}</h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-6 rounded-full"></div>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {data.specializations.map((s, i) => (
-                            <div key={i} className="bg-white rounded-xl p-8 text-center shadow-md hover:shadow-lg transition-shadow">
-                                {s.img && <img src={s.img} alt="" className="h-20 w-auto object-contain mx-auto mb-5" />}
-                                <p className="text-gray-600 leading-relaxed text-sm">{s.text}</p>
+                            <div key={i} className="bg-white rounded-3xl p-8 text-center shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group" data-aos="zoom-in" data-aos-delay={i * 100}>
+                                {s.img && <img src={s.img} alt="" className="h-20 w-auto object-contain mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />}
+                                <p className="text-slate-600 leading-relaxed font-medium">{s.text}</p>
                             </div>
                         ))}
                     </div>
@@ -302,26 +322,31 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-16 lg:py-20 bg-white">
+            <section className="py-24 bg-white relative">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <div className="flex flex-col lg:flex-row gap-12 items-start">
-                        <div className="flex-1">
-                            <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-8">{data.whyTitle}</h2>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex flex-col lg:flex-row gap-16 items-start">
+                        <div className="flex-1" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">Why Partner With Us</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-10">{data.whyTitle}</h2>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {data.bullets.map((b, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-gray-700">
-                                        <FaCheckCircle className="text-green-500 flex-shrink-0 mt-1" />
-                                        <span>{b}</span>
+                                    <li key={i} className="flex items-start gap-3 text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                                        <FaCheckCircle className="text-green-500 text-xl flex-shrink-0 mt-0.5" />
+                                        <span className="font-medium text-[15px]">{b}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         {/* CTA Box */}
-                        <div className="lg:w-[340px] bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl p-8 text-white text-center shadow-xl">
-                            <p className="text-lg font-semibold mb-6 leading-snug">{data.ctaTitle}</p>
+                        <div className="lg:w-[380px] w-full bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 rounded-2xl p-10 text-white text-center shadow-2xl relative overflow-hidden" data-aos="fade-left">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-[30px] -mr-16 -mt-16"></div>
+                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-500/20 rounded-full blur-[30px] -ml-16 -mb-16"></div>
+
+                            <h3 className="text-2xl font-bold mb-6 leading-snug relative z-10">{data.ctaTitle}</h3>
+                            <p className="text-blue-200 mb-8 relative z-10">Get a free consultation and project estimate within 24 hours.</p>
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-3 rounded transition-colors w-full justify-center"
+                                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 shadow-lg shadow-blue-500/30 text-white font-bold px-8 py-4 rounded-full transition-all w-full relative z-10 hover:-translate-y-1"
                             >
                                 Get Started <FaArrowRight />
                             </Link>
@@ -331,15 +356,19 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
             </section>
 
             {/* Why We're Different — 6-block grid */}
-            <section className="py-16 lg:py-20 bg-gray-900 text-white">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-center mb-12">Why Choose GoZooms?</h2>
+            <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-950/50 to-slate-900 text-white relative">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(37,99,235,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(99,102,241,0.5) 0%, transparent 50%)' }}></div>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="text-center mb-16" data-aos="fade-up">
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">The GoZoom Advantage</span>
+                        <h2 className="text-3xl md:text-5xl font-bold">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">GoZooms?</span></h2>
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {whyItems.map((item, i) => (
-                            <div key={i} className="flex flex-col items-start gap-4 bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-colors">
-                                <div className="text-3xl">{item.icon}</div>
-                                <h3 className="text-lg font-bold">{item.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+                            <div key={i} className="flex flex-col items-start gap-4 glass bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all hover:-translate-y-1 shadow-xl hover:shadow-cyan-500/10" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="text-4xl mb-2">{item.icon}</div>
+                                <h3 className="text-xl font-bold">{item.title}</h3>
+                                <p className="text-slate-400 text-[15px] leading-relaxed">{item.text}</p>
                             </div>
                         ))}
                     </div>
@@ -347,64 +376,72 @@ const HirePage = ({ title, bgFrom, bgTo }) => {
             </section>
 
             {/* Enquiry Form */}
-            <section className="py-16 lg:py-20 bg-blue-600 text-white">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <div className="max-w-2xl mx-auto">
-                        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-4">Get in Touch with Our Experts</h2>
-                        <p className="text-center opacity-90 mb-10">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <section className="py-24 bg-gradient-to-br from-blue-600 flex justify-center to-indigo-700 text-white relative flex justify-center text-center">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[80px] -mr-40 -mt-20"></div>
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full blur-[80px] -ml-40 -mb-20"></div>
 
-                        {submitted ? (
-                            <div className="bg-white text-green-600 rounded-xl p-10 text-center font-semibold text-xl shadow-xl">
-                                ✅ Thank you! We'll be in touch soon.
-                            </div>
-                        ) : (
-                            <form onSubmit={handleSubmit} className="bg-white text-gray-800 rounded-xl p-8 shadow-xl space-y-5">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-1">Your Name <span className="text-red-500">*</span></label>
-                                        <input type="text" name="name" value={form.name} onChange={handleChange} required
-                                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-                                            placeholder="Full Name" />
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="max-w-3xl mx-auto shadow-2xl rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10" data-aos="zoom-in">
+                        <div className="p-10 lg:p-14">
+                            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4">Get in Touch with Our Experts</h2>
+                            <p className="text-center text-blue-100 mb-10 text-lg">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                            {submitted ? (
+                                <div className="bg-white/10 border border-green-400/30 text-green-300 rounded-2xl p-10 text-center font-semibold text-xl backdrop-blur-md">
+                                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                        <FaCheckCircle className="text-white text-3xl" />
                                     </div>
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-1">Email <span className="text-red-500">*</span></label>
-                                        <input type="email" name="email" value={form.email} onChange={handleChange} required
-                                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-                                            placeholder="Email Address" />
-                                    </div>
+                                    Thank you! We'll be in touch soon.
                                 </div>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <div>
-                                        <label className="block text-sm font-semibold mb-1">Phone <span className="text-red-500">*</span></label>
-                                        <input type="tel" name="phone" value={form.phone} onChange={handleChange} required
-                                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-                                            placeholder="Contact Number" />
+                            ) : (
+                                <form onSubmit={handleSubmit} className="bg-white text-slate-800 rounded-2xl p-8 lg:p-10 shadow-2xl space-y-6 text-left">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <label className="block text-sm font-bold mb-2 text-slate-700">Your Name <span className="text-red-500">*</span></label>
+                                            <input type="text" name="name" value={form.name} onChange={handleChange} required
+                                                className="w-full border-2 border-slate-100 bg-slate-50 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                                                placeholder="Full Name" />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-bold mb-2 text-slate-700">Email <span className="text-red-500">*</span></label>
+                                            <input type="email" name="email" value={form.email} onChange={handleChange} required
+                                                className="w-full border-2 border-slate-100 bg-slate-50 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                                                placeholder="Email Address" />
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div>
+                                            <label className="block text-sm font-bold mb-2 text-slate-700">Phone <span className="text-red-500">*</span></label>
+                                            <input type="tel" name="phone" value={form.phone} onChange={handleChange} required
+                                                className="w-full border-2 border-slate-100 bg-slate-50 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                                                placeholder="Contact Number" />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-bold mb-2 text-slate-700">Interested Service</label>
+                                            <select name="service" value={form.service} onChange={handleChange}
+                                                className="w-full border-2 border-slate-100 bg-slate-50 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors appearance-none">
+                                                <option value="">Select Service</option>
+                                                <option>Web Development</option>
+                                                <option>Mobile Development</option>
+                                                <option>Integration</option>
+                                                <option>SEO Services</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-semibold mb-1">Interested Service</label>
-                                        <select name="service" value={form.service} onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500 bg-white">
-                                            <option value="">Select Service</option>
-                                            <option>Web Development</option>
-                                            <option>Mobile Development</option>
-                                            <option>Integration</option>
-                                            <option>SEO Services</option>
-                                            <option>Other</option>
-                                        </select>
+                                        <label className="block text-sm font-bold mb-2 text-slate-700">Message</label>
+                                        <textarea name="message" value={form.message} onChange={handleChange} rows={4}
+                                            className="w-full border-2 border-slate-100 bg-slate-50 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors resize-none"
+                                            placeholder="Tell us about your project..." />
                                     </div>
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-semibold mb-1">Message</label>
-                                    <textarea name="message" value={form.message} onChange={handleChange} rows={4}
-                                        className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-                                        placeholder="Tell us about your project..." />
-                                </div>
-                                <button type="submit"
-                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded transition-colors inline-flex items-center justify-center gap-2">
-                                    Submit Enquiry <FaArrowRight />
-                                </button>
-                            </form>
-                        )}
+                                    <button type="submit"
+                                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all inline-flex items-center justify-center gap-2 text-lg hover:-translate-y-1">
+                                        Submit Enquiry <FaArrowRight />
+                                    </button>
+                                </form>
+                            )}
+                        </div>
                     </div>
                 </div>
             </section>

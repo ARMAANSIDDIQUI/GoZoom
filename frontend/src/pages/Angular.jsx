@@ -14,358 +14,208 @@ const Angular = () => {
 
   return (
     <div>
-      {/* EXACT MIGRATED CONTENT BEGIN */}
+      {/* Banner Section */}
+      {/* Banner Section */}
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}></div>
+        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/20 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-orange-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
 
+        <div className="container relative z-10 block">
+          <div className="max-w-3xl">
+            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Angular Framework</span>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+              Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-10" data-aos="fade-up" data-aos-delay="400">
+              Everything you need to get your project started in 24 hours
+            </p>
+            <div className="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">Get Started</Link>
+              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* About Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-red-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-8" data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">About Angular</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+                Enhance your project with our in-house talent, offering expertise in <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development</span> services.
+              </h2>
+              <div className="space-y-5">
+                <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-red-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
+                  Angular is an open-source JavaScript framework that extends the functionality of HTML. The important use of Angular is to improve browser-based applications with the help of MVC capability. It makes front-end web development and testing easier using templates, command line tools, and IDEs.
+                </p>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  GoZooms employs specialized Angular developers experienced in Javascript to create real-time applications effortlessly. We are highly recognized as the best Angular development company for developing single page applications in an agile manner.
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-4 relative" data-aos="fade-left">
+              <div className="absolute inset-0 bg-red-100 rounded-full blur-[80px] opacity-60"></div>
+              <img className="w-full max-w-xs mx-auto relative z-10 animate-float drop-shadow-2xl" src="/images/angularboy.svg" alt="Angular Development" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section className="page-angular-banner banner-top">
-        <div className="banner-inner min-adj">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-7">
-                <div className="heading-in page-angular">
-                  <h1>Hire Dedicated Angular Developers</h1>
-                  <p className="page-angular-banner-text">
-                    Everything you need to get your project started in 24 hours
-                  </p>
-                  <p>
-                    <Link to="/contact" className="btn starBtn page-angular-btn-default">Get Started</Link><Link to="/about" className="btn starBtn page-angular-btn">About Us</Link>
-                  </p>
-                </div>
-              </div>
-              <div className="col-sm-5"></div>
-            </div>
+      {/* Skills Section */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">Our Strengths</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Dedicated and Skilled <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development</span></h3>
           </div>
-        </div>
-        <div className="banner-overlay1"></div>
-        <div className="banner-overlay-shape1"></div>
-        <div className="banner-overlay-shape2"></div>
-      </section>
-      <section className="page-angular intro-text whiteSection no-after">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8">
-              <div className="whoText angular-intro-content">
-                <h2 className="long-lg-text">
-                  Enhance your project with our in-house talent, offering expertise in Angular Development services and beyond."
-                </h2>
-                <p>
-                  Angular is an open-source JavaScript framework that extends the
-                  funcationality of HTML. The important use of Angular is to
-                  improve browser-based applications with the help of MVC (model
-                  view controller) capability. In simpler words, it’s designed to
-                  make front-end web development and testing much easier and
-                  faster by using templates, command line tools, and IDEs. Angular
-                  offers cross platform support for today’s devices, the speed and
-                  performance required as a modern development tool, and the
-                  productivity of a framework.
-                </p>
-                <p>
-                  GoZooms employs specialized Angular developers who are
-                  experienced in Javascript and jQuery to create real-time
-                  applications effortlessly in this framework. We are highly
-                  recognized as the best Angular development company for
-                  developing single page applications in an agile manner. Our team
-                  will help you to take your web or mobile app ideas from concept
-                  to reality using the Angular framework.
-                </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-24 h-24 mx-auto mb-6 bg-red-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <img src="../images/thought.png" className="w-14 h-14 object-contain" alt="5 years experience" />
               </div>
+              <p className="text-slate-600 leading-relaxed">
+                5+ years of working with Angular has given us extensive knowledge and technical skills to deal with all types of projects.
+              </p>
             </div>
-            <div className="col-sm-4">
-              <div className="page-angular-image-top text-center">
-                <img className="angular-mascot" src="/images/angularboy.svg" width="230" height="280" alt="CodeClouds' Angular JS development services" />
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="200">
+              <div className="w-24 h-24 mx-auto mb-6 bg-orange-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <img src="../images/expertise.png" className="w-14 h-14 object-contain" alt="Experienced" />
               </div>
+              <p className="text-slate-600 leading-relaxed">
+                We're an accomplished Angular development company working with enthusiasm and dedication to produce great results.
+              </p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="300">
+              <div className="w-24 h-24 mx-auto mb-6 bg-amber-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <img src="../images/performance.png" className="w-14 h-14 object-contain" alt="Efficiency" />
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Our efficiency means competitive rates and rapid delivery of Angular development services and solutions.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="page-angular skilled-angular-developement light-blue whiteSection no-after">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h3 className="long-lg-text">
-                Dedicated and Skilled Angular Development
-              </h3>
+
+      {/* Services Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent"></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative order-last lg:order-first" data-aos="fade-right">
+              <div className="absolute inset-0 bg-red-100 rounded-full blur-[80px] opacity-50"></div>
+              <img className="w-full max-w-xs mx-auto relative z-10 drop-shadow-2xl animate-float" src="../images/angular-icon.svg" alt="Angular Services" />
             </div>
-            <div className="col-md-4 col-sm-4 col-xl-12 clearfix">
-              <div className="skilled-angular-developement-blocks text-center clearfix">
-                <div className="skilled-angular-developement-blocks-imgHolder">
-                  <img className="skilled-angular-developement-blocks-img-experience" src="../images/thought.png" width="104" height="113" alt="5 years of Angular experience" />
-                </div>
-                <p className="skilled-angular-developement-blocks-textConent">
-                  5+ years of working with Angular has given us extensive
-                  knowledge and technical skills to deal with all types of
-                  projects.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-4 col-xl-12 clearfix">
-              <div className="skilled-angular-developement-blocks text-center clearfix">
-                <div className="skilled-angular-developement-blocks-imgHolder">
-                  <img className="skilled-angular-developement-blocks-img-accomplished" src="../images/expertise.png" width="80" height="111" alt="Experienced with Angular" />
-                </div>
-                <p className="skilled-angular-developement-blocks-textConent">
-                  We’re an accomplished Angular development company working with
-                  enthusiasm and dedication to produce great results.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-4 col-xl-12 clearfix">
-              <div className="skilled-angular-developement-blocks text-center clearfix">
-                <div className="skilled-angular-developement-blocks-imgHolder">
-                  <img className="skilled-angular-developement-blocks-img-effiency" src="../images/performance.png" width="136" height="76" alt="Efficient Development" />
-                </div>
-                <p className="skilled-angular-developement-blocks-textConent">
-                  Our efficiency means competitive rates and rapid delivery of
-                  Angular development services and solutions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="page-angular page-angular-services">
-        <div className="page-angular-services-inner">
-          <div className="app-development-expert-left">
-            <img className="angular-support-img" src="../images/angular-icon.svg" width="234" height="312" alt="Customer satisfaction" />
-          </div>
-          <div className="app-development-expert-right">
-            <div className="app-development-expert-right-inner">
-              <div className="angular-support-content">
-                <h3 className="long-lg-text">
-                  Our High Quality Angular Development Services
-                </h3>
-                <ul className="support-list">
-                  <li>Angular web app development</li>
-                  <li>Angular dashboards and web portals</li>
-                  <li>Angular mobile web app development</li>
-                  <li>Angular single-page applications</li>
-                </ul>
-                <ul className="support-list">
-                  <li>Angular performance optimization</li>
-                  <li>Angular eCommerce development</li>
-                  <li>Angular cross-platform development</li>
-                  <li>Angular plugin and widget development</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="page-angular talk-to-codecloud-ng-experts light-blue whiteSection no-after">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center">
-              <h3 className="long-lg-text">
-                Talk to GoZooms Expert Angular Developers Today
-              </h3>
-            </div>
-            <div className="col-md-12 clearfix text-center">
-              <ul className="arrows">
-                <li className="blue">Get in touch with us</li>
-                <li className="gray-first">Discuss your project</li>
-                <li className="gray-second">Finalize the details</li>
-                <li className="last red">Project Begins</li>
-              </ul>
-              <div className="triangle-3"></div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="wpcf7 js" id="wpcf7-f16448-o1" lang="en-US" dir="ltr">
-              <div className="screen-reader-response">
-                <p role="status" aria-live="polite" aria-atomic="true"></p>
-                <ul></ul>
-              </div>
-              <form action="../angular.php" method="post" className="wpcf7-form init salesBtn theme_1 noErrorMsg" id="contactform7" aria-label="Contact form" novalidate="novalidate" data-status="init">
-                <div style={{ "display": "none" }}>
-                  <input type="hidden" name="_wpcf7" value="16448" />
-                  <input type="hidden" name="_wpcf7_version" value="5.7.6" />
-                  <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                  <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f16448-o1" />
-                  <input type="hidden" name="_wpcf7_container_post" value="0" />
-                  <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                  <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]" />
-                  <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]" />
-                  <input type="hidden" name="_wpcf7cf_visible_groups" value="[]" />
-                  <input type="hidden" name="_wpcf7cf_repeaters" value="[]" />
-                  <input type="hidden" name="_wpcf7cf_steps" value="{}" />
-                  <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:16448,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:false,&quot;notice_dismissed_update-cf7-5.6&quot;:true,&quot;notice_dismissed_update-cf7-5.6.2&quot;:true,&quot;notice_dismissed_update-cf7-5.6.4&quot;:true}}" />
-                </div>
-                <div className="col-md-6 clearfix">
-                  <div className="form-group-row clearfix">
-                    <div className="form-group col-md-6 talk-to-expert-form-holder-block name">
-                      <p>
-                        <span className="wpcf7-form-control-wrap" data-name="Name"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control required" tabindex="1" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="angularName" /></span>
-                      </p>
+            <div data-aos="fade-left">
+              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">What We Offer</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">Our High Quality <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development Services</span></h3>
+              <div className="grid grid-cols-2 gap-4">
+                {['Angular web app development', 'Angular dashboards and web portals', 'Angular mobile web app development', 'Angular single-page applications', 'Angular performance optimization', 'Angular eCommerce development', 'Angular cross-platform development', 'Angular plugin and widget development'].map((service, i) => (
+                  <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl hover:bg-red-50 transition-colors">
+                    <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                     </div>
-                    <div className="form-group col-md-6 talk-to-expert-form-holder-block organisation">
-                      <p>
-                        <span className="wpcf7-form-control-wrap" data-name="Business"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control required" tabindex="2" aria-required="true" aria-invalid="false" placeholder="Business/Organization" value="" type="text" name="angularBusiness" /></span>
-                      </p>
-                    </div>
+                    <span className="text-slate-700 text-sm font-medium">{service}</span>
                   </div>
-                  <div className="form-group-row clearfix">
-                    <div className="form-group col-md-6 talk-to-expert-form-holder-block name">
-                      <p>
-                        <span className="wpcf7-form-control-wrap" data-name="Email"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control required email" tabindex="3" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="angularEmail" /></span>
-                      </p>
-                    </div>
-                    <div className="form-group col-md-6 talk-to-expert-form-holder-block organisation">
-                      <p>
-                        <span className="wpcf7-form-control-wrap" data-name="Email"><input size="17" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control required phone" tabindex="3" aria-required="true" aria-invalid="false" placeholder="Phone No." value="" type="tel" name="angularPhoneNo" /></span>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="form-group-row clearfix">
-                    <div className="form-group talk-to-expert-form-holder-block">
-                      <p>
-                        <span className="wpcf7-form-control-wrap" data-name="Subject"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control required" tabindex="5" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="angularSubject" /></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 form-group">
-                  <p>
-                    <span className="wpcf7-form-control-wrap" data-name="Enquiry">
-                      <textarea cols="40" rows="10" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control expert-message required" tabindex="6" aria-required="true" aria-invalid="false" placeholder="Tell us more about your enquiry" name="angularTextArea"></textarea>
-                    </span>
-                  </p>
-                </div>
-                <div className="form-group col-md-12 privacy-text clearfix">
-                  <div className="row clearfix">
-                    <div className="col-md-6">
-                      <p>
-                        <label className="agree-lable"><span className="wpcf7-form-control-wrap" data-name="AgreePrivacyPolicy"><span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required form-contro required" id="contact_form_chkbox"><span className="wpcf7-list-item first last"><input type="checkbox" name="AgreePrivacyPolicy[]" value="I have read and agree" tabindex="7" checked="checked" className="required" /><span className="wpcf7-list-item-label">I have read and
-                          agree</span></span></span></span>
-                          to the
-                          <a href="#" className="privacy-link form_pp" target="_blank" rel="nofollow">Privacy Policy</a></label>
-                      </p>
-                      <div id="error_msg" style={{ "display": "none" }}>
-                        <p>This field is required.</p>
-                      </div>
-                      <p>
-                        <label className="agree-lable subscrb-check"><span className="wpcf7-form-control-wrap" data-name="subscribeCheck"><span className="wpcf7-form-control wpcf7-checkbox cf7-checkbox form-check-input"><span className="wpcf7-list-item first last"><input type="checkbox" name="subscribeCheck[]" value="yes" checked="checked" tabindex="8" /><span className="wpcf7-list-item-label">yes</span></span></span></span>
-                          I would like to receive information about GoZooms’
-                          products, services and newsletters.</label>
-                      </p>
-                      <div className="clearfix reason-for-data-collection">
-                        <p className="data-collection-header">
-                          Why we collect this information and how we use it
-                          <input className="wpcf7-form-control wpcf7-hidden" id="current_url" value="https://www.codeclouds.com/web-development/angular/" type="hidden" name="pageUrl" />
-                          <input className="wpcf7-form-control wpcf7-hidden" id="source_url" value="Organic" type="hidden" name="sourceUrl" />
-                          <input className="wpcf7-form-control wpcf7-hidden" id="campain_url" value="" type="hidden" name="campainUrl" />
-                          <input className="wpcf7-form-control wpcf7-hidden" id="device_url" value="Desktop" type="hidden" name="urlDevice" />
-                          <input className="wpcf7-form-control wpcf7-hidden" id="user_country" value="India" type="hidden" name="userCountry" />
-                        </p>
-                        <p>
-                          We treat your information with respect, and we will
-                          never sell it to other companies. This information is
-                          collected out of necessity for basic account creation,
-                          billing, and support purposes. We will only email you
-                          for support.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="btn-otr" style={{ "float": "right" }}>
-                        <p>
-                          <input className="wpcf7-form-control has-spinner wpcf7-submit btn starBtn expertAngulardevelopers" tabindex="8" type="submit" value="Submit" /><span className="wpcf7-spinner"></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p style={{ "display": "none !important" }}>
-                  <label>Δ<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="1687032437344" />
-
-                </p>
-                <div className="wpcf7-response-output" aria-hidden="true"></div>
-              </form>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="page-angular why-chose-ng-clouds red-bg whiteSection no-after">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 text-center color-white">
-              <h3 className="long-lg-text">Why Should You Choose Us?</h3>
-            </div>
+      {/* Contact Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-red-950/50 to-slate-900 relative overflow-hidden">
+        <div className="container relative z-10 block">
+          <div className="text-center mb-14">
+            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-4">Get In Touch</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-white">Talk to GoZooms Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span> Today</h3>
           </div>
-          <div className="row">
-            <div className="clearfix col-md-4 color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-satisfaction" src="../images/expertises.png" width="40" height="40" alt="Customer satisfaction" />
-              <h4 className="why-chose-header">Customer Satisfaction</h4>
-              <p className="why-chose-content">
-                We take customer satisfaction seriously, providing you a dedicated
-                account manager and project manager to make sure all aspects of
-                your engagement with us run smoothly.
-              </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {['Get in touch with us', 'Discuss your project', 'Finalize the details', 'Project Begins'].map((step, i) => (
+              <div key={i} className={`relative px-8 py-4 rounded-full font-bold text-white ${i === 0 ? 'bg-red-600' : i === 3 ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-white/10'} border border-white/20`}>
+                <span className="absolute -top-2 -left-2 w-6 h-6 bg-white text-slate-800 rounded-full text-xs font-extrabold flex items-center justify-center">{i + 1}</span>
+                {step}
+              </div>
+            ))}
+          </div>
+          <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10">
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <input type="text" placeholder="Name" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="text" placeholder="Business/Organization" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="email" placeholder="Email" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="tel" placeholder="Phone No." className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="text" placeholder="Subject" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors md:col-span-2" />
             </div>
-            <div className="clearfix col-md-4 color-white color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-experience" src="../images/guarantees.png" width="50" height="40" alt="Extensive Experience" />
-              <h4 className="why-chose-header">Extensive Experience</h4>
-              <p className="why-chose-content">
-                GoZooms is a provider of efficent solutions for business big or
-                small. We don’t utilize off-the-shelf products but instead rely
-                upon a fully integrated customized approach.
-              </p>
-            </div>
-            <div className="clearfix col-md-4 color-white color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-Collaboration" src="../images/collectives.png" width="49" height="40" alt="Exceptional Collaboration" />
-              <h4 className="why-chose-header">Exceptional Collaboration</h4>
-              <p className="why-chose-content">
-                Our offshore developers will work with you for dedicated hours. We
-                aim to shape the right engagement model for your custom solution
-                to meet your needs on time and on budget.
-              </p>
-            </div>
-            <div className="clearfix col-md-4 color-white color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-fast-developement" src="../images/rockets.png" width="60" height="40" alt="Fast development" />
-              <h4 className="why-chose-header">Fast Development</h4>
-              <p className="why-chose-content">
-                We have refined our development process to result in applications
-                being built quicker and more efficiently, so projects are
-                completed on time and on budget.
-              </p>
-            </div>
-            <div className="clearfix col-md-4 color-white color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-Pricing-ng" src="../images/discounts.png" width="33" height="40" alt="Competitive pricing" />
-              <h4 className="why-chose-header">Competitive Pricing</h4>
-              <p className="why-chose-content">
-                Hiring an expert Angular developer, designer, or consultant? Make
-                sure you get a quote from us as we have some of the most
-                competitive rates on the market for development professionals.
-              </p>
-            </div>
-            <div className="clearfix col-md-4 color-white color-white why-chose-ndDeveloper-block">
-              <img className="chose-img-technical-Support" src="../images/telephones.png" width="34" height="40" alt="18/5 Technical Support" />
-              <h4 className="why-chose-header">18/5 Technical Support</h4>
-              <p className="why-chose-content">
-                Our open communication lines, dedicated support team, and strong
-                technical assistance helps your business through any issues that
-                you encounter.
-              </p>
+            <textarea rows="5" placeholder="Tell us more about your enquiry" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors mb-6"></textarea>
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+              <label className="flex items-center gap-2 text-slate-300 text-sm cursor-pointer">
+                <input type="checkbox" defaultChecked className="rounded" />
+                I have read and agree to the <a href="#" className="text-red-400 hover:underline">Privacy Policy</a>
+              </label>
+              <button type="submit" className="px-10 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">Submit</button>
             </div>
           </div>
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* EXACT MIGRATED CONTENT END */}
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">Why Us</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Why Should You <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Choose Us?</span></h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/expertises.png" className="w-8 h-8" alt="Customer Satisfaction" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">Customer Satisfaction</h4>
+              <p className="text-slate-600 leading-relaxed">We take customer satisfaction seriously, providing you a dedicated account manager and project manager to make sure all aspects of your engagement with us run smoothly.</p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
+              <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/guarantees.png" className="w-8 h-8" alt="Extensive Experience" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">Extensive Experience</h4>
+              <p className="text-slate-600 leading-relaxed">GoZooms is a provider of efficient solutions for business big or small. We don't utilize off-the-shelf products but instead rely upon a fully integrated customized approach.</p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
+              <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/collectives.png" className="w-8 h-8" alt="Exceptional Collaboration" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">Exceptional Collaboration</h4>
+              <p className="text-slate-600 leading-relaxed">Our offshore developers will work with you for dedicated hours. We aim to shape the right engagement model for your custom solution to meet your needs on time and on budget.</p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/rockets.png" className="w-8 h-8" alt="Fast Development" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">Fast Development</h4>
+              <p className="text-slate-600 leading-relaxed">We have refined our development process to result in applications being built quicker and more efficiently, so projects are completed on time and on budget.</p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
+              <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/discounts.png" className="w-8 h-8" alt="Competitive Pricing" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">Competitive Pricing</h4>
+              <p className="text-slate-600 leading-relaxed">Hiring an expert Angular developer, designer, or consultant? Make sure you get a quote from us as we have some of the most competitive rates on the market.</p>
+            </div>
+            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
+              <div className="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <img src="../images/telephones.png" className="w-8 h-8" alt="Technical Support" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-800 mb-3">18/5 Technical Support</h4>
+              <p className="text-slate-600 leading-relaxed">Our open communication lines, dedicated support team, and strong technical assistance helps your business through any issues that you encounter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

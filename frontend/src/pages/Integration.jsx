@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -12,203 +13,123 @@ const Integration = () => {
     wow.init();
   }, []);
 
+  const partners = [
+    { name: 'Azure', img: 'images/msazure.png' },
+    { name: 'Boomi', img: 'images/boomi.png' },
+    { name: 'Tibco', img: 'images/tibco.png' },
+    { name: 'Mulesoft', img: 'images/mulesoft.png' },
+    { name: 'Pega', img: 'images/pega.png' },
+    { name: 'IBM', img: 'images/IBM.png' },
+    { name: 'SAP', img: 'images/sap.png' },
+    { name: 'Dynamics', img: 'images/Dynamics.png' },
+    { name: 'Workato', img: 'images/workato.png' },
+  ];
+
   return (
     <div>
-      {/* EXACT MIGRATED CONTENT BEGIN */}
-      <div className="w-full bg-black font-['Lato',sans-serif] text-[15px] overflow-x-hidden">
+      {/* Hero Banner — Sky Blue Integration colors */}
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
+        <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm"></div>
+        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-sky-500/25 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-cyan-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-        {/* Hero Section */}
-        <section className="relative w-full min-h-[100vh] flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/images/20.png")' }}>
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h2 className="text-[3.1rem] md:text-[50px] font-normal text-white mb-6 tracking-[2px]">
-              INTEGRATION
-            </h2>
-            <p className="text-[18px] font-normal text-white tracking-[2px]">
-              Fueled by extensive knowledge, thorough research, and broad industry experience.
+        <div className="container relative z-10 block">
+          <div className="max-w-3xl text-center mx-auto">
+            <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Enterprise Integration</span>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+              INTEGRATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Solutions</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+              Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.
             </p>
-          </div>
-        </section>
-
-        {/* Integration Expertise Section */}
-        <section className="bg-[#f9f9f9] py-[40px] px-[10px]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="pb-[30px]">
-              <h2 className="text-[30px] font-semibold text-[#00a2fe] mb-[5px] pb-[5px] tracking-[2px] leading-none text-left font-['Lato',sans-serif]">GZ Integration Expertise</h2>
-              <p className="text-[18px] font-light text-[#aaa] text-left mx-auto font-['Lato',sans-serif]">
-                Our proficiency in integration is evidenced by our experience of over 1800 cross-consulting hours, during which we have worked with all major integration tools, whether on-premises or in the cloud.
-              </p>
-              <p className="text-[18px] font-light text-[#aaa] text-left mx-auto font-['Lato',sans-serif] mt-4">
-                We excel in seamlessly integrating all major ERP and business systems, encompassing SAP, Salesforce, ServiceNow, Oracle ERP, SuccessFactors, Workday, Coupa, and Concur, among others.
-              </p>
-              <p className="text-[18px] font-light text-[#aaa] text-left mx-auto font-['Lato',sans-serif] mt-4">
-                With our tried and tested delivery model, we ensure successful integration and assist in the creation of a scalable IT landscape that is future-ready.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 mx-0">
-              <div className="flex flex-col">
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/msazure.png" alt="Azure" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/boomi.png" alt="Boomi" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/tibco.png" alt="Tibco" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col">
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/mulesoft.png" alt="Mulesoft" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/pega.png" alt="Pega" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/IBM.png" alt="IBM" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col">
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/sap.png" alt="SAP" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/Dynamics.png" alt="Dynamics" />
-                  </div>
-                </div>
-                <div className="bg-[#f9f9f9] p-[64px] h-[140px] mb-[25px] flex justify-center items-center overflow-hidden">
-                  <div className="relative h-[140px] overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125 flex items-center">
-                    <img className="max-w-max h-auto flex shrink-0" src="images/workato.png" alt="Workato" />
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-sky-600 to-blue-600 text-white font-bold hover:shadow-lg hover:shadow-sky-500/30 transition-all hover:-translate-y-1">Discover More</Link>
+              <Link to="/about" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">About Us</Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* About Section */}
-        <section className="bg-[#0a0f25] text-left overflow-hidden py-[40px] px-[10px]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="wow animate__animated animate__fadeInLeft">
-                <div>
-                  <p className="block text-[#00a2fe] text-[32px] uppercase tracking-[4px] font-['Lato',sans-serif] font-normal mb-0"><b> What sets us apart?</b></p>
-                  <p className="block my-[1em] text-[#ccc] text-[18px] font-['Lato',sans-serif]">
-                    As organizations go through transformational phases, such as expansion through organic growth or mergers and acquisitions, they often require new systems to be added to their IT landscape.
-                  </p>
-                  <p className="block my-[1em] text-[#ccc] text-[18px] font-['Lato',sans-serif]">
-                    Our commitment lies in aiding organizations in guaranteeing business continuity, harnessing the full potential of data, seamless system integration, and leveraging technology for transformation.
-                  </p>
-                  <p className="block my-[1em] text-[#ccc] text-[18px] font-['Lato',sans-serif]">Join us in a partnership for success!!</p>
-
-                  <div className="pt-3 mb-5 wow animate__animated animate__slideInDown">
-                    <a href="/contact" className="text-[#007bff] bg-transparent border border-[#00A2FE] p-[10px] text-[21px] rounded-[10px] no-underline">
-                      Discover More
-                    </a>
-                  </div>
+      {/* Integration Expertise Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-sky-50 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-sky-50 text-sky-700 font-bold text-sm mb-4">Our Expertise</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">GZ Integration <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">Expertise</span></h2>
+            <p className="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">Our proficiency in integration is evidenced by our experience of over 1800 cross-consulting hours, working with all major integration tools, whether on-premises or in the cloud.</p>
+          </div>
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-9 gap-4 mb-12">
+            {partners.map((p, i) => (
+              <div key={i} className="glass-card bg-white border border-slate-100 p-4 rounded-2xl text-center hover:bg-sky-50 hover:border-sky-200 hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 60}>
+                <div className="h-16 flex items-center justify-center mb-2">
+                  <img src={p.img} alt={p.name} className="max-h-12 w-auto group-hover:scale-110 transition-transform" />
                 </div>
+                <p className="text-xs font-semibold text-slate-600 group-hover:text-sky-600">{p.name}</p>
               </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-600 text-lg">We excel in seamlessly integrating all major ERP and business systems, encompassing SAP, Salesforce, ServiceNow, Oracle ERP, SuccessFactors, Workday, Coupa, and Concur.</p>
+        </div>
+      </section>
 
-              <div className="wow animate__animated animate__fadeInRight">
-                <div>
-                  <div>
-                    <p className="text-[#00a2fe] text-[26px] font-['Lato',sans-serif] mt-0 mb-[1rem]">Harness your Current IT Landscape</p>
-                    <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">
-                      At GOZOOM, we offer solutions that capitalize on your current IT landscape investments. Our services facilitate the transformation of your application landscape to one that is both scalable and agile, empowering developers to efficiently create new applications and integrate with existing solutions.
-                    </p>
-                    <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">
-                      We conduct a comprehensive architectural review and provide enhancements to ensure that your systems remain ahead of the curve.
-                    </p>
-                  </div>
-                  <div>
-                    <div>
-                      <p className="text-[#00a2fe] text-[26px] font-['Lato',sans-serif] mt-0 mb-[1rem]">Experience Powerful Integrations</p>
-                      <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">
-                        At GOZOOM, system integration is a comprehensive process, whether it involves a small number of interfaces or a large-scale integration project.
-                      </p>
-                      <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">
-                        We ensure that your system has extensive connection points, allowing for flexibility and the capability to efficiently perform integrations at the speed of your business requirements.
-                      </p>
-                    </div>
-                    <div>
-                      <div>
-                        <p className="text-[#00a2fe] text-[26px] font-['Lato',sans-serif] mt-0 mb-[1rem]">Attain Your Desired Business Results</p>
-                        <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">
-                          It is imperative to comprehend your objectives, processes and strategies. However, at GOZOOM, we go further by examining:
-                        </p>
-                        <ul className="text-[#ccc] text-[18px] font-['Lato',sans-serif] leading-[24px] tracking-[0px] list-none pl-0 mt-0 mb-[1rem]">
-                          <li className="mb-2 flex items-start gap-2"><FaCheckCircle className="text-[#16a9e2] mt-1 shrink-0" />Your existing obstacles.</li>
-                          <li className="mb-2 flex items-start gap-2"><FaCheckCircle className="text-[#16a9e2] mt-1 shrink-0" />Your previous attempts, successes and failures.</li>
-                          <li className="mb-2 flex items-start gap-2"><FaCheckCircle className="text-[#16a9e2] mt-1 shrink-0" />Your overarching aspirations and the reasoning behind them.</li>
-                        </ul>
-                        <p className="text-[#ccc] text-[18px] font-['Lato',sans-serif] mt-0 mb-[1rem]">We strive to deliver optimal outcomes for your enterprise.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      {/* What Sets Us Apart Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-sky-950/50 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(14,165,233,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(37,99,235,0.5) 0%, transparent 50%)' }}></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Differentiators</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-white mb-8">What <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Sets Us Apart?</span></h3>
+              <div className="space-y-5">
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  As organizations go through transformational phases, such as expansion through organic growth or mergers and acquisitions, they often require new systems to be added to their IT landscape.
+                </p>
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  Our commitment lies in aiding organizations in guaranteeing business continuity, harnessing the full potential of data, seamless system integration, and leveraging technology for transformation.
+                </p>
+                <Link to="/contact" className="inline-block px-8 py-4 rounded-full border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white transition-all font-bold">Discover More</Link>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Operate Section */}
-        <section className="bg-[url('/images/integration-steps.webp')] bg-center bg-no-repeat bg-cover h-auto md:h-[116vh] w-full relative py-[110px] md:py-0 pt-[25px] md:pt-0 flex items-center">
-          <div className="container mx-auto px-4 py-[40px] flex justify-end">
-            <div className="w-full lg:text-left text-right">
-              <h2 className="text-[#00a2fe] text-[32px] tracking-[2px] font-['Gill_Sans',sans-serif] md:text-right font-semibold">HOW WE OPERATE</h2>
+            <div className="space-y-6" data-aos="fade-left">
+              {[
+                { title: 'Harness your Current IT Landscape', desc: 'We offer solutions that capitalize on your current IT landscape investments, facilitating transformation to a scalable and agile application landscape.' },
+                { title: 'Experience Powerful Integrations', desc: 'System integration is a comprehensive process — whether it involves a small number of interfaces or a large-scale integration project with extensive connection points.' },
+                { title: 'Attain Your Desired Business Results', desc: 'We go beyond your objectives — examining your existing obstacles, previous attempts, and overarching aspirations to deliver optimal outcomes for your enterprise.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:-translate-y-1 transition-all">
+                  <h4 className="text-sky-400 text-xl font-bold mb-3">{item.title}</h4>
+                  <p className="text-slate-300 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Partners Section */}
-        <section className="bg-white m-0 py-10">
-          <div className="mb-10">
-            <h2 className="text-[#00a2fe] text-center py-[20px] text-[50px] font-semibold tracking-[4px]">PARTNERS</h2>
+      {/* Partners Section */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-700 font-bold text-sm mb-4 uppercase tracking-wider">Partners</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Our Trusted <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">Partners</span></h3>
           </div>
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="flex flex-wrap flex-row w-full justify-center">
-              <div className="w-full md:w-1/2 lg:w-1/4 p-4 flex justify-center">
-                <div className="m-auto p-auto flex justify-center">
-                  <img className="h-[150px] w-[150px] p-[1rem] object-contain items-center" src="images/shadani.png" alt="Shadani" />
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            {[
+              { img: 'images/shadani.png', name: 'Shadani' },
+              { img: 'images/rajdhani.png', name: 'Rajdhani' },
+              { img: 'images/maisoninfra.png', name: 'Maison Infra' },
+              { img: 'images/cornitos.png', name: 'Cornitos' },
+            ].map((p, i) => (
+              <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 flex items-center justify-center" data-aos="fade-up" data-aos-delay={i * 100}>
+                <img src={p.img} alt={p.name} className="h-24 w-24 object-contain" />
               </div>
-              <div className="w-full md:w-1/2 lg:w-1/4 p-4 flex justify-center">
-                <div className="m-auto p-auto flex justify-center">
-                  <img className="h-[150px] w-[150px] p-[1rem] object-contain items-center" src="images/rajdhani.png" alt="Rajdhani" />
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 lg:w-1/4 p-4 flex justify-center">
-                <div className="m-auto p-auto flex justify-center">
-                  <img className="h-[150px] w-[150px] p-[1rem] object-contain items-center" src="images/maisoninfra.png" alt="Maison" />
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 lg:w-1/4 p-4 flex justify-center">
-                <div className="m-auto p-auto flex justify-center">
-                  <img className="h-[150px] w-[150px] p-[1rem] object-contain items-center" src="images/cornitos.png" alt="Cornitos" />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

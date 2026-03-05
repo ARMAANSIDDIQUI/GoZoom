@@ -20,128 +20,68 @@ const Laravel = () => {
 
 
 
-      <section className="banner-top laravel-banner">
-        <div className="banner-inner min-adj">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="heading-in laravel">
-                  <h1>Get an Application Made <br /> by an Expert Laravel <br />Development Company</h1>
-                  <p>We provide dedicated Laravel developers for your company's projects</p>
-                  <p className="st-cst-btn-area"><Link to="/contact" className="btn starBtn laraBtn">Get Started</Link><Link to="/about" className="btn starBtn aboutBtn laraBtn1">About Us</Link></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="banner-overlay1"></div>
-        <div className="banner-overlay-shape1"></div>
-        <div className="banner-overlay-shape2"></div>
-      </section>
-
-      <section className="laravel-pg whiteSection top no-after">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-7">
-              <div className="hire-txt-top-left">
-                <h2 className="long-sm-text">Expert Solutions From an Expert Laravel Development Company</h2>
-                <p>GoZoom offers a wide-range of flawless <strong>custom Laravel solutions</strong> to our clients.
-                  Laravel is an open source PHP based framework which offers a simple and robust structure making it very
-                  easy to use. Our Laravel developers provide top quality website structures. At GoZoom, we work closely
-                  with our clients to build scalable web applications making use of Laravel to elevate your business through
-                  high quality web applications.</p>
-                <p>Want to move your existing project to the Laravel framework? We have years of experience
-                  <strong>migrating to Laravel</strong> from other frameworks or vanilla PHP. Laravel offers superior code
-                  foundations, easy maintainability and resilient features, it has proven its position amongst the <a href="#" className="code_a">best PHP frameworks available</a>. Our expert Laravel developers will help you
-                  structure
-                  a detailed approach for developing Laravel powered websites and applications for your business. Hire the
-                  #1 Laravel Development Company to get top quality solutions at competitive prices.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-5">
-              <div className="laravel-mascot"> <img src="../images/laravelboy1.svg" alt="laravel-development" /></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="laravel whiteSection flat-gray">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-3">
-              <div className="laravel-char-inst"> <img src="../images/laravelb.svg" alt="https://www.codeclouds.com/wp-content/uploads/2018/11/char-laravel-nw.svg" /></div>
-            </div>
-            <div className="col-sm-9">
-              <div className="dev-off-gap-col clearfix">
-                <h3 className="long-sm-text">What Our Laravel Developers Offer</h3>
-                <ul className="prof-point">
-                  <li>
-                    <h4>Fast and efficient Laravel development</h4>
-                  </li>
-                  <li>
-                    <h4>Mobile application development</h4>
-                  </li>
-                  <li>
-                    <h4>Complex Laravel integration</h4>
-                  </li>
-                  <li>
-                    <h4>Laravel migrations and upgrades</h4>
-                  </li>
-                </ul>
-                <ul className="prof-point">
-                  <li>
-                    <h4>Laravel migrations and upgrades</h4>
-                  </li>
-                  <li>
-                    <h4>Custom Laravel frameworks</h4>
-                  </li>
-                  <li>
-                    <h4>Scalable and managed hosting solutions</h4>
-                  </li>
-                  <li>
-                    <h4>Laravel consulting and strategy</h4>
-                  </li>
-                </ul>
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #450a0a 50%, #0f172a 100%)' }}></div>
+        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-rose-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Laravel Framework</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-in" data-aos-delay="200">Get an Application Made by an Expert <span className="text-gradient-red">Laravel</span> Development Company</h1>
+              <p className="text-xl text-red-100 mb-8" data-aos="fade-in" data-aos-delay="500">
+                We provide dedicated Laravel developers for your company's projects
+              </p>
+              <div className="flex flex-wrap gap-4" data-aos="fade-in" data-aos-delay="800">
+                <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-red-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1 flex items-center">Get Started</Link>
+                <Link to="/about" className="px-8 py-4 rounded-full glass text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 flex items-center">About Us</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
-
-
-      <section className="laravel blueSection white">
-        <div className="container">
-          <div className="row clearfix">
-            <div className="col-sm-6">
-              <div className="inner-dev-dp-box pd-right30">
-                <div className="left-in-pt-lg-text">
-                  <h3 className="lg-gap-wt-txt">Why Choose Our Laravel Developers?</h3>
-                  <div className="in-cont-feature sec-left">
-                    <h4 className="red-fc-text">Comprehensive Quality Assurance and Testing</h4>
-                    <p>We employ highly skilled professionals for our <strong>Laravel development services</strong> who
-                      deliver the highest quality work at all times. Our dedicated support team responds quickly to resolve
-                      issues and implement suggestions or improvements proposed by our clients.</p>
-                  </div>
-                </div>
+      <section className="py-24 bg-white relative">
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Expert Solutions From an Expert Laravel Development Company</h2>
+              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>GoZoom offers a wide-range of flawless <strong>custom Laravel solutions</strong> to our clients. Laravel is an open source PHP based framework which offers a simple and robust structure making it very easy to use.</p>
+                <p>Our Laravel developers provide top quality website structures. At GoZoom, we work closely with our clients to build scalable web applications making use of Laravel to elevate your business through high quality web applications.</p>
+                <p>Want to move your existing project to the Laravel framework? We have years of experience <strong>migrating to Laravel</strong> from other frameworks or vanilla PHP. Laravel offers superior code foundations, easy maintainability and resilient features, it has proven its position amongst the <a href="#" className="text-red-500 font-bold hover:underline">best PHP frameworks available</a>.</p>
+                <p>Our expert Laravel developers will help you structure a detailed approach for developing Laravel powered websites and applications for your business. Hire the #1 Laravel Development Company to get top quality solutions at competitive prices.</p>
               </div>
             </div>
-            <div className="col-sm-6">
-              <div className="right-in-pt-lg-text pd-left30">
-                <div className="in-cont-feature mg-bot54">
-                  <h4 className="red-fc-text">Get Laravel Experts at Competitive Rates</h4>
-                  <p>Over the years, we’ve encountered numerous challenging tasks when developing exceptional Laravel-based
-                    websites for different business needs. Our experience means that we can provide our best Laravel
-                    developers for your project at the most cost-effecive rates.</p>
-                </div>
-                <div className="">
-                  <h4 className="red-fc-text">Custom Laravel Solutions &amp; Project Methodology</h4>
-                  <p>GoZoom is the most comprehensive Laravel development company in India, New Zealand, Australia and
-                    USA for delivering excellent services to our clients. Our Laravel development team thinks outside the
-                    box to satisfy your business requirements.</p>
+            <div className="relative animate-float">
+              <img src="../images/laravelboy1.svg" alt="laravel-development" className="w-full max-w-lg mx-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-4 flex justify-center">
+                <img src="../images/laravelb.svg" alt="Laravel" className="w-48 h-auto" />
+              </div>
+              <div className="lg:col-span-8">
+                <h3 className="text-3xl font-bold text-slate-800 mb-8 border-b border-slate-100 pb-4">What Our Laravel Developers Offer</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <ul className="space-y-4">
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Fast and efficient Laravel development</li>
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Mobile application development</li>
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Complex Laravel integration</li>
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Laravel migrations and upgrades</li>
+                  </ul>
+                  <ul className="space-y-4">
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Custom Laravel frameworks</li>
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Scalable and managed hosting solutions</li>
+                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Laravel consulting and strategy</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -149,96 +89,91 @@ const Laravel = () => {
         </div>
       </section>
 
-      <section className="laravel whiteSection dp-red no-after">
-        <div className="container">
-          <div className="wpcf7 js" id="wpcf7-f16439-o1" lang="en-US" dir="ltr">
-            <div className="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
+
+
+
+
+      <section className="py-24 bg-blue-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/20 blur-[100px] rounded-full mix-blend-screen"></div>
+        <div className="container relative z-10 block">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">Why Choose Our <span className="text-red-400">Laravel Developers?</span></h3>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
+              <h4 className="text-xl font-bold text-red-300 mb-4">Comprehensive Quality Assurance and Testing</h4>
+              <p className="text-blue-100 leading-relaxed">We employ highly skilled professionals for our <strong>Laravel development services</strong> who deliver the highest quality work at all times. Our dedicated support team responds quickly to resolve issues and implement suggestions or improvements proposed by our clients.</p>
             </div>
-            <form action="../laravel.php" method="post" className="wpcf7-form init salesBtn theme_1 noErrorMsg" id="contactform7" aria-label="Contact form" novalidate="novalidate" data-status="init">
-              <div style={{ "display": "none" }}> <input type="hidden" name="_wpcf7" value="16439" /> <input type="hidden" name="_wpcf7_version" value="5.7.6" /> <input type="hidden" name="_wpcf7_locale" value="en_US" /> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f16439-o1" /> <input type="hidden" name="_wpcf7_container_post" value="0" /> <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]" /> <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]" /> <input type="hidden" name="_wpcf7cf_visible_groups" value="[]" />
-                <input type="hidden" name="_wpcf7cf_repeaters" value="[]" /> <input type="hidden" name="_wpcf7cf_steps" value="{}" /> <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:16439,&quot;conditions&quot;:[],&quot;settings&quot;:{&quot;animation&quot;:&quot;yes&quot;,&quot;animation_intime&quot;:200,&quot;animation_outtime&quot;:200,&quot;conditions_ui&quot;:&quot;normal&quot;,&quot;notice_dismissed&quot;:false,&quot;notice_dismissed_update-cf7-5.6&quot;:true,&quot;notice_dismissed_update-cf7-5.6.2&quot;:true,&quot;notice_dismissed_update-cf7-5.6.4&quot;:true}}" />
+            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
+              <h4 className="text-xl font-bold text-red-300 mb-4">Get Laravel Experts at Competitive Rates</h4>
+              <p className="text-blue-100 leading-relaxed">Over the years, we’ve encountered numerous challenging tasks when developing exceptional Laravel-based websites for different business needs. Our experience means that we can provide our best Laravel developers for your project at the most cost-effecive rates.</p>
+            </div>
+            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
+              <h4 className="text-xl font-bold text-red-300 mb-4">Custom Laravel Solutions &amp; Project Methodology</h4>
+              <p className="text-blue-100 leading-relaxed">GoZoom is the most comprehensive Laravel development company in India, New Zealand, Australia and USA for delivering excellent services to our clients. Our Laravel development team thinks outside the box to satisfy your business requirements.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container relative z-10 block">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-3xl font-bold text-slate-800 mb-6 w-full lg:max-w-md">Get in touch with our expert Laravel developers today</h3>
+                <img src="../images/laravelboy2.svg" alt="Laravel solutions" className="w-full max-w-sm mx-auto hover:scale-105 transition-transform duration-500" />
               </div>
-
-              <div className="col-sm-6">
-                <div className="laravel-form">
-                  <div className="block-top">
-                    <div className="hlf_cnt clearfix">
-                      <div className="ct_frm half half flft">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Name"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required error" tabindex="1" aria-required="true" aria-invalid="true" placeholder="Name" value="" type="text" name="laravelName" /><label id="Name-error" className="error" htmlFor="Name" style={{ "display": "inline-block" }}>This field is required.</label></span></span></p>
-                        </div>
-                      </div>
-                      <div className="ct_frm half half flrt">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Business"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required" tabindex="2" aria-required="true" aria-invalid="false" placeholder="Business/Organization" value="" type="text" name="laravelBusiness" /></span></span>
-                          </p>
-                        </div>
-                      </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a message</h3>
+                <form action="../laravel.php" method="post" className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <input type="text" name="laravelName" placeholder="Name" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
                     </div>
-                    <div className="hlf_cnt clearfix">
-                      <div className="ct_frm half half flft">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Email"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email flc_in required email" tabindex="3" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="laravelEmail" /><label id="Email-error" className="error" htmlFor="Email" style={{ "display": "inline-block" }}>This field is required.</label></span></span></p>
-                        </div>
-                      </div>
-                      <div className="ct_frm half half flrt">
-                        <div className="full_ed">
-                          <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Phone no"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email flc_in required Phone no" tabindex="4" aria-required="true" aria-invalid="false" placeholder="Phone No" value="" type="tel" name="laravelPhoneNo" /></span></span></p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="full_ed">
-                      <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Subject"><input size="40" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required flc_in required" tabindex="5" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="laravelSubject" /></span></span></p>
-                    </div>
-                    <div className="full_ed">
-                      <p><span className="infld"><span className="wpcf7-form-control-wrap" data-name="Enquiry"><textarea cols="50" rows="5" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required required" tabindex="6" aria-required="true" aria-invalid="false" placeholder="Tell us more about your enquiry" name="laravelTextArea"></textarea></span></span>
-                      </p>
-                    </div>
-                    <div className="full_ed accept laravel-in-frm">
-                      <p><span className="laravel-agree"><span className="wpcf7-form-control-wrap" data-name="AgreePrivacyPolicy"><span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required agree_cnd hide-cf7-label required" id="contact_form_chkbox"><span className="wpcf7-list-item first last"><input type="checkbox" name="AgreePrivacyPolicy[]" value="1" tabindex="7" checked="checked" className="required" /><span className="wpcf7-list-item-label">1</span></span></span></span> I
-                        have read and agree to the <a href="#" target="_blank" rel="nofollow">Privacy
-                          Policy</a></span></p>
-                      <div id="error_msg" style={{ "display": "none" }}>
-                        <p><strong>This field is required</strong></p>
-                      </div>
-                      <p><span className="laravel-agree subscrb-check"><span className="wpcf7-form-control-wrap" data-name="subscribeCheck"><span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required agree_cnd hide-cf7-label required"><span className="wpcf7-list-item first last"><input type="checkbox" name="subscribeCheck[]" value="yes" checked="checked" tabindex="8" /><span className="wpcf7-list-item-label">yes</span></span></span></span> I would like to receive
-                        information about GoZooms’ products, services and newsletters.</span></p>
+                    <div>
+                      <input type="text" name="laravelBusiness" placeholder="Business/Organization" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" />
                     </div>
                   </div>
-                </div>
-                <div className="block-c wt-color">
-                  <p className="bld-head"><strong>Why we collect this information and how we use it</strong></p>
-                  <p>We treat your information with respect, and we will never sell it to other companies. This
-                    information is collected out of necessity for basic account creation, billing, and support purposes.
-                    We will only email you for support.</p>
-                  <div className="l_submit">
-                    <p><input className="wpcf7-form-control has-spinner wpcf7-submit btn starBtn" tabindex="8" type="submit" value="Submit" /><span className="wpcf7-spinner"></span></p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <input type="email" name="laravelEmail" placeholder="Email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
+                    </div>
+                    <div>
+                      <input type="tel" name="laravelPhoneNo" placeholder="Phone No" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
+                    </div>
                   </div>
-                </div>
+                  <div>
+                    <input type="text" name="laravelSubject" placeholder="Subject" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
+                  </div>
+                  <div>
+                    <textarea name="laravelTextArea" rows="5" placeholder="Tell us more about your enquiry" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors resize-none" required></textarea>
+                  </div>
+
+                  <div className="space-y-4">
+                    <label className="flex items-start text-sm text-slate-600">
+                      <input type="checkbox" name="AgreePrivacyPolicy" className="mt-1 mr-3 rounded text-red-500 focus:ring-red-500" required defaultChecked />
+                      <span>I have read and agree to the <a href="#" className="text-red-500 hover:underline">Privacy Policy</a></span>
+                    </label>
+                    <label className="flex items-start text-sm text-slate-600">
+                      <input type="checkbox" name="subscribeCheck" className="mt-1 mr-3 rounded text-red-500 focus:ring-red-500" defaultChecked />
+                      <span>I would like to receive information about GoZooms’ products, services and newsletters.</span>
+                    </label>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-100">
+                    <p className="text-xs text-slate-500 mb-6">
+                      <strong>Why we collect this information and how we use it:</strong> We treat your information with respect, and we will never sell it to other companies. This information is collected out of necessity for basic account creation, billing, and support purposes. We will only email you for support.
+                    </p>
+                    <button type="submit" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">
+                      Submit Message
+                    </button>
+                  </div>
+                </form>
               </div>
-
-
-              <div className="col-sm-6">
-                <div className="inner-mascot-block gap-80-lft">
-                  <h3 className="lg-white-txt-nrm mg-bot50">Get in touch with our expert Laravel developers today</h3>
-                  <p><img src="../images/laravelboy2.svg" alt="Laravel solutions" /></p>
-                </div>
-              </div>
-            </form></div> <input className="wpcf7-form-control wpcf7-hidden" id="current_url" value="https://www.codeclouds.com/web-development/laravel/" type="hidden" name="pageUrl" /> <input className="wpcf7-form-control wpcf7-hidden" id="source_url" value="Organic" type="hidden" name="sourceUrl" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="campain_url" value="" type="hidden" name="campainUrl" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="device_url" value="Desktop" type="hidden" name="urlDevice" />
-          <input className="wpcf7-form-control wpcf7-hidden" id="user_country" value="India" type="hidden" name="userCountry" />
-          <p style={{ "display": "none !important" }}><label>Δ<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="1686942297807" />
-
-          </p>
-          <div className="wpcf7-response-output" aria-hidden="true"></div>
-
+            </div>
+          </div>
         </div>
-
       </section>
 
 

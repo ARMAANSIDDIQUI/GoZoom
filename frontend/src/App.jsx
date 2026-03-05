@@ -64,6 +64,11 @@ function App() {
           <Route path="chatbot" element={<Chatbot />} />
           <Route path="expert-seo-services" element={<SeoServices />} />
 
+          {/* Tech page aliases */}
+          <Route path="angular-development" element={<Angular />} />
+          <Route path="react-development" element={<ReactJs />} />
+          <Route path="laravel-development" element={<Laravel />} />
+          <Route path="seo-services" element={<SeoServices />} />
           {/* Hiring Developer Pages using Reusable Component */}
           <Route path="hire-angular-developer" element={<HirePage title="Hire Angular Developers" bgFrom="from-red-600" bgTo="to-red-800" />} />
           <Route path="hire-codeIgniter-developers" element={<HirePage title="Hire CodeIgniter Developers" bgFrom="from-orange-500" bgTo="to-red-600" />} />
