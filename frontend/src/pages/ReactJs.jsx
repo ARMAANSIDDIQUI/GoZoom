@@ -35,15 +35,15 @@ const ReactJs = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">React Framework</span>
                             <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.1] uppercase">
                                 Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">React Developers</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
                                 Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

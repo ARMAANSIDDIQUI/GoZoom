@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaArrowRight } from 'react-icons/fa';
 
 const AndroidDev = () => {
     useEffect(() => {
@@ -26,21 +27,25 @@ const AndroidDev = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 border border-green-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Android Development</span>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
                                 Leading Android App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Experts</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
                                 Build powerful, native Android experiences that engage users and drive business growth through innovative engineering.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
-                                <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                    Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                    Learn More
+                                </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-10 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[360px] shadow-2xl flex items-center justify-center">
+                            <div className="relative z-10 p-10 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[360px] shadow-2xl flex items-center justify-center animate-float">
                                 <img src="/images/android.svg" alt="Android Specialist" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(74,222,128,0.4)]" />
                             </div>
                         </div>

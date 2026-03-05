@@ -48,27 +48,27 @@ const HirePhp = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
-                            <span className="inline-block py-2 px-5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold text-sm mb-8 uppercase tracking-[0.2em]">
+                        <div className="flex-1 text-center" data-aos="fade-right">
+                            <span className="inline-block py-2 px-5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-black text-sm mb-8 uppercase tracking-[0.2em]">
                                 Reliable Enterprise Solutions
                             </span>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-[1.05]">
                                 Power Your Vision with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Robust PHP</span> Engineering
                             </h1>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium">
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto">
                                 Hire veteran PHP developers who specialize in building ultra-secure, highly-performant, and scalable backend architectures that drive 80% of the web.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-5">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-indigo-600 text-white font-black text-center text-lg transition-all hover:bg-indigo-700 hover:-translate-y-1 shadow-2xl shadow-indigo-500/20 group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-indigo-600 text-white font-black text-center text-lg transition-all hover:bg-indigo-700 hover:-translate-y-1 shadow-2xl shadow-indigo-500/20 group uppercase tracking-wider">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#why-php" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 border border-white/10 text-white text-center font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
+                                <a href="#why-php" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 border border-white/20 text-white text-center font-black text-lg hover:bg-white/10 transition-all backdrop-blur-sm uppercase tracking-wider">
                                     Our Approach
                                 </a>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-6 bg-gradient-to-tr from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[380px] shadow-2xl">
+                            <div className="relative z-10 p-6 bg-gradient-to-tr from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[380px] shadow-2xl animate-float">
                                 <img src="/images/phpboyy.svg" alt="PHP Expert" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]" />
                             </div>
 

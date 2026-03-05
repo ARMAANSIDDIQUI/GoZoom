@@ -48,27 +48,27 @@ const HireAngular = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
-                            <div className="inline-flex items-center gap-3 py-2 px-5 rounded-lg bg-red-600/10 border border-red-600/20 text-red-500 font-black text-xs mb-8 uppercase tracking-[0.3em]">
+                        <div className="flex-1 text-center" data-aos="fade-right">
+                            <div className="inline-flex items-center gap-3 py-2 px-5 rounded-lg bg-red-600/10 border border-red-600/20 text-red-500 font-extrabold text-xs mb-8 uppercase tracking-[0.3em]">
                                 <FaAngular className="text-lg" /> Enterprise Platforms
                             </div>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
                                 Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">Angular</span> Architectures for Global Brands
                             </h1>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium">
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-bold mx-auto">
                                 Hire senior Angular engineers who specialized in heavy-duty enterprise applications, utilizing the full power of TypeScript and RxJS.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-black text-center text-lg rounded-xl shadow-2xl shadow-red-600/20 hover:-translate-y-1 transition-all group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-red-600/20 hover:-translate-y-1 transition-all group uppercase tracking-wider">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-white/5 border border-white/10 text-white font-bold text-center text-lg rounded-xl hover:bg-white/10 transition-all">
+                                <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-white/5 border border-white/20 text-white font-black text-center text-lg rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
                                     Our Capabilities
                                 </a>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-8 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] shadow-2xl">
+                            <div className="relative z-10 p-8 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] shadow-2xl animate-float">
                                 <img src="/images/angularboy.svg" alt="Angular Specialist" className="w-full h-auto drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]" />
                             </div>
 

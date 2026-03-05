@@ -43,27 +43,27 @@ const HireJquery = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center" data-aos="fade-right">
                             <div className="inline-flex items-center gap-3 py-2 px-6 bg-blue-600/10 border border-blue-600/20 rounded-lg text-blue-400 font-black text-xs mb-8 uppercase tracking-[0.4em]">
                                 <FaJs className="text-lg" /> Lightweight DOM Mastery
                             </div>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
                                 Streamline Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-slate-400">Interaction</span> with jQuery Experts
                             </h1>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-bold">
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto">
                                 Hire developers who leverage jQuery's power to build fast, interactive, and cross-browser compatible web experiences with surgical precision.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-blue-600 text-white font-black text-center text-lg rounded-xl shadow-2xl shadow-blue-600/20 hover:scale-105 transition-all group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-blue-600 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-blue-600/20 hover:scale-105 transition-all group uppercase tracking-wider">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#plugins" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 border border-white/20 text-white text-center font-bold text-lg rounded-xl hover:bg-white/5 transition-all">
+                                <a href="#plugins" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 border border-white/20 text-white text-center font-black text-lg rounded-2xl hover:bg-white/10 transition-all uppercase tracking-wider backdrop-blur-md">
                                     Case Studies
                                 </a>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-6 bg-gradient-to-tr from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+                            <div className="relative z-10 p-6 bg-gradient-to-tr from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
                                 <img src="/images/programmer-working-with-software.webp" alt="jQuery Developer" className="w-full h-auto rounded-[2.5rem] shadow-4xl filter saturate-[0.8] contrast-[1.1]" />
                             </div>
 

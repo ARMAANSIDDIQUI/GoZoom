@@ -124,7 +124,7 @@ const WebDevelopment = () => {
                         </div>
                         <div className="relative hidden lg:block" data-aos="fade-left">
                             <div className="absolute inset-0 bg-blue-500/10 rounded-3xl blur-[40px]"></div>
-                            <img src="/images/web-client.png" alt="Web Clients" className="w-full relative z-10 rounded-3xl shadow-2xl" />
+                            <img src="/images/web-client.png" alt="Web Clients" className="w-full relative z-10 rounded-3xl shadow-2xl animate-float" />
                         </div>
                     </div>
                 </div>

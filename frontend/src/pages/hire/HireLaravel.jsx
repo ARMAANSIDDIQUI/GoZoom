@@ -41,27 +41,27 @@ const HireLaravel = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center" data-aos="fade-right">
                             <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-white shadow-xl shadow-rose-500/5 text-[#ff2d20] font-black text-xs mb-8 uppercase tracking-[0.4em] border border-rose-100">
                                 <FaLaravel className="text-xl" /> The Artisan's Choice
                             </div>
                             <h1 className="text-5xl lg:text-8xl font-black text-slate-900 mb-8 leading-[0.9] tracking-tighter">
                                 Build <span className="text-[#ff2d20] italic">Expressive</span> Scalable Web Apps
                             </h1>
-                            <p className="text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-bold italic">
+                            <p className="text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-black mx-auto italic">
                                 Hire specialized Laravel developers who value clean code, elegant syntax, and rapid delivery without compromising on performance.
                             </p>
-                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-6 bg-[#ff2d20] text-white font-black text-center text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-[#ff2d20] text-white font-black text-center text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all group uppercase tracking-wider">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#stack" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-6 bg-white border border-rose-100 text-slate-800 font-black text-center text-lg rounded-2xl hover:bg-rose-50 transition-all">
+                                <a href="#stack" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-white border border-rose-100 text-slate-800 font-black text-center text-lg rounded-2xl hover:bg-rose-50 transition-all uppercase tracking-wider">
                                     Our Stack <FaHeart className="text-rose-500" />
                                 </a>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-4 bg-white rounded-[4rem] shadow-3xl border border-rose-50 w-full max-w-[380px]">
+                            <div className="relative z-10 p-4 bg-white rounded-[4rem] shadow-3xl border border-rose-50 w-full max-w-[380px] animate-float">
                                 <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto rounded-[3.5rem]" />
                             </div>
                             {/* Integrated Info Badge */}

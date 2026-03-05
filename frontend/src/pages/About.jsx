@@ -277,37 +277,43 @@ const About = () => {
               Our company's leaders share a passion for developing innovative technology solutions that drive significant bottom-line value, enabling customers and partners to succeed and win. Our team works together in one environment committed to deliver nothing, but the best.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-12" data-aos="fade-up" data-aos-delay="200">
-            <ValueCard
-              img="/images/about_innovation.jpeg"
-              title="INNOVATION"
-              items={[
-                '+ To ideate better and innovative strategy',
-                '+ To create Now and future proof solutions',
-                '+ To adapt to changing trends effortlessly',
-                '+ To outplace and outpace your competitors',
-              ]}
-            />
-            <ValueCard
-              img="/images/commitment.png"
-              title="COMMITMENTS"
-              items={[
-                '+ To ensure all stakeholders are working',
-                '+ To communicate hassle-free',
-                '+ To drive better results',
-                '+ To enhance growth',
-              ]}
-            />
-            <ValueCard
-              img="/images/excellence.webp"
-              title="EXCELLENCE"
-              items={[
-                '+ To be customer-driven more than ever',
-                '+ To deliver exceptional quality. Always!',
-                '+ To take real time and informed decisions',
-                '+ To enhance customer experience',
-              ]}
-            />
+          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-12">
+            <div data-aos="fade-up" data-aos-delay="100" className="w-full md:w-auto">
+              <ValueCard
+                img="/images/about_innovation.jpeg"
+                title="INNOVATION"
+                items={[
+                  '+ To ideate better and innovative strategy',
+                  '+ To create Now and future proof solutions',
+                  '+ To adapt to changing trends effortlessly',
+                  '+ To outplace and outpace your competitors',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" className="w-full md:w-auto">
+              <ValueCard
+                img="/images/commitment.png"
+                title="COMMITMENTS"
+                items={[
+                  '+ To ensure all stakeholders are working',
+                  '+ To communicate hassle-free',
+                  '+ To drive better results',
+                  '+ To enhance growth',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500" className="w-full md:w-auto">
+              <ValueCard
+                img="/images/excellence.webp"
+                title="EXCELLENCE"
+                items={[
+                  '+ To be customer-driven more than ever',
+                  '+ To deliver exceptional quality. Always!',
+                  '+ To take real time and informed decisions',
+                  '+ To enhance customer experience',
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>

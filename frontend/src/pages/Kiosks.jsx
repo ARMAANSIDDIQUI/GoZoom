@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaCartShopping, FaCircleInfo, FaCreditCard, FaHospital, FaMasksTheater, FaGear } from 'react-icons/fa6';
 
 const Kiosks = () => {
     useEffect(() => {
@@ -53,15 +54,17 @@ const Kiosks = () => {
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { title: 'Self-Ordering Kiosks', desc: 'Allow customers to browse menus, customize orders, and make payments independently — reducing wait times and increasing order accuracy.', icon: '🛒' },
-                            { title: 'Information Kiosks', desc: 'Provide visitors with wayfinding, product info, and interactive content in retail spaces, hotels, and public venues.', icon: '📋' },
-                            { title: 'Payment Kiosks', desc: 'Secure, fast, and reliable payment processing terminals integrated with your existing POS and accounting systems.', icon: '💳' },
-                            { title: 'Healthcare Kiosks', desc: 'Patient check-in, registration, and information retrieval solutions that reduce administrative burden and improve patient flow.', icon: '🏥' },
-                            { title: 'Entertainment Kiosks', desc: 'Ticketing, loyalty programs, and interactive entertainment solutions for cinemas, theme parks, and venues.', icon: '🎭' },
-                            { title: 'Custom Kiosks', desc: 'Bespoke kiosk solutions tailored to your specific industry needs, workflows, and brand identity.', icon: '⚙️' },
+                            { title: 'Self-Ordering Kiosks', desc: 'Allow customers to browse menus, customize orders, and make payments independently — reducing wait times and increasing order accuracy.', icon: FaCartShopping },
+                            { title: 'Information Kiosks', desc: 'Provide visitors with wayfinding, product info, and interactive content in retail spaces, hotels, and public venues.', icon: FaCircleInfo },
+                            { title: 'Payment Kiosks', desc: 'Secure, fast, and reliable payment processing terminals integrated with your existing POS and accounting systems.', icon: FaCreditCard },
+                            { title: 'Healthcare Kiosks', desc: 'Patient check-in, registration, and information retrieval solutions that reduce administrative burden and improve patient flow.', icon: FaHospital },
+                            { title: 'Entertainment Kiosks', desc: 'Ticketing, loyalty programs, and interactive entertainment solutions for cinemas, theme parks, and venues.', icon: FaMasksTheater },
+                            { title: 'Custom Kiosks', desc: 'Bespoke kiosk solutions tailored to your specific industry needs, workflows, and brand identity.', icon: FaGear },
                         ].map((item, i) => (
                             <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
-                                <div className="text-4xl mb-5">{item.icon}</div>
+                                <div className="text-4xl mb-5 text-teal-600 group-hover:scale-110 transition-transform flex justify-center md:justify-start">
+                                    <item.icon />
+                                </div>
                                 <h4 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h4>
                                 <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
                             </div>

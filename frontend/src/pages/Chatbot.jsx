@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -31,21 +32,25 @@ const Chatbot = () => {
 
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 font-bold text-sm mb-6 uppercase tracking-wider">AI-Powered Solutions</span>
               <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight uppercase">
                 Hire Experienced <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Chatbot Developers</span>
               </h1>
-              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
                 Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                <Link to="/contact" className="px-10 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-fuchsia-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
-                <Link to="/about" className="px-10 py-4 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-fuchsia-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                  Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                  Learn More
+                </Link>
               </div>
             </div>
             <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-10 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl flex items-center justify-center group/bot hover:scale-105 transition-all duration-500">
+              <div className="relative z-10 p-10 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl flex items-center justify-center group/bot hover:scale-105 transition-all duration-500 animate-float">
                 <img src="/images/chatbot1.svg" alt="Chatbot Expert" className="w-full h-auto drop-shadow-[0_20px_60px_rgba(139,92,246,0.5)]" />
               </div>
             </div>

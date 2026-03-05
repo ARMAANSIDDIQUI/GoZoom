@@ -1,0 +1,209 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { FaComments, FaTimes, FaPaperPlane, FaRobot } from 'react-icons/fa';
+
+const GlobalChatbot = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [messages, setMessages] = useState([
+        { role: 'bot', text: 'Hi! I\'m GoZoom\'s AI assistant. How can I help you today?' }
+    ]);
+    const [input, setInput] = useState('');
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
+
+    const knowledgeBase = [
+        {
+            pattern: /hello|hi|hey|greetings|morning|evening|hey there|howdy|hi there|yo|whats up|hola|asalam|namaste|morning|evening|afternoon/i,
+            response: "Hello! Welcome to GoZoom Technologies. How can I assist you with your digital goals today? I'm here to help with services, pricing, or hiring expert talent."
+        },
+        {
+            pattern: /services|what do you do|capability|expert|offer|portfolio|work|products|expertise|specialties|features|solutions|skills|development|design/i,
+            response: "GoZoom specializes in comprehensive tech solutions: \n• Web Development (React, Angular, Node, Laravel)\n• Mobile Apps (Android, iOS, Flutter)\n• Software Engineering & Architecture\n• Cloud Integration & DevOps\n• AI, ML & Chatbot Solutions. \nWhich specific service can I tell you more about?"
+        },
+        {
+            pattern: /contact|call|email|reach|address|location|office|phone|number|whatsapp|map|support|help me|talk to human|representative|agent|chat with person|speak with someone/i,
+            response: "You can reach our team directly at contact@gozoom.com or by calling our support line. Our headquarters is located in the primary business district. Check our 'Contact Us' page for a full map and contact form!"
+        },
+        {
+            pattern: /price|cost|quote|budget|how much|rate|estimation|pricing|fees|expensive|cheap|charges|payment|billing|invoice|estimate/i,
+            response: "Pricing depends on the scope and complexity of your project. For a quick estimate, please share your requirements via our 'Contact' form, and one of our consultants will provide a free quote within 24 hours."
+        },
+        {
+            pattern: /angular|react|laravel|php|node|frontend|backend|java|python|javascript|stack|vue|nextjs|typescript|golang|ruby|asp\.net|c#|spring|mern|mean/i,
+            response: "We are experts in modern stacks! Whether you need a React/Next.js frontend, a robust Laravel/Node backend, or a full-stack Angular enterprise app, we can build it. You can also hire our developers for your existing team."
+        },
+        {
+            pattern: /mobile|android|ios|app dev|flutter|react native|smartphone|iphone|playstore|appstore|tablet|ipad|native|hybrid|cross platform/i,
+            response: "We deliver high-end mobile experiences. Our team builds native Android/iOS apps and cross-platform solutions using Flutter/React Native, handling everything from design to store submission."
+        },
+        {
+            pattern: /ai|machine learning|ml|chatbot|automation|intelligent|bot|nlp|data science|gpt|llm|neural|deep learning|vision|predictive/i,
+            response: "AI is our forte. We build smart automation tools, predictive analytics models, and custom NLP chatbots (just like me!) to streamline your business workflows."
+        },
+        {
+            pattern: /hire|recruit|career|job|join|work at|position|vacancy|internship|hiring|employment|developer for hire|talent|staffing|candidate/i,
+            response: "Looking for talent or a new role? \n• Hire Experts: Check our 'Hire Developers' section for tech-specific talent.\n• Join Us: Visit our 'Careers' page for current job openings and internships!"
+        },
+        {
+            pattern: /about|company|who are you|history|team|gozoom|corporate|vision|mission|background|founded|ceo|owner|director/i,
+            response: "GoZoom Technologies is a premier offshore software delivery partner. With 3+ years of excellence, a team of 30+ experts, and 100+ happy global clients, we transform ideas into digital reality."
+        },
+        {
+            pattern: /seo|marketing|digital|rank|google|ads|sem|social media|traffic|optimization|growth|content|strategy|adwords/i,
+            response: "Our Digital Marketing division helps products grow. We offer technical SEO, Google Ads management, and data-driven marketing strategies to ensure you rank #1 and drive traffic."
+        },
+        {
+            pattern: /thank|great|perfect|awesome|thanks|cool|ok|thanks bot|good bot|well done|excellent|helpful|superb/i,
+            response: "My pleasure! I'm glad I could provide the information you needed. Is there anything else about GoZoom technologies you'd like to explore?"
+        },
+        {
+            pattern: /bye|goodbye|see you|later|exit|close|quit|leave|stop|done/i,
+            response: "Goodbye! It was a pleasure chatting. Feel free to reach out anytime you need assistance. Have an amazing day!"
+        },
+        {
+            pattern: /help|guide|manual|instructions|how to/i,
+            response: "I can help you navigate our services, find contact info, or explain our hiring process. Just type a keyword like 'Services', 'Pricing', or 'Hire React' to get started!"
+        }
+    ];
+
+    const handleBotResponse = (userInput) => {
+        let botResponse = "I'm not sure I understand that. Would you like to speak to a human expert?";
+
+        for (const item of knowledgeBase) {
+            if (item.pattern.test(userInput)) {
+                botResponse = item.response;
+                break;
+            }
+        }
+
+        setMessages(prev => [...prev, { role: 'bot', text: botResponse }]);
+    };
+
+    const handleSend = (e) => {
+        e.preventDefault();
+        if (!input.trim()) return;
+
+        const userMsg = { role: 'user', text: input };
+        setMessages(prev => [...prev, userMsg]);
+        setInput('');
+
+        // Simulate bot typing
+        setTimeout(() => {
+            handleBotResponse(input);
+        }, 800);
+    };
+
+    const handleSuggestedClick = (question) => {
+        const userMsg = { role: 'user', text: question };
+        setMessages(prev => [...prev, userMsg]);
+
+        setTimeout(() => {
+            handleBotResponse(question);
+        }, 800);
+    };
+
+    const suggestedQuestions = [
+        "What services do you provide?",
+        "How can I contact you?",
+        "Tell me about your pricing.",
+        "I want to hire a developer.",
+        "What tech stack do you use?",
+        "Do you build mobile apps?",
+        "Tell me about your AI solutions.",
+        "Who is Gozoom Technologies?",
+        "Can you help with SEO?",
+        "How do I join the team?",
+    ];
+
+    return (
+        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end chatbot-area">
+            {/* Chat Window */}
+            {isOpen && (
+                <div className="mb-4 w-[350px] sm:w-[400px] h-[500px] bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(0,0,0,0.5)] animate-fade-up">
+                    {/* Header */}
+                    <div className="p-5 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                                <FaRobot className="text-white text-xl" />
+                            </div>
+                            <div>
+                                <h3 className="text-white font-bold text-sm">GoZoom Assistant</h3>
+                                <div className="flex items-center gap-1">
+                                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                    <span className="text-white/70 text-xs">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white transition-colors">
+                            <FaTimes />
+                        </button>
+                    </div>
+
+                    {/* Messages */}
+                    <div className="flex-grow overflow-y-auto p-5 space-y-4 scroll-smooth visible-scrollbar">
+                        {messages.map((msg, i) => (
+                            <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                                <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
+                                    ? 'bg-blue-600 text-white rounded-tr-none'
+                                    : 'bg-white/10 text-slate-200 border border-white/10 rounded-tl-none'
+                                    } shadow-lg`}>
+                                    {msg.text}
+                                </div>
+                            </div>
+                        ))}
+                        <div ref={messagesEndRef} />
+                    </div>
+
+                    {/* Suggested Questions */}
+                    <div className="px-5 pb-3 flex overflow-x-auto gap-2 visible-scrollbar flex-nowrap shrink-0">
+                        {suggestedQuestions.map((q, i) => (
+                            <button
+                                key={i}
+                                onClick={() => handleSuggestedClick(q)}
+                                className="text-[10px] sm:text-xs bg-white/10 border border-white/10 hover:bg-blue-600/30 hover:border-blue-500/50 text-slate-200 py-1.5 px-4 rounded-full transition-all text-left whitespace-nowrap shadow-sm active:scale-95"
+                            >
+                                {q}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Input */}
+                    <form onSubmit={handleSend} className="p-4 border-t border-white/10 bg-black/20">
+                        <div className="relative">
+                            <input
+                                type="text"
+                                value={input}
+                                onChange={(e) => setInput(e.target.value)}
+                                placeholder="Type your message..."
+                                className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 pr-12 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                            />
+                            <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
+                                <FaPaperPlane className="text-xs" />
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            )}
+
+            {/* Toggle Button */}
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-500 hover:scale-110 active:scale-95 ${isOpen ? 'bg-slate-800 rotate-90' : 'bg-gradient-to-tr from-blue-600 to-indigo-600'
+                    }`}
+            >
+                {isOpen ? <FaTimes className="text-2xl" /> : <FaComments className="text-2xl" />}
+                {!isOpen && (
+                    <span className="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-slate-900 rounded-full animate-ping"></span>
+                )}
+            </button>
+        </div>
+    );
+};
+
+export default GlobalChatbot;

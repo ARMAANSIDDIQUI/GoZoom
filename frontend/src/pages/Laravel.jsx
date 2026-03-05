@@ -31,15 +31,15 @@ const Laravel = () => {
 
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-20">
-            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Laravel Framework</span>
               <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
                 Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
               </h1>
-              <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+              <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto font-medium">
                 We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -49,7 +49,7 @@ const Laravel = () => {
               </div>
             </div>
             <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
                 <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]" />
               </div>
             </div>

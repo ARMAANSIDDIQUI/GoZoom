@@ -41,27 +41,27 @@ const HireHtml = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center" data-aos="fade-right">
                             <div className="inline-flex items-center gap-3 py-2 px-6 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 font-black text-xs mb-8 uppercase tracking-[0.4em]">
                                 <FaHtml5 className="text-lg" /> Pixel-Perfect Engineering
                             </div>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
                                 Design to <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Reality</span> with HTML5 Artisans
                             </h1>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-bold">
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto">
                                 Hire front-end HTML/CSS specialists who bridge the gap between stunning designs and rock-solid, production-ready code.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-orange-500 text-white font-black text-center text-lg rounded-xl shadow-2xl shadow-orange-500/20 hover:scale-105 transition-all group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-orange-500 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-orange-500/20 hover:scale-105 transition-all group uppercase tracking-wider">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#design" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 border border-white/20 text-white text-center font-bold text-lg rounded-xl hover:bg-white/5 transition-all">
+                                <a href="#design" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 border border-white/20 text-white text-center font-black text-lg rounded-2xl hover:bg-white/5 transition-all uppercase tracking-wider backdrop-blur-md">
                                     Our Portfolio
                                 </a>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+                            <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
                                 <img src="/images/software-developers.webp" alt="HTML Specialists" className="w-full h-auto rounded-[3.5rem] shadow-4xl filter saturate-[1.2]" />
                             </div>
 

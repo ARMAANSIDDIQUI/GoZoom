@@ -26,7 +26,7 @@ const MobileAppDev = () => {
 
                 <div className="container relative z-10 block py-24">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="text-center lg:text-left">
+                        <div className="text-center flex flex-col items-center">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
                                 Mobile Development
@@ -34,12 +34,12 @@ const MobileAppDev = () => {
                             <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
                                 Top Mobile App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Company</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium" data-aos="fade-up" data-aos-delay="400">
+                            <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                                 Crafting secure, dynamic solutions for iOS, Android, and Cross-Platform, ensuring robustness and performance.
                             </p>
 
                             {/* Stats Grid - Glassmorphism */}
-                            <div className="grid grid-cols-3 gap-4 mb-10 max-w-md mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="500">
+                            <div className="grid grid-cols-3 gap-4 mb-10 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="500">
                                 {[
                                     { label: 'User Engagement', value: '100k' },
                                     { label: 'Featured Apps', value: '100+' },
@@ -52,9 +52,9 @@ const MobileAppDev = () => {
                                 ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4" data-aos="fade-up" data-aos-delay="700">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black hover:shadow-lg hover:shadow-purple-500/30 transition-all hover:-translate-y-1 gap-2">Talk to Our Expert <FaArrowRight /></Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-8 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 gap-2">Know More <FaArrowRight /></Link>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="700">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">Talk to Our Expert <FaArrowRight className="group-hover:translate-x-1 transition-transform" /></Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-white/5 text-white text-center font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">Know More</Link>
                             </div>
                         </div>
                         <div className="relative flex justify-center items-center" data-aos="fade-left">

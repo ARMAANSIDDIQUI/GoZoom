@@ -7,8 +7,18 @@ import { FaArrowRight } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import WOW from 'wow.js';
+import 'animate.css';
 
 const Home = () => {
+    React.useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+        const wow = new WOW({ live: false });
+        wow.init();
+    }, []);
+
     const slides = [
         {
             id: 1,
@@ -85,24 +95,26 @@ const Home = () => {
                     {slides.map((slide) => (
                         <SwiperSlide key={slide.id}>
                             <div className="container min-h-[90vh] lg:min-h-screen py-24 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
-                                <div className="lg:w-3/5 text-center lg:text-left z-10">
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-6 animate-fade-down">
+                                <div className="lg:w-3/5 text-center z-10 flex flex-col items-center">
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-6" data-aos="fade-down">
                                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                         {slide.tagline}
                                     </div>
                                     <h1
                                         className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight drop-shadow-sm"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
+                                        data-aos="fade-up" data-aos-delay="200"
                                     />
                                     <p
-                                        className="text-hero-desc text-slate-400 mb-6 max-w-2xl mx-auto lg:mx-0 font-medium"
+                                        className="text-hero-desc text-slate-400 mb-6 max-w-2xl mx-auto font-medium"
                                         dangerouslySetInnerHTML={{ __html: slide.desc }}
+                                        data-aos="fade-up" data-aos-delay="400"
                                     />
-                                    <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
-                                        <Link to="/contact" className="inline-flex items-center justify-center gap-3 h-[60px] lg:h-[70px] px-10 lg:px-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all group shrink-0 w-full sm:w-auto shrink-0 min-w-[220px]">
+                                    <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
+                                        <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                             Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                         </Link>
-                                        <Link to="/about" className="inline-flex items-center justify-center gap-3 h-[60px] lg:h-[70px] px-10 lg:px-12 bg-white/5 border border-white/10 text-white font-bold text-center rounded-2xl hover:bg-white/10 backdrop-blur-md transition-all shrink-0 w-full sm:w-auto shrink-0 min-w-[220px]">
+                                        <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
                                             Learn More
                                         </Link>
                                     </div>
@@ -124,10 +136,10 @@ const Home = () => {
             </section>
 
             {/* We are Gozoom Technologies */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-gray-50 overflow-hidden">
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row gap-16">
-                        <div className="lg:w-7/12">
+                        <div className="lg:w-7/12" data-aos="fade-right">
                             <span className="text-gray-500 uppercase tracking-wider text-sm font-semibold block mb-2">We are Gozoom Technologies</span>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">End-to-End Custom Software Development Company</h2>
                             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -141,25 +153,25 @@ const Home = () => {
                             </Link>
                         </div>
 
-                        <div className="lg:w-5/12 grid grid-cols-2 gap-8">
-                            <div className="border-l-4 border-yellow-400 pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded">
+                        <div className="lg:w-5/12 grid grid-cols-2 gap-8" data-aos="fade-left">
+                            <div className="border-l-4 border-yellow-400 pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Years</span>
-                                <span className="text-4xl font-bold text-gray-900 block my-2">3+</span>
+                                <span className="text-4xl font-bold text-gray-900 block my-2 group-hover:text-yellow-500 transition-colors">3+</span>
                                 <p className="text-sm text-gray-600">Extensive experience in delivering IT solutions & services.</p>
                             </div>
-                            <div className="border-l-4 border-purple-500 pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded">
+                            <div className="border-l-4 border-purple-500 pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Clients</span>
-                                <span className="text-4xl font-bold text-gray-900 block my-2">100+</span>
+                                <span className="text-4xl font-bold text-gray-900 block my-2 group-hover:text-purple-500 transition-colors">100+</span>
                                 <p className="text-sm text-gray-600">Clients across the globe testifying our quality & processes.</p>
                             </div>
-                            <div className="border-l-4 border-blue-400 pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded">
+                            <div className="border-l-4 border-blue-400 pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Awards</span>
-                                <span className="text-4xl font-bold text-gray-900 block my-2">7+</span>
+                                <span className="text-4xl font-bold text-gray-900 block my-2 group-hover:text-blue-500 transition-colors">7+</span>
                                 <p className="text-sm text-gray-600">Industry prestigious awards for excellence and innovation.</p>
                             </div>
-                            <div className="border-l-4 border-green-500 pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded">
+                            <div className="border-l-4 border-green-500 pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Experts</span>
-                                <span className="text-4xl font-bold text-gray-900 block my-2">30+</span>
+                                <span className="text-4xl font-bold text-gray-900 block my-2 group-hover:text-green-500 transition-colors">30+</span>
                                 <p className="text-sm text-gray-600">Team of qualified, skilled and committed professionals.</p>
                             </div>
                         </div>

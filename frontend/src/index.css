@@ -38,6 +38,28 @@
     border-radius: 99px;
 }
 
+/* Chatbot Scrollbar Exception */
+.chatbot-area .visible-scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.05) !important;
+    -ms-overflow-style: auto !important;
+}
+
+.chatbot-area .visible-scrollbar::-webkit-scrollbar {
+    display: block !important;
+    width: 5px !important;
+    height: 5px !important;
+}
+
+.chatbot-area .visible-scrollbar::-webkit-scrollbar-thumb {
+    background: #3b82f6 !important;
+    border-radius: 10px !important;
+}
+
+.chatbot-area .visible-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
 /* =========================================================
    REFINED SHARED PAGE STYLES — based on legacy CSS auditing
    ========================================================= */
