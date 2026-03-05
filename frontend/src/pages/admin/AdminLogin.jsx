@@ -26,8 +26,8 @@ const AdminLogin = () => {
             <div className="relative z-10 w-full max-w-md px-6">
                 <div className="glass-premium p-10 rounded-[2.5rem] border border-white bg-white/80 backdrop-blur-2xl shadow-premium animate-fade-up">
                     <div className="text-center mb-10">
-                        <div className="w-16 h-16 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center font-black text-white shadow-xl shadow-blue-500/20 mx-auto mb-6">
-                            GZ
+                        <div className="mb-6">
+                            <img src="/images/logo2.png" alt="GoZoom Logo" className="h-16 mx-auto object-contain" />
                         </div>
                         <h2 className="text-4xl font-black text-slate-900 mb-2">Admin Portal</h2>
                         <p className="text-slate-500 font-medium">Log in to manage GoZoom</p>

@@ -20,11 +20,11 @@ const AdminDashboard = () => {
             {/* Header / Navigation */}
             <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200 px-6 py-4">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center font-black text-white shadow-lg shadow-blue-500/20">
-                            GZ
-                        </div>
-                        <h1 className="text-xl font-black tracking-tight text-slate-900 hidden sm:block">GoZoom <span className="text-blue-600 text-[10px] uppercase font-bold ml-1 tracking-widest border border-blue-100 bg-blue-50 px-2 py-0.5 rounded-md">Admin</span></h1>
+                    <div className="flex items-center gap-6">
+                        <Link to="/" className="block">
+                            <img src="/images/logo2.png" alt="GoZoom Logo" className="h-10 object-contain" />
+                        </Link>
+                        <h1 className="text-xl font-extrabold tracking-tight text-slate-900 hidden sm:block">Admin <span className="text-blue-600 text-[10px] uppercase font-bold ml-1 tracking-widest border border-blue-100 bg-blue-50 px-2 py-0.5 rounded-md">Control</span></h1>
                     </div>
 
                     <button

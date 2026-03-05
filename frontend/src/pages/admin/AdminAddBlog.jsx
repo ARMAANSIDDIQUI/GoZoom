@@ -59,11 +59,14 @@ const AdminAddBlog = () => {
             {/* Header / Navigation */}
             <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200 px-6 py-4">
                 <div className="max-w-5xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-6">
                         <Link to="/admin/dashboard" className="w-10 h-10 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center transition-all duration-300 shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                         </Link>
-                        <h1 className="text-xl font-black tracking-tight text-slate-900 uppercase tracking-widest text-xs">Editor <span className="text-blue-600">Suite</span></h1>
+                        <div className="flex items-center gap-3">
+                            <img src="/images/logo2.png" alt="Logo" className="h-7 object-contain" />
+                            <h1 className="text-xl font-black tracking-tight text-slate-900 uppercase tracking-widest text-[10px]">Editor <span className="text-blue-600">Suite</span></h1>
+                        </div>
                     </div>
                     <button onClick={handleSubmit} type="button" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-2.5 rounded-xl font-black text-sm shadow-lg shadow-blue-500/20 active:scale-95 transition-transform">
                         Publish Article
