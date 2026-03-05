@@ -98,11 +98,11 @@ const Home = () => {
                                         className="text-hero-desc text-slate-400 mb-6 max-w-2xl mx-auto lg:mx-0 font-medium"
                                         dangerouslySetInnerHTML={{ __html: slide.desc }}
                                     />
-                                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                                        <Link to="/contact" className="h-[60px] lg:h-[70px] px-10 lg:px-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-3 group shrink-0">
+                                    <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
+                                        <Link to="/contact" className="inline-flex items-center justify-center gap-3 h-[60px] lg:h-[70px] px-10 lg:px-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all group shrink-0 w-full sm:w-auto shrink-0 min-w-[220px]">
                                             Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                         </Link>
-                                        <Link to="/about" className="h-[60px] lg:h-[70px] px-10 lg:px-12 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 backdrop-blur-md transition-all flex items-center justify-center shrink-0">
+                                        <Link to="/about" className="inline-flex items-center justify-center gap-3 h-[60px] lg:h-[70px] px-10 lg:px-12 bg-white/5 border border-white/10 text-white font-bold text-center rounded-2xl hover:bg-white/10 backdrop-blur-md transition-all shrink-0 w-full sm:w-auto shrink-0 min-w-[220px]">
                                             Learn More
                                         </Link>
                                     </div>

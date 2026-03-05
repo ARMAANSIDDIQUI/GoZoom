@@ -58,9 +58,9 @@ const WebDevelopment = () => {
                         <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                             Creating powerful, effective, and engaging web experiences for businesses of all sizes
                         </p>
-                        <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <a href="#explore" className="px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Explore Services</a>
-                            <Link to="/contact" className="px-10 py-4 rounded-2xl bg-white/5 text-white font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Enquire Now</Link>
+                        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#explore" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Explore Services</a>
+                            <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Enquire Now</Link>
                         </div>
                     </div>
                 </div>

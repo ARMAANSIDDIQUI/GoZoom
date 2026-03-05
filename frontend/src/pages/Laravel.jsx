@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Laravel = () => {
   useEffect(() => {
@@ -20,23 +21,37 @@ const Laravel = () => {
 
 
 
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #450a0a 50%, #0f172a 100%)' }}></div>
-        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-rose-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="container relative z-10 flex flex-col items-center justify-center min-min-h-[90vh] lg:min-h-screen py-24">
-          <div className="max-w-4xl text-center mx-auto">
-            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Laravel Framework</span>
-            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-in" data-aos-delay="200">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
-            </h1>
-            <p className="text-hero-desc text-red-100 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-in" data-aos-delay="500">
-              We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
-            </p>
-            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-in" data-aos-delay="800">
-              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
-              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">About Us</Link>
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
+        {/* Custom Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-rose-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Laravel Framework</span>
+              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
+              </h1>
+              <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                  Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">
+                  About Us
+                </Link>
+              </div>
+            </div>
+            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+                <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]" />
+              </div>
             </div>
           </div>
         </div>
@@ -44,8 +59,8 @@ const Laravel = () => {
 
       <section className="py-24 bg-white relative">
         <div className="container relative z-10 block">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div data-aos="fade-right">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Expert Solutions From an Expert Laravel Development Company</h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>GoZoom offers a wide-range of flawless <strong>custom Laravel solutions</strong> to our clients. Laravel is an open source PHP based framework which offers a simple and robust structure making it very easy to use.</p>
@@ -53,9 +68,6 @@ const Laravel = () => {
                 <p>Want to move your existing project to the Laravel framework? We have years of experience <strong>migrating to Laravel</strong> from other frameworks or vanilla PHP. Laravel offers superior code foundations, easy maintainability and resilient features, it has proven its position amongst the <a href="#" className="text-red-500 font-bold hover:underline">best PHP frameworks available</a>.</p>
                 <p>Our expert Laravel developers will help you structure a detailed approach for developing Laravel powered websites and applications for your business. Hire the #1 Laravel Development Company to get top quality solutions at competitive prices.</p>
               </div>
-            </div>
-            <div className="relative animate-float">
-              <img src="../images/laravelboy1.svg" alt="laravel-development" className="w-full max-w-lg mx-auto" />
             </div>
           </div>
         </div>

@@ -14,25 +14,42 @@ const Angular = () => {
 
   return (
     <div>
-      {/* Banner Section */}
-      {/* Banner Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}></div>
-        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/20 blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-orange-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
+        {/* Geometric Background Particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[5%] right-[5%] w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-[10%] left-[10%] w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          {/* SVG Hexagon Grid */}
+          <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="hex" width="50" height="43.3" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
+                <path d="M25 0 L50 14.4 L50 28.9 L25 43.3 L0 28.9 L0 14.4 Z" fill="none" stroke="white" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hex)" />
+          </svg>
+        </div>
 
-        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[90vh] lg:min-h-screen py-24">
-          <div className="max-w-4xl text-center mx-auto">
-            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Angular Framework</span>
-            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-              Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
-            </h1>
-            <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-              Everything you need to get your project started in 24 hours — architecture, speed, and reliability.
-            </p>
-            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
-              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+        <div className="container mx-auto px-6 lg:px-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Angular Framework</span>
+              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
+              </h1>
+              <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                Everything you need to get your project started in 24 hours — architecture, speed, and reliability.
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
+                <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+              </div>
+            </div>
+            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-8 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] shadow-2xl">
+                <img src="/images/angularboy.svg" alt="Angular Specialist" className="w-full h-auto drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]" />
+              </div>
             </div>
           </div>
         </div>
@@ -42,8 +59,8 @@ const Angular = () => {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-red-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
         <div className="container relative z-10 block">
-          <div className="grid lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-8" data-aos="fade-right">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">About Angular</span>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
                 Enhance your project with our in-house talent, offering expertise in <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development</span> services.
@@ -56,10 +73,6 @@ const Angular = () => {
                   GoZooms employs specialized Angular developers experienced in Javascript to create real-time applications effortlessly. We are highly recognized as the best Angular development company for developing single page applications in an agile manner.
                 </p>
               </div>
-            </div>
-            <div className="lg:col-span-4 relative" data-aos="fade-left">
-              <div className="absolute inset-0 bg-red-100 rounded-full blur-[80px] opacity-60"></div>
-              <img className="w-full max-w-xs mx-auto relative z-10 animate-float drop-shadow-2xl" src="/images/angularboy.svg" alt="Angular Development" />
             </div>
           </div>
         </div>

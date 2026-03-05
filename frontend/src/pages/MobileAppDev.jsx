@@ -52,9 +52,9 @@ const MobileAppDev = () => {
                                 ))}
                             </div>
 
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4" data-aos="fade-up" data-aos-delay="700">
-                                <Link to="/contact" className="px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-black hover:shadow-lg hover:shadow-purple-500/30 transition-all hover:-translate-y-1 flex items-center gap-2">Talk to Our Expert <FaArrowRight /></Link>
-                                <Link to="/about" className="px-8 py-4 rounded-2xl bg-white/5 text-white font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 flex items-center gap-2">Know More <FaArrowRight /></Link>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4" data-aos="fade-up" data-aos-delay="700">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black hover:shadow-lg hover:shadow-purple-500/30 transition-all hover:-translate-y-1 gap-2">Talk to Our Expert <FaArrowRight /></Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-8 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 gap-2">Know More <FaArrowRight /></Link>
                             </div>
                         </div>
                         <div className="relative flex justify-center items-center" data-aos="fade-left">

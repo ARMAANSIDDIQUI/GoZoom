@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaArrowRight } from 'react-icons/fa';
 
 const ReactJs = () => {
     useEffect(() => {
@@ -23,25 +24,38 @@ const ReactJs = () => {
 
     return (
         <div>
-            {/* Hero Banner — Cyan/Blue React colors */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #0c4a6e 50%, #0f172a 100%)' }}></div>
-                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-cyan-500/25 blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-sky-400/15 blur-[80px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+            {/* Hero Section */}
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
+                {/* Handcrafted Decorative Elements (matching Hire style) */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#61dafb 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                </div>
 
-                <div className="container relative z-10 block">
-                    <div className="max-w-3xl text-center mx-auto">
-                        <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">React Framework</span>
-                        <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-                            Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">React Developers</span>
-                        </h1>
-                        <p className="text-hero-desc text-slate-300 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-                            Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.
-                        </p>
-                        <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
-                            <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">React Framework</span>
+                            <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.1] uppercase">
+                                Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">React Developers</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                                Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.
+                            </p>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                    Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                    About Us
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 bg-gradient-to-br from-white/10 to-transparent p-4 rounded-[40px] border border-white/10 backdrop-blur-sm shadow-2xl w-full max-w-[400px] animate-zoom-in-out">
+                                <img src="/images/react2.png" alt="React Development" className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,24 +66,17 @@ const ReactJs = () => {
                 <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-50 rounded-full blur-[80px] -mr-32 -mt-32"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-[80px] -ml-32 -mb-32"></div>
                 <div className="container relative z-10 block">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-cyan-50 text-cyan-700 font-bold text-sm mb-4">Next Level React</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
-                                Next Level of <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">ReactJS Development</span>
-                            </h2>
-                            <div className="space-y-5">
-                                <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-cyan-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
-                                    GoZooms' developers use React to create impressively flexible user interfaces for web applications. Using React, we can help businesses build static or dynamic websites using frameworks like Next.js, React Native mobile apps, or even desktop apps using Electron.js!
-                                </p>
-                                <p className="text-lg text-slate-600 leading-relaxed">
-                                    With our expertise and knowledge with React, you don't need to look anywhere else for professional and dedicated React developers. Our React.js developers have experience with technology stacks like MERN, and adhere to strict architectural principles when building any React application.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="relative" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-cyan-100 rounded-full blur-[80px] opacity-60"></div>
-                            <img src="../images/reactboy.svg" alt="React Development" className="w-full max-w-md mx-auto relative z-10 animate-float drop-shadow-2xl" />
+                    <div className="order-1 lg:order-2" data-aos="fade-left">
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6 mt-12 lg:mt-0">
+                            Next Level of <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">ReactJS Development</span>
+                        </h2>
+                        <div className="space-y-5">
+                            <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-cyan-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
+                                GoZooms' developers use React to create impressively flexible user interfaces for web applications. Using React, we can help businesses build static or dynamic websites using frameworks like Next.js, React Native mobile apps, or even desktop apps using Electron.js!
+                            </p>
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                With our expertise and knowledge with React, you don't need to look anywhere else for professional and dedicated React developers. Our React.js developers have experience with technology stacks like MERN, and adhere to strict architectural principles when building any React application.
+                            </p>
                         </div>
                     </div>
                 </div>

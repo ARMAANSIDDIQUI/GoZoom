@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaArrowRight } from 'react-icons/fa';
 
 const GeometricBackground = () => {
   const shapes = [
@@ -203,9 +204,13 @@ const Integration = () => {
             <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
               Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.
             </p>
-            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-sky-600 to-blue-600 text-white font-black text-lg hover:shadow-2xl hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Discover More</Link>
-              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                Connect Systems <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+              </Link>
+              <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-12 py-5 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md">
+                View Capabilities
+              </a>
             </div>
           </div>
         </div>

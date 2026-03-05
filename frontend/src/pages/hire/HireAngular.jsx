@@ -58,11 +58,11 @@ const HireAngular = () => {
                             <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium">
                                 Hire senior Angular engineers who specialized in heavy-duty enterprise applications, utilizing the full power of TypeScript and RxJS.
                             </p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-                                <Link to="/contact" className="px-10 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-black text-lg rounded-xl shadow-2xl shadow-red-600/20 hover:-translate-y-1 transition-all flex items-center gap-3 group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-black text-center text-lg rounded-xl shadow-2xl shadow-red-600/20 hover:-translate-y-1 transition-all group">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#capabilities" className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-xl hover:bg-white/10 transition-all">
+                                <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-white/5 border border-white/10 text-white font-bold text-center text-lg rounded-xl hover:bg-white/10 transition-all">
                                     Our Capabilities
                                 </a>
                             </div>

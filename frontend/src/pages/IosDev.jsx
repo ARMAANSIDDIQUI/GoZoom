@@ -19,26 +19,34 @@ const IosDev = () => {
 
 
 
-            <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('../images/ios1.webp')" }}></div>
-                <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a112f] overflow-hidden">
+                {/* iOS Decorative Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-500/25 blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full bg-sky-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#0ea5e9 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                </div>
 
-                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-500/25 blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full bg-sky-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-
-                <div className="container relative z-10 block">
-                    <div className="max-w-3xl text-center mx-auto">
-                        <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">iOS Development</span>
-                        <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-                            Get iOS Expert for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Enterprises</span>
-                        </h1>
-                        <p className="text-hero-desc text-blue-100 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-                            Our expert iOS developers help you build custom, scalable, and secure applications that deliver premium user experiences.
-                        </p>
-                        <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
-                            <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider">iOS Development</span>
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                                Get iOS Expert for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Enterprises</span>
+                            </h1>
+                            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                                Our expert iOS developers help you build custom, scalable, and secure applications that deliver premium user experiences.
+                            </p>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
+                                <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 p-12 bg-gradient-to-br from-white/10 to-transparent rounded-[5rem] border border-white/10 backdrop-blur-xl w-full max-w-[380px] shadow-2xl flex items-center justify-center group/ios hover:scale-105 transition-transform duration-500">
+                                <img src="/images/apple-ios-app-store-seeklogo.svg" alt="iOS Specialist" className="w-full h-auto drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] filter brightness-110" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,11 +54,11 @@ const IosDev = () => {
 
             <section className="py-24 bg-white relative">
                 <div className="container relative z-10 block">
-                    <div className="grid lg:grid-cols-12 gap-16 items-center">
-                        <div className="lg:col-span-7">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="flex-1">
                             <div className="space-y-6">
                                 <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-2">iOS Development</span>
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">We Provide Full <span className="text-gradient">iOS App</span> Development Support</h2>
+                                <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">We Provide Full <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">iOS App</span> Development Support</h2>
                                 <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-blue-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
                                     Streamline iOS app development with Swift, a versatile and intuitive programming language.
                                     Swift's syntax simplifies coding tasks, from UI design to backend functionality, enhancing
@@ -65,10 +73,6 @@ const IosDev = () => {
                                     With a focus on <strong>user-centric design and robust backend integration,</strong> we deliver engaging and intuitive iOS applications that captivate audiences and drive results. Partner with us to bring your app vision to life and stay ahead in today's competitive market.
                                 </p>
                             </div>
-                        </div>
-                        <div className="lg:col-span-5 relative">
-                            <div className="absolute inset-0 bg-blue-100 rounded-full blur-[80px] opacity-60"></div>
-                            <img src="../images/apple-ios-app-store-seeklogo.svg" className="w-full max-w-sm mx-auto relative z-10 animate-float drop-shadow-2xl" alt="iOS App Development" />
                         </div>
                     </div>
                 </div>

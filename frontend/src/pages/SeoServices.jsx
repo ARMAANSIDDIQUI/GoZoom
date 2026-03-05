@@ -15,24 +15,36 @@ const SeoServices = () => {
   return (
     <div>
       {/* Hero Banner — Orange SEO colors */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #431407 50%, #0f172a 100%)' }}></div>
-        <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-orange-500/25 blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-amber-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-1/4 w-48 h-48 rounded-full bg-yellow-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#160d01] overflow-hidden">
+        {/* Creative Amber Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[10%] right-[5%] w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-[5%] left-[5%] w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 right-1/4 w-48 h-48 rounded-full bg-yellow-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          {/* SVG Pixels Pattern */}
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#f59e0b 2px, transparent 2px)', backgroundSize: '50px 50px' }}></div>
+        </div>
 
-        <div className="container relative z-10 block">
-          <div className="max-w-3xl text-center mx-auto">
-            <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Digital Marketing</span>
-            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-              Transform Your Online Presence with <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
-            </h1>
-            <p className="text-hero-desc text-slate-300 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-              Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.
-            </p>
-            <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
-              <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+        <div className="container mx-auto px-6 lg:px-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Digital Marketing</span>
+              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                Transform Your Online Presence with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
+              </h1>
+              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Get Started</Link>
+                <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">About Us</Link>
+              </div>
+            </div>
+            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+                <img src="/images/seo1.png" alt="SEO Specialist" className="w-full h-auto rounded-[3.5rem] shadow-4xl filter saturate-[1.2]" />
+              </div>
             </div>
           </div>
         </div>
@@ -43,7 +55,7 @@ const SeoServices = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full blur-[80px] -mr-32 -mt-32"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-50 rounded-full blur-[80px] -ml-32 -mb-32"></div>
         <div className="container relative z-10 block">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
             <div data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-orange-50 text-orange-600 font-bold text-sm mb-4">Our Approach</span>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
@@ -51,16 +63,12 @@ const SeoServices = () => {
               </h2>
               <div className="space-y-5">
                 <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-orange-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
-                  In the dynamic digital landscape, effective SEO is the key to unlocking unparalleled online visibility and success. Our expert SEO services are meticulously crafted to propel your business to new heights.
+                  In the digital landscape, effective SEO is the key to unlocking unparalleled online visibility and success. Our expert SEO services are meticulously crafted to propel your business to new heights.
                 </p>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Harnessing the power of cutting-edge SEO strategies, we navigate the complexities of search algorithms, keyword optimization, and content enhancement. Our dedicated specialists work collaboratively with you to drive organic traffic, foster brand authority, and maximize your impact.
                 </p>
               </div>
-            </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="absolute inset-0 bg-orange-100 rounded-full blur-[80px] opacity-60"></div>
-              <img src="../images/seo1.png" alt="SEO Mascot" className="w-full max-w-md mx-auto relative z-10 animate-float drop-shadow-2xl" />
             </div>
           </div>
         </div>

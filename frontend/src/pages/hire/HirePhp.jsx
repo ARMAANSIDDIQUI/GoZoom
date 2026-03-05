@@ -58,11 +58,11 @@ const HirePhp = () => {
                             <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-medium">
                                 Hire veteran PHP developers who specialize in building ultra-secure, highly-performant, and scalable backend architectures that drive 80% of the web.
                             </p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-5">
-                                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-indigo-600 text-white font-black text-lg transition-all hover:bg-indigo-700 hover:-translate-y-1 shadow-2xl shadow-indigo-500/20 flex items-center gap-3 group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-5">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-indigo-600 text-white font-black text-center text-lg transition-all hover:bg-indigo-700 hover:-translate-y-1 shadow-2xl shadow-indigo-500/20 group">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#why-php" className="px-12 py-5 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
+                                <a href="#why-php" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 border border-white/10 text-white text-center font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
                                     Our Approach
                                 </a>
                             </div>

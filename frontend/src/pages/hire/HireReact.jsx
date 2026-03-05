@@ -50,11 +50,11 @@ const HireReact = () => {
                             <p className="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
                                 Hire specialized React.js developers who don't just write code, but architect immersive digital experiences using the latest frontend standards.
                             </p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold px-10 py-5 rounded-full shadow-[0_10px_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all flex items-center gap-2 group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-center px-10 py-5 rounded-full shadow-[0_10px_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all group">
                                     Start Your Project <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#expertise" className="bg-white/5 border border-white/10 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md">
+                                <a href="#expertise" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 bg-white/5 border border-white/10 text-white font-bold text-center px-10 py-5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md">
                                     Our Stack
                                 </a>
                             </div>

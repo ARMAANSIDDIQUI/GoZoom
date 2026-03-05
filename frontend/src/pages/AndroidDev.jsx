@@ -15,25 +15,34 @@ const AndroidDev = () => {
     return (
         <div>
             {/* Banner Section */}
-            <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/android1.jpg')" }}></div>
-                <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+            {/* Hero Section */}
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a1f0a] overflow-hidden">
+                {/* Android Decorative Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-0 left-0 -ml-40 -mt-20 w-96 h-96 rounded-full bg-green-500/30 blur-[100px] animate-pulse"></div>
+                    <div className="absolute bottom-0 right-0 -mr-40 -mb-20 w-96 h-96 rounded-full bg-emerald-600/30 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#4ade80 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+                </div>
 
-                <div className="absolute top-0 left-0 -ml-40 -mt-20 w-96 h-96 rounded-full bg-green-500/30 blur-[100px] animate-pulse"></div>
-                <div className="absolute bottom-0 right-0 -mr-40 -mb-20 w-96 h-96 rounded-full bg-emerald-600/30 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-                <div className="container relative z-10 block">
-                    <div className="max-w-3xl text-center mx-auto">
-                        <span className="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 border border-green-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Android Development</span>
-                        <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-                            Leading Android App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Experts</span>
-                        </h1>
-                        <p className="text-hero-desc text-slate-300 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-                            Build powerful, native Android experiences that engage users and drive business growth through innovative engineering.
-                        </p>
-                        <div className="flex flex-wrap gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
-                            <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 border border-green-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Android Development</span>
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                                Leading Android App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Experts</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                                Build powerful, native Android experiences that engage users and drive business growth through innovative engineering.
+                            </p>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <Link to="/contact" className="px-12 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-emerald-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-green-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
+                                <Link to="/about" className="px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 p-10 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[360px] shadow-2xl flex items-center justify-center">
+                                <img src="/images/android.svg" alt="Android Specialist" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(74,222,128,0.4)]" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,7 +54,7 @@ const AndroidDev = () => {
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-50 rounded-full blur-[80px] -ml-32 -mb-32"></div>
 
                 <div className="container relative z-10 block">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-green-50 text-green-600 font-bold text-sm mb-4">Our Approach</span>
                             <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
@@ -59,10 +68,6 @@ const AndroidDev = () => {
                                     Our <strong>team of experienced Android application developers</strong> deliver stable and efficient code that empowers clients worldwide. Collaborating with GoZooms ensures access to top-notch, tailored, and innovative Android app solutions. Leveraging a refined process honed over years of experience, we minimize development time and costs while maximizing quality.
                                 </p>
                             </div>
-                        </div>
-                        <div className="relative" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-green-100 rounded-full blur-[80px] opacity-60"></div>
-                            <img src="../images/195.jpg" className="w-full max-w-lg mx-auto relative z-10 rounded-3xl shadow-2xl object-cover" alt="Android Development" />
                         </div>
                     </div>
                 </div>

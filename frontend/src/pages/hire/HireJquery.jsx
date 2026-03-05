@@ -53,11 +53,11 @@ const HireJquery = () => {
                             <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-bold">
                                 Hire developers who leverage jQuery's power to build fast, interactive, and cross-browser compatible web experiences with surgical precision.
                             </p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-                                <Link to="/contact" className="px-10 py-5 bg-blue-600 text-white font-black text-lg rounded-xl shadow-2xl shadow-blue-600/20 hover:scale-105 transition-all flex items-center gap-3 group">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-blue-600 text-white font-black text-center text-lg rounded-xl shadow-2xl shadow-blue-600/20 hover:scale-105 transition-all group">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#plugins" className="px-10 py-5 border border-white/20 text-white font-bold text-lg rounded-xl hover:bg-white/5 transition-all">
+                                <a href="#plugins" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 border border-white/20 text-white text-center font-bold text-lg rounded-xl hover:bg-white/5 transition-all">
                                     Case Studies
                                 </a>
                             </div>

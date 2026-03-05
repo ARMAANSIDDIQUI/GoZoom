@@ -51,11 +51,11 @@ const HireLaravel = () => {
                             <p className="text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-bold italic">
                                 Hire specialized Laravel developers who value clean code, elegant syntax, and rapid delivery without compromising on performance.
                             </p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-                                <Link to="/contact" className="px-12 py-6 bg-[#ff2d20] text-white font-black text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all flex items-center gap-3 group">
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-6 bg-[#ff2d20] text-white font-black text-center text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all group">
                                     Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#stack" className="px-12 py-6 bg-white border border-rose-100 text-slate-800 font-black text-lg rounded-2xl hover:bg-rose-50 transition-all flex items-center gap-2">
+                                <a href="#stack" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-6 bg-white border border-rose-100 text-slate-800 font-black text-center text-lg rounded-2xl hover:bg-rose-50 transition-all">
                                     Our Stack <FaHeart className="text-rose-500" />
                                 </a>
                             </div>

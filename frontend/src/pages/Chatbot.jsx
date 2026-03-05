@@ -20,25 +20,34 @@ const Chatbot = () => {
 
 
 
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ "backgroundImage": "url('../images/chatbot-bg.webp')" }}></div>
-        <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#140b25] overflow-hidden">
+        {/* Chatbot Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 -ml-40 -mt-20 w-96 h-96 rounded-full bg-violet-600/30 blur-[100px] animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 -mr-40 -mb-20 w-96 h-96 rounded-full bg-fuchsia-600/30 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#8b5cf6 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+        </div>
 
-        <div className="absolute top-0 left-0 -ml-40 -mt-20 w-96 h-96 rounded-full bg-violet-600/30 blur-[100px] animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 -mr-40 -mb-20 w-96 h-96 rounded-full bg-fuchsia-600/30 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-        <div className="container relative z-10 block">
-          <div className="max-w-3xl text-center mx-auto">
-            <span className="inline-block py-1 px-3 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">AI-Powered Solutions</span>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-              Hire Experienced <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Chatbot Developers</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-10 text-shadow-md leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-              Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-bold hover:shadow-lg hover:shadow-fuchsia-500/30 transition-all hover:-translate-y-1">Enquire Now</Link>
-              <Link to="/about" className="px-8 py-4 rounded-full glass bg-white/5 text-white font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Learn More</Link>
+        <div className="container mx-auto px-6 lg:px-16 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+              <span className="inline-block py-1 px-3 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 font-bold text-sm mb-6 uppercase tracking-wider">AI-Powered Solutions</span>
+              <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight uppercase">
+                Hire Experienced <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Chatbot Developers</span>
+              </h1>
+              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.
+              </p>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                <Link to="/contact" className="px-10 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-black text-lg hover:shadow-2xl hover:shadow-fuchsia-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider">Enquire Now</Link>
+                <Link to="/about" className="px-10 py-4 rounded-2xl bg-white/5 text-white font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">Learn More</Link>
+              </div>
+            </div>
+            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-10 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl flex items-center justify-center group/bot hover:scale-105 transition-all duration-500">
+                <img src="/images/chatbot1.svg" alt="Chatbot Expert" className="w-full h-auto drop-shadow-[0_20px_60px_rgba(139,92,246,0.5)]" />
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +57,7 @@ const Chatbot = () => {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-fuchsia-50 rounded-full blur-[80px] -ml-32 -mb-32"></div>
 
         <div className="container relative z-10 block">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
             <div data-aos="fade-right">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight">
@@ -67,10 +76,6 @@ const Chatbot = () => {
                   With a focus on innovation and efficiency, our chatbot development process is characterized by a client-centric approach. We collaborate closely with you to understand your unique requirements and objectives, ensuring the delivery of customized chatbot solutions that seamlessly integrate into your existing systems.
                 </p>
               </div>
-            </div>
-            <div className="relative" data-aos="fade-left">
-              <div className="absolute inset-0 bg-violet-100 rounded-full blur-[80px] opacity-60"></div>
-              <img src="../images/chatbot1.svg" className="w-full max-w-lg mx-auto relative z-10 animate-float drop-shadow-2xl" alt="Chatbot Solutions" />
             </div>
           </div>
         </div>
