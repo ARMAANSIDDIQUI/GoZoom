@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Layout from './layouts/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -39,8 +40,10 @@ import AdminAddBlog from './pages/admin/AdminAddBlog';
 // Context
 import { AuthProvider, useAuth } from './context/AuthContext';
 
+import { useState, useEffect } from 'react';
 // Components
 import ScrollToTop from './components/ScrollToTop';
+import LoadingScreen from './components/LoadingScreen';
 
 // Protected Route Wrapper
 const ProtectedRoute = ({ children }) => {
@@ -56,9 +59,14 @@ const ProtectedRoute = ({ children }) => {
 };
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <AuthProvider>
       <Router>
+        <AnimatePresence mode="wait">
+          {isLoading && <LoadingScreen key="loader" onFinished={() => setIsLoading(false)} />}
+        </AnimatePresence>
         <ScrollToTop />
         <Routes>
           {/* Main Website Routes */}

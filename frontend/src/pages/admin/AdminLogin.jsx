@@ -32,7 +32,7 @@ const AdminLogin = () => {
             <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-indigo-100 rounded-full blur-[100px] opacity-60"></div>
 
             <div className="relative z-10 w-full max-w-md px-6">
-                <div className="glass-premium p-10 rounded-[2.5rem] border border-white bg-white/80 backdrop-blur-2xl shadow-premium animate-fade-up">
+                <div className="glass-premium p-12 md:p-16 rounded-[2.5rem] border border-white bg-white/80 backdrop-blur-2xl shadow-premium animate-fade-up">
                     <div className="text-center mb-10">
                         <div className="mb-6">
                             <img src="/images/logo2.png" alt="GoZoom Logo" className="h-16 mx-auto object-contain" />
@@ -79,12 +79,6 @@ const AdminLogin = () => {
                             Connect to Dashboard
                         </button>
                     </form>
-
-                    {/* <div className="mt-10 text-center">
-                        <p className="text-slate-400 text-xs font-bold tracking-widest uppercase">
-                            Enterprise Security Layer
-                        </p>
-                    </div> */}
                 </div>
             </div>
         </div>

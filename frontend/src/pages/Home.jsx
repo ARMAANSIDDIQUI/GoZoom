@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import ServiceCollage from '../components/ServiceCollage';
+import TechSpotlight from '../components/TechSpotlight';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -179,48 +181,11 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="pt-20 pb-0 bg-white">
-                <div className="container mx-auto px-8 md:px-16 mb-12">
-                    <span className="text-gray-500 uppercase tracking-wider text-sm font-semibold block mb-2">Our Services</span>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 lg:w-2/3">Accelerate technology innovation with software development services</h2>
-                    <p className="text-gray-600 lg:w-2/3 leading-relaxed">
-                        Whether you require complex enterprise software development or seamless software integration, we will take your business to the next level of success with IT consulting services & software development.
-                    </p>
-                </div>
+            {/* Replace legacy services with Collage */}
+            <ServiceCollage />
 
-                {/* We use Swiper for services carousel to mimic Owl Carousel */}
-                <div className="container mx-auto px-4 md:px-16">
-                    <Swiper
-                        spaceBetween={30}
-                        slidesPerView={1}
-                        breakpoints={{
-                            640: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
-                        }}
-                        loop={true}
-                        autoplay={{ delay: 3500 }}
-                        className="pb-0"
-                    >
-                        {services.map((srv, idx) => (
-                            <SwiperSlide key={idx} className="h-auto">
-                                <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col group hover:-translate-y-2 transition-transform duration-300">
-                                    <div className="h-48 overflow-hidden">
-                                        <img src={srv.img} alt={srv.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                                    </div>
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-3 text-gray-800" dangerouslySetInnerHTML={{ __html: srv.title }}></h3>
-                                        <p className="text-gray-600 text-sm mb-6 flex-grow">{srv.desc}</p>
-                                        <Link to={srv.link} className="text-blue-600 font-bold inline-flex items-center gap-2 group-hover:text-blue-800">
-                                            Learn More <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </section>
+            {/* Build Environment / Tech Spotlight */}
+            <TechSpotlight />
         </div>
     );
 };
