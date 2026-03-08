@@ -40,7 +40,17 @@ const TechSpotlight = () => {
         { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
         { name: 'Vercel', icon: 'https://cdn.worldvectorlogo.com/logos/vercel.svg' },
         { name: 'Stripe', icon: 'https://cdn.worldvectorlogo.com/logos/stripe-4.svg' },
-        { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' }
+        { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
+        { name: 'React Native', icon: 'https://cdn.worldvectorlogo.com/logos/react-native-1.svg' },
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+        { name: 'Swift', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg' },
+        { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
+        { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+        { name: 'Gemini', icon: 'https://cdn.simpleicons.org/googlegemini/6077ff' },
+        { name: 'Cloudinary', icon: 'https://cdn.worldvectorlogo.com/logos/cloudinary-2.svg' },
+        { name: 'Azure', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+        { name: 'Oracle', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
+        { name: 'Google Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg' }
     ];
 
     return (
@@ -109,8 +119,8 @@ const TechSpotlight = () => {
                             )}
                         </AnimatePresence>
 
-                        {/* Grid of Icons - Optimized for 20 icons */}
-                        <div className="grid grid-cols-4 md:grid-cols-5 gap-4 relative z-10">
+                        {/* Grid of Icons - Optimized for 25+ icons */}
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4 relative z-10 w-full max-w-2xl">
                             {techStack.map((tech, idx) => (
                                 <motion.div
                                     key={idx}
@@ -124,8 +134,8 @@ const TechSpotlight = () => {
                                         <img
                                             src={tech.icon}
                                             alt={tech.name}
-                                            className={`w-12 h-12 md:w-14 md:h-14 object-contain transition-all duration-500 
-                                                ${(tech.name === 'Next.js' || tech.name === 'Vercel' || tech.name === 'OpenAI' || tech.name === 'Three.js')
+                                            className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain transition-all duration-500 
+                                                ${(tech.name === 'Next.js' || tech.name === 'Vercel' || tech.name === 'OpenAI' || tech.name === 'Three.js' || tech.name === 'Django')
                                                     ? 'invert grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0'
                                                     : 'grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100'
                                                 }`}

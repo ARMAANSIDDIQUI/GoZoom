@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 
 const enquiryRoutes = require('./routes/enquiryRoutes');
 const blogRoutes = require('./routes/blogRoutes');
+const testimonialRoutes = require('./routes/testimonialRoutes');
 
 // Connect to Database
 connectDB();
@@ -23,6 +24,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Routes
 app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/testimonials', testimonialRoutes);
 
 // PORT 5001 as specified by memory
 const PORT = process.env.PORT || 5001;

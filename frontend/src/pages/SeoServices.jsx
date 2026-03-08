@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { FaArrowRight, FaSearch, FaCode, FaPenNib, FaTasks, FaMapMarkerAlt, FaLink, FaChartLine, FaEye, FaTrophy, FaCogs, FaRocket, FaChartPie, FaChartArea, FaHeadset } from 'react-icons/fa';
 
 const SeoServices = () => {
   useEffect(() => {
@@ -87,13 +87,23 @@ const SeoServices = () => {
             <div data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Expertise</span>
               <h3 className="text-3xl md:text-5xl font-bold text-white mb-8">What Our SEO Experts <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Offer</span></h3>
-              <div className="grid grid-cols-2 gap-4">
-                {['Strategic Keyword Research', 'Comprehensive On-Page Optimization', 'Quality Content Creation', 'Technical SEO Excellence', 'Local SEO Strategies', 'Strategic Link Building', 'Data-Driven Analytics', 'Transparent Reporting'].map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-orange-500/10 transition-colors">
-                    <div className="flex-shrink-0 w-6 h-6 bg-orange-500/30 rounded-lg flex items-center justify-center">
-                      <svg className="w-3 h-3 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { title: 'Strategic Keyword Research', desc: 'Identifying high-value, intent-driven search terms to capture your target audience effectively.', icon: FaSearch },
+                  { title: 'On-Page Optimization', desc: 'Enhancing meta tags, headers, and internal linking structures for maximum search engine crawlability.', icon: FaCode },
+                  { title: 'Quality Content Creation', desc: 'Producing engaging, SEO-rich blogs, articles, and landing pages that rank and convert.', icon: FaPenNib },
+                  { title: 'Technical SEO Excellence', desc: 'Fixing site speed, mobile responsiveness, and schema markup to meet Core Web Vitals criteria.', icon: FaTasks },
+                  { title: 'Local SEO Strategies', desc: 'Dominating local packs and Maps through optimized Google Business Profiles and localized citations.', icon: FaMapMarkerAlt },
+                  { title: 'Strategic Link Building', desc: 'Acquiring high-authority backlinks from reputable domains to massively boost your domain rating.', icon: FaLink },
+                ].map((feature, idx) => (
+                  <div key={idx} className="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-orange-500/10 transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mt-1">
+                      <feature.icon className="w-5 h-5 text-orange-400" />
                     </div>
-                    <span className="text-slate-300 text-sm font-medium">{feature}</span>
+                    <div>
+                      <span className="text-white text-base font-bold block mb-1">{feature.title}</span>
+                      <span className="text-slate-400 text-sm leading-relaxed">{feature.desc}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -116,29 +126,30 @@ const SeoServices = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-4" data-aos="fade-right">
               {[
-                { title: 'Proven Track Record', desc: 'Rely on our seasoned SEO experts with an extensive track record of successfully delivering measurable results.' },
-                { title: 'Tailored Strategies', desc: 'Crafting personalized SEO strategies tailored to align with your unique business objectives, providing a distinct competitive advantage.' },
-                { title: 'Cutting-Edge Expertise', desc: 'Stay at the forefront of industry trends and technologies, allowing us to optimize your digital footprint for sustained growth.' },
-                { title: 'Transparent Reporting', desc: 'Get regular, clear reports on your campaign performance with data-driven insights to guide ongoing optimization.' },
-                { title: 'Long-Term Growth', desc: 'We focus on sustainable, organic growth strategies that deliver lasting results and continuously improve your rankings.' },
-                { title: 'Dedicated Support', desc: 'A committed team available to answer questions, provide updates, and refine strategies as your business evolves.' },
+                { title: 'Proven Track Record', desc: 'Rely on our seasoned SEO experts with an extensive track record of successfully delivering measurable results.', icon: FaTrophy },
+                { title: 'Tailored Strategies', desc: 'Crafting personalized SEO strategies tailored to align with your unique business objectives, providing a distinct competitive advantage.', icon: FaCogs },
+                { title: 'Cutting-Edge Expertise', desc: 'Stay at the forefront of industry trends and technologies, allowing us to optimize your digital footprint for sustained growth.', icon: FaRocket },
+                { title: 'Transparent Reporting', desc: 'Get regular, clear reports on your campaign performance with data-driven insights to guide ongoing optimization.', icon: FaChartPie },
+                { title: 'Long-Term Growth', desc: 'We focus on sustainable, organic growth strategies that deliver lasting results and continuously improve your rankings.', icon: FaChartLine },
+                { title: 'Dedicated Support', desc: 'A committed team available to answer questions, provide updates, and refine strategies as your business evolves.', icon: FaHeadset },
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-                  <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
-                    <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                <div key={i} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-orange-100 to-amber-50 rounded-2xl flex items-center justify-center border border-orange-200">
+                    <item.icon className="w-6 h-6 text-orange-600" />
                   </div>
                   <div>
-                    <p className="font-bold text-slate-800">{item.title}</p>
-                    <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
+                    <h4 className="text-lg font-bold text-slate-800 mb-2">{item.title}</h4>
+                    <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="text-center" data-aos="fade-left">
-              <div className="glass-card bg-white rounded-3xl p-10 shadow-2xl border border-slate-100 inline-block">
-                <img src="../images/laravelboy2.svg" className="w-40 mx-auto mb-6 animate-float" alt="SEO Experts" />
-                <p className="text-2xl font-bold text-slate-800 mb-6">Get in touch with our<br /><span className="text-orange-600">SEO Experts Today!</span></p>
-                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all hover:-translate-y-1">Get Started</Link>
+              <div className="glass-card bg-white rounded-3xl p-10 shadow-2xl border border-slate-100 inline-block overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-full -z-10 blur-xl"></div>
+                <img src="../images/seo1.png" className="w-40 mx-auto mb-6 animate-float drop-shadow-xl filter saturate-150" alt="SEO Experts" />
+                <p className="text-2xl font-bold text-slate-800 mb-6 relative z-10">Get in touch with our<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">SEO Experts Today!</span></p>
+                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold hover:shadow-xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 relative z-10">Get Started</Link>
               </div>
             </div>
           </div>

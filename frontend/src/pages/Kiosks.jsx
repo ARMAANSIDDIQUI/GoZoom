@@ -22,18 +22,34 @@ const Kiosks = () => {
                 <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-emerald-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-                <div className="container relative z-10 block">
-                    <div className="max-w-3xl text-center mx-auto">
-                        <span className="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Kiosk Solutions</span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
-                            GoZooms <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Kiosk Technologies!</span>
-                        </h1>
-                        <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                            Interactive kiosk solutions that enhance customer experience and streamline business operations across all industries.
-                        </p>
-                        <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/integration" className="px-8 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1">Integration</Link>
-                            <Link to="/retail" className="px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Retail</Link>
+                <div className="container mx-auto px-6 lg:px-16 relative z-10 w-full">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0">
+                            <span className="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Kiosk Solutions</span>
+                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                                GoZooms <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Kiosk Technologies!</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                                Interactive kiosk solutions that enhance customer experience and streamline business operations across all industries.
+                            </p>
+                            <div className="flex flex-wrap gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/integration" className="px-8 py-4 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1">Integration</Link>
+                                <Link to="/retail" className="px-8 py-4 rounded-xl bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Retail</Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="relative w-full max-w-[450px] aspect-square animate-float">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-cyan-500/20 rounded-[3rem] blur-3xl"></div>
+                                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-8 flex flex-col items-center justify-center gap-8">
+                                    <div className="grid grid-cols-2 gap-8 w-full place-items-center">
+                                        <div className="w-24 h-24 rounded-3xl bg-teal-500/10 flex items-center justify-center shadow-lg border border-teal-500/20"><FaCartShopping className="w-12 h-12 text-teal-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-cyan-500/10 flex items-center justify-center shadow-lg border border-cyan-500/20"><FaCreditCard className="w-12 h-12 text-cyan-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-emerald-500/10 flex items-center justify-center shadow-lg border border-emerald-500/20"><FaHospital className="w-12 h-12 text-emerald-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-blue-500/10 flex items-center justify-center shadow-lg border border-blue-500/20"><FaMasksTheater className="w-12 h-12 text-blue-400" /></div>
+                                    </div>
+                                    <div className="w-2/3 h-1.5 bg-gradient-to-r from-teal-500/50 to-cyan-500/50 rounded-full mt-4"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -101,6 +101,27 @@ const AdminDashboard = () => {
                             </button>
                         </div>
                     </div>
+
+                    {/* Testimonials Card */}
+                    <div className="bg-white p-2 rounded-[2.5rem] border border-slate-200 shadow-sm group hover:border-indigo-200 transition-colors lg:col-span-2 mx-auto w-full lg:max-w-[50%]">
+                        <div className="bg-slate-50/50 p-8 md:p-10 rounded-[2.2rem] h-full flex flex-col justify-between">
+                            <div className="mb-8">
+                                <div className="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4">Testimonials</h2>
+                                <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium">Upload client feedback, ratings, and avatar images for display on the public website.</p>
+                            </div>
+                            <Link
+                                to="/admin/manage-testimonials"
+                                className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:scale-[1.02] text-white px-8 py-3.5 rounded-2xl font-black text-sm transition-all duration-300 shadow-lg shadow-indigo-500/20 text-center"
+                            >
+                                Manage Testimonials
+                            </Link>
+                        </div>
+                    </div>
                 </div>
 
             </main>

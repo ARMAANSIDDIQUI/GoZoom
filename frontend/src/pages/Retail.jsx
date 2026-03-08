@@ -1,17 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaQuoteLeft, FaStar, FaShoppingCart, FaUsers, FaChartLine, FaCogs, FaShieldAlt, FaRocket, FaLaptopCode, FaCheckCircle, FaSearch } from 'react-icons/fa';
 
 const Retail = () => {
+    const [testimonials, setTestimonials] = useState([]);
+    const [loadingTestimonials, setLoadingTestimonials] = useState(true);
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
         wow.init();
+
+        const fetchTestimonials = async () => {
+            try {
+                const apiUrl = process.env.NODE_ENV === 'production'
+                    ? 'https://gozoom-backend.onrender.com'
+                    : 'http://localhost:5001';
+                const res = await axios.get(`${apiUrl}/api/testimonials`);
+                setTestimonials(res.data);
+            } catch (err) {
+                console.error('Failed to fetch testimonials', err);
+            } finally {
+                setLoadingTestimonials(false);
+            }
+        };
+        fetchTestimonials();
     }, []);
+
+    const backendUrl = process.env.NODE_ENV === 'production'
+        ? 'https://gozoom-backend.onrender.com'
+        : 'http://localhost:5001';
 
     const retailSolutions = [
         { img: 'images/11.webp', title: 'RETAIL EXECUTION', desc: "GOZOOM's connected retail solutions empower global companies to enhance retail execution, boost sales, and increase profitability through innovative and industry-leading products and solutions." },
@@ -35,11 +58,7 @@ const Retail = () => {
         { img: 'images/hospital.png', title: 'HEALTHCARE', features: ['POS', 'HEALTHCARE KIOSK', 'INFORMATION KIOSK', 'LIVE REPORTING', 'INTEGRATED PAYMENTS'] },
     ];
 
-    const testimonials = [
-        { img: 'images/shadani.png', text: "Working with Gozoom Technologies IT Solutions has been a game-changer for our business. Their team of experts seamlessly integrated our systems and provided us with a comprehensive solution that has boosted our productivity and efficiency." },
-        { img: 'images/rajdhani.png', text: "I was blown away by the professionalism and expertise of the team at Gozoom Technologies. They took the time to understand our unique business requirements and offered customized solutions that exceeded our expectations." },
-        { img: 'images/maisoninfra.png', text: "The team at GoZoom IT Solutions is truly top-notch. They provided us with a comprehensive suite of services that has transformed the way we do business. From digital transformation to cybersecurity, their team delivered exceptional results." },
-    ];
+
 
     return (
         <div>
@@ -100,52 +119,66 @@ const Retail = () => {
                 </div>
             </section>
 
-            {/* Products & Services */}
-            <section className="py-24 bg-gradient-to-br from-slate-900 via-emerald-950/50 to-slate-900 relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(16,185,129,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20,184,166,0.5) 0%, transparent 50%)' }}></div>
-                <div className="container relative z-10 block">
-                    <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Products & Services</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-white">PRODUCTS & <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">SERVICES</span></h3>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {products.map((item, i) => (
-                            <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 80}>
-                                <div className="relative h-44 overflow-hidden">
-                                    <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                    <div className="absolute inset-0 bg-slate-900/50"></div>
-                                    <h4 className="absolute bottom-3 left-3 text-white font-bold tracking-widest text-sm">{item.title}</h4>
-                                </div>
-                                <div className="p-5">
-                                    <p className="text-slate-300 text-sm leading-relaxed">{item.desc}</p>
-                                </div>
+            {/* Why Choose Us for Retail */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container relative z-10 block px-6">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="flex-1" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 font-bold text-sm mb-4 uppercase">Next-Gen Commerce</span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6 font-sans">Empowering Modern Retailers</h2>
+                            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                                We help brick-and-mortar stores transition into data-driven digital hubs. Our solutions bridge the gap between physical storefronts and the digital marketplace.
+                            </p>
+                            <div className="grid sm:grid-cols-2 gap-6">
+                                {[
+                                    { icon: <FaShoppingCart />, title: "Omnichannel Sync", desc: "Unified inventory across web, mobile, and store." },
+                                    { icon: <FaUsers />, title: "Customer Loyalty", desc: "Deep analytics on buyer behavior and repeat visits." },
+                                    { icon: <FaChartLine />, title: "Real-time Profit", desc: "Live reporting on sales and cost margin metrics." },
+                                    { icon: <FaShieldAlt />, title: "Fraud Prevention", desc: "Enterprise-grade digital payment security." }
+                                ].map((benefit, i) => (
+                                    <div key={i} className="flex gap-4">
+                                        <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20">
+                                            {benefit.icon}
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-slate-800">{benefit.title}</h4>
+                                            <p className="text-sm text-slate-500">{benefit.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+                        <div className="flex-1 relative" data-aos="fade-left">
+                            <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl">
+                                <img src="/images/Home Page - IT Solutions.png" alt="Retail Excellence" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=Retail+Tech"; }} />
+                                <div className="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Industry Solutions */}
+            {/* Industry Solutions - Redesigned Grid */}
             <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container relative z-10 block">
+                <div className="container relative z-10 block px-6">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Industries</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">INDUSTRY <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">SOLUTIONS</span></h3>
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Vertical Solutions</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800 font-sans tracking-tight">SPECIALIZED <span className="text-emerald-600">SECTORS</span></h3>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {industrySolutions.map((item, i) => (
-                            <div key={i} className="glass-card bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
-                                <div className="relative h-48 overflow-hidden">
-                                    <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                                    <h4 className="absolute bottom-3 left-3 text-white font-bold text-sm tracking-widest">{item.title}</h4>
-                                </div>
-                                <div className="p-5">
-                                    <ul className="space-y-2">
+                            <div key={i} className="group relative bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:bg-emerald-600 transition-all duration-500 hover:-translate-y-2 overflow-hidden" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-emerald-500/10 rounded-full group-hover:bg-white/10 transition-colors"></div>
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-emerald-600 text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                        {i === 0 ? <FaCogs /> : i === 1 ? <FaShoppingCart /> : i === 2 ? <FaRocket /> : <FaSearch />}
+                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-800 mb-6 group-hover:text-white transition-colors">{item.title}</h4>
+                                    <ul className="space-y-3">
                                         {item.features.map((f, j) => (
-                                            <li key={j} className="flex items-center gap-2 text-slate-600 text-sm">
-                                                <div className="w-4 h-4 bg-emerald-100 rounded flex items-center justify-center flex-shrink-0">
-                                                    <svg className="w-2.5 h-2.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                            <li key={j} className="flex items-center gap-3 text-slate-600 group-hover:text-emerald-50 text-sm font-medium transition-colors">
+                                                <div className="w-5 h-5 rounded-full bg-emerald-500 group-hover:bg-white/20 flex items-center justify-center flex-shrink-0">
+                                                    <FaCheckCircle className="text-[10px] text-white" />
                                                 </div>
                                                 {f}
                                             </li>
@@ -158,25 +191,44 @@ const Retail = () => {
                 </div>
             </section>
 
-            {/* Testimonials */}
-            <section className="py-24 bg-slate-50 relative">
-                <div className="container relative z-10 block">
-                    <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Testimonials</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Clients Say</span></h3>
+            {/* Dynamic Testimonials */}
+            <section className="py-24 bg-slate-900 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #10b981 0%, transparent 70%)' }}></div>
+                <div className="container relative z-10 block px-6 text-center">
+                    <div className="mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-sm mb-4 tracking-wider uppercase border border-emerald-500/30">Client Success</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-white font-sans tracking-tight leading-tight">IMPACTFUL <span className="text-emerald-400">PARTNERSHIPS</span></h3>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {testimonials.map((t, i) => (
-                            <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
-                                <div className="flex justify-center mb-5">
-                                    <div className="w-20 h-20 rounded-full border-4 border-emerald-200 overflow-hidden">
-                                        <img src={t.img} alt="" className="w-full h-full object-contain p-2" />
+
+                    {loadingTestimonials ? (
+                        <div className="flex justify-center items-center py-20">
+                            <div className="w-12 h-12 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
+                        </div>
+                    ) : testimonials.length > 0 ? (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {testimonials.map((t, idx) => (
+                                <div key={t._id} className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/10 text-left hover:border-emerald-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
+                                    <FaQuoteLeft className="text-4xl text-emerald-500/20 mb-6 group-hover:text-emerald-500/40 transition-colors" />
+                                    <p className="text-slate-300 text-lg mb-8 leading-relaxed italic">"{t.content}"</p>
+                                    <div className="flex items-center gap-4 pt-6 border-t border-white/5">
+                                        <div className="w-14 h-14 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center overflow-hidden">
+                                            {t.avatar ? (
+                                                <img src={`${backendUrl}${t.avatar}`} alt={t.authorName} className="w-full h-full object-cover" />
+                                            ) : (
+                                                <span className="text-xl font-bold text-emerald-400">{t.authorName.charAt(0)}</span>
+                                            )}
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-white">{t.authorName}</h4>
+                                            <p className="text-sm text-emerald-400/80 font-medium">{t.authorRole}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <p className="text-slate-600 text-sm leading-relaxed text-center italic">"{t.text}"</p>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-slate-400">Collaborating with global brands to redefine retail excellence.</p>
+                    )}
                 </div>
             </section>
 

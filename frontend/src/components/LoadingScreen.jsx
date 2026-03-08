@@ -52,6 +52,14 @@ const LoadingScreen = ({ onFinished }) => {
                 }
             }}
         >
+            {/* Hexagon Beehive Background */}
+            <div
+                className="absolute inset-0 opacity-[0.15]"
+                style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='100' viewBox='0 0 60 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15zM30 50l25.98 15v30L30 110 4.02 95V65z' fill-rule='evenodd' stroke='%2360a5fa' stroke-width='2' fill='none'/%3E%3C/svg%3E")`,
+                    backgroundSize: '60px 100px'
+                }}
+            />
             <div className="relative flex flex-col items-center">
                 <svg
                     width="200"

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaMobileAlt, FaLayerGroup, FaShieldAlt, FaRocket, FaTabletAlt, FaCodeBranch, FaClock, FaCheckCircle, FaLaptopCode, FaWrench } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -99,33 +99,65 @@ const MobileAppDev = () => {
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
                         <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Our Services</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-white">We build modern <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">mobile experiences</span></h3>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {[
-                            { img: '../images/icons/android.svg', title: 'Android Development', desc: 'Elevate your business with our expert Android development services. We create cutting-edge apps for optimal performance and user satisfaction.', link: '/android-development', color: 'green' },
-                            { img: '../images/icons/apple.svg', title: 'iOS Development', desc: 'Transform your vision into reality with our iOS development expertise. From concept to launch, we craft sleek, intuitive apps that captivate users.', link: '/ios-development', color: 'slate' },
-                            { img: '../images/icons/cube.svg', title: 'Hybrid App Development', desc: 'Hybrid apps offer cost-effective solutions, reaching wider audiences with seamless performance across platforms, saving time and resources.', link: '#', color: 'indigo' },
+                            { title: 'Native iOS Apps', desc: 'Secure, high-performance apps built specifically for Apple devices using Swift and Objective-C.', icon: FaMobileAlt },
+                            { title: 'Native Android Apps', desc: 'Robust applications designed to dominate the Google Play Store, utilizing Kotlin and Java.', icon: FaLayerGroup },
+                            { title: 'Cross-Platform Apps', desc: 'Write once, deploy anywhere. We build efficient React Native and Flutter apps that look native.', icon: FaCodeBranch },
+                            { title: 'IoT Mobile Interfaces', desc: 'Applications designed to communicate seamlessly with smart home devices and industrial sensors.', icon: FaLaptopCode },
+                            { title: 'Enterprise Apps', desc: 'Internal communication tools, field service apps, and mobile ERP integrations for your workforce.', icon: FaTabletAlt },
+                            { title: 'App Maintenance', desc: 'Ongoing support, performance tuning, and immediate bug fixes to ensure 99.99% uptime.', icon: FaWrench },
                         ].map((item, i) => (
-                            <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay={i * 150}>
+                            <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="w-20 h-20 mx-auto mb-6 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                    <img src={item.img} alt={item.title} className="w-10 h-10" />
+                                    <item.icon className="w-10 h-10 text-purple-400 group-hover:text-pink-400 transition-colors" />
                                 </div>
                                 <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                                <p className="text-slate-300 leading-relaxed text-sm mb-5">{item.desc}</p>
-                                <Link to={item.link} className="text-purple-400 font-bold hover:text-pink-400 inline-flex items-center gap-1 transition-colors">Read More <FaArrowRight className="text-sm" /></Link>
+                                <p className="text-slate-300 leading-relaxed text-sm">{item.desc}</p>
                             </div>
                         ))}
                     </div>
+
                     <div className="bg-white/5 border border-white/10 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white">Hire World-Class <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Mobile App Developers</span></h3>
+                        <h3 className="text-3xl md:text-4xl font-bold text-white">Hire World-Class <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Mobile Engineers</span></h3>
                         <Link to="/contact" className="flex-shrink-0 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:-translate-y-1 flex items-center gap-2">Hire Now <FaArrowRight /></Link>
                     </div>
                 </div>
-            </section>
+            </section >
+
+            {/* Why Choose Us Section */}
+            < section className="py-24 bg-white relative" >
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 font-bold text-sm mb-4">Why Us</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">Why Partner With Us?</h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {[
+                            { title: 'Uncompromising Security', desc: 'We implement bank-grade encryption and secure authentication flows, protecting your user data against all vectors.', icon: FaShieldAlt },
+                            { title: 'Lightning Fast Time-to-Market', desc: 'Our agile methodologies and deep talent pool allow us to drastically cut development timelines without sacrificing quality.', icon: FaRocket },
+                            { title: 'Perfect App Store Optimization', desc: 'We don’t just build apps; we help you launch them. We guide you through the strict Apple and Google publishing review loops.', icon: FaCheckCircle },
+                            { title: 'Constant Reliability', desc: 'Through rigorous automated testing (unit, UI, integration), we ensure your app performs flawlessly before it ever reaches a user.', icon: FaClock }
+                        ].map((item, i) => (
+                            <div key={i} className="flex gap-5" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="flex-shrink-0 w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 font-bold text-lg shadow-sm border border-purple-100">
+                                    <item.icon className="w-5 h-5" />
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-slate-800 mb-2">{item.title}</h4>
+                                    <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section >
 
             {/* Technologies Section */}
-            <section className="py-24 bg-slate-50 relative">
+            < section className="py-24 bg-slate-50 relative" >
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
                         <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 font-bold text-sm mb-4">Tech Stack</span>

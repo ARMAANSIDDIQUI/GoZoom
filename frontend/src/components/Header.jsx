@@ -1,23 +1,53 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaGlobe, FaCode } from 'react-icons/fa';
+import { FaGlobe, FaCode, FaCloud, FaRobot } from 'react-icons/fa';
 
-const webDropdownSections = [
+
+
+const servicesDropdownSections = [
     {
-        id: 'services',
-        heading: <span className="flex items-center gap-1.5"><FaGlobe className="text-cyan-500" /> Our Services</span>,
+        id: 'cloud',
+        heading: <span className="flex items-center gap-1.5"><FaCloud className="text-blue-500" /> Cloud & Infrastructure</span>,
         links: [
+            { to: '/cloud-services', label: 'Cloud Services (AWS, GCP)' },
+            { to: '/devops-services', label: 'Kubernetes & Docker' },
+            { to: '/service-consulting', label: 'IT Strategy Consulting' }
+        ]
+    },
+    {
+        id: 'ai',
+        heading: <span className="flex items-center gap-1.5"><FaRobot className="text-fuchsia-500" /> Artificial Intelligence</span>,
+        links: [
+            { to: '/ai-applications', label: 'AI Applications' },
+            { to: '/chatbot', label: 'Chatbot Development' },
+            { to: '/ai-automation', label: 'Task Automation' },
+            { to: '/agentic-development', label: 'Agentic Development' },
+            { to: '/ai-agent-customization', label: 'AI Customization' },
+            { to: '/use-cases', label: 'Industry Use Cases' }
+        ]
+    },
+    {
+        id: 'general',
+        heading: <span className="flex items-center gap-1.5"><FaGlobe className="text-cyan-500" /> General Services</span>,
+        links: [
+            { to: '/services', label: 'All Services Directory' },
+            { to: '/cyber-security', label: 'Cyber Security Services' },
+            { to: '/ui-ux-design', label: 'UI / UX Design' },
+            { to: '/nextjs-development', label: 'Next.js Development' },
             { to: '/web-development', label: 'Web Development' },
-            { to: '/mobile-application-development', label: 'Mobile App Development' },
+            { to: '/react-native-development', label: 'React Native Apps' },
+            { to: '/flutter-development', label: 'Flutter Apps' },
+            { to: '/swift-development', label: 'Swift iOS Apps' },
             { to: '/android-development', label: 'Android Development' },
             { to: '/ios-development', label: 'iOS Development' },
             { to: '/angular-development', label: 'Angular Development' },
             { to: '/react-development', label: 'React Development' },
+            { to: '/django-development', label: 'Django Development' },
+            { to: '/java-development', label: 'Java Enterprise Apps' },
             { to: '/laravel-development', label: 'Laravel Development' },
-            { to: '/chatbot', label: 'Chatbot Development' },
             { to: '/expert-seo-services', label: 'SEO Services' },
             { to: '/kiosks', label: 'Kiosk Solutions' },
-        ],
+        ]
     },
     {
         id: 'hire',
@@ -30,12 +60,11 @@ const webDropdownSections = [
             { to: '/hire-html-developer', label: 'Hire HTML Developers' },
             { to: '/hire-codeIgniter-developers', label: 'Hire CodeIgniter Developers' },
             { to: '/laravel-development-company', label: 'Hire Laravel Developers' },
-        ],
-    },
+        ]
+    }
 ];
 
-// Flat list for mobile accordion
-const allWebLinks = webDropdownSections.flatMap(s => s.links);
+
 
 
 const Header = () => {
@@ -43,13 +72,16 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [webOpen, setWebOpen] = useState(false);
     const [desktopWebOpen, setDesktopWebOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
+    const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const servicesRef = useRef(null);
     const location = useLocation();
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
-        setWebOpen(false);
-        setDesktopWebOpen(false);
+        setServicesOpen(false);
+        setDesktopServicesOpen(false);
     }, [location]);
 
     useEffect(() => {
@@ -62,8 +94,8 @@ const Header = () => {
     // Close desktop dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-                setDesktopWebOpen(false);
+            if (servicesRef.current && !servicesRef.current.contains(e.target)) {
+                setDesktopServicesOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -74,9 +106,9 @@ const Header = () => {
 
     return (
         <>
-            <header className={`fixed w-full top-0 left-0 z-[9999] h-[72px] transition-all duration-500 ${isScrolled
-                ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-slate-200/80'
-                : 'bg-gradient-to-b from-black/75 via-black/30 to-transparent'
+            <header className={`fixed left-1/2 -translate-x-1/2 z-[9999] transition-all duration-700 ease-in-out ${isScrolled
+                ? 'top-4 w-[95%] max-w-[1240px] h-[58px] bg-slate-950/90 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl shadow-black/40'
+                : 'top-0 w-full h-[64px] bg-gradient-to-b from-black/75 via-black/30 to-transparent border-transparent'
                 }`}>
                 <div className="max-w-[1280px] mx-auto px-4 lg:px-8 h-full flex items-center justify-between">
 
@@ -86,8 +118,7 @@ const Header = () => {
                             <img
                                 src="/images/logo2.webp"
                                 alt="Gozoom Technologies"
-                                className={`h-[42px] w-auto object-contain transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'brightness-100' : 'brightness-125'
-                                    }`}
+                                className={`h-[34px] lg:h-[38px] w-auto object-contain transition-all duration-300 group-hover:scale-105 brightness-110`}
                             />
                         </div>
                     </Link>
@@ -98,55 +129,55 @@ const Header = () => {
                         <Link
                             to="/"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/')
-                                ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/10'
-                                : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
+                                : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
                         >HOME</Link>
 
                         <Link
                             to="/integration"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/integration')
-                                ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/10'
-                                : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
+                                : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
                         >INTEGRATION</Link>
 
                         <Link
                             to="/retail"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/retail')
-                                ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/10'
-                                : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
+                                : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
                         >RETAIL</Link>
 
-                        {/* WEB Dropdown */}
+                        {/* SERVICES Dropdown */}
                         <div
                             className="relative"
-                            ref={dropdownRef}
-                            onMouseEnter={() => setDesktopWebOpen(true)}
-                            onMouseLeave={() => setDesktopWebOpen(false)}
+                            ref={servicesRef}
+                            onMouseEnter={() => setDesktopServicesOpen(true)}
+                            onMouseLeave={() => setDesktopServicesOpen(false)}
                         >
                             <Link
-                                to="/web-development"
-                                className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopWebOpen || isActive('/web-development')
-                                    ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/15'
-                                    : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                to="/services"
+                                className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopServicesOpen || isActive('/services')
+                                    ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
+                                    : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                     }`}
                             >
-                                WEB
+                                SERVICES
                                 <svg
-                                    className={`w-3 h-3 transition-transform duration-300 ${desktopWebOpen ? 'rotate-180' : ''}`}
+                                    className={`w-3 h-3 transition-transform duration-300 ${desktopServicesOpen ? 'rotate-180' : ''}`}
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </Link>
 
-                            {/* Dropdown Panel — scrollable, categorized */}
-                            <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[280px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopWebOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                            {/* Services Dropdown Panel */}
+                            <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                 }`}>
                                 <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown">
-                                    {webDropdownSections.map((section) => (
+                                    {servicesDropdownSections.map((section) => (
                                         <div key={section.id} className="mb-1">
                                             <p className="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
                                             {section.links.map(({ to, label }) => (
@@ -169,26 +200,28 @@ const Header = () => {
                             </div>
                         </div>
 
+
+
                         <Link
                             to="/blogs"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/blogs')
-                                ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/10'
-                                : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
+                                : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
                         >BLOGS</Link>
 
                         <Link
                             to="/about"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/about')
-                                ? isScrolled ? 'text-cyan-600 bg-cyan-50' : 'text-cyan-300 bg-white/10'
-                                : isScrolled ? 'text-slate-700 hover:text-cyan-600 hover:bg-slate-100' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
+                                : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
                         >ABOUT US</Link>
 
                         <Link
                             to="/contact"
-                            className={`ml-2 px-5 py-2.5 text-[13px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 hover:-translate-y-0.5 ${isScrolled
-                                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
+                            className={`ml-2 px-5 py-2 text-[13px] font-bold uppercase tracking-wider rounded-full transition-all duration-300 hover:-translate-y-0.5 ${isScrolled
+                                ? 'bg-white text-slate-900 shadow-lg shadow-white/10 hover:bg-cyan-50'
                                 : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white hover:text-slate-800'
                                 }`}
                         >CONTACT US</Link>
@@ -215,7 +248,7 @@ const Header = () => {
 
             {/* Mobile Drawer */}
             <nav className={`fixed top-0 right-0 h-full w-[300px] bg-white z-[9995] lg:hidden transform transition-transform duration-500 ease-out shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                <div className="flex items-center justify-between px-5 h-[72px] border-b border-slate-100">
+                <div className="flex items-center justify-between px-5 h-[64px] border-b border-slate-100">
                     <img src="/images/logo2.webp" alt="Gozoom" className="h-9 w-auto object-contain" />
                     <button
                         onClick={() => setIsMobileMenuOpen(false)}
@@ -227,7 +260,7 @@ const Header = () => {
                     </button>
                 </div>
 
-                <div className="overflow-y-auto h-[calc(100%-72px)] p-4">
+                <div className="overflow-y-auto h-[calc(100%-64px)] p-4">
                     <ul className="space-y-1">
                         {[
                             { to: '/', label: 'Home' },
@@ -249,19 +282,21 @@ const Header = () => {
                             </li>
                         ))}
 
+
                         <li>
                             <button
-                                onClick={() => setWebOpen(v => !v)}
+                                onClick={() => setServicesOpen(v => !v)}
                                 className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] font-semibold text-slate-700 hover:bg-slate-50 transition-all"
                             >
-                                Web Services
-                                <svg className={`w-4 h-4 transition-transform ${webOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                Services
+                                <svg className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </button>
-                            {webOpen && (
+                            {servicesOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
-                                    {webDropdownSections.map((section) => (
+                                    <Link to="/services" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View All Services</Link>
+                                    {servicesDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
                                             {section.links.map(({ to, label }) => (

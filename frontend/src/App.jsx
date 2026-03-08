@@ -23,6 +23,25 @@ import AndroidDev from './pages/AndroidDev';
 import IosDev from './pages/IosDev';
 import Chatbot from './pages/Chatbot';
 import SeoServices from './pages/SeoServices';
+
+// New Service Pages
+import AllServices from './pages/AllServices';
+import CloudServices from './pages/CloudServices';
+import AiApplications from './pages/AiApplications';
+import AiAutomation from './pages/AiAutomation';
+import UseCases from './pages/UseCases';
+import ServiceConsulting from './pages/ServiceConsulting';
+import AgenticDevelopment from './pages/AgenticDevelopment';
+import AiAgentCustomization from './pages/AiAgentCustomization';
+import NextJs from './pages/NextJs';
+import DevOpsServices from './pages/DevOpsServices';
+import UiUxDesign from './pages/UiUxDesign';
+import CyberSecurity from './pages/CyberSecurity';
+import ReactNative from './pages/ReactNative';
+import Flutter from './pages/Flutter';
+import Swift from './pages/Swift';
+import Django from './pages/Django';
+import Java from './pages/Java';
 // Hiring Developer Pages (Premium Separate Pages)
 import HireAngular from './pages/hire/HireAngular';
 import HireCodeIgniter from './pages/hire/HireCodeIgniter';
@@ -36,6 +55,7 @@ import HireLaravel from './pages/hire/HireLaravel';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminAddBlog from './pages/admin/AdminAddBlog';
+import TestimonialManager from './admin/components/TestimonialManager';
 
 // Context
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -99,6 +119,25 @@ function App() {
             <Route path="react-development" element={<ReactJs />} />
             <Route path="laravel-development" element={<Laravel />} />
             <Route path="seo-services" element={<SeoServices />} />
+
+            {/* New Service Routes */}
+            <Route path="services" element={<AllServices />} />
+            <Route path="cloud-services" element={<CloudServices />} />
+            <Route path="ai-applications" element={<AiApplications />} />
+            <Route path="ai-automation" element={<AiAutomation />} />
+            <Route path="use-cases" element={<UseCases />} />
+            <Route path="service-consulting" element={<ServiceConsulting />} />
+            <Route path="agentic-development" element={<AgenticDevelopment />} />
+            <Route path="ai-agent-customization" element={<AiAgentCustomization />} />
+            <Route path="nextjs-development" element={<NextJs />} />
+            <Route path="devops-services" element={<DevOpsServices />} />
+            <Route path="ui-ux-design" element={<UiUxDesign />} />
+            <Route path="cyber-security" element={<CyberSecurity />} />
+            <Route path="react-native-development" element={<ReactNative />} />
+            <Route path="flutter-development" element={<Flutter />} />
+            <Route path="swift-development" element={<Swift />} />
+            <Route path="django-development" element={<Django />} />
+            <Route path="java-development" element={<Java />} />
 
             {/* Hiring Developer Pages - Premium Dedicated Pages */}
             <Route path="hire-angular-developer" element={<HireAngular />} />

@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -207,11 +209,36 @@ const ValueCard = ({ img, title, items }) => (
 );
 
 const About = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loadingTestimonials, setLoadingTestimonials] = useState(true);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     const wow = new WOW({ live: false });
     wow.init();
+
+    // Fetch active testimonials
+    const fetchTestimonials = async () => {
+      try {
+        const apiUrl = process.env.NODE_ENV === 'production'
+          ? 'https://gozoom-backend.onrender.com'
+          : 'http://localhost:5001';
+
+        const res = await axios.get(`${apiUrl}/api/testimonials`);
+        setTestimonials(res.data);
+      } catch (err) {
+        console.error('Failed to fetch testimonials', err);
+      } finally {
+        setLoadingTestimonials(false);
+      }
+    };
+
+    fetchTestimonials();
   }, []);
+
+  const backendUrl = process.env.NODE_ENV === 'production'
+    ? 'https://gozoom-backend.onrender.com'
+    : 'http://localhost:5001';
 
   return (
     <div className="font-['Lato',sans-serif] overflow-x-hidden">
@@ -345,6 +372,56 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Dynamic Testimonials Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-4 tracking-wider uppercase border border-blue-100">Client Stories</span>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-800">What Our Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Say</span></h2>
+          </div>
+
+          {loadingTestimonials ? (
+            <div className="flex justify-center items-center py-12">
+              <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+            </div>
+          ) : testimonials.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((t, idx) => (
+                <div key={t._id} className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
+                  <FaQuoteLeft className="text-4xl text-blue-200 mb-6 group-hover:text-blue-400 transition-colors" />
+                  <p className="text-slate-600 text-lg mb-8 leading-relaxed italic relative z-10">"{t.content}"</p>
+
+                  <div className="flex items-center justify-between border-t border-slate-200 pt-6 mt-auto">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-full bg-white shadow-sm border border-slate-200 p-1 flex items-center justify-center overflow-hidden">
+                        {t.avatar ? (
+                          <img src={`${backendUrl}${t.avatar}`} alt={t.authorName} className="w-full h-full object-cover rounded-full" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150"; }} />
+                        ) : (
+                          <div className="w-full h-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl rounded-full">
+                            {t.authorName.charAt(0)}
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-800 text-lg">{t.authorName}</h4>
+                        <p className="text-sm text-slate-500 font-medium">{t.authorRole}</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-1 text-amber-400 text-sm">
+                      {[...Array(t.rating || 5)].map((_, i) => <FaStar key={i} />)}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 text-slate-500 bg-slate-50 rounded-2xl border border-slate-100 max-w-2xl mx-auto">
+              Testimonials are currently being updated. Please check back soon!
+            </div>
+          )}
         </div>
       </section>
 

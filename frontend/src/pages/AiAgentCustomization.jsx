@@ -1,0 +1,148 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import WOW from 'wow.js';
+import 'animate.css';
+import { FaArrowRight, FaSlidersH, FaPuzzlePiece, FaCodeBranch, FaDatabase, FaShieldAlt, FaComments, FaCheckCircle, FaProjectDiagram, FaUserLock } from 'react-icons/fa';
+
+const AiAgentCustomization = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+        const wow = new WOW({ live: false });
+        wow.init();
+    }, []);
+
+    return (
+        <div>
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-slate-950 overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[30%] left-[5%] w-[300px] h-[300px] bg-pink-500/20 rounded-full blur-[100px] animate-pulse"></div>
+                    <div className="absolute top-[10%] right-[10%] w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute bottom-[20%] right-[40%] w-[350px] h-[350px] bg-purple-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
+
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0">
+                            <span className="inline-block py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">Tailored Intelligence</span>
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight" data-aos="fade-down" data-aos-delay="100">
+                                AI Agent <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">Customization</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="200">
+                                Off-the-shelf AI models are just the beginning. We fine-tune, constrain, and customize AI agents to operate exactly within your domain, mimicking your brand voice and adhering strictly to your rules.
+                            </p>
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-pink-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                    Customize Your AI <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="relative w-full max-w-[450px] aspect-square animate-float">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-purple-500/20 to-cyan-500/20 rounded-[3rem] blur-3xl"></div>
+                                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-8 flex flex-col items-center justify-center gap-8">
+                                    <div className="grid grid-cols-2 gap-8 w-full place-items-center">
+                                        <div className="w-24 h-24 rounded-3xl bg-pink-500/10 flex items-center justify-center shadow-lg border border-pink-500/20"><FaSlidersH className="w-12 h-12 text-pink-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-purple-500/10 flex items-center justify-center shadow-lg border border-purple-500/20"><FaCodeBranch className="w-12 h-12 text-purple-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-cyan-500/10 flex items-center justify-center shadow-lg border border-cyan-500/20"><FaShieldAlt className="w-12 h-12 text-cyan-400" /></div>
+                                        <div className="w-24 h-24 rounded-3xl bg-indigo-500/10 flex items-center justify-center shadow-lg border border-indigo-500/20"><FaPuzzlePiece className="w-12 h-12 text-indigo-400" /></div>
+                                    </div>
+                                    <div className="w-2/3 h-1.5 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-cyan-500/50 rounded-full mt-4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="container relative z-10 block px-6">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up">
+                            <div className="w-16 h-16 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <FaSlidersH className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-4">Fine-Tuning</h3>
+                            <p className="text-slate-600">Training foundation models (like GPT-4 or Llama 3) on your proprietary datasets to improve domain-specific accuracy and relevance without hallucination.</p>
+                        </div>
+                        <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                            <div className="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <FaCodeBranch className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-4">Guardrails & Safety</h3>
+                            <p className="text-slate-600">Implementing strict moderation and operational boundaries to ensure the AI acts safely, legally, and within corporate compliance guidelines.</p>
+                        </div>
+                        <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                            <div className="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <FaPuzzlePiece className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-4">Persona Design</h3>
+                            <p className="text-slate-600">Engineering the system prompt and instructions so the output tone perfectly mimics your brand's voice—be it professional, witty, or deeply empathetic.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* What We Build Section */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="container relative z-10 block px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-cyan-100 text-cyan-800 font-bold text-sm mb-4 border border-cyan-200">Our Expertise</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">Customization Capabilities</h2>
+                        <p className="text-xl text-slate-600 mt-6 max-w-3xl mx-auto">We configure and fine-tune AI agents to integrate flawlessly into your existing technology stack.</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: 'RAG Architecture Integration', desc: 'Implementing Retrieval-Augmented Generation (RAG) so your AI agents can accurately query your private databases and knowledge bases in real-time.', icon: FaDatabase },
+                            { title: 'Brand Voice Alignment', desc: 'Extensive system prompt engineering and persona drafting to ensure the agent communicates exactly like your best human employees.', icon: FaComments },
+                            { title: 'Safety & Compliance Guardrails', desc: 'Hardcoding strict boundaries to prevent the AI from generating inappropriate content, leaking PII, or executing dangerous tasks.', icon: FaShieldAlt },
+                            { title: 'Tool Calling & APIs', desc: 'Empowering your agents to utilize external tools—allowing them to fetch weather data, execute SQL queries, or send emails through the Salesforce API.', icon: FaProjectDiagram },
+                            { title: 'Role-Based Access Control', desc: 'Customizing agent behavior based on the user interacting with it, ensuring execs see full data while frontline staff only see relevant scopes.', icon: FaUserLock },
+                            { title: 'Continuous Model Fine-Tuning', desc: 'Setting up automated pipelines that use feedback loops (RLHF) to constantly retrain and improve the model over time using real user interactions.', icon: FaSlidersH },
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-cyan-500/10 transition-shadow duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="w-16 h-16 bg-cyan-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <item.icon className="w-8 h-8 text-cyan-500" />
+                                </div>
+                                <h4 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h4>
+                                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Choose Us Section */}
+            <section className="py-24 bg-white relative">
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <span className="inline-block py-1 px-3 rounded-full bg-pink-100 text-pink-800 font-bold text-sm mb-4 border border-pink-200">Why Us</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">Why Choose Our Customization Engineering?</h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {[
+                            { title: 'Zero Hallucination Tolerance', desc: 'Through rigorous vector database structuring and strict temperature controls, we minimize AI hallucinations, guaranteeing accuracy.', icon: FaShieldAlt },
+                            { title: 'Model Agnostic Approach', desc: 'We do not lock you into OpenAI. We assess and customize across Anthropic, Google Gemini, Mistral, and open-source models (like Llama 3) to find the perfect fit.', icon: FaPuzzlePiece },
+                            { title: 'Data Privacy Standard', desc: 'Your fine-tuning datasets are sacred. We deploy models on private VPCs and never send your proprietary data to public training sets.', icon: FaUserLock },
+                            { title: 'Enterprise-Scale Deployment', desc: 'Custom models require sophisticated hosting. We manage the MLOps, inference optimization, and auto-scaling to keep your latency low and costs manageable.', icon: FaProjectDiagram }
+                        ].map((item, i) => (
+                            <div key={i} className="flex gap-5" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="flex-shrink-0 w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center text-pink-600 font-bold text-lg shadow-sm border border-pink-100">
+                                    <item.icon className="w-5 h-5" />
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-slate-800 mb-2">{item.title}</h4>
+                                    <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default AiAgentCustomization;

@@ -15,12 +15,6 @@ const Chatbot = () => {
 
   return (
     <div>
-      {/* EXACT MIGRATED CONTENT BEGIN */}
-
-
-
-
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#140b25] overflow-hidden">
         {/* Chatbot Decorative Elements */}
@@ -32,15 +26,15 @@ const Chatbot = () => {
 
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+            <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 font-bold text-sm mb-6 uppercase tracking-wider">AI-Powered Solutions</span>
               <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight uppercase">
                 Hire Experienced <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">Chatbot Developers</span>
               </h1>
-              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
+              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
                 Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-fuchsia-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -157,20 +151,6 @@ const Chatbot = () => {
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* EXACT MIGRATED CONTENT END */}
     </div>
   );
 };
