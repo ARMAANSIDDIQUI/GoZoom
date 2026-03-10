@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import { FaArrowLeft, FaCalendarAlt } from 'react-icons/fa';
 import ShootingStars from '../components/ShootingStars';
 
 const BlogDetails = () => {
@@ -25,65 +27,164 @@ const BlogDetails = () => {
         fetchBlog();
     }, [id]);
 
-    if (error) return <div className="text-center py-20 text-2xl text-red-500">Blog not found.</div>;
-    if (!blog) return <div className="text-center py-20 text-2xl">Loading...</div>;
-    return (
-        <div className="w-full bg-white font-sans">
-            <section className="relative w-full min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
-                <ShootingStars />
-                <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-cyan-500/20 blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+    if (error) return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-xl border border-gray-100">
+                <h2 className="text-3xl font-bold text-red-500 mb-4">Blog Not Found</h2>
+                <Link to="/blogs" className="text-blue-600 font-bold hover:underline">Return to Blogs</Link>
+            </div>
+        </div>
+    );
 
-                <div className="relative z-10 text-center pt-[72px] px-4 max-w-4xl">
-                    <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Blog Post</span>
-                    <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold text-center drop-shadow-lg leading-tight">
+    if (!blog) return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="flex flex-col items-center">
+                <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p className="text-gray-500 font-medium">Loading amazing content...</p>
+            </div>
+        </div>
+    );
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    };
+
+    return (
+        <div className="w-full bg-white font-['Lato',sans-serif]">
+            {/* Premium Hero Section */}
+            <section className="hero-premium relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+                <motion.div
+                    initial={{ scale: 1.1, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 0.4 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0 bg-cover bg-center mix-blend-overlay"
+                    style={{ backgroundImage: 'url("/images/20.png")' }}
+                />
+
+                <ShootingStars />
+                <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-blue-500/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+                <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-indigo-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+
+                <div className="relative z-10 text-center pt-24 px-4 max-w-5xl">
+                    <motion.span
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="inline-block py-1.5 px-4 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20 font-black text-xs mb-6 uppercase tracking-widest"
+                    >
+                        Insights & Perspectives
+                    </motion.span>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-white text-4xl md:text-6xl lg:text-7xl font-black text-center drop-shadow-2xl leading-[1.1] tracking-tight"
+                    >
                         {blog.title}
-                    </h2>
+                    </motion.h2>
                 </div>
             </section>
 
-            <section className="py-16">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <Link to="/blogs" className="inline-block mb-8 text-blue-600 hover:text-blue-800 font-medium transition-colors" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                        &larr; Back to Blogs
-                    </Link>
+            <section className="py-24 bg-white relative">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="mb-12"
+                    >
+                        <Link to="/blogs" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold transition-all group" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                            <FaArrowLeft className="group-hover:-translate-x-2 transition-transform" /> Back to Explorations
+                        </Link>
+                    </motion.div>
 
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>{blog.title}</h1>
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="space-y-12"
+                    >
+                        <motion.div variants={itemVariants} className="space-y-6">
+                            <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>{blog.title}</h1>
 
-                    <p className="text-gray-500 italic mb-8" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                        Published on: {new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                    </p>
+                            <div className="flex items-center gap-4 text-gray-500 font-bold uppercase tracking-widest text-xs" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                                <span className="flex items-center gap-2 bg-gray-100 px-3 py-1.5 rounded-lg">
+                                    <FaCalendarAlt className="text-blue-600" />
+                                    {new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                </span>
+                                <span className="bg-blue-600/10 text-blue-600 px-3 py-1.5 rounded-lg">5 Min Read</span>
+                            </div>
+                        </motion.div>
 
-                    <div className="w-full relative rounded-xl overflow-hidden shadow-lg mb-12 bg-gray-100 flex justify-center items-center h-[50vh] md:h-[60vh]">
-                        <img
-                            src={blog.image_filename}
-                            alt={blog.title}
-                            className="w-full h-full object-cover"
-                            onError={(e) => { e.target.src = '/images/placeholder.jpg'; }}
-                        />
-                    </div>
+                        <motion.div
+                            variants={itemVariants}
+                            className="aspect-video relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-gray-100 group"
+                        >
+                            <motion.img
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.8 }}
+                                src={blog.image_filename}
+                                alt={blog.title}
+                                className="w-full h-full object-cover"
+                                onError={(e) => { e.target.src = '/images/placeholder.jpg'; }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+                        </motion.div>
 
-                    <div className="prose max-w-none text-gray-700 leading-relaxed text-lg" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b pb-2">Introduction</h2>
-                        <p className="mb-8 text-justify">{blog.introduction}</p>
+                        <motion.div
+                            variants={itemVariants}
+                            className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8"
+                            style={{ fontFamily: 'Montserrat, sans-serif' }}
+                        >
+                            <div className="relative">
+                                <span className="absolute -left-4 top-0 w-1 h-full bg-blue-600 rounded-full opacity-50 hidden md:block"></span>
+                                <h2 className="text-3xl font-black text-gray-900 mb-6 border-b border-gray-100 pb-4">Executive Summary</h2>
+                                <p className="text-xl text-gray-600 leading-loose text-justify font-medium italic">{blog.introduction}</p>
+                            </div>
 
-                        {[1, 2, 3, 4, 5].map(i => {
-                            const heading = blog[`heading${i}`];
-                            const paragraph = blog[`paragraph${i}`];
-                            if (!heading && !paragraph) return null;
+                            {[1, 2, 3, 4, 5].map(i => {
+                                const heading = blog[`heading${i}`];
+                                const paragraph = blog[`paragraph${i}`];
+                                if (!heading && !paragraph) return null;
 
-                            return (
-                                <React.Fragment key={i}>
-                                    {heading && <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">{heading}</h3>}
-                                    {paragraph && <p className="mb-6 text-justify">{paragraph}</p>}
-                                </React.Fragment>
-                            );
-                        })}
+                                return (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        className="pt-8"
+                                    >
+                                        {heading && <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center gap-4">
+                                            <span className="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center text-sm font-black">{i}</span>
+                                            {heading}
+                                        </h3>}
+                                        {paragraph && <p className="text-lg text-gray-600 leading-[1.8] text-justify">{paragraph}</p>}
+                                    </motion.div>
+                                );
+                            })}
 
-                        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4 border-b pb-2">Conclusion</h2>
-                        <p className="text-justify">{blog.conclusion}</p>
-                    </div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="mt-16 p-10 bg-slate-900 rounded-[2rem] text-white shadow-2xl relative overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-[50px]"></div>
+                                <h2 className="text-3xl font-black mb-6 relative z-10">Strategic Conclusion</h2>
+                                <p className="text-lg text-slate-300 leading-relaxed text-justify relative z-10">{blog.conclusion}</p>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
         </div>
