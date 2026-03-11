@@ -43,6 +43,19 @@ import Swift from './pages/Swift';
 import Django from './pages/Django';
 import Java from './pages/Java';
 import WorkforceSolutions from './pages/WorkforceSolutions';
+
+// Workforce Solutions Sub-Pages
+import ContingentStaffing from './pages/workforce/ContingentStaffing';
+import DirectHire from './pages/workforce/DirectHire';
+import GlobalPayroll from './pages/workforce/GlobalPayroll';
+import StatementOfWork from './pages/workforce/StatementOfWork';
+import NearshoreOffshore from './pages/workforce/NearshoreOffshore';
+import DirectSourcing from './pages/workforce/DirectSourcing';
+import Rpo from './pages/workforce/Rpo';
+import DiversitySpendCapture from './pages/workforce/DiversitySpendCapture';
+import GccBot from './pages/workforce/GccBot';
+import MasterVendorProgram from './pages/workforce/MasterVendorProgram';
+
 // Hiring Developer Pages (Premium Separate Pages)
 import HireAngular from './pages/hire/HireAngular';
 import HireCodeIgniter from './pages/hire/HireCodeIgniter';
@@ -140,6 +153,16 @@ function App() {
             <Route path="django-development" element={<Django />} />
             <Route path="java-development" element={<Java />} />
             <Route path="workforce-solutions" element={<WorkforceSolutions />} />
+            <Route path="workforce-solutions/contingent-staffing" element={<ContingentStaffing />} />
+            <Route path="workforce-solutions/direct-hire" element={<DirectHire />} />
+            <Route path="workforce-solutions/global-payroll" element={<GlobalPayroll />} />
+            <Route path="workforce-solutions/statement-of-work" element={<StatementOfWork />} />
+            <Route path="workforce-solutions/nearshore-offshore" element={<NearshoreOffshore />} />
+            <Route path="workforce-solutions/direct-sourcing" element={<DirectSourcing />} />
+            <Route path="workforce-solutions/rpo" element={<Rpo />} />
+            <Route path="workforce-solutions/diversity-spend" element={<DiversitySpendCapture />} />
+            <Route path="workforce-solutions/gcc-bot" element={<GccBot />} />
+            <Route path="workforce-solutions/mvp" element={<MasterVendorProgram />} />
 
             {/* Hiring Developer Pages - Premium Dedicated Pages */}
             <Route path="hire-angular-developer" element={<HireAngular />} />

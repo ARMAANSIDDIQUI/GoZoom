@@ -7,16 +7,16 @@ import 'animate.css';
 import { FaArrowRight, FaUsers, FaUserTie, FaGlobeAmericas, FaFileSignature, FaMapMarkedAlt, FaSearchPlus, FaTasks, FaChartPie, FaRobot, FaCrown } from 'react-icons/fa';
 
 const solutions = [
-    { title: 'Contingent Staffing', desc: 'Flexible workforce solutions to meet your dynamic business needs.', icon: FaUsers, link: '#' },
-    { title: 'Direct Hire', desc: 'Find permanent, top-tier talent for your organization’s long-term success.', icon: FaUserTie, link: '#' },
-    { title: 'Global Payroll & Compliance', desc: 'Seamlessly manage payroll and regulatory compliance across borders.', icon: FaGlobeAmericas, link: '#' },
-    { title: 'Statement Of Work (SOW)', desc: 'Project-based solutions with clear deliverables, timelines, and budgets.', icon: FaFileSignature, link: '#' },
-    { title: 'Nearshore and Offshore', desc: 'Access global talent pools for cost-effective, high-quality delivery.', icon: FaMapMarkedAlt, link: '#' },
-    { title: 'Direct Sourcing', desc: 'Leverage your brand to attract and engage top talent directly.', icon: FaSearchPlus, link: '#' },
-    { title: 'Recruitment Process Outsourcing (RPO)', desc: 'End-to-end recruitment solutions to optimize your hiring strategy.', icon: FaTasks, link: '#' },
-    { title: 'Diversity Spend Capture', desc: 'Track and maximize your diverse supplier spending initiatives.', icon: FaChartPie, link: '#' },
-    { title: 'GCC BOT', desc: 'Build, Operate, and Transfer models for Global Capability Centers.', icon: FaRobot, link: '#' },
-    { title: 'Master Vendor Program (MVP)', desc: 'Streamlined vendor management for optimal efficiency and performance.', icon: FaCrown, link: '#' },
+    { title: 'Contingent Staffing', desc: 'GoZoom offers contingent staffing solutions to build and manage a flexible, on-demand workforce seamlessly.', icon: FaUsers, link: '/workforce-solutions/contingent-staffing' },
+    { title: 'Direct Hire', desc: 'We carefully screen and handpick the best candidates, matching top talent with the perfect job fit for long-term success.', icon: FaUserTie, link: '/workforce-solutions/direct-hire' },
+    { title: 'Global Payroll & Compliance', desc: 'Trust our EOR/AOR services with seamless invoicing, compliance management, and payroll processing.', icon: FaGlobeAmericas, link: '/workforce-solutions/global-payroll' },
+    { title: 'Statement Of Work (SOW)', desc: 'Top-notch services to streamline projects, define scope, outline deliverables, and manage resources on time and budget.', icon: FaFileSignature, link: '/workforce-solutions/statement-of-work' },
+    { title: 'Nearshore and Offshore', desc: 'Flexible global delivery centers providing access to top talent, ensuring seamless collaboration and cost savings.', icon: FaMapMarkedAlt, link: '/workforce-solutions/nearshore-offshore' },
+    { title: 'Direct Sourcing', desc: 'Harness our global network to connect directly with the best candidates, eliminating intermediaries and delays.', icon: FaSearchPlus, link: '/workforce-solutions/direct-sourcing' },
+    { title: 'Recruitment Process Outsourcing (RPO)', desc: 'We handle every aspect of hiring, from sourcing to onboarding, saving you time and giving access to a larger talent pool.', icon: FaTasks, link: '/workforce-solutions/rpo' },
+    { title: 'Diversity Spend Capture', desc: 'Consolidate workforce expenses to meet diversity goals with advanced data analytics and tailored compliance reporting.', icon: FaChartPie, link: '/workforce-solutions/diversity-spend' },
+    { title: 'GCC BOT', desc: 'Our Build-Operate-Transfer (BOT) model helps you establish scalable operations and seamless transitions with reduced risk.', icon: FaRobot, link: '/workforce-solutions/gcc-bot' },
+    { title: 'Master Vendor Program (MVP)', desc: 'A comprehensive solution eliminating the complexity of managing multiple vendors through a single, streamlined partnership.', icon: FaCrown, link: '/workforce-solutions/mvp' },
 ];
 
 const WorkforceSolutions = () => {

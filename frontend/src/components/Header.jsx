@@ -69,22 +69,22 @@ const workforceDropdownSections = [
         id: 'staffing',
         heading: <span className="flex items-center gap-1.5"><FaUsers className="text-blue-500" /> Talent & Acquisition</span>,
         links: [
-            { to: '/workforce-solutions#contingent', label: 'Contingent Staffing' },
-            { to: '/workforce-solutions#direct', label: 'Direct Hire' },
-            { to: '/workforce-solutions#nearshore', label: 'Nearshore and Offshore' },
-            { to: '/workforce-solutions#direct-sourcing', label: 'Direct Sourcing' },
-            { to: '/workforce-solutions#rpo', label: 'Recruitment Process Outsourcing' },
+            { to: '/workforce-solutions/contingent-staffing', label: 'Contingent Staffing' },
+            { to: '/workforce-solutions/direct-hire', label: 'Direct Hire' },
+            { to: '/workforce-solutions/nearshore-offshore', label: 'Nearshore and Offshore' },
+            { to: '/workforce-solutions/direct-sourcing', label: 'Direct Sourcing' },
+            { to: '/workforce-solutions/rpo', label: 'Recruitment Process Outsourcing' },
         ]
     },
     {
         id: 'management',
         heading: <span className="flex items-center gap-1.5"><FaTasks className="text-cyan-500" /> Compliance & Operations</span>,
         links: [
-            { to: '/workforce-solutions#payroll', label: 'Global Payroll & Compliance' },
-            { to: '/workforce-solutions#sow', label: 'Statement Of Work (SOW)' },
-            { to: '/workforce-solutions#diversity', label: 'Diversity Spend Capture' },
-            { to: '/workforce-solutions#gcc', label: 'GCC BOT' },
-            { to: '/workforce-solutions#mvp', label: 'Master Vendor Program (MVP)' },
+            { to: '/workforce-solutions/global-payroll', label: 'Global Payroll & Compliance' },
+            { to: '/workforce-solutions/statement-of-work', label: 'Statement Of Work (SOW)' },
+            { to: '/workforce-solutions/diversity-spend', label: 'Diversity Spend Capture' },
+            { to: '/workforce-solutions/gcc-bot', label: 'GCC BOT' },
+            { to: '/workforce-solutions/mvp', label: 'Master Vendor Program (MVP)' },
         ]
     }
 ];
@@ -325,12 +325,12 @@ const Header = () => {
 
             {/* Mobile Overlay */}
             <div
-                className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[9990] lg:hidden transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[10000] lg:hidden transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
             ></div>
 
             {/* Mobile Drawer */}
-            <nav className={`fixed top-0 right-0 h-full w-[300px] bg-white z-[9995] lg:hidden transform transition-transform duration-500 ease-out shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <nav className={`fixed top-0 right-0 h-full w-[300px] bg-white z-[10001] lg:hidden transform transition-transform duration-500 ease-out shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex items-center justify-between px-5 h-[64px] border-b border-slate-100">
                     <img src="/images/logo2.webp" alt="Gozoom" className="h-9 w-auto object-contain" />
                     <button
