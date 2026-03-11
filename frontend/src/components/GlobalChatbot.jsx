@@ -4,7 +4,7 @@ import { FaComments, FaTimes, FaPaperPlane, FaRobot } from 'react-icons/fa';
 const GlobalChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { role: 'bot', text: 'Hi! I\'m GoZoom\'s AI assistant. How can I help you today?' }
+        { role: 'bot', text: 'Hi! I\'m Alex, GoZoom\'s AI assistant. How can I help you today?' }
     ]);
     const [input, setInput] = useState('');
     const messagesEndRef = useRef(null);
@@ -91,10 +91,27 @@ const GlobalChatbot = () => {
     const handleBotResponse = (userInput) => {
         let botResponse = "I'm not sure I understand that. Would you like to speak to a human expert?";
 
-        for (const item of knowledgeBase) {
-            if (item.pattern.test(userInput)) {
-                botResponse = item.response;
-                break;
+        const exactMatches = {
+            "Why should I choose GoZoom?": "Choosing GoZoom means choosing excellence. We offer:\n• Deep Technical Expertise: 30+ specialists across modern stacks.\n• Global Delivery: 100+ successful projects for international clients.\n• Agile Speed: Fast turnarounds without compromising on quality.\n• Cost-Effective: High-end solutions tailored to your budget.\n• Long-term Partnership: We don't just build; we scale with you.",
+            "What services do you provide?": "GoZoom specializes in comprehensive tech solutions: \n• Web Development (React, Angular, Node, Laravel)\n• Mobile Apps (Android, iOS, Flutter)\n• Software Engineering & Architecture\n• Cloud Integration & DevOps\n• AI, ML & Chatbot Solutions. \nWhich specific service can I tell you more about?",
+            "Tell me about your process.": "We follow a transparent, Agile-driven process:\n1. Discovery: Understanding your vision.\n2. Design: Creating intuitive UI/UX.\n3. Development: Sprints with regular updates.\n4. Testing: Rigorous QA for bug-free code.\n5. Launch & Support: Seamless deployment and ongoing maintenance.",
+            "How can I contact you?": "You can reach our team directly at contact@gozoom.com or by calling our support line. Our headquarters is located in the primary business district. Check our 'Contact Us' page for a full map and contact form!",
+            "What is your tech stack?": "We are experts in modern stacks! Whether you need a React/Next.js frontend, a robust Laravel/Node backend, or a full-stack Angular enterprise app, we can build it. You can also hire our developers for your existing team.",
+            "Is my data secure?": "Your data is our priority. We sign strict NDAs (Non-Disclosure Agreements) with all clients, use secure encrypted servers, and follow industry-best practices for code security and data protection.",
+            "Tell me about pricing.": "Pricing depends on the scope and complexity of your project. For a quick estimate, please share your requirements via our 'Contact' form, and one of our consultants will provide a free quote within 24 hours.",
+            "Do you provide support?": "Our relationship doesn't end at launch! We provide dedicated post-launch support, 24/7 monitoring, and scalable maintenance packages to ensure your application stays modern and bug-free.",
+            "I want to hire a developer.": "Looking for talent or a new role? \n• Hire Experts: Check our 'Hire Developers' section for tech-specific talent.\n• Join Us: Visit our 'Careers' page for current job openings and internships!",
+            "Do you build mobile apps?": "We deliver high-end mobile experiences. Our team builds native Android/iOS apps and cross-platform solutions using Flutter/React Native, handling everything from design to store submission.",
+        };
+
+        if (exactMatches[userInput]) {
+            botResponse = exactMatches[userInput];
+        } else {
+            for (const item of knowledgeBase) {
+                if (item.pattern.test(userInput)) {
+                    botResponse = item.response;
+                    break;
+                }
             }
         }
 
@@ -149,7 +166,7 @@ const GlobalChatbot = () => {
                                 <FaRobot className="text-white text-xl" />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold text-sm">GoZoom Assistant</h3>
+                                <h3 className="text-white font-bold text-sm">Alex</h3>
                                 <div className="flex items-center gap-1">
                                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                                     <span className="text-white/70 text-xs">Online</span>

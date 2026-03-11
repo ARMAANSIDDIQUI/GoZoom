@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaGlobe, FaCode, FaCloud, FaRobot } from 'react-icons/fa';
+import { FaGlobe, FaCode, FaCloud, FaRobot, FaUsers, FaTasks } from 'react-icons/fa';
 
 
 
@@ -19,7 +19,7 @@ const servicesDropdownSections = [
         heading: <span className="flex items-center gap-1.5"><FaRobot className="text-fuchsia-500" /> Artificial Intelligence</span>,
         links: [
             { to: '/ai-applications', label: 'AI Applications' },
-            { to: '/chatbot', label: 'Chatbot Development' },
+            { to: '/chatbot', label: 'Alex!' },
             { to: '/ai-automation', label: 'Task Automation' },
             { to: '/agentic-development', label: 'Agentic Development' },
             { to: '/ai-agent-customization', label: 'AI Customization' },
@@ -64,6 +64,31 @@ const servicesDropdownSections = [
     }
 ];
 
+const workforceDropdownSections = [
+    {
+        id: 'staffing',
+        heading: <span className="flex items-center gap-1.5"><FaUsers className="text-blue-500" /> Talent & Acquisition</span>,
+        links: [
+            { to: '/workforce-solutions#contingent', label: 'Contingent Staffing' },
+            { to: '/workforce-solutions#direct', label: 'Direct Hire' },
+            { to: '/workforce-solutions#nearshore', label: 'Nearshore and Offshore' },
+            { to: '/workforce-solutions#direct-sourcing', label: 'Direct Sourcing' },
+            { to: '/workforce-solutions#rpo', label: 'Recruitment Process Outsourcing' },
+        ]
+    },
+    {
+        id: 'management',
+        heading: <span className="flex items-center gap-1.5"><FaTasks className="text-cyan-500" /> Compliance & Operations</span>,
+        links: [
+            { to: '/workforce-solutions#payroll', label: 'Global Payroll & Compliance' },
+            { to: '/workforce-solutions#sow', label: 'Statement Of Work (SOW)' },
+            { to: '/workforce-solutions#diversity', label: 'Diversity Spend Capture' },
+            { to: '/workforce-solutions#gcc', label: 'GCC BOT' },
+            { to: '/workforce-solutions#mvp', label: 'Master Vendor Program (MVP)' },
+        ]
+    }
+];
+
 
 
 
@@ -74,14 +99,19 @@ const Header = () => {
     const [desktopWebOpen, setDesktopWebOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+    const [workforceOpen, setWorkforceOpen] = useState(false);
+    const [desktopWorkforceOpen, setDesktopWorkforceOpen] = useState(false);
     const dropdownRef = useRef(null);
     const servicesRef = useRef(null);
+    const workforceRef = useRef(null);
     const location = useLocation();
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
         setServicesOpen(false);
         setDesktopServicesOpen(false);
+        setWorkforceOpen(false);
+        setDesktopWorkforceOpen(false);
     }, [location]);
 
     useEffect(() => {
@@ -96,6 +126,9 @@ const Header = () => {
         const handleClickOutside = (e) => {
             if (servicesRef.current && !servicesRef.current.contains(e.target)) {
                 setDesktopServicesOpen(false);
+            }
+            if (workforceRef.current && !workforceRef.current.contains(e.target)) {
+                setDesktopWorkforceOpen(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -164,7 +197,7 @@ const Header = () => {
                                     : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                     }`}
                             >
-                                SERVICES
+                                IT SOLUTIONS!
                                 <svg
                                     className={`w-3 h-3 transition-transform duration-300 ${desktopServicesOpen ? 'rotate-180' : ''}`}
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
@@ -201,6 +234,56 @@ const Header = () => {
                         </div>
 
 
+
+                        {/* WORKFORCE SOLUTIONS Dropdown */}
+                        <div
+                            className="relative"
+                            ref={workforceRef}
+                            onMouseEnter={() => setDesktopWorkforceOpen(true)}
+                            onMouseLeave={() => setDesktopWorkforceOpen(false)}
+                        >
+                            <Link
+                                to="/workforce-solutions"
+                                className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopWorkforceOpen || isActive('/workforce-solutions')
+                                    ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
+                                    : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
+                                    }`}
+                            >
+                                WORKFORCE SOLUTIONS
+                                <svg
+                                    className={`w-3 h-3 transition-transform duration-300 ${desktopWorkforceOpen ? 'rotate-180' : ''}`}
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </Link>
+
+                            {/* Workforce Solutions Dropdown Panel */}
+                            <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopWorkforceOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                                }`}>
+                                <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown">
+                                    {workforceDropdownSections.map((section) => (
+                                        <div key={section.id} className="mb-1">
+                                            <p className="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
+                                            {section.links.map(({ to, label }) => (
+                                                <Link
+                                                    key={to}
+                                                    to={to}
+                                                    className={`flex items-center gap-2.5 px-3 py-2 text-[13px] font-medium rounded-xl transition-all duration-200 group ${isActive(to)
+                                                        ? 'text-cyan-600 bg-cyan-50 font-semibold'
+                                                        : 'text-slate-700 hover:text-cyan-600 hover:bg-slate-50'
+                                                        }`}
+                                                >
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                                    {label}
+                                                </Link>
+                                            ))}
+                                            <div className="mt-1 mb-1 mx-3 h-px bg-slate-100"></div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
 
                         <Link
                             to="/blogs"
@@ -288,7 +371,7 @@ const Header = () => {
                                 onClick={() => setServicesOpen(v => !v)}
                                 className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] font-semibold text-slate-700 hover:bg-slate-50 transition-all"
                             >
-                                Services
+                                IT Solutions!
                                 <svg className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
@@ -297,6 +380,36 @@ const Header = () => {
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
                                     <Link to="/services" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View All Services</Link>
                                     {servicesDropdownSections.map((section) => (
+                                        <div key={section.id}>
+                                            <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
+                                            {section.links.map(({ to, label }) => (
+                                                <Link
+                                                    key={to}
+                                                    to={to}
+                                                    className="block px-3 py-2 text-[13px] text-slate-600 hover:text-cyan-600 rounded-lg hover:bg-cyan-50 transition-all"
+                                                >
+                                                    {label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => setWorkforceOpen(v => !v)}
+                                className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] font-semibold text-slate-700 hover:bg-slate-50 transition-all"
+                            >
+                                Workforce Solutions
+                                <svg className={`w-4 h-4 transition-transform ${workforceOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                            {workforceOpen && (
+                                <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
+                                    <Link to="/workforce-solutions" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Workforce Services</Link>
+                                    {workforceDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
                                             {section.links.map(({ to, label }) => (

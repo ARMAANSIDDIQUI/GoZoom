@@ -271,37 +271,47 @@ const About = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-10">
-        <div className="container mx-auto max-w-6xl py-10 lg:py-20">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50 rounded-l-[100px] -z-10"></div>
+        <div className="container mx-auto max-w-7xl px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Image */}
-            <div className="w-full md:w-1/2 px-[15px] pt-[55px]" data-aos="fade-right">
-              <img src="/images/aboutusimage.webp" alt="About Us" className="w-full h-auto rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-500" />
+            <div className="w-full lg:w-1/2 relative" data-aos="fade-right">
+              <div className="absolute inset-0 bg-blue-500/20 translate-x-4 translate-y-4 rounded-3xl -z-10 blur-xl"></div>
+              <img src="/images/aboutusimage.webp" alt="About Us" className="w-full h-auto rounded-3xl shadow-2xl border border-slate-100 object-cover" />
             </div>
             {/* Content */}
-            <div className="w-full md:w-1/2 mt-[3rem]" data-aos="fade-left">
-              <h3 className="text-[32px] font-semibold text-[#00a2fe] text-center md:text-left mb-[10px]">ABOUT US</h3>
-              <p className="text-[17.5px] text-justify mb-4 text-gray-700 leading-relaxed">
-                Welcome to Gozoom Technologies, your one-stop shop for all your retail and integration needs! At Gozoom Technologies, we are passionate about technology and helping businesses succeed. With over 3 years of experience in the IT industry, we have the expertise and knowledge to help you achieve your goals. Our team of experts specializes in retail and integration, providing a range of services to help you streamline your operations and improve your bottom line. Whether you need help with point of sale systems, inventory management, or e-commerce integration, we have you covered.
-              </p>
-              <p className="text-[17.5px] text-justify mb-4">
-                We pride ourselves on delivering exceptional customer service and support, and we work closely with our clients to understand their unique needs and develop customized solutions that meet their specific requirements. We believe in building strong, long-lasting relationships with our clients, and we are committed to providing the highest level of service and support. At Gozoom Technologies, we are dedicated to staying on the cutting edge of technology, and we are constantly exploring new and innovative solutions to help our clients stay ahead of the competition. We are passionate about what we do, and we are committed to helping our clients succeed.
-              </p>
-              <p className="text-[17.5px] text-justify">
-                Thank you for considering Gozoom Technologies for your retail and integration needs. We look forward to working with you!
-              </p>
+            <div className="w-full lg:w-1/2" data-aos="fade-left">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-6 tracking-widest uppercase border border-blue-100">Our Journey</span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-800 mb-8 leading-tight">
+                Empowering Businesses Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Innovation</span>
+              </h2>
+              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>
+                  Welcome to <span className="font-bold text-slate-800">Gozoom Technologies</span>, your premier partner for transformative digital solutions. With years of deep industry expertise, we empower organizations to streamline operations, engage customers, and accelerate growth.
+                </p>
+                <p>
+                  We believe in building true partnerships. By deeply understanding your unique challenges, our team crafts bespoke IT strategies—from advanced integrations and retail tech to comprehensive cloud and AI solutions—designed specifically to give you a competitive edge.
+                </p>
+                <p className="font-medium text-slate-800 border-l-4 border-blue-500 pl-4 py-2 bg-slate-50 rounded-r-xl">
+                  We are driven by a singular mission: to deliver excellence and shape the future of technology for our clients globally.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* What We Stand For */}
-      <section className="py-16">
-        <div className="container mx-auto pt-0 pb-0">
-          <div className="mb-[15px] w-[80%] mx-auto text-center" data-aos="fade-up">
-            <h1 className="w-full text-[#00a2fe] text-[32px] font-bold mb-[15px] tracking-wide">WHAT WE STAND FOR</h1>
-            <p className="text-[18px] text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Our company's leaders share a passion for developing innovative technology solutions that drive significant bottom-line value, enabling customers and partners to succeed and win. Our team works together in one environment committed to deliver nothing, but the best.
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 tracking-widest uppercase border border-blue-200">Values & Vision</span>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-800 mb-6">
+              What We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Stand For</span>
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Our passion lies in developing cutting-edge technology that drives substantial value. We are committed to a collaborative environment that settles for nothing less than excellence.
             </p>
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-12">

@@ -42,6 +42,7 @@ import Flutter from './pages/Flutter';
 import Swift from './pages/Swift';
 import Django from './pages/Django';
 import Java from './pages/Java';
+import WorkforceSolutions from './pages/WorkforceSolutions';
 // Hiring Developer Pages (Premium Separate Pages)
 import HireAngular from './pages/hire/HireAngular';
 import HireCodeIgniter from './pages/hire/HireCodeIgniter';
@@ -138,6 +139,7 @@ function App() {
             <Route path="swift-development" element={<Swift />} />
             <Route path="django-development" element={<Django />} />
             <Route path="java-development" element={<Java />} />
+            <Route path="workforce-solutions" element={<WorkforceSolutions />} />
 
             {/* Hiring Developer Pages - Premium Dedicated Pages */}
             <Route path="hire-angular-developer" element={<HireAngular />} />
