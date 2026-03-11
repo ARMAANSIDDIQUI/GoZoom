@@ -355,12 +355,12 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-0 mb-0 !pb-0 relative overflow-hidden bg-gradient-to-r from-slate-900 to-[#0a0f25]" data-aos="fade-up">
-        <div className="text-center pt-16 pb-0 relative">
+      <section className="relative overflow-hidden bg-gradient-to-r from-slate-900 to-[#0a0f25]" data-aos="fade-up">
+        <div className="text-center py-20 relative">
           <div className="absolute top-0 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px]"></div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
               {[
                 { prefix: '', value: '3', suffix: '', label: 'YEARS IN\nBUSINESS' },
                 { prefix: '', value: '5', suffix: '+', label: 'OUTLETS\nINSTALLED' },
@@ -368,14 +368,14 @@ const About = () => {
                 { prefix: '$', value: '1000', suffix: 'k+', label: 'TRANSACTION\nVALUE' },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col items-center group">
-                  <div className="w-[135px] mx-auto border-b-2 border-blue-400/50 h-[90px] mb-4 flex items-end justify-center pb-2 group-hover:border-blue-400 transition-colors">
-                    <p className="text-white text-4xl md:text-5xl font-bold flex items-center">
-                      {stat.prefix && <span className="text-3xl text-blue-400 mr-1">{stat.prefix}</span>}
-                      {stat.value}
-                      {stat.suffix && <span className="text-3xl text-blue-400 ml-1">{stat.suffix}</span>}
+                  <div className="w-[150px] md:w-[200px] mx-auto border-b-2 border-blue-400/50 h-[90px] mb-6 flex items-end justify-center pb-3 group-hover:border-blue-400 transition-colors">
+                    <p className="text-white text-4xl md:text-5xl font-bold flex items-baseline justify-center whitespace-nowrap">
+                      {stat.prefix && <span className="text-3xl text-blue-400 font-medium mr-1">{stat.prefix}</span>}
+                      <span>{stat.value}</span>
+                      {stat.suffix && <span className="text-3xl text-blue-400 font-medium ml-1">{stat.suffix}</span>}
                     </p>
                   </div>
-                  <p className="text-slate-300 text-sm md:text-base font-bold tracking-widest leading-relaxed whitespace-pre-line group-hover:text-white transition-colors">
+                  <p className="text-slate-300 text-sm md:text-base font-bold tracking-widest leading-relaxed whitespace-pre-line text-center group-hover:text-white transition-colors">
                     {stat.label}
                   </p>
                 </div>
