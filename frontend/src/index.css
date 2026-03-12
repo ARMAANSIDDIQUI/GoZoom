@@ -159,13 +159,13 @@ body::-webkit-scrollbar {
 
     /* Zoom Responsive Typography */
     .text-hero-title {
-        font-size: clamp(2.25rem, 10vw, 5rem);
+        font-size: clamp(2rem, 8vw, 4.25rem);
         line-height: 1.1;
         font-weight: 800;
     }
 
     .text-hero-desc {
-        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+        font-size: clamp(0.9rem, 2vw, 1.05rem);
         line-height: 1.6;
     }
 

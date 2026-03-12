@@ -19,7 +19,7 @@ const servicesDropdownSections = [
         heading: <span className="flex items-center gap-1.5"><FaRobot className="text-fuchsia-500" /> Artificial Intelligence</span>,
         links: [
             { to: '/ai-applications', label: 'AI Applications' },
-            { to: '/chatbot', label: 'Alex!' },
+            { to: '/chatbot', label: 'Chatbot' },
             { to: '/ai-automation', label: 'Task Automation' },
             { to: '/agentic-development', label: 'Agentic Development' },
             { to: '/ai-agent-customization', label: 'AI Customization' },

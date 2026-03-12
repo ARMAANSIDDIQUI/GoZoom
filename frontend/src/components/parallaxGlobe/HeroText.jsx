@@ -101,7 +101,7 @@ export default function HeroText({ scrollYProgress, onScrollNext }) {
                         
                         <h1
                           className="font-black tracking-[-0.06em] text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 mb-5 max-w-5xl mx-auto leading-[1.05] drop-shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
-                          style={{ fontSize: 'clamp(2.1rem, 4.6vw, 4.1rem)' }}
+                          style={{ fontSize: 'clamp(1.9rem, 4vw, 3.6rem)' }}
                         >
                           {slide.titleLines.map((line, lineIndex) => (
                             <span key={`${slide.id}-l-${lineIndex}`} className="block">
