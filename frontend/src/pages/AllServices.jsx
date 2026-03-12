@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -63,6 +63,25 @@ const AllServices = () => {
         }
     ];
 
+    const [query, setQuery] = useState('');
+
+    const filteredCategories = useMemo(() => {
+        const q = query.trim().toLowerCase();
+        if (!q) return serviceCategories;
+        return serviceCategories
+            .map((cat) => {
+                const filteredServices = cat.services.filter(
+                    (s) =>
+                        s.name.toLowerCase().includes(q) ||
+                        s.desc.toLowerCase().includes(q) ||
+                        cat.title.toLowerCase().includes(q)
+                );
+                if (filteredServices.length === 0) return null;
+                return { ...cat, services: filteredServices };
+            })
+            .filter(Boolean);
+    }, [query, serviceCategories]);
+
     return (
         <div className="bg-slate-50 min-h-screen">
             <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a112f] overflow-hidden">
@@ -80,6 +99,20 @@ const AllServices = () => {
                             <p className="text-hero-desc text-indigo-100 max-w-3xl mb-10 font-medium" data-aos="fade-up" data-aos-delay="200">
                                 Comprehensive digital solutions designed to propel your business forward. From AI and Cloud to robust Web Development.
                             </p>
+                            <div className="w-full max-w-xl mt-4 space-y-2" data-aos="fade-up" data-aos-delay="250">
+                                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs font-semibold text-white uppercase tracking-[0.15em] shadow-lg shadow-black/20 animate-wiggle-attn">
+                                    Search services
+                                </span>
+                                <input
+                                    value={query}
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    placeholder="Search services (e.g., cloud, chatbot, design)..."
+                                    className="w-full rounded-2xl bg-white/20 border border-white/30 text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-md"
+                                />
+                                {/* <p className="text-white/70 text-xs font-medium">
+                                    Tip: try “cloud”, “chatbot”, or “design”.
+                                </p> */}
+                            </div>
                         </div>
                         <div className="flex-1 relative flex justify-center lg:justify-end w-full" data-aos="zoom-in" data-aos-delay="400">
                             <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square">
@@ -107,7 +140,12 @@ const AllServices = () => {
             <section className="py-24 relative z-20 -mt-10">
                 <div className="container mx-auto px-6">
                     <div className="space-y-24">
-                        {serviceCategories.map((category, idx) => (
+                        {filteredCategories.length === 0 && (
+                            <div className="text-center text-slate-500 text-lg" data-aos="fade-up">
+                                No services match “{query}”. Try another keyword.
+                            </div>
+                        )}
+                        {filteredCategories.map((category, idx) => (
                             <div key={idx} className="relative" data-aos="fade-up">
                                 {/* Category Header */}
                                 <div className="flex items-center gap-4 mb-10">
