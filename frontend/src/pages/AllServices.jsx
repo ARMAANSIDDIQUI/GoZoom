@@ -73,7 +73,7 @@ const AllServices = () => {
                 </div>
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+                        <div className="flex-1 text-center flex flex-col items-center">
                             <h1 className="text-hero-title text-white mb-6 tracking-tight uppercase" data-aos="zoom-in">
                                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Services</span>
                             </h1>
