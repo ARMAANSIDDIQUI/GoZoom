@@ -39,7 +39,7 @@ export default function Hero() {
   }, [mouseX, mouseY]);
 
   return (
-    <div ref={containerRef} className="relative h-[150vh]">
+    <div ref={containerRef} className="relative h-screen">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
         <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
         <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
