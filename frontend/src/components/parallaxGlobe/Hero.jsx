@@ -12,6 +12,13 @@ export default function Hero() {
     offset: ['start start', 'end end'],
   });
 
+  // Smooth the scroll progress so the globe animations don't feel jittery/broken
+  const smoothScrollYProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -32,12 +39,12 @@ export default function Hero() {
   }, [mouseX, mouseY]);
 
   return (
-    <div ref={containerRef} className="relative h-[400vh]">
+    <div ref={containerRef} className="relative h-[150vh]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
-        <ParallaxBackground scrollYProgress={scrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
-        <RotatingShape scrollYProgress={scrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
-        <HeroText scrollYProgress={scrollYProgress} />
-        <ScrollIndicator scrollYProgress={scrollYProgress} />
+        <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
+        <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
+        <HeroText scrollYProgress={smoothScrollYProgress} />
+        <ScrollIndicator scrollYProgress={smoothScrollYProgress} />
       </div>
     </div>
   );

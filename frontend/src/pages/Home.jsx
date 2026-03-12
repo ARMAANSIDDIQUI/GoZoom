@@ -5,7 +5,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import ServiceCollage from '../components/ServiceCollage';
 import TechSpotlight from '../components/TechSpotlight';
 import Hero from '../components/parallaxGlobe/Hero';
-import PostHeroSection from '../components/parallaxGlobe/PostHeroSection';
 import { useScroll, useMotionValue, useSpring } from 'motion/react';
 
 import AOS from 'aos';
@@ -69,12 +68,9 @@ const Home = () => {
         <div className="w-full font-sans relative">
             {/* Hero Parallax Globe */}
             <Hero />
-            
-            {/* Parallax Continuation Background (No dummy features) */}
-            <PostHeroSection />
 
             {/* We are Gozoom Technologies */}
-            <section className="py-20 bg-gray-50 overflow-hidden relative z-10">
+            <section id="about-section" className="pb-20 pt-8 bg-gray-50 overflow-hidden relative z-10">
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-7/12" data-aos="fade-right">
