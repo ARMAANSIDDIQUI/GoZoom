@@ -26,21 +26,10 @@ export default function Hero() {
   const smoothMouseY = useSpring(mouseY, { stiffness: 50, damping: 20 });
 
   const scrollToNext = useCallback(() => {
-    const heroEl = containerRef.current;
-    if (heroEl) {
-      const heroTop = heroEl.offsetTop;
-      const heroMaxScroll = heroTop + heroEl.offsetHeight - window.innerHeight;
-      const currentY = window.scrollY || 0;
-      const nextY = Math.min(currentY + window.innerHeight, heroMaxScroll);
-
-      if (nextY > currentY + 2) {
-        window.scrollTo({ top: nextY, behavior: 'smooth' });
-        return;
-      }
-    }
-
     const nextSection = document.getElementById('about-section');
-    if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }, []);
 
   useEffect(() => {
@@ -83,7 +72,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative h-[300vh]">
+    <div ref={containerRef} className="relative h-[100vh] bg-[#020617]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
         <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
         <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
