@@ -27,21 +27,21 @@ const SeoServices = () => {
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#f59e0b 2px, transparent 2px)', backgroundSize: '50px 50px' }}></div>
         </div>
 
-        <div className="container mx-auto px-6 lg:px-16 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
-            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+        <div className="container relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="flex-1 text-center flex flex-col items-center lg:items-start lg:text-left" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Digital Marketing</span>
-              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+              <h1 className="text-hero-title text-white mb-6 leading-tight uppercase">
                 Transform Your Online Presence with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Expert SEO Services</span>
               </h1>
-              <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
+              <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
                 Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base sm:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
                   About Us
                 </Link>
               </div>

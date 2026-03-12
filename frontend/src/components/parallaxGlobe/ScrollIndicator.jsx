@@ -1,14 +1,13 @@
 import { motion, useTransform } from 'motion/react';
 import { FaChevronDown } from 'react-icons/fa';
 
-export default function ScrollIndicator({ scrollYProgress }) {
+export default function ScrollIndicator({ scrollYProgress, onScrollNext }) {
   const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   const scrollToNext = () => {
+    if (typeof onScrollNext === 'function') return onScrollNext();
     const nextSection = document.getElementById('about-section');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -34,7 +33,7 @@ export default function ScrollIndicator({ scrollYProgress }) {
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="text-white/60 group-hover:text-white transition-colors"
         >
-          <FaChevronDown size={20} />
+          <FaChevronDown size={24} />
         </motion.div>
       </motion.button>
     </motion.div>
