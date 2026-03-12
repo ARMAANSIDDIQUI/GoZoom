@@ -70,7 +70,7 @@ const Home = () => {
             <Hero />
 
             {/* We are Gozoom Technologies */}
-            <section id="about-section" className="pb-20 pt-8 bg-gray-50 overflow-hidden relative z-10">
+            <section id="about-section" className="pb-20 pt-12 -mt-12 bg-gray-50 overflow-hidden relative z-10">
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-7/12" data-aos="fade-right">

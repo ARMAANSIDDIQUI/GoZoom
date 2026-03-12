@@ -46,33 +46,8 @@ export default function Hero() {
   }, [mouseX, mouseY]);
 
   // Browser zoom triggers a resize; keep the current scroll position stable.
-  useEffect(() => {
-    const lastScrollY = { current: window.scrollY || 0 };
-
-    const onScroll = () => {
-      lastScrollY.current = window.scrollY || 0;
-    };
-
-    const restoreScroll = () => {
-      const y = lastScrollY.current;
-      window.scrollTo(0, y);
-      requestAnimationFrame(() => window.scrollTo(0, y));
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', restoreScroll);
-    const vv = window.visualViewport;
-    vv?.addEventListener('resize', restoreScroll);
-
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', restoreScroll);
-      vv?.removeEventListener('resize', restoreScroll);
-    };
-  }, []);
-
   return (
-    <div ref={containerRef} className="relative h-[100vh] bg-[#020617]">
+    <div ref={containerRef} className="relative h-[120vh] bg-[#020617]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
         <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
         <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
