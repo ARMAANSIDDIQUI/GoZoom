@@ -2,8 +2,7 @@ import { motion, useTransform } from 'motion/react';
 
 export default function RotatingShape({ scrollYProgress, mouseX, mouseY }) {
   const scrollRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.3]);
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], ['0%', '0%', '-80%']);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.85, 0.5]);
   const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 1]);
 
   // 3D Tilt effect based on mouse
@@ -12,7 +11,7 @@ export default function RotatingShape({ scrollYProgress, mouseX, mouseY }) {
 
   return (
     <motion.div
-      style={{ scale, y, opacity }}
+      style={{ scale, opacity }}
       className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 perspective-[1000px]"
     >
       <motion.div
