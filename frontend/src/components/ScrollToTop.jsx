@@ -32,7 +32,7 @@ const ScrollToTop = () => {
         <button
             type="button"
             onClick={scrollToTop}
-            className={`fixed bottom-24 sm:bottom-28 right-4 sm:right-6 w-16 h-16 bg-gradient-to-tr from-blue-600 to-indigo-600 text-white rounded-full shadow-2xl transition-all duration-500 z-50 flex items-center justify-center hover:scale-110 active:scale-95 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+            className={`fixed bottom-24 sm:bottom-28 right-4 sm:right-6 w-16 h-16 bg-gradient-to-tr from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white rounded-full shadow-2xl transition-all duration-500 z-50 flex items-center justify-center hover:scale-110 active:scale-95 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
                 }`}
             aria-label="Scroll to top"
         >

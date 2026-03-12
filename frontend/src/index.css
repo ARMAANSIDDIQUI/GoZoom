@@ -15,6 +15,27 @@ body {
     /* Prevent horizontal jitter */
 }
 
+/* Lenis Smooth Scroll Configuration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* Chrome / Safari / Opera */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -82,6 +103,9 @@ body::-webkit-scrollbar {
     --color-gold-500: #ffb703;
     --color-slate-950: #020617;
     --font-heading: 'Outfit', 'Inter', sans-serif;
+
+    --color-gozoom-blue: #0b9df0; /* Extracted from 'GOZ' on logo */
+    --color-gozoom-green: #1bd361; /* Extracted from 'OOM' on logo */
 
     /* Shadow tokens */
     --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -700,7 +724,7 @@ body::-webkit-scrollbar {
 .chatbot-banner,
 .page-chatbot-banner {
     min-height: 420px;
-    background: linear-gradient(135deg, #6c63ff 0%, #2d1b69 100%);
+    background: linear-gradient(135deg, var(--color-gozoom-blue) 0%, var(--color-gozoom-green) 100%);
     display: flex;
     align-items: center;
     padding: 5rem 0;

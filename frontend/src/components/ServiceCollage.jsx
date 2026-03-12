@@ -21,7 +21,7 @@ const ServiceCollage = () => {
             link: "/about",
             image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
             size: "col-span-1 row-span-2",
-            color: "from-purple-600/20 to-pink-600/20"
+            color: "from-teal-500/20 to-[var(--color-gozoom-green)]/20"
         },
         {
             title: "Software / AI",
@@ -30,7 +30,7 @@ const ServiceCollage = () => {
             link: "/expert-seo-services",
             image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
             size: "col-span-1 row-span-2",
-            color: "from-orange-600/20 to-red-600/20"
+            color: "from-[var(--color-gozoom-blue)]/20 to-[var(--color-gozoom-green)]/20"
         },
         {
             title: "3D Animation",
@@ -55,7 +55,7 @@ const ServiceCollage = () => {
                         We replace the need for multiple vendors. From brand identity to custom software, we build the entire ecosystem your business runs on.
                     </p>
                     <div className="flex items-center justify-center gap-6 mt-10">
-                        <Link to="/contact" className="px-8 py-3 bg-[#c85a4a] text-white font-bold rounded-full hover:shadow-xl transition-all">
+                        <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-bold rounded-full hover:shadow-xl transition-all">
                             Work With Us
                         </Link>
                         <Link to="/web-development" className="text-gray-900 font-bold flex items-center gap-2 group">

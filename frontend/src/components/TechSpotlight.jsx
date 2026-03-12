@@ -68,7 +68,7 @@ const TechSpotlight = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-10 py-4 bg-[#c85a4a] text-white font-bold rounded-full shadow-[0_10px_30px_rgba(200,90,74,0.3)] transition-all"
+                            className="px-10 py-4 bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-bold rounded-full shadow-[0_10px_30px_rgba(27,211,97,0.3)] transition-all"
                         >
                             Start a project
                         </motion.button>
@@ -90,7 +90,7 @@ const TechSpotlight = () => {
                             className="absolute pointer-events-none inset-0 z-0 opacity-0 transition-opacity duration-300"
                             style={{
                                 opacity: isHovered ? 1 : 0,
-                                background: `radial-gradient(600px circle at ${springX}px ${springY}px, rgba(200,90,74,0.15), transparent 80%)`
+                                background: `radial-gradient(600px circle at ${springX}px ${springY}px, rgba(11,157,240,0.15), transparent 80%)`
                             }}
                         />
 
@@ -144,7 +144,7 @@ const TechSpotlight = () => {
 
                                     {/* Border Glow for Spotlight */}
                                     <motion.div
-                                        className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-[#c85a4a] to-transparent opacity-0 group-hover:opacity-100"
+                                        className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-gozoom-blue)] to-transparent opacity-0 group-hover:opacity-100"
                                         layoutId="glow-border"
                                     />
                                 </motion.div>
@@ -155,8 +155,8 @@ const TechSpotlight = () => {
             </div>
 
             {/* Background Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#c85a4a]/5 rounded-full blur-[120px] -ml-64 -mb-64" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-gozoom-green)]/5 rounded-full blur-[120px] -mr-64 -mt-64" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--color-gozoom-blue)]/5 rounded-full blur-[120px] -ml-64 -mb-64" />
         </section>
     );
 };

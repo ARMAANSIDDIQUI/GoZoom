@@ -160,7 +160,7 @@ const GlobalChatbot = () => {
             {isOpen && (
                 <div className="mb-4 w-[calc(100vw-2rem)] sm:w-[400px] h-[500px] max-h-[80vh] bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col shadow-[0_20px_60px_rgba(0,0,0,0.5)] animate-fade-up">
                     {/* Header */}
-                    <div className="p-5 bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-between">
+                    <div className="p-5 bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                                 <FaRobot className="text-white text-xl" />
@@ -183,7 +183,7 @@ const GlobalChatbot = () => {
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
-                                    ? 'bg-blue-600 text-white rounded-tr-none'
+                                    ? 'bg-[var(--color-gozoom-blue)] text-white rounded-tr-none'
                                     : 'bg-white/10 text-slate-200 border border-white/10 rounded-tl-none'
                                     } shadow-lg`}>
                                     {msg.text}
@@ -199,7 +199,7 @@ const GlobalChatbot = () => {
                             <button
                                 key={i}
                                 onClick={() => handleSuggestedClick(q)}
-                                className="text-[10px] sm:text-xs bg-white/10 border border-white/10 hover:bg-blue-600/30 hover:border-blue-500/50 text-slate-200 py-1.5 px-4 rounded-full transition-all text-left whitespace-nowrap shadow-sm active:scale-95"
+                                className="text-[10px] sm:text-xs bg-white/10 border border-white/10 hover:bg-[var(--color-gozoom-blue)]/30 hover:border-[var(--color-gozoom-blue)]/50 text-slate-200 py-1.5 px-4 rounded-full transition-all text-left whitespace-nowrap shadow-sm active:scale-95"
                             >
                                 {q}
                             </button>
@@ -214,9 +214,9 @@ const GlobalChatbot = () => {
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder="Type your message..."
-                                className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 pr-12 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 pr-12 text-sm text-white focus:outline-none focus:border-[var(--color-gozoom-blue)] transition-colors"
                             />
-                            <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
+                            <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] flex items-center justify-center text-white hover:opacity-90 transition-colors">
                                 <FaPaperPlane className="text-xs" />
                             </button>
                         </div>
@@ -227,7 +227,7 @@ const GlobalChatbot = () => {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-500 hover:scale-110 active:scale-95 ${isOpen ? 'bg-slate-800 rotate-90' : 'bg-gradient-to-tr from-blue-600 to-indigo-600'
+                className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-500 hover:scale-110 active:scale-95 ${isOpen ? 'bg-slate-800 rotate-90' : 'bg-gradient-to-tr from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)]'
                     }`}
             >
                 {isOpen ? <FaTimes className="text-2xl" /> : <FaComments className="text-2xl" />}
