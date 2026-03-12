@@ -94,34 +94,30 @@ export default function HeroText({ scrollYProgress, onScrollNext }) {
         >
             {slides.map((slide) => (
                 <SwiperSlide key={slide.id}>
-                    <div className="flex flex-col items-center justify-center pb-6">
+                    <div className="flex flex-col items-center justify-center pb-6 space-y-3 sm:space-y-4">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/80 text-xs font-black uppercase tracking-[0.25em] mb-6 backdrop-blur-md shadow-[0_0_30px_rgba(255,255,255,0.05)]">
                             {slide.tagline}
                         </div>
                         
                         <h1
-                          className="font-black tracking-[-0.06em] text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-400 mb-5 max-w-5xl mx-auto leading-[1.05] drop-shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
-                          style={{ fontSize: 'clamp(1.9rem, 4vw, 3.6rem)' }}
+                          className="hero-script-title text-white/90 mb-5 max-w-5xl mx-auto leading-[1.03] drop-shadow-[0_14px_40px_rgba(0,0,0,0.48)]"
+                          style={{ fontSize: 'clamp(2.4rem, 4.6vw, 4.25rem)' }}
                         >
                           {slide.titleLines.map((line, lineIndex) => (
                             <span key={`${slide.id}-l-${lineIndex}`} className="block">
-                              {line.map((part, partIndex) =>
-                                part.accent ? (
-                                  <span
-                                    key={`${slide.id}-p-${lineIndex}-${partIndex}`}
-                                    className="font-serif italic font-normal text-white"
-                                  >
-                                    {part.text}
-                                  </span>
-                                ) : (
-                                  <span key={`${slide.id}-p-${lineIndex}-${partIndex}`}>{part.text}</span>
-                                )
-                              )}
+                              {line.map((part, partIndex) => (
+                                <span
+                                  key={`${slide.id}-p-${lineIndex}-${partIndex}`}
+                                  className={part.accent ? 'text-white' : 'text-white/85'}
+                                >
+                                  {part.text}
+                                </span>
+                              ))}
                             </span>
                           ))}
                         </h1>
 
-                        <p className="text-sm sm:text-base md:text-lg text-white/55 max-w-2xl mx-auto mb-6 sm:mb-10 font-light tracking-wide leading-relaxed">
+                        <p className="hero-body-copy text-sm sm:text-base md:text-lg text-white/55 max-w-2xl mx-auto mb-6 sm:mb-10 font-light">
                           {slide.descLines.map((line, i) => (
                             <span key={`${slide.id}-d-${i}`} className="block">
                               {line}

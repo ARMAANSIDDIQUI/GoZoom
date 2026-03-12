@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Great+Vibes&display=swap');
 @import "tailwindcss";
+
+:root {
+    --font-hero-sans: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-hero-script: 'Great Vibes', 'Lucida Handwriting', cursive;
+}
 
 /* =========================================================
    SCROLLBAR — Hidden but scrollable
@@ -155,6 +161,34 @@ body::-webkit-scrollbar {
 
     .text-gradient-red {
         @apply text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400;
+    }
+
+    .font-hero-sans {
+        font-family: var(--font-hero-sans);
+        letter-spacing: -0.04em;
+    }
+
+    .hero-accent {
+        font-family: var(--font-hero-script);
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.03em;
+        font-size: 1.08em;
+        text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-script-title {
+        font-family: var(--font-hero-script);
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        word-spacing: 0.12em;
+        text-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-body-copy {
+        letter-spacing: 0.02em;
+        word-spacing: 0.08em;
+        line-height: 1.75;
     }
 
     /* Zoom Responsive Typography */
