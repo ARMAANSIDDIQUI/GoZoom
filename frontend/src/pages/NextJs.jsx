@@ -38,7 +38,7 @@ const NextJs = () => {
                             <p className="text-xl text-slate-600 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="100">
                                 Harness the power of React with server-side rendering. We build blazingly fast, SEO-optimized web applications utilizing the modern App Router and Edge compute capabilities.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="200">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="200">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-black text-white font-black text-center text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Build With Next.js <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

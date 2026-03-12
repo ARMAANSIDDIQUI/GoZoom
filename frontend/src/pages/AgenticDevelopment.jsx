@@ -24,7 +24,7 @@ const AgenticDevelopment = () => {
 
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0" data-aos="fade-right">
+                        <div className="flex-1 text-center flex flex-col items-center mx-auto lg:mx-0" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold text-sm mb-6 uppercase tracking-wider">The Future is Autonomous</span>
                             <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight">
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Agentic</span> Development
@@ -32,7 +32,7 @@ const AgenticDevelopment = () => {
                             <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
                                 We design, build, and deploy multi-agent LLM systems capable of reasoning, planning, and executing complex, multi-step tasks autonomously.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-indigo-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Build Agents <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

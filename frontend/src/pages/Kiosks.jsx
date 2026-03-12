@@ -32,7 +32,7 @@ const Kiosks = () => {
                             <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                                 Interactive kiosk solutions that enhance customer experience and streamline business operations across all industries.
                             </p>
-                            <div className="flex flex-wrap gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="600">
+                            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
                                 <Link to="/integration" className="px-8 py-4 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1">Integration</Link>
                                 <Link to="/retail" className="px-8 py-4 rounded-xl bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Retail</Link>
                             </div>

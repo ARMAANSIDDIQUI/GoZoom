@@ -33,7 +33,7 @@ const Java = () => {
                             <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 Build secure, highly scalable, and exceptionally reliable software solutions with Java. We specialize in robust enterprise applications, complex architectures, and high-performance backend systems.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Start Your Project <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

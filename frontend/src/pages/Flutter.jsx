@@ -33,7 +33,7 @@ const Flutter = () => {
                             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 Create natively compiled, visually stunning applications for mobile, web, and desktop from a single codebase. Delivering expressive and flexible UI without compromising on speed.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Hire Flutter Devs <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

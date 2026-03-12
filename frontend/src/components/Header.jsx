@@ -104,6 +104,8 @@ const Header = () => {
     const dropdownRef = useRef(null);
     const servicesRef = useRef(null);
     const workforceRef = useRef(null);
+    const servicesHideTimer = useRef(null);
+    const workforceHideTimer = useRef(null);
     const location = useLocation();
 
     useEffect(() => {
@@ -135,7 +137,31 @@ const Header = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    useEffect(() => {
+        return () => {
+            if (servicesHideTimer.current) clearTimeout(servicesHideTimer.current);
+            if (workforceHideTimer.current) clearTimeout(workforceHideTimer.current);
+        };
+    }, []);
+
     const isActive = (path) => location.pathname === path;
+
+    const openServices = () => {
+        if (servicesHideTimer.current) clearTimeout(servicesHideTimer.current);
+        setDesktopServicesOpen(true);
+    };
+    const closeServicesWithDelay = () => {
+        if (servicesHideTimer.current) clearTimeout(servicesHideTimer.current);
+        servicesHideTimer.current = setTimeout(() => setDesktopServicesOpen(false), 200);
+    };
+    const openWorkforce = () => {
+        if (workforceHideTimer.current) clearTimeout(workforceHideTimer.current);
+        setDesktopWorkforceOpen(true);
+    };
+    const closeWorkforceWithDelay = () => {
+        if (workforceHideTimer.current) clearTimeout(workforceHideTimer.current);
+        workforceHideTimer.current = setTimeout(() => setDesktopWorkforceOpen(false), 200);
+    };
 
     return (
         <>
@@ -187,8 +213,8 @@ const Header = () => {
                         <div
                             className="relative"
                             ref={servicesRef}
-                            onMouseEnter={() => setDesktopServicesOpen(true)}
-                            onMouseLeave={() => setDesktopServicesOpen(false)}
+                            onMouseEnter={openServices}
+                            onMouseLeave={closeServicesWithDelay}
                         >
                             <Link
                                 to="/services"
@@ -239,8 +265,8 @@ const Header = () => {
                         <div
                             className="relative"
                             ref={workforceRef}
-                            onMouseEnter={() => setDesktopWorkforceOpen(true)}
-                            onMouseLeave={() => setDesktopWorkforceOpen(false)}
+                            onMouseEnter={openWorkforce}
+                            onMouseLeave={closeWorkforceWithDelay}
                         >
                             <Link
                                 to="/workforce-solutions"

@@ -108,7 +108,7 @@ const Contact = () => {
                 Ready to transform your ideas into reality? Our expert team is here to guide you through every step of your development journey.
               </p>
 
-              <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-12">
+              <div className="flex flex-wrap gap-6 justify-center mb-12">
                 <div className="flex items-center gap-4 text-blue-200/80" data-aos="fade-up" data-aos-delay="500">
                   <div className="w-14 h-14 rounded-[1.25rem] bg-white/5 border border-white/10 flex items-center justify-center text-xl group hover:scale-110 transition-transform duration-300">
                     <FaEdit className="text-blue-400" />

@@ -33,7 +33,7 @@ const Swift = () => {
                             <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 Build powerful, lightning-fast native applications for iOS, macOS, watchOS, and tvOS using Apple's modern Swift programming language and SwiftUI.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Start Exploring Swift <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

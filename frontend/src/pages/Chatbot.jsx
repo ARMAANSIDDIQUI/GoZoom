@@ -34,7 +34,7 @@ const Chatbot = () => {
               <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
                 Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-[var(--color-gozoom-green)]/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>

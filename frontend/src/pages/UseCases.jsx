@@ -36,7 +36,7 @@ const UseCases = () => {
                             <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="200">
                                 Discover how our customized AI and Cloud solutions are resolving complex challenges across diverse industries worldwide.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#industries" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Explore Industries <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </a>

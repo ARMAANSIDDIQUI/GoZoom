@@ -30,7 +30,7 @@ const ServiceConsulting = () => {
                             <p className="text-xl text-slate-600 mb-12 max-w-2xl font-medium leading-relaxed">
                                 Navigate the complex digital landscape with our seasoned IT consultants. We align your technology stack with your core business objectives.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full mt-2">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full mt-2">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-slate-900 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-slate-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Book a Session <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>

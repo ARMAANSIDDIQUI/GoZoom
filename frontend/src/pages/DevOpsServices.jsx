@@ -31,7 +31,7 @@ const DevOpsServices = () => {
                             <p className="text-xl text-slate-300 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="200">
                                 Modernize your deployment pipeline. We specialize in containerization, microservices architecture, and deploying high-availability clusters using Kubernetes and Docker.
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Scale Your App <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
