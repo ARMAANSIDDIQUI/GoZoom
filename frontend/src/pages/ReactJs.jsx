@@ -28,8 +28,8 @@ const ReactJs = () => {
             <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
                 {/* Handcrafted Decorative Elements (matching Hire style) */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-[10%] right-[10%] w-[clamp(200px,45vw,500px)] h-[clamp(200px,45vw,500px)] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-[10%] left-[5%] w-[clamp(150px,40vw,400px)] h-[clamp(150px,40vw,400px)] bg-blue-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#61dafb 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
@@ -37,17 +37,17 @@ const ReactJs = () => {
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">React Framework</span>
-                            <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.1] uppercase">
+                            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase">
                                 Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">React Developers</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto font-medium">
                                 Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base sm:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
                                     About Us
                                 </Link>
                             </div>

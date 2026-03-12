@@ -19,8 +19,8 @@ const Angular = () => {
       <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
         {/* Geometric Background Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[5%] right-[5%] w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-[10%] left-[10%] w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-[5%] right-[5%] w-[clamp(250px,50vw,600px)] h-[clamp(250px,50vw,600px)] bg-red-600/10 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-[10%] left-[10%] w-[clamp(200px,45vw,500px)] h-[clamp(200px,45vw,500px)] bg-rose-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
           {/* SVG Hexagon Grid */}
           <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -33,20 +33,20 @@ const Angular = () => {
         </div>
 
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
               <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Angular Framework</span>
-              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+              <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase">
                 Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
               </h1>
-              <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-medium">
+              <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
                 Everything you need to get your project started in 24 hours — architecture, speed, and reliability.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                   Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base sm:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
                   About Us
                 </Link>
               </div>

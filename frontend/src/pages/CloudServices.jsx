@@ -17,8 +17,8 @@ const CloudServices = () => {
         <div>
             <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0f172a] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-[5%] right-[10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-[10%] left-[5%] w-[clamp(200px,45vw,500px)] h-[clamp(200px,45vw,500px)] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-[5%] right-[10%] w-[clamp(250px,50vw,600px)] h-[clamp(250px,50vw,600px)] bg-blue-600/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
                     <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -29,18 +29,18 @@ const CloudServices = () => {
                     </svg>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                <div className="container relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Cloud Infrastructure</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase">
                                 Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Cloud Services</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
                                 Unlock unparalleled scalability and security with our managed cloud services across AWS, Google Cloud, Azure, and Oracle environments.
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Deploy Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>

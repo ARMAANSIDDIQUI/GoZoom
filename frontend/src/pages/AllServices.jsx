@@ -67,34 +67,34 @@ const AllServices = () => {
         <div className="bg-slate-50 min-h-screen">
             <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a112f] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-indigo-500/25 blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[clamp(200px,50vw,600px)] h-[clamp(200px,50vw,600px)] rounded-full bg-indigo-500/25 blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-[clamp(150px,35vw,384px)] h-[clamp(150px,35vw,384px)] rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#6366f1 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
                         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight uppercase" data-aos="zoom-in">
+                            <h1 className="text-hero-title text-white mb-6 tracking-tight uppercase" data-aos="zoom-in">
                                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Services</span>
                             </h1>
-                            <p className="text-xl lg:text-2xl text-indigo-100 max-w-3xl mb-10 font-medium" data-aos="fade-up" data-aos-delay="200">
+                            <p className="text-hero-desc text-indigo-100 max-w-3xl mb-10 font-medium" data-aos="fade-up" data-aos-delay="200">
                                 Comprehensive digital solutions designed to propel your business forward. From AI and Cloud to robust Web Development.
                             </p>
                         </div>
                         <div className="flex-1 relative flex justify-center lg:justify-end w-full" data-aos="zoom-in" data-aos-delay="400">
-                            <div className="relative w-full max-w-[450px] aspect-square">
+                            <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
-                                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl flex items-center justify-center p-8 animate-float">
-                                    <div className="grid grid-cols-3 gap-6 sm:gap-10 w-full h-full place-items-center">
-                                        <div className="w-16 h-16 rounded-2xl bg-cyan-500/20 flex items-center justify-center"><FaCloud className="w-8 h-8 text-cyan-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-fuchsia-500/20 flex items-center justify-center"><FaRobot className="w-8 h-8 text-fuchsia-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-indigo-500/20 flex items-center justify-center"><FaCode className="w-8 h-8 text-indigo-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-rose-500/20 flex items-center justify-center"><FaMobileAlt className="w-8 h-8 text-rose-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center"><FaDatabase className="w-8 h-8 text-emerald-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-amber-500/20 flex items-center justify-center"><FaShieldAlt className="w-8 h-8 text-amber-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center"><FaServer className="w-8 h-8 text-blue-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-teal-500/20 flex items-center justify-center"><FaChartLine className="w-8 h-8 text-teal-400" /></div>
-                                        <div className="w-16 h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center"><FaMagic className="w-8 h-8 text-purple-400" /></div>
+                                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl flex items-center justify-center p-6 sm:p-8 animate-float">
+                                    <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-10 w-full h-full place-items-center">
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-cyan-500/20 flex items-center justify-center"><FaCloud className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-fuchsia-500/20 flex items-center justify-center"><FaRobot className="w-6 h-6 sm:w-8 sm:h-8 text-fuchsia-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-indigo-500/20 flex items-center justify-center"><FaCode className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-rose-500/20 flex items-center justify-center"><FaMobileAlt className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center"><FaDatabase className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-amber-500/20 flex items-center justify-center"><FaShieldAlt className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center"><FaServer className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-teal-500/20 flex items-center justify-center"><FaChartLine className="w-6 h-6 sm:w-8 sm:h-8 text-teal-400" /></div>
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center"><FaMagic className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400" /></div>
                                     </div>
                                 </div>
                             </div>

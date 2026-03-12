@@ -18,35 +18,35 @@ const AgenticDevelopment = () => {
             <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-black overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/HexPatterngrad4.jpg')] opacity-10 mix-blend-screen bg-cover bg-center"></div>
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[20%] right-[20%] w-[500px] h-[500px] bg-indigo-600/30 rounded-full blur-[150px] animate-pulse"></div>
-                    <div className="absolute bottom-[20%] left-[20%] w-[400px] h-[400px] bg-violet-600/30 rounded-full blur-[150px]" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute top-[20%] right-[20%] w-[clamp(200px,40vw,500px)] h-[clamp(200px,40vw,500px)] bg-indigo-600/30 rounded-full blur-[150px] animate-pulse"></div>
+                    <div className="absolute bottom-[20%] left-[20%] w-[clamp(150px,35vw,400px)] h-[clamp(150px,35vw,400px)] bg-violet-600/30 rounded-full blur-[150px]" style={{ animationDelay: '2s' }}></div>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-right">
+                <div className="container relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold text-sm mb-6 uppercase tracking-wider">The Future is Autonomous</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight">
+                            <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight">
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Agentic</span> Development
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
                                 We design, build, and deploy multi-agent LLM systems capable of reasoning, planning, and executing complex, multi-step tasks autonomously.
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-indigo-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-indigo-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     Build Agents <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative w-full max-w-[450px] aspect-square animate-float">
+                            <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square animate-float">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-violet-500/20 rounded-[3rem] blur-3xl"></div>
                                 <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-8 flex flex-col items-center justify-center gap-8">
-                                    <div className="grid grid-cols-2 gap-8 w-full place-items-center">
-                                        <div className="w-24 h-24 rounded-3xl bg-indigo-500/10 flex items-center justify-center shadow-lg border border-indigo-500/20"><FaRobot className="w-12 h-12 text-indigo-400" /></div>
-                                        <div className="w-24 h-24 rounded-3xl bg-violet-500/10 flex items-center justify-center shadow-lg border border-violet-500/20"><FaNetworkWired className="w-12 h-12 text-violet-400" /></div>
-                                        <div className="w-24 h-24 rounded-3xl bg-fuchsia-500/10 flex items-center justify-center shadow-lg border border-fuchsia-500/20"><FaProjectDiagram className="w-12 h-12 text-fuchsia-400" /></div>
-                                        <div className="w-24 h-24 rounded-3xl bg-purple-500/10 flex items-center justify-center shadow-lg border border-purple-500/20"><FaMicroscope className="w-12 h-12 text-purple-400" /></div>
+                                    <div className="grid grid-cols-2 gap-6 sm:gap-8 w-full place-items-center">
+                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-indigo-500/10 flex items-center justify-center shadow-lg border border-indigo-500/20"><FaRobot className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-400" /></div>
+                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-violet-500/10 flex items-center justify-center shadow-lg border border-violet-500/20"><FaNetworkWired className="w-8 h-8 sm:w-12 sm:h-12 text-violet-400" /></div>
+                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-fuchsia-500/10 flex items-center justify-center shadow-lg border border-fuchsia-500/20"><FaProjectDiagram className="w-8 h-8 sm:w-12 sm:h-12 text-fuchsia-400" /></div>
+                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-purple-500/10 flex items-center justify-center shadow-lg border border-purple-500/20"><FaMicroscope className="w-8 h-8 sm:w-12 sm:h-12 text-purple-400" /></div>
                                     </div>
                                     <div className="w-2/3 h-1.5 bg-gradient-to-r from-indigo-500/50 to-violet-500/50 rounded-full mt-4"></div>
                                 </div>
