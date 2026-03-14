@@ -55,15 +55,6 @@ const Home = () => {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, [mouseX, mouseY]);
 
-    const services = [
-        { title: 'Microsoft Technologies', desc: 'Gozoom specializes in Microsoft...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-microsoft-mbl.jpg?v1', link: '/web-development' },
-        { title: 'Chatbot Development', desc: 'Gozoom provides chatbot development...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-chatbot-mbl.jpg?v1', link: '/chatbot' },
-        { title: 'Cloud & DevOps', desc: 'Gozoom offers highly sophisticated cloud...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-clouds-mbl.jpg?v1', link: '/integration' },
-        { title: 'Artificial Intelligence', desc: 'With a proficiency in Artificial Intelligence...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-prototype-mbl-new.jpg?v1', link: '/expert-seo-services' },
-        { title: 'Web Application Development', desc: 'We have built secure web application...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-web-mbl-new.jpg?v1', link: '/hire-react-developer' },
-        { title: 'Mobile App Development', desc: 'We leverage cutting-edge technologies...', img: 'https://img.hiddenbrains.com/public/local-cdn/images/home-service-mobile-mbl.jpg?v1', link: '/mobile-application-development' }
-    ];
-
     return (
         <div className="w-full font-sans relative">
             {/* Hero Parallax Globe */}
@@ -91,7 +82,7 @@ const Home = () => {
                             <div className="border-l-4 border-[var(--color-gozoom-blue)] pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Years</span>
                                 <span className="text-4xl font-bold text-[var(--color-gozoom-blue)] block my-2 transition-colors">3+</span>
-                                <p className="text-sm text-gray-600">Extensive experience in delivering IT solutions & services.</p>
+                                <p className="text-sm text-gray-600">Extensive experience in delivering IT Solutions & Services.</p>
                             </div>
                             <div className="border-l-4 border-[var(--color-gozoom-green)] pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
                                 <span className="text-gray-500 uppercase text-xs font-bold block">Clients</span>
@@ -108,6 +99,58 @@ const Home = () => {
                                 <span className="text-4xl font-bold text-[var(--color-gozoom-green)] block my-2 transition-colors">30+</span>
                                 <p className="text-sm text-gray-600">Team of qualified, skilled and committed professionals.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Workforce Solutions Section */}
+            <section className="py-20 bg-white overflow-hidden relative border-t border-gray-100">
+                <div className="container mx-auto px-8 md:px-16">
+                    <div className="flex flex-col lg:flex-row items-center gap-12">
+                        <div className="lg:w-1/2" data-aos="fade-right">
+                            <span className="text-cyan-600 uppercase tracking-widest text-sm font-bold block mb-4">Talent & Acquisition</span>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                                Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Workforce Solutions</span>
+                            </h2>
+                            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                                We help enterprises build and manage high-performing teams globally. From contingent staffing and direct hire to global payroll compliance, our workforce solutions are designed to scale your operations seamlessly.
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                                {[
+                                    'Contingent Staffing',
+                                    'Direct Hire',
+                                    'Global Payroll',
+                                    'Nearshore/Offshore',
+                                    'RPO Solutions',
+                                    'SOW Management'
+                                ].map((item, idx) => (
+                                    <div key={idx} className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
+                                        <span className="text-gray-700 font-semibold">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <Link to="/workforce-solutions" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gray-900 text-white font-bold hover:bg-cyan-600 transition-all gap-3 group">
+                                View Workforce Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="lg:w-1/2 relative" data-aos="fade-left">
+                            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                                <img
+                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                                    alt="Workforce Solutions"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div className="absolute bottom-8 left-8">
+                                    <p className="text-white text-2xl font-bold">Scaling Global Teams</p>
+                                    <p className="text-white/80">Tailored recruitment & management</p>
+                                </div>
+                            </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan-100 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full blur-3xl -z-10 animate-pulse"></div>
                         </div>
                     </div>
                 </div>

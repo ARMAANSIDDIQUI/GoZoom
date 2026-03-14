@@ -101,7 +101,7 @@ const AllServices = () => {
                             </p>
                             <div className="w-full max-w-xl mt-4 space-y-2" data-aos="fade-up" data-aos-delay="250">
                                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs font-semibold text-white uppercase tracking-[0.15em] shadow-lg shadow-black/20 animate-wiggle-attn">
-                                    Search services
+                                    Search Services
                                 </span>
                                 <input
                                     value={query}

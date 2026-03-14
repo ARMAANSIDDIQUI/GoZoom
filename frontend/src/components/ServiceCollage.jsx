@@ -58,8 +58,8 @@ const ServiceCollage = () => {
                         <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-bold rounded-full hover:shadow-xl transition-all">
                             Work With Us
                         </Link>
-                        <Link to="/web-development" className="text-gray-900 font-bold flex items-center gap-2 group">
-                            Explore our services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        <Link to="/services" className="text-gray-900 font-bold flex items-center gap-2 group">
+                            Explore our Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
                 </div>
