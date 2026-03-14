@@ -14,8 +14,8 @@ export default function Hero() {
 
   // Smooth the scroll progress so the globe animations don't feel jittery/broken
   const smoothScrollYProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 80,
+    damping: 40,
     restDelta: 0.001
   });
 
@@ -47,7 +47,7 @@ export default function Hero() {
 
   // Browser zoom triggers a resize; keep the current scroll position stable.
   return (
-    <div ref={containerRef} className="relative h-[120vh] bg-[#020617]">
+    <div ref={containerRef} className="relative h-[180vh] bg-[#020617]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
         <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
         <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />

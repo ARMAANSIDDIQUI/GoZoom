@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 
 export default function HeroText({ scrollYProgress, onScrollNext }) {
   // Match the reference parallax behavior: text drifts up and fades early while the globe takes over.
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '-300%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '-150%']);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 

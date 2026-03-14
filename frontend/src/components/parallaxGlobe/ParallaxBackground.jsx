@@ -3,9 +3,9 @@ import { motion, useTransform } from 'motion/react';
 
 export default function ParallaxBackground({ scrollYProgress, mouseX, mouseY }) {
   // Match the reference parallax behavior: background layers drift on scroll and fade out near the end.
-  const gridY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
-  const particlesY1 = useTransform(scrollYProgress, [0, 1], ['0%', '-80%']);
-  const particlesY2 = useTransform(scrollYProgress, [0, 1], ['0%', '-40%']);
+  const gridY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+  const particlesY1 = useTransform(scrollYProgress, [0, 1], ['0%', '-40%']);
+  const particlesY2 = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
   const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const bgX = useTransform(mouseX, [-1, 1], ['-2%', '2%']);
