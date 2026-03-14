@@ -5,7 +5,7 @@ import RotatingShape from './RotatingShape';
 import HeroText from './HeroText';
 import ScrollIndicator from './ScrollIndicator';
 
-export default function Hero() {
+export default function Hero({ onScrollNext }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -26,24 +26,8 @@ export default function Hero() {
   const smoothMouseY = useSpring(mouseY, { stiffness: 50, damping: 20 });
 
   const scrollToNext = useCallback(() => {
-    const nextSection = document.getElementById('about-section');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, []);
-
-  useEffect(() => {
-    let triggered = false;
-    const unsubscribe = scrollYProgress.on('change', (latest) => {
-      // Trigger if user scrolls down just a bit (threshold 0.01)
-      if (!triggered && latest > 0.01 && latest < 0.2) {
-        triggered = true;
-        scrollToNext();
-        setTimeout(() => { triggered = false; }, 2000);
-      }
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress, scrollToNext]);
+    if (onScrollNext) onScrollNext();
+  }, [onScrollNext]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {

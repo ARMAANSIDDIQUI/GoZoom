@@ -29,7 +29,7 @@ const Home = () => {
         }
         requestAnimationFrame(raf);
 
-        // Auto-scroll Snap Logic
+        // Binary Snap Logic (Discrete Hero transition)
         let lastScrollY = window.scrollY;
         let isTransitioning = false;
 
@@ -43,34 +43,34 @@ const Home = () => {
 
             const sectionTop = aboutSection.offsetTop;
             
-            // AGGRESSIVE SNAP DOWN: If we are on Hero and scroll DOWN even a tiny bit
-            if (currentScrollY > 10 && currentScrollY < sectionTop - 100 && currentScrollY > lastScrollY) {
+            // BINARY SNAP DOWN: From Hero top or within Hero -> Snap all way to content
+            if (currentScrollY > 1 && currentScrollY < sectionTop - 100 && currentScrollY > lastScrollY) {
                 isTransitioning = true;
                 lenis.scrollTo('#about-section', {
                     offset: -50,
-                    duration: 1.5,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth custom easing
+                    duration: 1.2,
+                    easing: (t) => 1 - Math.pow(1 - t, 4), // Quantic easing for power
                     onComplete: () => {
-                        setTimeout(() => { isTransitioning = false; }, 500);
+                        // Keep lock temporarily to settle
+                        setTimeout(() => { isTransitioning = false; }, 800);
                     }
                 });
             }
             
-            // AGGRESSIVE SNAP UP: If we are at the very top of About and scroll UP
-            if (currentScrollY < sectionTop && currentScrollY > sectionTop - 100 && currentScrollY < lastScrollY) {
+            // BINARY SNAP UP: From top of content -> Snap all way to Hero top
+            if (currentScrollY < sectionTop && currentScrollY > sectionTop - 150 && currentScrollY < lastScrollY) {
                 isTransitioning = true;
                 lenis.scrollTo(0, {
-                    duration: 1.5,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    duration: 1.2,
+                    easing: (t) => 1 - Math.pow(1 - t, 4),
                     onComplete: () => {
-                        setTimeout(() => { isTransitioning = false; }, 500);
+                        setTimeout(() => { isTransitioning = false; }, 800);
                     }
                 });
             }
             lastScrollY = currentScrollY;
         };
 
-        // Sync with Lenis scroll
         lenis.on('scroll', handleScroll);
 
         return () => {
@@ -78,7 +78,9 @@ const Home = () => {
         };
     }, []);
 
+    // Helper for internal Hero components
     const scrollToAbout = () => {
+        const lenis = Lenis.get(); // Or use a ref if needed, but instance should be accessible
         const aboutSection = document.getElementById('about-section');
         if (aboutSection) {
             window.scrollTo({ top: aboutSection.offsetTop - 50, behavior: 'smooth' });
