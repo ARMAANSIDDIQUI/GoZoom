@@ -24,10 +24,10 @@ export default function RotatingShape({ scrollYProgress, mouseX, mouseY }) {
           className="absolute inset-0 flex items-center justify-center transform-style-3d"
         >
           {/* Core Glow */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-gozoom-blue)] via-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] rounded-full blur-[100px] opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-gozoom-blue)] via-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] rounded-full blur-[60px] opacity-20" />
 
           {/* Abstract Sphere */}
-          <div className="relative w-3/4 h-3/4 rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 shadow-[inset_0_0_100px_rgba(255,255,255,0.05)] flex items-center justify-center overflow-hidden">
+          <div className="relative w-3/4 h-3/4 rounded-full bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-[inset_0_0_50px_rgba(255,255,255,0.05)] flex items-center justify-center overflow-hidden">
             {/* Inner floating light */}
             <motion.div
               animate={{
@@ -36,7 +36,7 @@ export default function RotatingShape({ scrollYProgress, mouseX, mouseY }) {
                 scale: [1, 1.2, 1]
               }}
               transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute w-3/5 h-3/5 bg-[var(--color-gozoom-blue)]/30 rounded-full blur-[50px]"
+              className="absolute w-3/5 h-3/5 bg-[var(--color-gozoom-blue)]/30 rounded-full blur-[30px]"
             />
           </div>
 

@@ -5,7 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import ServiceCollage from '../components/ServiceCollage';
 import TechSpotlight from '../components/TechSpotlight';
 import Hero from '../components/parallaxGlobe/Hero';
-import { useScroll, useMotionValue, useSpring } from 'motion/react';
+import { useScroll } from 'motion/react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,16 +34,31 @@ const Home = () => {
         }
         requestAnimationFrame(raf);
 
+        let cachedSectionTop = null;
+        const getSectionTop = () => {
+            if (cachedSectionTop === null) {
+                const aboutSection = document.getElementById('about-section');
+                if (aboutSection) {
+                    cachedSectionTop = aboutSection.offsetTop;
+                }
+            }
+            return cachedSectionTop;
+        };
+
+        const handleResize = () => {
+            cachedSectionTop = null; // Invalidate cache on resize
+        };
+        window.addEventListener('resize', handleResize);
+
         // Binary Snap Logic (Discrete Hero transition)
         const handleScroll = (e) => {
             const currentScrollY = e.scrollY;
-            const aboutSection = document.getElementById('about-section');
-            if (!aboutSection || isTransitioningRef.current) {
+            const sectionTop = getSectionTop();
+            
+            if (sectionTop === null || isTransitioningRef.current) {
                 lastScrollYRef.current = currentScrollY;
                 return;
             }
-
-            const sectionTop = aboutSection.offsetTop;
             
             // BINARY SNAP DOWN: From Hero -> Snap all way to content
             if (currentScrollY > 5 && currentScrollY < sectionTop - 10 && currentScrollY > lastScrollYRef.current) {
@@ -85,6 +100,7 @@ const Home = () => {
         }
 
         return () => {
+            window.removeEventListener('resize', handleResize);
             lenis.destroy();
             lenisRef.current = null;
         };
@@ -119,25 +135,6 @@ const Home = () => {
         target: containerRef,
         offset: ['start start', 'end end'],
     });
-
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    const smoothMouseX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-    const smoothMouseY = useSpring(mouseY, { stiffness: 50, damping: 20 });
-
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            const { innerWidth, innerHeight } = window;
-            const x = (e.clientX / innerWidth) * 2 - 1;
-            const y = (e.clientY / innerHeight) * 2 - 1;
-            mouseX.set(x);
-            mouseY.set(y);
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, [mouseX, mouseY]);
 
     return (
         <div className="w-full font-sans relative">

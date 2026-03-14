@@ -45,7 +45,7 @@ export default function ParallaxBackground({ scrollYProgress, mouseX, mouseY }) 
       {/* Dynamic Gradient Lighting */}
       <motion.div
         style={{ x: lightX, y: lightY, willChange: 'transform' }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,163,255,0.15)_0%,rgba(0,245,160,0.05)_40%,transparent_70%)] blur-[100px]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,163,255,0.15)_0%,rgba(0,245,160,0.05)_40%,transparent_70%)] blur-[60px]"
       />
 
       {/* Grid */}
