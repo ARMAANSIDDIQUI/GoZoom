@@ -794,5 +794,799 @@
         "desc": "A comprehensive solution eliminating the complexity of managing multiple vendors through a single, streamlined partnership."
       }
     ]
+  },
+  "mobile_app_dev_page": {
+    "hero": {
+      "badge": "UI/UX & Mobile Specialist",
+      "title": "Build the Next Generation of ",
+      "title_gradient": "Mobile Experiences",
+      "desc": "We create high-performance, beautiful mobile applications that scale. From startups to enterprises, we deliver excellence across iOS and Android.",
+      "cta_contact": "Get Started",
+      "cta_services": "Our Services"
+    },
+    "expertise": {
+      "subtitle": "Our Expertise",
+      "title": "Tailored Mobile Solutions",
+      "cards": {
+        "ios": {
+          "title": "iOS Development",
+          "desc": "Premium Swift and SwiftUI applications built for the Apple ecosystem."
+        },
+        "android": {
+          "title": "Android Development",
+          "desc": "Robust Kotlin and Java apps designed for the global Android market."
+        },
+        "hybrid": {
+          "title": "Cross-Platform",
+          "desc": "High-efficiency Flutter and React Native solutions for shared codebases."
+        },
+        "uiux": {
+          "title": "Mobile UI/UX",
+          "desc": "Intuitive, gesture-driven designs that users love to interact with."
+        }
+      }
+    }
+  },
+  "android_dev_page": {
+    "hero": {
+      "badge": "Android Specialist",
+      "title1": "Build Your Next ",
+      "title2": "Android App",
+      "title3": " with Experts",
+      "desc": "We develop high-performance, secure, and scalable Android applications tailored to your business needs.",
+      "cta_enquire": "Enquire Now",
+      "cta_about": "About Us",
+      "img_alt": "Android Specialist"
+    },
+    "about": {
+      "badge": "Android Development",
+      "title1": "Full-Cycle ",
+      "title2": "Android App",
+      "title3": " Development",
+      "p1": "Our team of seasoned Android developers uses Kotlin and Java to build robust applications that deliver seamless user experiences.",
+      "p2": "From initial concept to Google Play Store deployment, we handle every aspect of the development process with precision and care."
+    },
+    "expertise": {
+      "badge": "Expertise",
+      "title1": "Our Android ",
+      "title2": "Capabilities",
+      "items": {
+        "custom": {
+          "title": "Custom Android Apps",
+          "desc": "Tailor-made solutions designed specifically for your unique business requirements."
+        },
+        "uiux": {
+          "title": "Android UI/UX Design",
+          "desc": "Beautiful and intuitive interfaces that follow Material Design guidelines."
+        },
+        "integration": {
+          "title": "API Integration",
+          "desc": "Seamless connection with third-party services and internal systems."
+        },
+        "maintenance": {
+          "title": "Support & Maintenance",
+          "desc": "Ensuring your app stays up-to-date and performs at its best."
+        },
+        "qa": {
+          "title": "Quality Assurance",
+          "desc": "Rigorous testing across multiple devices and Android versions."
+        },
+        "deployment": {
+          "title": "Store Deployment",
+          "desc": "Expert guidance through the Google Play Store submission process."
+        }
+      }
+    },
+    "hire": {
+      "title1": "Hire ",
+      "title2": "Android Developer",
+      "title3": " for Your Project",
+      "p": "Get access to top-tier talent and accelerate your mobile strategy with GoZoom.",
+      "button": "Hire Android Developer"
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title1": "Why Choose ",
+      "title2": "GoZoom?",
+      "items": {
+        "security": {
+          "title": "Data Security",
+          "desc": "We prioritize your data privacy and implement the highest security standards."
+        },
+        "scalability": {
+          "title": "Scalable Solutions",
+          "desc": "Our apps are built to grow alongside your business."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "desc": "Our dedicated team is always here to help you."
+        },
+        "experience": {
+          "title": "Years of Experience",
+          "desc": "Proven track record of delivering successful Android projects."
+        },
+        "cost": {
+          "title": "Cost-Effective",
+          "desc": "High-quality development services at competitive prices."
+        },
+        "quality": {
+          "title": "Premium Quality",
+          "desc": "We never compromise on the quality of our code or design."
+        }
+      }
+    }
+  },
+  "ios_dev_page": {
+    "hero": {
+      "badge": "iOS Development",
+      "title1": "Get iOS Expert for ",
+      "title2": "Enterprises",
+      "desc": "Our expert iOS developers help you build custom, scalable, and secure applications that deliver premium user experiences.",
+      "cta_enquire": "Enquire Now",
+      "cta_about": "About Us",
+      "img_alt": "iOS Specialist"
+    },
+    "about": {
+      "badge": "iOS Development",
+      "title1": "We Provide Full ",
+      "title2": "iOS App",
+      "title3": " Development Support",
+      "p1": "Streamline iOS app development with Swift, a versatile and intuitive programming language. Swift's syntax simplifies coding tasks, from UI design to backend functionality, enhancing app performance and user experience.",
+      "p2": "At GoZooms, we focus on elevating your digital presence with comprehensive iOS app development services. Our seasoned team leverages Swift, Apple's powerful programming language, to craft cutting-edge mobile solutions tailored to your business objectives. From concept ideation to app store deployment, we guide you through every step of the development process."
+    },
+    "expertise": {
+      "badge": "Expertise",
+      "title1": "Our iOS Development ",
+      "title2": "Capabilities",
+      "items": {
+        "iphone": {
+          "title": "iPhone App Development",
+          "desc": "Custom applications engineered from the ground up to utilize the full capabilities of modern iPhones and iOS features."
+        },
+        "ipad": {
+          "title": "iPad App Development",
+          "desc": "Tablet-optimized interfaces that take advantage of the larger screen real-estate for productivity and media consumption."
+        },
+        "watch": {
+          "title": "Apple Watch Apps",
+          "desc": "Glanceable, highly-efficient watchOS companion applications for fitness, notifications, and rapid interactions."
+        },
+        "tvos": {
+          "title": "Apple TV (tvOS) Apps",
+          "desc": "Immersive media streaming and gaming applications designed specifically for the living room experience."
+        },
+        "uiux": {
+          "title": "iOS UI/UX Design",
+          "desc": "Human Interface Guidelines (HIG) compliant designs that feel natural, premium, and inherently Apple."
+        },
+        "deployment": {
+          "title": "App Store Deployment",
+          "desc": "End-to-end assistance slicing through the red tape of the Apple App Store review process for rapid publishing."
+        }
+      }
+    },
+    "hire": {
+      "title1": "Hire ",
+      "title2": "iOS App Developer",
+      "title3": " for All your Needs",
+      "p": "iOS app developers from GoZoom are known for their ability to come up with unique ideas and develop feature-rich yet customer-centric applications using domain-oriented methodologies.",
+      "button": "Hire iOS Developer"
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title1": "Why Should You ",
+      "title2": "Choose Us?",
+      "items": {
+        "customized": {
+          "title": "Customized Experiences",
+          "desc": "Our specialized iOS development process utilizes the latest stable iOS frameworks (SwiftUI) to provide extended functionality tailored for your business."
+        },
+        "satisfaction": {
+          "title": "Satisfaction Guarantee",
+          "desc": "For us, customer satisfaction is of the utmost importance. We will provide you with dedicated iOS developers focused entirely on your project."
+        },
+        "security": {
+          "title": "Uncompromising Security",
+          "desc": "We implement the highest standards of data protection, utilizing Keychain and secure enclaves for enterprise-grade security."
+        },
+        "fast": {
+          "title": "Fast Development",
+          "desc": "Having developers that possess strong time management skills is our specialty. You can trust us to efficiently deliver results on time and on budget."
+        },
+        "premium": {
+          "title": "Premium Code Quality",
+          "desc": "By strictly adhering to SOLID principles and Clean Architecture, we guarantee that your codebase remains stable and scalable for years."
+        },
+        "support": {
+          "title": "18/5 Technical Support",
+          "desc": "Our dedicated support team and strong technical assistance helps your business through any issues via email, Slack, or direct calls."
+        }
+      }
+    }
+  },
+  "flutter_dev_page": {
+    "hero": {
+      "badge": "UI Toolkit by Google",
+      "title_main": "Flutter App ",
+      "title_gradient": "Development",
+      "desc": "Create natively compiled, visually stunning applications for mobile, web, and desktop from a single codebase. Delivering expressive and flexible UI without compromising on speed.",
+      "cta_hire": "Hire Flutter Devs",
+      "img_alt": "Flutter App Development"
+    },
+    "expertise": {
+      "badge": "Our Services",
+      "title": "What We Build with Flutter",
+      "desc": "From MVP launches to enterprise-scale systems, we harness Dart and Flutter for maximum impact.",
+      "items": {
+        "cross_platform": {
+          "title": "Cross-Platform Apps",
+          "desc": "Reach billions of Android and iOS users simultaneously using custom, feature-rich apps compiled ahead-of-time."
+        },
+        "web_desktop": {
+          "title": "Flutter for Web & Desktop",
+          "desc": "Expand your mobile application immediately into progressive web apps (PWA) and macOS, Windows, or Linux clients."
+        },
+        "widgets": {
+          "title": "Custom Widget Design",
+          "desc": "Building beautiful, highly intricate custom UI widgets matching your specific brand guidelines perfectly."
+        },
+        "backend": {
+          "title": "Backend Integration",
+          "desc": "Hooking up scalable Firebase backgrounds, AWS configurations, or custom REST/GraphQL APIs securely."
+        },
+        "migration": {
+          "title": "UI/UX Migration",
+          "desc": "Modernizing legacy application interfaces into the blazing fast Flutter render engine."
+        },
+        "mvp": {
+          "title": "MVP Development",
+          "desc": "Launch start-up ideas reliably and affordably in record time, proving market fit without building twice."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "The Power of Flutter Framework",
+      "desc": "At GoZoom, we have embraced Flutter's revolutionary widget-based architecture to bypass native performance bridges, meaning your app looks and feels 100% native while costing significantly less to develop and maintain.",
+      "list": [
+        "Hot Reload dramatically reduces coding and testing times in Dart",
+        "A single codebase that easily deploys to 6 platforms max",
+        "60 & 120 FPS performance out of the box using Skia/Impeller",
+        "Extensive catalog of highly customizable materialistic & cupertino widgets"
+      ],
+      "img_alt": "Flutter Dev Team"
+    }
+  },
+  "swift_dev_page": {
+    "hero": {
+      "badge": "Apple Ecosystem Mastery",
+      "title_main": "Swift iOS ",
+      "title_gradient": "Development",
+      "desc": "Build powerful, lightning-fast native applications for iOS, macOS, watchOS, and tvOS using Apple's modern Swift programming language and SwiftUI.",
+      "cta_start": "Start Exploring Swift"
+    },
+    "expertise": {
+      "badge": "Our Services",
+      "title": "What We Build with Swift",
+      "desc": "From iPhone apps to comprehensive enterprise systems across the Apple ecosystem, we provide end-to-end Swift development.",
+      "items": {
+        "custom_ios": {
+          "title": "Custom iOS Apps",
+          "desc": "Feature-rich, scalable iPhone and iPad applications engineered for maximum performance and stability."
+        },
+        "uiux": {
+          "title": "UI/UX with SwiftUI",
+          "desc": "Crafting stunning, state-driven interfaces across all Apple platforms faster and more consistently using SwiftUI."
+        },
+        "wearables": {
+          "title": "watchOS & tvOS",
+          "desc": "Expanding your digital footprint directly to users’ wrists and living rooms through dedicated native Apple experiences."
+        },
+        "migration": {
+          "title": "Swift Migration",
+          "desc": "Updating your legacy Objective-C codebases into clean, type-safe, and maintainable Swift architectures."
+        },
+        "next_gen": {
+          "title": "ARKit & CoreML Integration",
+          "desc": "Building next-generation applications utilizing Apple’s native augmented reality and machine learning frameworks."
+        },
+        "deployment": {
+          "title": "App Store Deployment",
+          "desc": "Navigating the strict Apple App Store review guidelines to guarantee seamless approval and launch."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose GoZoom for Swift?",
+      "desc": "Modern iOS users demand flawless performance, smooth animations, and adherence to Apple's Human Interface Guidelines. Our native Swift developers ensure your product surpasses these high expectations.",
+      "list": [
+        "Type-safe language features prevent crashes in production",
+        "Maximum hardware performance unmatched by hybrid frameworks",
+        "Immediate access to the latest iOS APIs the day they are released",
+        "Deep integration with Apple Pay, SiriKit, HealthKit, and passes"
+      ],
+      "img_alt": "Swift Dev Team"
+    }
+  },
+  "react_native_dev_page": {
+    "hero": {
+      "badge": "Cross-Platform Excellence",
+      "title_main": "React Native ",
+      "title_gradient": "Development",
+      "desc": "Build native apps for Android and iOS using a single, robust codebase. Our expert React Native developers deliver high-performance, cost-effective mobile solutions tailored to your business needs.",
+      "cta_start": "Start Your Project",
+      "cta_explore": "Explore Services"
+    },
+    "expertise": {
+      "badge": "Our Offerings",
+      "title": "What We Build with React Native",
+      "desc": "We leverage React Native's shared codebase architecture to deliver versatile, scalable mobile applications.",
+      "items": {
+        "custom": {
+          "title": "Custom App Development",
+          "desc": "From startup ideas to enterprise mobility solutions, we build fully customized apps that hit both app stores simultaneously."
+        },
+        "uiux": {
+          "title": "UI/UX Design for RN",
+          "desc": "Creating native-feeling, fluid, and brilliantly intuitive interfaces optimized for React Native’s rendering engine."
+        },
+        "migration": {
+          "title": "App Migration",
+          "desc": "Seamlessly port your existing native or hybrid (Cordova/Ionic) apps over to the powerful React Native framework."
+        },
+        "integration": {
+          "title": "API Integrations",
+          "desc": "Extending app functionality by securely linking third-party RESTful APIs, payment gateways, and backend services."
+        },
+        "qa": {
+          "title": "Testing & QA",
+          "desc": "Rigorous automated and manual testing on real devices across iOS and Android ecosystems to guarantee zero crashes."
+        },
+        "maintenance": {
+          "title": "Post-Launch Maintenance",
+          "desc": "Ongoing support, performance monitoring, OS updates, and feature enhancements to keep your app ahead."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose GoZoom for React Native?",
+      "desc": "React Native speeds up development and maintains high native performance. Combining this powerful technology with our experienced talent ensures your mobile product hits the market faster and scales seamlessly.",
+      "list": [
+        "Single codebase for Android & iOS lowers cost by ~40%",
+        "Hot reloading guarantees faster development cycles",
+        "True native UI components and deep OS integration",
+        "Massive community support and pre-built libraries",
+        "Dedicated React framework experts on staff"
+      ],
+      "img_alt": "React Native Dev Team"
+    }
+  },
+  "react_js_dev_page": {
+    "hero": {
+      "badge": "React Framework",
+      "title_main": "Hire Dedicated ",
+      "title_gradient": "React Developers",
+      "desc": "Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.",
+      "cta_start": "Get Started",
+      "cta_about": "About Us"
+    },
+    "about": {
+      "title_main": "Next Level of ",
+      "title_gradient": "ReactJS Development",
+      "desc_highlight": "GoZooms' developers use React to create impressively flexible user interfaces for web applications. Using React, we can help businesses build static or dynamic websites using frameworks like Next.js, React Native mobile apps, or even desktop apps using Electron.js!",
+      "desc_main": "With our expertise and knowledge with React, you don't need to look anywhere else for professional and dedicated React developers. Our React.js developers have experience with technology stacks like MERN, and adhere to strict architectural principles when building any React application."
+    },
+    "expertise": {
+      "badge": "What We Build",
+      "title_main": "Our Expert ",
+      "title_gradient": "React JS Development Services",
+      "items": {
+        "web_app": {
+          "title": "React Web App Development",
+          "desc": "Our React development and design experts can help you build fast, scalable and large web applications."
+        },
+        "mobile": {
+          "title": "React Native Mobile Apps",
+          "desc": "We can build, test, and launch your dream mobile app on Android and iOS. Let our React Native experts handle it!"
+        },
+        "websites": {
+          "title": "Static & Dynamic Websites",
+          "desc": "We create powerful and scalable web applications with React using frameworks like Next.js and Gatsby."
+        },
+        "ui": {
+          "title": "React UI Development",
+          "desc": "Let GoZooms React specialists develop impeccable user interfaces that are flexible and interactive!"
+        },
+        "server": {
+          "title": "Server-Side Development",
+          "desc": "Our React experts can deliver secure, next generation experiences through React's server-side rendering components."
+        },
+        "migration": {
+          "title": "React Migration & Optimization",
+          "desc": "Want to migrate to React from another JavaScript library? We can help you with that, as well as do optimization!"
+        }
+      },
+      "cta": "Get Started"
+    },
+    "why_us": {
+      "badge": "Why Choose Us",
+      "title_main": "Why Choose Our ",
+      "title_gradient": "ReactJS Developers?",
+      "items": {
+        "flexible": {
+          "title": "Flexible Development Solutions",
+          "desc": "Whether you want to build a web application or just want ongoing development support, you can hire our dedicated developers on our monthly or fixed pricing packages."
+        },
+        "expertise": {
+          "title": "Expertise & Experience",
+          "desc": "Our developers are chosen based on their knowledge not only with React, but with other JavaScript libraries, technology stacks and their ability to adhere to software principles."
+        },
+        "satisfaction": {
+          "title": "Satisfaction Guarantee",
+          "desc": "We constantly strive for perfection in the solutions we deliver. We make sure you're kept in the loop during the development process, so your expectations are met."
+        },
+        "affordability": {
+          "title": "Quality With Affordability",
+          "desc": "With our in-house development team we ensure the quality of your project exceeds your expectations, not your budget. Let GoZooms take care of your React app development."
+        }
+      }
+    },
+    "cta_section": {
+      "badge": "Get In Touch",
+      "title_main": "Get Dedicated ",
+      "title_gradient": "React Experts",
+      "title_end": " Today!",
+      "desc": "Fill out the form below and our experts will get back to you shortly.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Tell us more about your project",
+        "privacy": "I agree to the Privacy Policy",
+        "submit": "Send Enquiry"
+      }
+    }
+  },
+  "angular_dev_page": {
+    "hero": {
+      "badge": "Angular Framework",
+      "title_main": "Hire Dedicated ",
+      "title_gradient": "Angular Developers",
+      "desc": "Everything you need to get your project started in 24 hours — architecture, speed, and reliability.",
+      "cta_start": "Get Started",
+      "cta_about": "About Us"
+    },
+    "about": {
+      "badge": "About Angular",
+      "title": "Enhance your project with our in-house talent, offering expertise in ",
+      "title_gradient": "Angular Development",
+      "desc_highlight": "Angular is an open-source JavaScript framework that extends the functionality of HTML. The important use of Angular is to improve browser-based applications with the help of MVC capability. It makes front-end web development and testing easier using templates, command line tools, and IDEs.",
+      "desc_main": "GoZooms employs specialized Angular developers experienced in Javascript to create real-time applications effortlessly. We are highly recognized as the best Angular development company for developing single page applications in an agile manner."
+    },
+    "strengths": {
+      "badge": "Our Strengths",
+      "title_main": "Dedicated and Skilled ",
+      "title_gradient": "Angular Development",
+      "items": [
+        "5+ years of working with Angular has given us extensive knowledge and technical skills to deal with all types of projects.",
+        "We're an accomplished Angular development company working with enthusiasm and dedication to produce great results.",
+        "Our efficiency means competitive rates and rapid delivery of Angular development services and solutions."
+      ]
+    },
+    "expertise": {
+      "badge": "What We Offer",
+      "title_main": "Our High Quality ",
+      "title_gradient": "Angular Development Services",
+      "list": [
+        "Angular web app development",
+        "Angular dashboards and web portals",
+        "Angular mobile web app development",
+        "Angular single-page applications",
+        "Angular performance optimization",
+        "Angular eCommerce development",
+        "Angular cross-platform development",
+        "Angular plugin and widget development"
+      ]
+    },
+    "cta_section": {
+      "badge": "Get In Touch",
+      "title_main": "Talk to GoZooms Expert ",
+      "title_gradient": "Angular Developers",
+      "title_end": " Today",
+      "steps": [
+        "Get in touch with us",
+        "Discuss your project",
+        "Finalize the details",
+        "Project Begins"
+      ],
+      "form": {
+        "name": "Name",
+        "business": "Business/Organization",
+        "email": "Email",
+        "phone": "Phone No.",
+        "subject": "Subject",
+        "message": "Tell us more about your enquiry",
+        "privacy": "I have read and agree to the Privacy Policy",
+        "submit": "Submit"
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title_main": "Why Should You ",
+      "title_gradient": "Choose Us?",
+      "items": {
+        "satisfaction": {
+          "title": "Customer Satisfaction",
+          "desc": "We take customer satisfaction seriously, providing you a dedicated account manager and project manager to make sure all aspects of your engagement with us run smoothly."
+        },
+        "experience": {
+          "title": "Extensive Experience",
+          "desc": "GoZooms is a provider of efficient solutions for business big or small. We don't utilize off-the-shelf products but instead rely upon a fully integrated customized approach."
+        },
+        "collaboration": {
+          "title": "Exceptional Collaboration",
+          "desc": "Our offshore developers will work with you for dedicated hours. We aim to shape the right engagement model for your custom solution to meet your needs on time and on budget."
+        },
+        "fast": {
+          "title": "Fast Development",
+          "desc": "We have refined our development process to result in applications being built quicker and more efficiently, so projects are completed on time and on budget."
+        },
+        "pricing": {
+          "title": "Competitive Pricing",
+          "desc": "Hiring an expert Angular developer, designer, or consultant? Make sure you get a quote from us as we have some of the most competitive rates on the market."
+        },
+        "support": {
+          "title": "18/5 Technical Support",
+          "desc": "Our open communication lines, dedicated support team, and strong technical assistance helps your business through any issues that you encounter."
+        }
+      }
+    }
+  },
+  "laravel_dev_page": {
+    "hero": {
+      "badge": "Laravel Framework",
+      "title_main": "Expert ",
+      "title_gradient": "Laravel",
+      "title_end": " Development Company",
+      "desc": "We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.",
+      "cta_start": "Get Started",
+      "cta_about": "About Us"
+    },
+    "about": {
+      "title": "Expert Solutions From an Expert Laravel Development Company",
+      "p1": "GoZoom offers a wide-range of flawless custom Laravel solutions to our clients. Laravel is an open source PHP based framework which offers a simple and robust structure making it very easy to use.",
+      "p2": "Our Laravel developers provide top quality website structures. At GoZoom, we work closely with our clients to build scalable web applications making use of Laravel to elevate your business through high quality web applications.",
+      "p3_start": "Want to move your existing project to the Laravel framework? We have years of experience migrating to Laravel from other frameworks or vanilla PHP. Laravel offers superior code foundations, easy maintainability and resilient features, it has proven its position amongst the ",
+      "p3_link": "best PHP frameworks available",
+      "p4": "Our expert Laravel developers will help you structure a detailed approach for developing Laravel powered websites and applications for your business. Hire the #1 Laravel Development Company to get top quality solutions at competitive prices."
+    },
+    "offerings": {
+      "title": "What Our Laravel Developers Offer",
+      "list": [
+        "Fast and efficient Laravel development",
+        "Mobile application development",
+        "Complex Laravel integration",
+        "Laravel migrations and upgrades",
+        "Custom Laravel frameworks",
+        "Scalable and managed hosting solutions",
+        "Laravel consulting and strategy"
+      ]
+    },
+    "why_us": {
+      "title_main": "Why Choose Our ",
+      "title_gradient": "Laravel Developers?",
+      "items": [
+        {
+          "title": "Comprehensive Quality Assurance and Testing",
+          "desc": "We employ highly skilled professionals for our Laravel development services who deliver the highest quality work at all times. Our dedicated support team responds quickly to resolve issues and implement suggestions or improvements proposed by our clients."
+        },
+        {
+          "title": "Get Laravel Experts at Competitive Rates",
+          "desc": "Over the years, we’ve encountered numerous challenging tasks when developing exceptional Laravel-based websites for different business needs. Our experience means that we can provide our best Laravel developers for your project at the most cost-effecive rates."
+        },
+        {
+          "title": "Custom Laravel Solutions & Project Methodology",
+          "desc": "GoZoom is the most comprehensive Laravel development company in India, New Zealand, Australia and USA for delivering excellent services to our clients. Our Laravel development team thinks outside the box to satisfy your business requirements."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Get in touch with our expert Laravel developers today",
+      "send_message": "Send us a message",
+      "form": {
+        "name": "Name",
+        "business": "Business/Organization",
+        "email": "Email",
+        "phone": "Phone No",
+        "subject": "Subject",
+        "message": "Tell us more about your enquiry",
+        "privacy": "I have read and agree to the Privacy Policy",
+        "subscribe": "I would like to receive information about GoZooms’ products, services and newsletters.",
+        "why_collect_title": "Why we collect this information and how we use it:",
+        "why_collect_desc": "We treat your information with respect, and we will never sell it to other companies. This information is collected out of necessity for basic account creation, billing, and support purposes. We will only email you for support.",
+        "submit": "Submit Message"
+      }
+    }
+  },
+  "django_dev_page": {
+    "hero": {
+      "badge": "High-Level Python Framework",
+      "title_main": "Django Web ",
+      "title_gradient": "Development",
+      "desc": "Build ridiculously fast, secure, and scalable web applications and APIs with Django. Perfect for data-heavy applications, machine learning integrations, and enterprise architectures.",
+      "cta_start": "Start Your Project",
+      "cta_services": "Our Services"
+    },
+    "expertise": {
+      "badge": "Core Python Services",
+      "title": "What We Build with Django",
+      "desc": "From robust backend APIs powering mobile apps to comprehensive full-stack enterprise portals.",
+      "items": {
+        "enterprise": {
+          "title": "Enterprise Web Apps",
+          "desc": "Secure, scalable, and highly available web applications capable of handling massive spikes in user traffic."
+        },
+        "api": {
+          "title": "REST & GraphQL APIs",
+          "desc": "Building seamless data bridges using Django REST Framework (DRF) to power modern React/Vue frontends or mobile apps."
+        },
+        "data": {
+          "title": "Data-Heavy Portals",
+          "desc": "Expertly managing complicated databases using Django’s powerful ORM to build dashboards and analytics portals."
+        },
+        "security": {
+          "title": "High-Security Systems",
+          "desc": "Leveraging Django’s built-in defenses against clickjacking, cross-site scripting, and SQL injection for financial/healthcare apps."
+        },
+        "ai": {
+          "title": "AI/ML Integration",
+          "desc": "Natively integrating Python-based Machine Learning models (TensorFlow, PyTorch) directly into your web backend."
+        },
+        "saas": {
+          "title": "SaaS Architecture",
+          "desc": "Designing multi-tenant architectures and subscription billing flows utilizing Django’s rapid development capabilities."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose GoZoom for Django?",
+      "desc": "\"The web framework for perfectionists with deadlines.\" We strictly adhere to Pythonic principles and Django best practices to ensure your backend isn't just fast today, but maintainable for years to come.",
+      "list": [
+        "Rapid MVP development using fully-featured built-in admin panels",
+        "Expertise in celery, redis caching, and async task queues",
+        "Impeccable security architecture out-of-the-box",
+        "Seamless DevOps CI/CD pipeline integration (Docker, AWS, Heroku)"
+      ]
+    }
+  },
+  "nextjs_dev_page": {
+    "hero": {
+      "title_main": "Next.js ",
+      "title_gradient": "Development",
+      "desc": "Harness the power of React with server-side rendering. We build blazingly fast, SEO-optimized web applications utilizing the modern App Router and Edge compute capabilities.",
+      "cta_start": "Build With Next.js"
+    },
+    "features": {
+      "performance": {
+        "title": "Blazing Performance",
+        "desc": "Static Site Generation (SSG) and Image Optimization ensures your site loads instantly, improving both user experience and Core Web Vitals."
+        },
+      "seo": {
+        "title": "SEO Dominance",
+        "desc": "Server-Side Rendering (SSR) means search engines can index your content immediately, guaranteeing massive SEO improvements over standard React SPA."
+      },
+      "fullstack": {
+        "title": "Full Stack Capabilities",
+        "desc": "Utilize Next.js API Routes and Server Actions to build robust full-stack applications without needing a separate backend server."
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build with Next.js",
+      "desc": "From high-traffic e-commerce storefronts to complex B2B SaaS platforms.",
+      "items": {
+        "ecommerce": {
+          "title": "E-commerce Platforms",
+          "desc": "Lightning-fast, headless commerce frontends that integrate with Shopify or commercetools to boost conversion rates."
+        },
+        "saas": {
+          "title": "SaaS Applications",
+          "desc": "Complex, authenticated dashboards utilizing Server Actions for secure, instant mutations without heavy client-side JavaScript."
+        },
+        "corporate": {
+          "title": "Corporate Websites",
+          "desc": "Static site generated (SSG) corporate pages that achieve 100/100 Lighthouse scores and dominate search engine rankings."
+        },
+        "portals": {
+          "title": "Dynamic Web Portals",
+          "desc": "Real-time user portals that stream data dynamically from the server using React Suspense and Server Components."
+        },
+        "pwa": {
+          "title": "Progressive Web Apps",
+          "desc": "Installable, offline-capable Next.js applications that bring a native-like experience to the mobile web browser."
+        },
+        "cms": {
+          "title": "Custom CMS Frontends",
+          "desc": "Decoupled presentation layers fetching content from headless CMSs (Sanity, Contentful) for ultimate editorial flexibility."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our Next.js Developers?",
+      "items": {
+        "pioneers": {
+          "title": "App Router Pioneers",
+          "desc": "We utilize the latest Next.js App Router (app directory) paradigms, leveraging React Server Components for minimal client-side bundles."
+        },
+        "vercel": {
+          "title": "Vercel Deployment Experts",
+          "desc": "We optimize deployments specifically for Edge Networks, utilizing Edge Config and Middleware for millisecond global logic execution."
+        },
+        "seo": {
+          "title": "Uncompromising SEO",
+          "desc": "Our developers implement perfect semantic HTML, dynamic Open Graph images, and optimal vital metrics to ensure search engine dominance."
+        },
+        "secure": {
+          "title": "Secure by Default",
+          "desc": "By moving logic to Server Components and Server Actions, we protect your API keys and business logic from ever reaching the browser network tab."
+        }
+      }
+    }
+  },
+  "java_dev_page": {
+    "hero": {
+      "badge": "Enterprise-Grade Robustness",
+      "title_main": "Java Enterprise ",
+      "title_gradient": "Applications",
+      "desc": "Build secure, highly scalable, and exceptionally reliable software solutions with Java. We specialize in robust enterprise applications, complex architectures, and high-performance backend systems.",
+      "cta_start": "Start Your Project"
+    },
+    "expertise": {
+      "badge": "Core Offerings",
+      "title": "What We Build with Java",
+      "desc": "From legacy system migrations to highly complex cloud-native microservices for enterprise businesses.",
+      "items": {
+        "enterprise": {
+          "title": "Enterprise Web Applications",
+          "desc": "Secure B2B portals, ERPs, and CRM systems built using robust frameworks like Spring Boot and Java EE."
+        },
+        "microservices": {
+          "title": "Microservices Architectures",
+          "desc": "De-coupling monolithic applications into scalable, independently deployable microservices."
+        },
+        "security": {
+          "title": "High-Security Systems",
+          "desc": "Developing applications with strict financial and healthcare compliance demands utilizing robust Java security APIs."
+        },
+        "api": {
+          "title": "API Development",
+          "desc": "Building high-throughput, low-latency REST and SOAP APIs to serve mobile frontends and third-party integrations."
+        },
+        "modernization": {
+          "title": "Legacy System Modernization",
+          "desc": "Carefully migrating and refactoring outdated codebases to modern Java standards without business disruption."
+        },
+        "cloud": {
+          "title": "Cloud-Native Java",
+          "desc": "Optimizing enterprise applications utilizing Kubernetes, Docker, and AWS native environments."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why GoZoom for Enterprise Java?",
+      "desc": "Java is the backbone of the world's largest corporate networks. Our specialized backend engineering teams build architectures that are mathematically sound, highly typed, and impervious to scale bottlenecks.",
+      "list": [
+        "Strict adherence to Object-Oriented and SOLID design principles",
+        "Deep expertise in the Spring Ecosystem (Spring Boot, Security, Data)",
+        "Extensive performance tuning for JVM multi-threading and memory management",
+        "Guaranteed 99.9% uptime architecture design"
+      ]
+    }
   }
 }

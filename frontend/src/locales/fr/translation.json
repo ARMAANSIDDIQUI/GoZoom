@@ -794,5 +794,785 @@
         "desc": "Une solution complète éliminant la complexité de la gestion de plusieurs fournisseurs grâce à un partenariat unique et rationalisé."
       }
     ]
+  },
+  "mobile_app_dev_page": {
+    "hero": {
+      "badge": "Spécialiste UI/UX & Mobile",
+      "title": "Construisez la Prochaine Génération d'",
+      "title_gradient": "Expériences Mobiles",
+      "desc": "Nous créons des applications mobiles magnifiques et hautement performantes qui évoluent. Des startups aux entreprises, nous offrons l'excellence sur iOS et Android.",
+      "cta_contact": "Commencer",
+      "cta_services": "Nos Services"
+    },
+    "expertise": {
+      "subtitle": "Notre Expertise",
+      "title": "Solutions Mobiles Sur Mesure",
+      "cards": {
+        "ios": {
+          "title": "Développement iOS",
+          "desc": "Applications Swift et SwiftUI haut de gamme conçues pour l'écosystème Apple."
+        },
+        "android": {
+          "title": "Développement Android",
+          "desc": "Applications robustes en Kotlin et Java conçues pour le marché mondial Android."
+        },
+        "hybrid": {
+          "title": "Multiplateforme",
+          "desc": "Solutions Flutter et React Native hautement efficaces pour des bases de code partagées."
+        },
+        "uiux": {
+          "title": "UI/UX Mobile",
+          "desc": "Des designs intuitifs et basés sur des gestes que les utilisateurs adorent utiliser."
+        }
+      }
+    }
+  },
+  "android_dev_page": {
+    "hero": {
+      "badge": "Spécialiste Android",
+      "title1": "Construisez votre Prochaine ",
+      "title2": "Application Android",
+      "title3": " avec des Experts",
+      "desc": "Nous développons des applications Android performantes, sécurisées et évolutives, adaptées à vos besoins professionnels.",
+      "cta_enquire": "Se Renseigner Maintenant",
+      "cta_about": "À Propos de Nous",
+      "img_alt": "Spécialiste Android"
+    },
+    "about": {
+      "badge": "Développement Android",
+      "title1": "Développement d' ",
+      "title2": "Applications Android",
+      "title3": " à Cycle Complet",
+      "p1": "Notre équipe de développeurs Android chevronnés utilise Kotlin et Java pour créer des applications robustes qui offrent des expériences utilisateur fluides.",
+      "p2": "Du concept initial au déploiement sur le Google Play Store, nous gérons chaque aspect du processus de développement avec précision et soin."
+    },
+    "expertise": {
+      "badge": "Expertise",
+      "title1": "Nos Capacités ",
+      "title2": "Android",
+      "items": {
+        "custom": {
+          "title": "Applications Android Sur Mesure",
+          "desc": "Solutions personnalisées conçues spécifiquement pour vos besoins commerciaux uniques."
+        },
+        "uiux": {
+          "title": "Conception UI/UX Android",
+          "desc": "Interfaces magnifiques et intuitives qui suivent les directives du Material Design."
+        },
+        "integration": {
+          "title": "Intégration d'API",
+          "desc": "Connexion transparente avec des services tiers et des systèmes internes."
+        },
+        "maintenance": {
+          "title": "Support et Maintenance",
+          "desc": "Veiller à ce que votre application reste à jour et performante."
+        },
+        "qa": {
+          "title": "Assurance Qualité",
+          "desc": "Tests rigoureux sur plusieurs appareils et versions d'Android."
+        },
+        "deployment": {
+          "title": "Déploiement sur le Store",
+          "desc": "Conseils d'experts tout au long du processus de soumission au Google Play Store."
+        }
+      }
+    },
+    "hire": {
+      "title1": "Embauchez un ",
+      "title2": "Développeur Android",
+      "title3": " pour Votre Projet",
+      "p": "Accédez à des talents de premier plan et accélérez votre stratégie mobile avec GoZoom.",
+      "button": "Embaucher un Développeur Android"
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title1": "Pourquoi Choisir ",
+      "title2": "GoZoom ?",
+      "items": {
+        "security": {
+          "title": "Sécurité des Données",
+          "desc": "Nous accordons la priorité à la confidentialité de vos données et mettons en œuvre les normes de sécurité les plus élevées."
+        },
+        "scalability": {
+          "title": "Solutions Évolutives",
+          "desc": "Nos applications sont conçues pour croître en même temps que votre entreprise."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "desc": "Notre équipe dédiée est toujours là pour vous aider."
+        },
+        "experience": {
+          "title": "Années d'Expérience",
+          "desc": "Antécédents prouvés dans la réalisation de projets Android réussis."
+        },
+        "cost": {
+          "title": "Rentable",
+          "desc": "Services de développement de haute qualité à des prix compétitifs."
+        },
+        "quality": {
+          "title": "Qualité Premium",
+          "desc": "Nous ne faisons jamais de compromis sur la qualité de notre code ou de notre conception."
+        }
+      }
+    }
+  },
+  "ios_dev_page": {
+    "hero": {
+      "badge": "Développement iOS",
+      "title1": "Obtenez un Expert iOS pour les ",
+      "title2": "Entreprises",
+      "desc": "Nos développeurs iOS experts vous aident à créer des applications personnalisées, évolutives et sécurisées qui offrent des expériences utilisateur premium.",
+      "cta_enquire": "Se Renseigner Maintenant",
+      "cta_about": "À Propos de Nous",
+      "img_alt": "Spécialiste iOS"
+    },
+    "about": {
+      "badge": "Développement iOS",
+      "title1": "Nous Fournissons un Support Complet pour le Développement d' ",
+      "title2": "Applications iOS",
+      "title3": " ",
+      "p1": "Simplifiez le développement d'applications iOS avec Swift, un langage de programmation polyvalent et intuitif. La syntaxe de Swift simplifie les tâches de codage, de la conception de l'interface utilisateur à la fonctionnalité backend, améliorant ainsi les performances de l'application et l'expérience utilisateur.",
+      "p2": "Chez GoZooms, nous nous concentrons sur l'élévation de votre présence numérique avec des services complets de développement d'applications iOS. Notre équipe chevronnée s'appuie sur Swift, le puissant langage de programmation d'Apple, pour créer des solutions mobiles de pointe adaptées à vos objectifs commerciaux. De l'idéation du concept au déploiement sur l'App Store, nous vous guidons à travers chaque étape du processus de développement."
+    },
+    "expertise": {
+      "badge": "Expertise",
+      "title1": "Nos Capacités de Développement ",
+      "title2": "iOS",
+      "items": {
+        "iphone": {
+          "title": "Développement d'Applications iPhone",
+          "desc": "Applications personnalisées conçues à partir de zéro pour utiliser toutes les capacités des iPhones modernes et des fonctionnalités iOS."
+        },
+        "ipad": {
+          "title": "Développement d'Applications iPad",
+          "desc": "Interfaces optimisées pour tablettes qui tirent parti de la plus grande surface d'écran pour la productivité et la consommation de médias."
+        },
+        "watch": {
+          "title": "Applications Apple Watch",
+          "desc": "Applications compagnons watchOS hautement efficaces et consultables d'un coup d'œil pour le fitness, les notifications et les interactions rapides."
+        },
+        "tvos": {
+          "title": "Applications Apple TV (tvOS)",
+          "desc": "Applications de streaming multimédia et de jeux immersives conçues spécifiquement pour l'expérience du salon."
+        },
+        "uiux": {
+          "title": "Conception UI/UX iOS",
+          "desc": "Concept conforme aux Human Interface Guidelines (HIG) qui semble naturel, premium et intrinsèquement Apple."
+        },
+        "deployment": {
+          "title": "Déploiement sur l'App Store",
+          "desc": "Assistance de bout en bout pour franchir les obstacles du processus de révision de l'Apple App Store pour une publication rapide."
+        }
+      }
+    },
+    "hire": {
+      "title1": "Embauchez un ",
+      "title2": "Développeur d'Applications iOS",
+      "title3": " pour Tous vos Besoins",
+      "p": "Les développeurs d'applications iOS de GoZoom sont connus pour leur capacité à proposer des idées uniques et à développer des applications riches en fonctionnalités mais centrées sur le client en utilisant des méthodologies orientées domaine.",
+      "button": "Embaucher un Développeur iOS"
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title1": "Pourquoi Devriez-vous Nous ",
+      "title2": "Choisir ?",
+      "items": {
+        "customized": {
+          "title": "Expériences Personnalisées",
+          "desc": "Notre processus de développement iOS spécialisé utilise les derniers frameworks iOS stables (SwiftUI) pour fournir des fonctionnalités étendues adaptées à votre entreprise."
+        },
+        "satisfaction": {
+          "title": "Garantie de Satisfaction",
+          "desc": "Pour nous, la satisfaction du client est de la plus haute importance. Nous mettrons à votre disposition des développeurs iOS dédiés entièrement concentrés sur votre projet."
+        },
+        "security": {
+          "title": "Sécurité sans Compromis",
+          "desc": "Nous mettons en œuvre les normes les plus élevées de protection des données, en utilisant Keychain et des enclaves sécurisées pour une sécurité de niveau entreprise."
+        },
+        "fast": {
+          "title": "Développement Rapide",
+          "desc": "Avoir des développeurs qui possèdent de solides compétences en gestion du temps est notre spécialité. Vous pouvez nous faire confiance pour fournir des résultats efficacement, dans les délais et le budget impartis."
+        },
+        "premium": {
+          "title": "Qualité de Code Premium",
+          "desc": "En respectant strictement les principes SOLID et la Clean Architecture, we garantissons que votre base de code reste stable et évolutive pendant des années."
+        },
+        "support": {
+          "title": "Support Technique 18/5",
+          "desc": "Notre équipe de support dédiée et notre solide assistance technique aident votre entreprise à travers tous les problèmes via e-mail, Slack ou appels directs."
+        }
+      }
+    }
+  },
+  "flutter_dev_page": {
+    "hero": {
+      "badge": "Boîte à outils UI par Google",
+      "title_main": "Développement d'Applications ",
+      "title_gradient": "Flutter",
+      "desc": "Créez des applications compilées nativement et visuellement époustouflantes pour mobile, Web et bureau à partir d'une base de code unique. Offrir une interface utilisateur expressive et flexible sans compromis sur la vitesse.",
+      "cta_hire": "Embaucher des Développeurs Flutter",
+      "img_alt": "Développement d'Applications Flutter"
+    },
+    "expertise": {
+      "badge": "Nos Services",
+      "title": "Ce que nous construisons avec Flutter",
+      "desc": "Des lancements de MVP aux systèmes à l'échelle de l'entreprise, nous exploitons Dart et Flutter pour un impact maximal.",
+      "items": {
+        "cross_platform": {
+          "title": "Applications Multiplateformes",
+          "desc": "Atteignez des milliards d'utilisateurs Android et iOS simultanément à l'aide d'applications personnalisées et riches en fonctionnalités compilées à l'avance."
+        },
+        "web_desktop": {
+          "title": "Flutter pour le Web et le Bureau",
+          "desc": "Étendez immédiatement votre application mobile en applications Web progressives (PWA) et en clients macOS, Windows ou Linux."
+        },
+        "widgets": {
+          "title": "Conception de Widgets Personnalisés",
+          "desc": "Construire de magnifiques widgets d'interface utilisateur personnalisés et hautement complexes correspondant parfaitement aux directives de votre marque."
+        },
+        "backend": {
+          "title": "Intégration Backend",
+          "desc": "Connexion sécurisée de backends Firebase évolutifs, de configurations AWS ou d'API REST/GraphQL personnalisées."
+        },
+        "migration": {
+          "title": "Migration UI/UX",
+          "desc": "Modernisation des interfaces d'applications héritées vers le moteur de rendu ultra-rapide de Flutter."
+        },
+        "mvp": {
+          "title": "Développement de MVP",
+          "desc": "Lancez des idées de start-up de manière fiable et abordable en un temps record, prouvant l'adéquation au marché sans construire deux fois."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title": "La Puissance du Framework Flutter",
+      "desc": "Chez GoZoom, nous avons adopté l'architecture révolutionnaire basée sur les widgets de Flutter pour contourner les ponts de performance natifs, ce qui signifie que votre application ressemble et se sent 100% native tout en coûtant beaucoup moins cher à développer et à maintenir.",
+      "list": [
+        "Hot Reload réduit considérablement les temps de codage et de test dans Dart",
+        "Une base de code unique qui se déploie facilement sur 6 plateformes au maximum",
+        "Performances de 60 et 120 FPS prêtes à l'emploi avec Skia/Impeller",
+        "Vaste catalogue de widgets materialistic et cupertino hautement personnalisables"
+      ],
+      "img_alt": "Équipe de Développement Flutter"
+    }
+  },
+  "swift_dev_page": {
+    "hero": {
+      "badge": "Maîtrise de l'Écosystème Apple",
+      "title_main": "Développement iOS ",
+      "title_gradient": "Swift",
+      "desc": "Construisez des applications natives puissantes et ultra-rapides pour iOS, macOS, watchOS et tvOS en utilisant le langage de programmation moderne Swift d'Apple et SwiftUI.",
+      "cta_start": "Commencer à Explorer Swift"
+    },
+    "expertise": {
+      "badge": "Nos Services",
+      "title": "Ce que nous construisons avec Swift",
+      "desc": "Des applications iPhone aux systèmes d'entreprise complets à travers l'écosystème Apple, nous fournissons un développement Swift de bout en bout.",
+      "items": {
+        "custom_ios": {
+          "title": "Applications iOS Sur Mesure",
+          "desc": "Applications iPhone et iPad riches en fonctionnalités et évolutives, conçues pour une performance et une stabilité maximales."
+        },
+        "uiux": {
+          "title": "UI/UX avec SwiftUI",
+          "desc": "Création d'interfaces magnifiques et pilotées par l'état sur toutes les plateformes Apple plus rapidement et de manière plus cohérente en utilisant SwiftUI."
+        },
+        "wearables": {
+          "title": "watchOS & tvOS",
+          "desc": "Étendez votre empreinte numérique directement aux poignets et aux salons des utilisateurs grâce à des expériences Apple natives dédiées."
+        },
+        "migration": {
+          "title": "Migration Swift",
+          "desc": "Mise à jour de vos bases de code Objective-C héritées vers des architectures Swift propres, sûres et maintenables."
+        },
+        "next_gen": {
+          "title": "Intégration ARKit & CoreML",
+          "desc": "Construction d'applications de nouvelle génération utilisant les frameworks natifs de réalité augmentée et d'apprentissage automatique d'Apple."
+        },
+        "deployment": {
+          "title": "Déploiement sur l'App Store",
+          "desc": "Navigation dans les directives strictes de révision de l'Apple App Store pour garantir une approbation et un lancement sans faille."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title": "Pourquoi Choisir GoZoom pour Swift ?",
+      "desc": "Les utilisateurs iOS modernes exigent des performances impeccables, des animations fluides et le respect des Human Interface Guidelines d'Apple. Nos développeurs Swift natifs garantissent que votre produit dépasse ces attentes élevées.",
+      "list": [
+        "Les fonctionnalités de langage de type sûr empêchent les plantages en production",
+        "Performances matérielles maximales inégalées par les frameworks hybrides",
+        "Accès immédiat aux dernières API iOS le jour de leur sortie",
+        "Intégration profonde avec Apple Pay, SiriKit, HealthKit et les pass"
+      ],
+      "img_alt": "Équipe de Développement Swift"
+    }
+  },
+  "react_native_dev_page": {
+    "hero": {
+      "badge": "Excellence Multiplateforme",
+      "title_main": "Développement ",
+      "title_gradient": "React Native",
+      "desc": "Construisez des applications natives pour Android et iOS à l'aide d'une base de code unique et robuste. Nos développeurs experts React Native fournissent des solutions mobiles performantes et rentables adaptées à vos besoins commerciaux.",
+      "cta_start": "Lancer Votre Projet",
+      "cta_explore": "Explorer les Services"
+    },
+    "expertise": {
+      "badge": "Nos Offres",
+      "title": "Ce que nous construisons avec React Native",
+      "desc": "Nous exploitons l'architecture de base de code partagée de React Native pour fournir des applications mobiles polyvalentes et évolutives.",
+      "items": {
+        "custom": {
+          "title": "Développement d'Applications Sur Mesure",
+          "desc": "Des idées de start-up aux solutions de mobilité d'entreprise, nous construisons des applications entièrement personnalisées qui atteignent les deux app stores simultanément."
+        },
+        "uiux": {
+          "title": "Conception UI/UX pour RN",
+          "desc": "Création d'interfaces natives, fluides et brillamment intuitives optimisées pour le moteur de rendu de React Native."
+        },
+        "migration": {
+          "title": "Migration d'Applications",
+          "desc": "Transférez en toute transparence vos applications natives ou hybrides (Cordova/Ionic) existantes vers le puissant framework React Native."
+        },
+        "integration": {
+          "title": "Intégrations d'API",
+          "desc": "Extension des fonctionnalités de l'application en liant en toute sécurité des API RESTful tierces, des passerelles de paiement et des services backend."
+        },
+        "qa": {
+          "title": "Tests et AQ",
+          "desc": "Tests automatisés et manuels rigoureux sur des appareils réels à travers les écosystèmes iOS et Android pour garantir zéro plantage."
+        },
+        "maintenance": {
+          "title": "Maintenance Post-Lancement",
+          "desc": "Support continu, surveillance des performances, mises à jour de l'OS et améliorations des fonctionnalités pour garder votre application en avance."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "desc": "React Native accélère le développement et maintient des performances natives élevées. La combinaison de cette technologie puissante avec notre talent expérimenté garantit que votre produit mobile arrive plus rapidement sur le marché et évolue de manière transparente.",
+      "list": [
+        "Une base de code unique pour Android et iOS réduit les coûts d'environ 40%",
+        "Le remplacement à chaud garantit des cycles de développement plus rapides",
+        "Véritables composants d'interface utilisateur natifs et intégration profonde de l'OS",
+        "Soutien massif de la communauté et bibliothèques pré-construites",
+        "Experts dédiés au framework React au sein de l'équipe"
+      ],
+      "img_alt": "Équipe de Développement React Native"
+    }
+  },
+  "react_js_dev_page": {
+    "hero": {
+      "badge": "Framework React",
+      "title_main": "Engagez des ",
+      "title_gradient": "Développeurs React",
+      "desc": "Construisez l'avenir des applications web avec les développeurs React.js de GoZooms — priorité à la performance et prêts pour les composants.",
+      "cta_start": "Commencer",
+      "cta_about": "À Propos de Nous"
+    },
+    "about": {
+      "title_main": "Niveau Supérieur de ",
+      "title_gradient": "Développement ReactJS",
+      "desc_highlight": "Les développeurs de GoZooms utilisent React pour créer des interfaces utilisateur incroyablement flexibles pour les applications web. Avec React, nous pouvons aider les entreprises à créer des sites web statiques ou dynamiques en utilisant des frameworks comme Next.js, des applications mobiles React Native, ou même des applications de bureau en utilisant Electron.js !",
+      "desc_main": "Grâce à notre expertise et nos connaissances avec React, vous n'avez pas besoin de chercher ailleurs des développeurs React professionnels et dédiés. Nos développeurs React.js ont de l'expérience avec des piles technologiques comme MERN, et respectent des principes architecturaux stricts lors de la création de toute application React."
+    },
+    "expertise": {
+      "badge": "Ce Que Nous Construisons",
+      "title_main": "Nos Services Experts de ",
+      "title_gradient": "Développement React JS",
+      "items": {
+        "web_app": {
+          "title": "Développement d'Applications Web React",
+          "desc": "Nos experts en développement et conception React peuvent vous aider à créer des applications web rapides, évolutives et de grande envergure."
+        },
+        "mobile": {
+          "title": "Applications Mobiles React Native",
+          "desc": "Nous pouvons construire, tester et lancer l'application mobile de vos rêves sur Android et iOS. Laissez nos experts React Native s'en charger !"
+        },
+        "websites": {
+          "title": "Sites Web Statiques et Dynamiques",
+          "desc": "Nous créons des applications web puissantes et évolutives avec React en utilisant des frameworks comme Next.js et Gatsby."
+        },
+        "ui": {
+          "title": "Développement d'Interface Utilisateur React",
+          "desc": "Laissez les spécialistes React de GoZooms développer des interfaces utilisateur impeccables, flexibles et interactives !"
+        },
+        "server": {
+          "title": "Développement Côté Serveur",
+          "desc": "Nos experts React peuvent offrir des expériences de nouvelle génération sécurisées grâce aux composants de rendu côté serveur de React."
+        },
+        "migration": {
+          "title": "Migration et Optimisation React",
+          "desc": "Vous voulez migrer vers React depuis une autre bibliothèque JavaScript ? Nous pouvons vous aider, ainsi qu'effectuer l'optimisation !"
+        }
+      },
+      "cta": "Commencer"
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous Choisir",
+      "title_main": "Pourquoi Choisir nos ",
+      "title_gradient": "Développeurs ReactJS ?",
+      "items": {
+        "flexible": {
+          "title": "Solutions de Développement Flexibles",
+          "desc": "Que vous souhaitiez créer une application web ou simplement un support de développement continu, vous pouvez embaucher nos développeurs dédiés sur nos forfaits mensuels ou à prix fixe."
+        },
+        "expertise": {
+          "title": "Expertise et Expérience",
+          "desc": "Nos développeurs sont choisis en fonction de leurs connaissances non seulement de React, mais aussi d'autres bibliothèques JavaScript, des piles technologiques et de leur capacité à respecter les principes logiciels."
+        },
+        "satisfaction": {
+          "title": "Garantie de Satisfaction",
+          "desc": "Nous visons constamment la perfection dans les solutions que nous livrons. Nous nous assurons que vous êtes tenu au courant pendant le processus de développement, afin que vos attentes soient satisfaites."
+        },
+        "affordability": {
+          "title": "Qualité et Abordabilité",
+          "desc": "Avec notre équipe de développement interne, nous garantissons que la qualité de votre projet dépasse vos attentes, pas votre budget. Laissez GoZooms s'occuper du développement de votre application React."
+        }
+      }
+    },
+    "cta_section": {
+      "badge": "Contactez-nous",
+      "title_main": "Obtenez des Experts ",
+      "title_gradient": "React Dédiés",
+      "title_end": " Aujourd'hui !",
+      "desc": "Remplissez le formulaire ci-dessous et nos experts vous recontacteront sous peu.",
+      "form": {
+        "name": "Nom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "subject": "Sujet",
+        "message": "Dites-nous en plus sur votre projet",
+        "privacy": "J'accepte la politique de confidentialité",
+        "submit": "Envoyer la Demande"
+      }
+    }
+  },
+  "angular_dev_page": {
+    "hero": {
+      "badge": "Framework Angular",
+      "title_main": "Engagez des ",
+      "title_gradient": "Développeurs Angular",
+      "desc": "Tout ce dont vous avez besoin pour démarrer votre projet en 24 heures — architecture, rapidité et fiabilité.",
+      "cta_start": "Commencer",
+      "cta_about": "À Propos de Nous"
+    },
+    "about": {
+      "badge": "À Propos d'Angular",
+      "title": "Améliorez votre projet avec notre talent interne, offrant une expertise en ",
+      "title_gradient": "Développement Angular",
+      "desc_highlight": "Angular est un framework JavaScript open-source qui étend les fonctionnalités de HTML. L'utilité importante d'Angular est d'améliorer les applications basées sur navigateur à l'aide de la capacité MVC. Il facilite le développement web front-end et les tests à l'aide de modèles, d'outils de ligne de commande et d'IDE.",
+      "desc_main": "GoZooms emploie des développeurs Angular spécialisés expérimentés en Javascript pour créer des applications en temps réel sans effort. Nous sommes reconnus comme la meilleure entreprise de développement Angular pour le développement d'applications à page unique de manière agile."
+    },
+    "strengths": {
+      "badge": "Nos Forces",
+      "title_main": "Développement Angular ",
+      "title_gradient": "Dédié et Qualifié",
+      "items": [
+        "Plus de 5 ans de travail avec Angular nous ont donné des connaissances approfondies et des compétences techniques pour traiter tous types de projets.",
+        "Nous sommes une entreprise de développement Angular accomplie travaillant avec enthousiasme et dévouement pour produire d'excellents résultats.",
+        "Notre efficacité signifie des tarifs compétitifs et une livraison rapide des services et solutions de développement Angular."
+      ]
+    },
+    "expertise": {
+      "badge": "Ce Que Nous Offrons",
+      "title_main": "Nos Services de ",
+      "title_gradient": "Développement Angular de Haute Qualité",
+      "list": [
+        "Développement d'applications web Angular",
+        "Tableaux de bord et portails web Angular",
+        "Développement d'applications web mobiles Angular",
+        "Applications Angular à page unique",
+        "Optimisation des performances Angular",
+        "Développement eCommerce Angular",
+        "Développement Angular multiplateforme",
+        "Développement de plugins et de widgets Angular"
+      ]
+    },
+    "cta_section": {
+      "badge": "Contactez-nous",
+      "title_main": "Parlez aux Développeurs ",
+      "title_gradient": "Angular Experts",
+      "title_end": " de GoZooms Aujourd'hui",
+      "steps": [
+        "Contactez-nous",
+        "Discutez de votre projet",
+        "Finalisez les détails",
+        "Le projet commence"
+      ],
+      "form": {
+        "name": "Nom",
+        "business": "Entreprise/Organisation",
+        "email": "Email",
+        "phone": "N° de téléphone",
+        "subject": "Sujet",
+        "message": "Dites-nous en plus sur votre demande",
+        "privacy": "J'ai lu et j'accepte la politique de confidentialité",
+        "submit": "Soumettre"
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title_main": "Pourquoi devriez-vous ",
+      "title_gradient": "nous choisir ?",
+      "items": {
+        "satisfaction": {
+          "title": "Satisfaction du Client",
+          "desc": "Nous prenons la satisfaction client au sérieux, en vous fournissant un gestionnaire de compte dédié et un chef de projet pour vous assurer que tous les aspects de votre engagement avec nous se déroulent sans heurts."
+        },
+        "experience": {
+          "title": "Vaste Expérience",
+          "desc": "GoZooms est un fournisseur de solutions efficaces pour les grandes et petites entreprises. Nous n'utilisons pas de produits standard mais comptons sur une approche personnalisée entièrement intégrée."
+        },
+        "collaboration": {
+          "title": "Collaboration Exceptionnelle",
+          "desc": "Nos développeurs offshore travailleront avec vous pendant des heures dédiées. Nous visons à façonner le bon modèle d'engagement pour votre solution personnalisée afin de répondre à vos besoins dans les délais et le budget impartis."
+        },
+        "fast": {
+          "title": "Développement Rapide",
+          "desc": "Nous avons perfectionné notre processus de développement pour aboutir à des applications construites plus rapidement et plus efficacement, afin que les projets soient terminés à temps et dans le budget."
+        },
+        "pricing": {
+          "title": "Prix Compétitifs",
+          "desc": "Vous embauchez un développeur, un designer ou un consultant Angular expert ? Assurez-vous d'obtenir un devis de notre part car nous avons certains des tarifs les plus compétitifs du marché."
+        },
+        "support": {
+          "title": "Support Technique 18/5",
+          "desc": "Nos lignes de communication ouvertes, notre équipe d'assistance dédiée et notre assistance technique solide aident votre entreprise à traverser tous les problèmes que vous rencontrez."
+        }
+      }
+    }
+  },
+  "laravel_dev_page": {
+    "hero": {
+      "badge": "Framework Laravel",
+      "title_main": "Entreprise de ",
+      "title_gradient": "Développement Laravel",
+      "title_end": " Experte",
+      "desc": "Nous fournissons des développeurs Laravel dédiés pour les projets de votre entreprise — créant des applications robustes, sécurisées et artisanales.",
+      "cta_start": "Commencer",
+      "cta_about": "À Propos de Nous"
+    },
+    "about": {
+      "title": "Solutions d'experts d'une entreprise experte en développement Laravel",
+      "p1": "GoZoom offre une large gamme de solutions Laravel personnalisées et impeccables à ses clients. Laravel est un framework basé sur PHP open source qui offre une structure simple et robuste le rendant très facile à utiliser.",
+      "p2": "Nos développeurs Laravel fournissent des structures de sites web de haute qualité. Chez GoZoom, nous travaillons en étroite collaboration avec nos clients pour créer des applications web évolutives utilisant Laravel afin d'élever votre entreprise grâce à des applications web de haute qualité.",
+      "p3_start": "Vous souhaitez migrer votre projet actuel vers le framework Laravel ? Nous avons des années d'expérience dans la migration vers Laravel à partir d'autres frameworks ou de PHP natif. Laravel offre des bases de code supérieures, une maintenance facile et des fonctionnalités résilientes, il a prouvé sa position parmi les ",
+      "p3_link": "meilleurs frameworks PHP disponibles",
+      "p4": "Nos experts développeurs Laravel vous aideront à structurer une approche détaillée pour le développement de sites web et d'applications propulsés par Laravel pour votre entreprise. Embauchez la meilleure entreprise de développement Laravel pour obtenir des solutions de haute qualité à des prix compétitifs."
+    },
+    "offerings": {
+      "title": "Ce que nos développeurs Laravel proposent",
+      "list": [
+        "Développement Laravel rapide et efficace",
+        "Développement d'applications mobiles",
+        "Intégration Laravel complexe",
+        "Migrations et mises à niveau Laravel",
+        "Frameworks Laravel personnalisés",
+        "Solutions d'hébergement évolutives et gérées",
+        "Conseil et stratégie Laravel"
+      ]
+    },
+    "why_us": {
+      "title_main": "Pourquoi choisir nos ",
+      "title_gradient": "Développeurs Laravel ?",
+      "items": [
+        {
+          "title": "Assurance Qualité et Tests Approfondis",
+          "desc": "Nous employons des professionnels hautement qualifiés pour nos services de développement Laravel qui fournissent une qualité de travail optimale à tout moment. Notre équipe d'assistance dédiée répond rapidement pour résoudre les problèmes et mettre en œuvre les suggestions ou améliorations proposées par nos clients."
+        },
+        {
+          "title": "Bénéficiez d'experts Laravel à des tarifs compétitifs",
+          "desc": "Au fil des ans, nous avons rencontré de nombreuses tâches difficiles lors du développement de sites web exceptionnels basés sur Laravel pour divers besoins commerciaux. Notre expérience nous permet de mettre à disposition nos meilleurs développeurs Laravel pour votre projet aux tarifs les plus rentables."
+        },
+        {
+          "title": "Solutions Laravel personnalisées et méthodologie de projet",
+          "desc": "GoZoom est l'entreprise de développement Laravel la plus complète en Inde, en Nouvelle-Zélande, en Australie et aux États-Unis pour fournir d'excellents services à ses clients. Notre équipe de développement Laravel sort des sentiers battus pour satisfaire vos exigences commerciales."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Contactez nos experts développeurs Laravel dès aujourd'hui",
+      "send_message": "Envoyez-nous un message",
+      "form": {
+        "name": "Nom",
+        "business": "Entreprise/Organisation",
+        "email": "Email",
+        "phone": "N° de téléphone",
+        "subject": "Sujet",
+        "message": "Dites-nous en plus sur votre demande",
+        "privacy": "J'ai lu et j'accepte la politique de confidentialité",
+        "subscribe": "Je souhaite recevoir des informations sur les produits, services et newsletters de GoZooms.",
+        "why_collect_title": "Pourquoi nous collectons ces informations et comment nous les utilisons :",
+        "why_collect_desc": "Nous traitons vos informations avec respect et nous ne les vendrons jamais à d'autres entreprises. Ces informations sont collectées par nécessité pour la création de compte de base, la facturation et l'assistance. Nous ne vous enverrons des e-mails que pour l'assistance.",
+        "submit": "Envoyer le message"
+      }
+    }
+  },
+  "django_dev_page": {
+    "hero": {
+      "badge": "Framework Python de haut niveau",
+      "title_main": "Développement Web ",
+      "title_gradient": "Django",
+      "desc": "Construisez des applications web et des API incroyablement rapides, sécurisées et évolutives avec Django. Parfait pour les applications gourmandes en données, les intégrations d'apprentissage automatique et les architectures d'entreprise.",
+      "cta_start": "Démarrez votre projet",
+      "cta_services": "Nos services"
+    },
+    "expertise": {
+      "badge": "Services Python de base",
+      "title": "Ce que nous construisons avec Django",
+      "desc": "Des API backend robustes alimentant des applications mobiles aux portails d'entreprise complets en pile complète.",
+      "items": {
+        "enterprise": {
+          "title": "Applications Web d'Entreprise",
+          "desc": "Applications web sécurisées, évolutives et hautement disponibles capables de gérer des pics massifs de trafic utilisateur."
+        },
+        "api": {
+          "title": "API REST et GraphQL",
+          "desc": "Construction de ponts de données fluides utilisant Django REST Framework (DRF) pour alimenter les frontends React/Vue modernes ou les applications mobiles."
+        },
+        "data": {
+          "title": "Portails gourmands en données",
+          "desc": "Gestion experte de bases de données compliquées utilisant le puissant ORM de Django pour créer des tableaux de bord et des portails d'analyse."
+        },
+        "security": {
+          "title": "Systèmes de haute sécurité",
+          "desc": "Tirer parti des défenses intégrées de Django contre le clickjacking, le cross-site scripting et l'injection SQL pour les applications financières et de santé."
+        },
+        "ai": {
+          "title": "Intégration IA/ML",
+          "desc": "Intégration native de modèles d'apprentissage automatique basés sur Python (TensorFlow, PyTorch) directement dans votre backend web."
+        },
+        "saas": {
+          "title": "Architecture SaaS",
+          "desc": "Conception d'architectures multi-tenants et de flux de facturation par abonnement utilisant les capacités de développement rapide de Django."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title": "Pourquoi choisir GoZoom pour Django ?",
+      "desc": "\"Le framework web pour les perfectionnistes avec des délais.\" Nous adhérons strictement aux principes Pythoniques et aux meilleures pratiques Django pour garantir que votre backend n'est pas seulement rapide aujourd'hui, mais maintenable pour les années à venir.",
+      "list": [
+        "Développement rapide de MVP à l'aide de panneaux d'administration intégrés complets",
+        "Expertise en Celery, mise en cache Redis et files d'attente de tâches asynchrones",
+        "Architecture de sécurité impeccable dès la sortie de la boîte",
+        "Intégration transparente du pipeline CI/CD DevOps (Docker, AWS, Heroku)"
+      ]
+    }
+  },
+  "nextjs_dev_page": {
+    "hero": {
+      "badge": "Le framework React pour le Web",
+      "title_main": "Développement ",
+      "title_gradient": "Next.js Expert",
+      "desc": "Exploitez la puissance de React avec le rendu côté serveur. Nous construisons des applications web incroyablement rapides et optimisées pour le référencement, en utilisant le routeur d'application moderne et les capacités de calcul Edge.",
+      "cta_start": "Construire avec Next.js",
+      "cta_about": "À Propos de Nous"
+    },
+    "about": {
+      "title": "Élevez votre présence web avec Next.js",
+      "p1": "Nous fournissons des services de développement Next.js de haute qualité pour créer des applications web évolutives et performantes. Next.js est un puissant framework React qui permet des fonctionnalités telles que le rendu côté serveur et la génération de sites statiques, ce qui en fait le choix idéal pour le développement web moderne.",
+      "p2": "Notre équipe d'experts travaille en étroite collaboration avec ses clients pour créer des sites web rapides, sécurisés et optimisés pour le référencement qui améliorent l'engagement des utilisateurs et stimulent la croissance de l'entreprise."
+    },
+    "services": {
+      "badge": "Notre Expertise",
+      "title": "Services de développement Next.js",
+      "items": {
+        "ssr": {
+          "title": "Rendu côté serveur (SSR)",
+          "desc": "Optimisation des temps de chargement et de la livraison de contenu dynamique pour de meilleures expériences utilisateur et un meilleur référencement."
+        },
+        "static": {
+          "title": "Génération de sites statiques (SSG)",
+          "desc": "Construction de sites web statiques ultra-rapides, faciles à entretenir et hautement sécurisés."
+        },
+        "pwa": {
+          "title": "Applications Web Progressives (PWA)",
+          "desc": "Création d'applications web mobiles privilégiant le mobile, fonctionnant hors ligne et ressemblant à des applications natives."
+        },
+        "seo": {
+          "title": "Développement optimisé pour le référencement",
+          "desc": "S'assurer que votre site web est entièrement optimisé pour les moteurs de recherche grâce aux fonctionnalités intégrées de Next.js."
+        },
+        "api": {
+          "title": "Routes API et intégration backend",
+          "desc": "Connecter de manière transparente votre frontend avec des fonctions serverless puissantes et des bases de données."
+        },
+        "enterprise": {
+          "title": "Solutions de classe entreprise",
+          "desc": "Construction d'applications sécurisées, évolutives et robustes pour les grandes entreprises."
+        }
+      }
+    },
+    "why_us": {
+      "title": "Pourquoi nous choisir pour le développement Next.js ?",
+      "items": [
+        {
+          "title": "La performance d'abord",
+          "desc": "Nous accordons la priorité à la rapidité et à l'efficacité dans chaque ligne de code que nous écrivons."
+        },
+        {
+          "title": "Optimisé pour le référencement",
+          "desc": "Nos sites sont construits en pensant aux moteurs de recherche dès le premier jour."
+        },
+        {
+          "title": "Architecture évolutive",
+          "desc": "Nous concevons des systèmes qui peuvent évoluer avec votre entreprise."
+        }
+      ]
+    }
+  },
+  "java_dev_page": {
+    "hero": {
+      "badge": "Robustesse de classe entreprise",
+      "title_main": "Applications Java ",
+      "title_gradient": "Enterprise",
+      "desc": "Créez des solutions logicielles sécurisées, hautement évolutives et exceptionnellement fiables avec Java. Nous nous spécialisons dans les applications d'entreprise robustes, les architectures complexes et les systèmes backend haute performance.",
+      "cta_start": "Démarrez votre projet",
+      "cta_about": "À Propos de Nous"
+    },
+    "features": {
+      "badge": "Offres de base",
+      "title": "Ce que nous construisons avec Java",
+      "items": {
+        "enterprise": {
+          "title": "Applications Web d'Entreprise",
+          "desc": "Portails B2B sécurisés, ERP et systèmes CRM construits à l'aide de frameworks robustes comme Spring Boot et Java EE."
+        },
+        "microservices": {
+          "title": "Architectures Microservices",
+          "desc": "Découplage d'applications monolithiques en microservices évolutifs et déployables indépendamment."
+        },
+        "security": {
+          "title": "Systèmes de haute sécurité",
+          "desc": "Développement d'applications répondant à des exigences strictes de conformité financière et de santé utilisant les API de sécurité Java robustes."
+        },
+        "api": {
+          "title": "Développement d'API",
+          "desc": "Construction d'API REST et SOAP à haut débit et faible latence pour servir les frontends mobiles et les intégrations tierces."
+        },
+        "modernization": {
+          "title": "Modernisation des systèmes hérités",
+          "desc": "Migration et refactorisation minutieuses de bases de code obsolètes vers les normes Java modernes sans interruption d'activité."
+        },
+        "cloud": {
+          "title": "Java natif dans le cloud",
+          "desc": "Optimisation des applications d'entreprise utilisant des environnements natifs Kubernetes, Docker et AWS."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Pourquoi Nous",
+      "title": "Pourquoi GoZoom pour Java Enterprise ?",
+      "desc": "Java est la pierre angulaire des plus grands réseaux d'entreprise au monde. Nos équipes d'ingénierie backend spécialisées construisent des architectures mathématiquement saines, hautement typées et imperméables aux goulots d'étranglement d'échelle.",
+      "list": [
+        "Adhérence stricte aux principes de conception orientée objet et SOLID",
+        "Expertise approfondie de l'écosystème Spring (Spring Boot, Security, Data)",
+        "Réglage étendu des performances pour le multi-threading JVM et la gestion de la mémoire",
+        "Conception d'architecture avec un temps de fonctionnement garanti de 99,9 %"
+      ]
+    }
   }
 }

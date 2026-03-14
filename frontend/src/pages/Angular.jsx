@@ -5,8 +5,11 @@ import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
 import { FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Angular = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     const wow = new WOW({ live: false });
@@ -35,25 +38,25 @@ const Angular = () => {
         <div className="container mx-auto px-6 lg:px-16 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
-              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">Angular Framework</span>
+              <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('angular_dev_page.hero.badge')}</span>
               <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase">
-                Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span>
+                {t('angular_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">{t('angular_dev_page.hero.title_gradient')}</span>
               </h1>
               <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
-                Everything you need to get your project started in 24 hours — architecture, speed, and reliability.
+                {t('angular_dev_page.hero.desc')}
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                  Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  {t('angular_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base sm:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
-                  About Us
+                  {t('angular_dev_page.hero.cta_about')}
                 </Link>
               </div>
             </div>
             <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
               <div className="relative z-10 p-8 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] shadow-2xl animate-float">
-                <img src="/images/angularboy.svg" alt="Angular Specialist" className="w-full h-auto drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]" />
+                <img src="/images/angularboy.svg" alt={t('angular_dev_page.hero.badge')} className="w-full h-auto drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]" />
               </div>
             </div>
           </div>
@@ -66,16 +69,16 @@ const Angular = () => {
         <div className="container relative z-10 block">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1" data-aos="fade-right">
-              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">About Angular</span>
+              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">{t('angular_dev_page.about.badge')}</span>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
-                Enhance your project with our in-house talent, offering expertise in <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development</span> services.
+                {t('angular_dev_page.about.title')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">{t('angular_dev_page.about.title_gradient')}</span>
               </h2>
               <div className="space-y-5">
                 <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-red-500 pl-4 bg-slate-50 py-2 rounded-r-lg">
-                  Angular is an open-source JavaScript framework that extends the functionality of HTML. The important use of Angular is to improve browser-based applications with the help of MVC capability. It makes front-end web development and testing easier using templates, command line tools, and IDEs.
+                  {t('angular_dev_page.about.desc_highlight')}
                 </p>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  GoZooms employs specialized Angular developers experienced in Javascript to create real-time applications effortlessly. We are highly recognized as the best Angular development company for developing single page applications in an agile manner.
+                  {t('angular_dev_page.about.desc_main')}
                 </p>
               </div>
             </div>
@@ -87,34 +90,24 @@ const Angular = () => {
       <section className="py-24 bg-slate-50 relative">
         <div className="container relative z-10 block">
           <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">Our Strengths</span>
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Dedicated and Skilled <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development</span></h3>
+            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">{t('angular_dev_page.strengths.badge')}</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">{t('angular_dev_page.strengths.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">{t('angular_dev_page.strengths.title_gradient')}</span></h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-24 h-24 mx-auto mb-6 bg-red-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="../images/thought.png" className="w-14 h-14 object-contain" alt="5 years experience" />
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                5+ years of working with Angular has given us extensive knowledge and technical skills to deal with all types of projects.
-              </p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-24 h-24 mx-auto mb-6 bg-orange-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="../images/expertise.png" className="w-14 h-14 object-contain" alt="Experienced" />
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                We're an accomplished Angular development company working with enthusiasm and dedication to produce great results.
-              </p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-24 h-24 mx-auto mb-6 bg-amber-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="../images/performance.png" className="w-14 h-14 object-contain" alt="Efficiency" />
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                Our efficiency means competitive rates and rapid delivery of Angular development services and solutions.
-              </p>
-            </div>
+            {t('angular_dev_page.strengths.items', { returnObjects: true }).map((desc, i) => {
+              const icons = ['../images/thought.png', '../images/expertise.png', '../images/performance.png'];
+              const bgs = ['bg-red-50', 'bg-orange-50', 'bg-amber-50'];
+              return (
+                <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 text-center group" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+                  <div className={`w-24 h-24 mx-auto mb-6 ${bgs[i]} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                    <img src={icons[i]} className="w-14 h-14 object-contain" alt="Strength Icon" />
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -129,10 +122,10 @@ const Angular = () => {
               <img className="w-full max-w-xs mx-auto relative z-10 drop-shadow-2xl animate-float" src="../images/angular-icon.svg" alt="Angular Services" />
             </div>
             <div data-aos="fade-left">
-              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">What We Offer</span>
-              <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">Our High Quality <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Angular Development Services</span></h3>
+              <span className="inline-block py-1 px-3 rounded-full bg-red-50 text-red-600 font-bold text-sm mb-4">{t('angular_dev_page.expertise.badge')}</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">{t('angular_dev_page.expertise.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">{t('angular_dev_page.expertise.title_gradient')}</span></h3>
               <div className="grid grid-cols-2 gap-4">
-                {['Angular web app development', 'Angular dashboards and web portals', 'Angular mobile web app development', 'Angular single-page applications', 'Angular performance optimization', 'Angular eCommerce development', 'Angular cross-platform development', 'Angular plugin and widget development'].map((service, i) => (
+                {t('angular_dev_page.expertise.list', { returnObjects: true }).map((service, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl hover:bg-red-50 transition-colors">
                     <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-lg flex items-center justify-center">
                       <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
@@ -150,11 +143,11 @@ const Angular = () => {
       <section className="py-24 bg-gradient-to-br from-slate-900 via-red-950/50 to-slate-900 relative overflow-hidden">
         <div className="container relative z-10 block">
           <div className="text-center mb-14">
-            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-4">Get In Touch</span>
-            <h3 className="text-3xl md:text-5xl font-bold text-white">Talk to GoZooms Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Angular Developers</span> Today</h3>
+            <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-4">{t('angular_dev_page.cta_section.badge')}</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-white">{t('angular_dev_page.cta_section.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">{t('angular_dev_page.cta_section.title_gradient')}</span>{t('angular_dev_page.cta_section.title_end')}</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {['Get in touch with us', 'Discuss your project', 'Finalize the details', 'Project Begins'].map((step, i) => (
+            {t('angular_dev_page.cta_section.steps', { returnObjects: true }).map((step, i) => (
               <div key={i} className={`relative px-8 py-4 rounded-full font-bold text-white ${i === 0 ? 'bg-red-600' : i === 3 ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-white/10'} border border-white/20`}>
                 <span className="absolute -top-2 -left-2 w-6 h-6 bg-white text-slate-800 rounded-full text-xs font-extrabold flex items-center justify-center">{i + 1}</span>
                 {step}
@@ -162,21 +155,21 @@ const Angular = () => {
             ))}
           </div>
           <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <input type="text" placeholder="Name" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
-              <input type="text" placeholder="Business/Organization" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
-              <input type="email" placeholder="Email" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
-              <input type="tel" placeholder="Phone No." className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
-              <input type="text" placeholder="Subject" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors md:col-span-2" />
-            </div>
-            <textarea rows="5" placeholder="Tell us more about your enquiry" className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors mb-6"></textarea>
-            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-              <label className="flex items-center gap-2 text-slate-300 text-sm cursor-pointer">
-                <input type="checkbox" defaultChecked className="rounded" />
-                I have read and agree to the <a href="#" className="text-red-400 hover:underline">Privacy Policy</a>
-              </label>
-              <button type="submit" className="px-10 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">Submit</button>
-            </div>
+            <form className="grid md:grid-cols-2 gap-6 mb-6">
+              <input type="text" placeholder={t('angular_dev_page.cta_section.form.name')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="text" placeholder={t('angular_dev_page.cta_section.form.business')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="email" placeholder={t('angular_dev_page.cta_section.form.email')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="tel" placeholder={t('angular_dev_page.cta_section.form.phone')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors" />
+              <input type="text" placeholder={t('angular_dev_page.cta_section.form.subject')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors md:col-span-2" />
+              <textarea rows="5" placeholder={t('angular_dev_page.cta_section.form.message')} className="w-full px-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-400 transition-colors mb-6 md:col-span-2"></textarea>
+              <div className="md:col-span-2 flex flex-col sm:flex-row justify-between items-start gap-4">
+                <label className="flex items-center gap-2 text-slate-300 text-sm cursor-pointer">
+                  <input type="checkbox" defaultChecked className="rounded" />
+                  {t('angular_dev_page.cta_section.form.privacy')}
+                </label>
+                <button type="submit" className="px-10 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">{t('angular_dev_page.cta_section.form.submit')}</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -185,52 +178,26 @@ const Angular = () => {
       <section className="py-24 bg-slate-50 relative">
         <div className="container relative z-10 block">
           <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">Why Us</span>
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Why Should You <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Choose Us?</span></h3>
+            <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 font-bold text-sm mb-4">{t('angular_dev_page.why_us.badge')}</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">{t('angular_dev_page.why_us.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">{t('angular_dev_page.why_us.title_gradient')}</span></h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/expertises.png" className="w-8 h-8" alt="Customer Satisfaction" />
+            {[
+              { key: 'satisfaction', icon: '../images/expertises.png', bg: 'bg-red-50' },
+              { key: 'experience', icon: '../images/guarantees.png', bg: 'bg-orange-50' },
+              { key: 'collaboration', icon: '../images/collectives.png', bg: 'bg-amber-50' },
+              { key: 'fast', icon: '../images/rockets.png', bg: 'bg-green-50' },
+              { key: 'pricing', icon: '../images/discounts.png', bg: 'bg-yellow-50' },
+              { key: 'support', icon: '../images/telephones.png', bg: 'bg-cyan-50' }
+            ].map((item, i) => (
+              <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+                <div className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+                  <img src={item.icon} className="w-8 h-8" alt="Feature Icon" />
+                </div>
+                <h4 className="text-xl font-bold text-slate-800 mb-3">{t(`angular_dev_page.why_us.items.${item.key}.title`)}</h4>
+                <p className="text-slate-600 leading-relaxed">{t(`angular_dev_page.why_us.items.${item.key}.desc`)}</p>
               </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">Customer Satisfaction</h4>
-              <p className="text-slate-600 leading-relaxed">We take customer satisfaction seriously, providing you a dedicated account manager and project manager to make sure all aspects of your engagement with us run smoothly.</p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/guarantees.png" className="w-8 h-8" alt="Extensive Experience" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">Extensive Experience</h4>
-              <p className="text-slate-600 leading-relaxed">GoZooms is a provider of efficient solutions for business big or small. We don't utilize off-the-shelf products but instead rely upon a fully integrated customized approach.</p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/collectives.png" className="w-8 h-8" alt="Exceptional Collaboration" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">Exceptional Collaboration</h4>
-              <p className="text-slate-600 leading-relaxed">Our offshore developers will work with you for dedicated hours. We aim to shape the right engagement model for your custom solution to meet your needs on time and on budget.</p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/rockets.png" className="w-8 h-8" alt="Fast Development" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">Fast Development</h4>
-              <p className="text-slate-600 leading-relaxed">We have refined our development process to result in applications being built quicker and more efficiently, so projects are completed on time and on budget.</p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/discounts.png" className="w-8 h-8" alt="Competitive Pricing" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">Competitive Pricing</h4>
-              <p className="text-slate-600 leading-relaxed">Hiring an expert Angular developer, designer, or consultant? Make sure you get a quote from us as we have some of the most competitive rates on the market.</p>
-            </div>
-            <div className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <img src="../images/telephones.png" className="w-8 h-8" alt="Technical Support" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-800 mb-3">18/5 Technical Support</h4>
-              <p className="text-slate-600 leading-relaxed">Our open communication lines, dedicated support team, and strong technical assistance helps your business through any issues that you encounter.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -4,9 +4,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle, FaRocket, FaShieldAlt, FaCogs } from 'react-icons/fa';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Laravel = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     const wow = new WOW({ live: false });
@@ -15,198 +18,165 @@ const Laravel = () => {
 
   return (
     <div>
-      {/* EXACT MIGRATED CONTENT BEGIN */}
-
-
-
-
-
-      <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#1a0b0b] overflow-hidden">
-        {/* Custom Decorative Elements */}
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#2d0b0b] overflow-hidden">
+        {/* Decorative Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-rose-600/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-orange-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -top-[10%] -right-[10%] w-[clamp(300px,60vw,800px)] h-[clamp(300px,60vw,800px)] bg-red-600/10 rounded-full blur-[150px] animate-pulse"></div>
+          <div className="absolute -bottom-[10%] -left-[10%] w-[clamp(250px,50vw,600px)] h-[clamp(250px,50vw,600px)] bg-orange-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5" style={{ backgroundImage: 'radial-gradient(#ff2d20 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
-              <span className="inline-block py-1 px-4 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">Laravel Framework</span>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
-                Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Laravel</span> Development Company
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+              <span className="inline-block py-2 px-4 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('laravel_dev_page.hero.badge')}</span>
+              <h1 className="text-hero-title text-white mb-8 leading-[1.1] tracking-tight uppercase">
+                {t('laravel_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2d20] to-[#ff7d75]">{t('laravel_dev_page.hero.title_gradient')}</span>{t('laravel_dev_page.hero.title_end')}
               </h1>
-              <p className="text-lg sm:text-xl text-red-100 mb-12 max-w-2xl mx-auto font-medium">
-                We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.
+              <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
+                {t('laravel_dev_page.hero.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 text-white font-black text-center text-base lg:text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                  Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-[#ff2d20] text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-600/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                  {t('laravel_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-red-100 uppercase tracking-wider">
-                  About Us
+                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                  {t('laravel_dev_page.hero.cta_about')}
                 </Link>
               </div>
             </div>
-            <div className="w-full lg:flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[2rem] sm:rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[320px] lg:max-w-[400px] shadow-2xl animate-float">
-                <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]" />
+            <div className="flex-1 relative" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-4 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-sm shadow-2xl animate-float">
+                <img src="/images/laravelboy1.svg" alt={t('laravel_dev_page.hero.badge')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
               </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#ff2d20]/20 rounded-full blur-2xl -z-10 animate-pulse"></div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* About Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container relative z-10 block">
+          <div className="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">
+              {t('laravel_dev_page.about.title')}
+            </h2>
+            <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-justify">
+              <p>{t('laravel_dev_page.about.p1')}</p>
+              <p>{t('laravel_dev_page.about.p2')}</p>
+              <p>
+                <Trans
+                  i18nKey="laravel_dev_page.about.p3_start"
+                  components={{
+                    link: <Link to="/blog/laravel-migration" className="text-[#ff2d20] font-bold hover:underline" />
+                  }}
+                >
+                  {t('laravel_dev_page.about.p3_start')}
+                </Trans>
+                {t('laravel_dev_page.about.p3_link')}
+              </p>
+              <p>{t('laravel_dev_page.about.p4')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Offerings Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container relative z-10 block">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <h3 className="text-3xl md:text-5xl font-bold text-slate-800 mb-10 leading-tight">
+                {t('laravel_dev_page.offerings.title')}
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {t('laravel_dev_page.offerings.list', { returnObjects: true }).map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <FaCheckCircle className="text-[#ff2d20] mt-1 flex-shrink-0" />
+                    <span className="text-slate-700 font-semibold">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative" data-aos="fade-left">
+              <img src="/images/laravelboy2.svg" alt="Laravel Features" className="w-full h-auto drop-shadow-2xl animate-float" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
       <section className="py-24 bg-white relative">
         <div className="container relative z-10 block">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div data-aos="fade-right">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Expert Solutions From an Expert Laravel Development Company</h2>
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
-                <p>GoZoom offers a wide-range of flawless <strong>custom Laravel solutions</strong> to our clients. Laravel is an open source PHP based framework which offers a simple and robust structure making it very easy to use.</p>
-                <p>Our Laravel developers provide top quality website structures. At GoZoom, we work closely with our clients to build scalable web applications making use of Laravel to elevate your business through high quality web applications.</p>
-                <p>Want to move your existing project to the Laravel framework? We have years of experience <strong>migrating to Laravel</strong> from other frameworks or vanilla PHP. Laravel offers superior code foundations, easy maintainability and resilient features, it has proven its position amongst the <a href="#" className="text-red-500 font-bold hover:underline">best PHP frameworks available</a>.</p>
-                <p>Our expert Laravel developers will help you structure a detailed approach for developing Laravel powered websites and applications for your business. Hire the #1 Laravel Development Company to get top quality solutions at competitive prices.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-slate-50 relative">
-        <div className="container relative z-10 block">
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
-            <div className="grid lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-4 flex justify-center">
-                <img src="../images/laravelb.svg" alt="Laravel" className="w-48 h-auto" />
-              </div>
-              <div className="lg:col-span-8">
-                <h3 className="text-3xl font-bold text-slate-800 mb-8 border-b border-slate-100 pb-4">What Our Laravel Developers Offer</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <ul className="space-y-4">
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Fast and efficient Laravel development</li>
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Mobile application development</li>
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Complex Laravel integration</li>
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Laravel migrations and upgrades</li>
-                  </ul>
-                  <ul className="space-y-4">
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Custom Laravel frameworks</li>
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Scalable and managed hosting solutions</li>
-                    <li className="flex items-center text-slate-700 font-semibold"><div className="w-2 h-2 rounded-full bg-red-500 mr-3"></div> Laravel consulting and strategy</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-
-      <section className="py-24 bg-blue-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/20 blur-[100px] rounded-full mix-blend-screen"></div>
-        <div className="container relative z-10 block">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">Why Choose Our <span className="text-red-400">Laravel Developers?</span></h3>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">
+              {t('laravel_dev_page.why_us.title_main')}<span className="text-[#ff2d20]">{t('laravel_dev_page.why_us.title_gradient')}</span>
+            </h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
-              <h4 className="text-xl font-bold text-red-300 mb-4">Comprehensive Quality Assurance and Testing</h4>
-              <p className="text-blue-100 leading-relaxed">We employ highly skilled professionals for our <strong>Laravel development services</strong> who deliver the highest quality work at all times. Our dedicated support team responds quickly to resolve issues and implement suggestions or improvements proposed by our clients.</p>
-            </div>
-            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
-              <h4 className="text-xl font-bold text-red-300 mb-4">Get Laravel Experts at Competitive Rates</h4>
-              <p className="text-blue-100 leading-relaxed">Over the years, we’ve encountered numerous challenging tasks when developing exceptional Laravel-based websites for different business needs. Our experience means that we can provide our best Laravel developers for your project at the most cost-effecive rates.</p>
-            </div>
-            <div className="glass-card bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:-translate-y-2 transition-transform duration-300">
-              <h4 className="text-xl font-bold text-red-300 mb-4">Custom Laravel Solutions &amp; Project Methodology</h4>
-              <p className="text-blue-100 leading-relaxed">GoZoom is the most comprehensive Laravel development company in India, New Zealand, Australia and USA for delivering excellent services to our clients. Our Laravel development team thinks outside the box to satisfy your business requirements.</p>
-            </div>
+            {t('laravel_dev_page.why_us.items', { returnObjects: true }).map((item, i) => (
+              <div key={i} className="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
+                <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  {i === 0 ? <FaShieldAlt className="text-3xl text-[#ff2d20]" /> : i === 1 ? <FaRocket className="text-3xl text-[#ff2d20]" /> : <FaCogs className="text-3xl text-[#ff2d20]" />}
+                </div>
+                <h4 className="text-xl font-bold text-slate-800 mb-4">{item.title}</h4>
+                <p className="text-slate-600 leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50 relative">
+      {/* CTA / Contact Section */}
+      <section className="py-24 bg-[#1a0b0b] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff2d20]/5 rounded-full blur-[120px]"></div>
         <div className="container relative z-10 block">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12">
-            <div className="grid lg:grid-cols-2 gap-12">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] p-8 md:p-16">
+            <div className="grid lg:grid-cols-2 gap-16">
               <div>
-                <h3 className="text-3xl font-bold text-slate-800 mb-6 w-full lg:max-w-md">Get in touch with our expert Laravel developers today</h3>
-                <img src="../images/laravelboy2.svg" alt="Laravel solutions" className="w-full max-w-sm mx-auto hover:scale-105 transition-transform duration-500" />
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase leading-tight">
+                  {t('laravel_dev_page.cta_section.title')}
+                </h3>
+                <p className="text-slate-400 text-lg mb-8">{t('laravel_dev_page.cta_section.send_message')}</p>
+                <img src="/images/laravel-hero.svg" alt="Laravel White" className="w-32 opacity-20" />
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a message</h3>
-                <form action="../laravel.php" method="post" className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <input type="text" name="laravelName" placeholder="Name" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
-                    </div>
-                    <div>
-                      <input type="text" name="laravelBusiness" placeholder="Business/Organization" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" />
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <input type="email" name="laravelEmail" placeholder="Email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
-                    </div>
-                    <div>
-                      <input type="tel" name="laravelPhoneNo" placeholder="Phone No" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
-                    </div>
-                  </div>
-                  <div>
-                    <input type="text" name="laravelSubject" placeholder="Subject" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors" required />
-                  </div>
-                  <div>
-                    <textarea name="laravelTextArea" rows="5" placeholder="Tell us more about your enquiry" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-colors resize-none" required></textarea>
-                  </div>
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <input type="text" placeholder={t('laravel_dev_page.cta_section.form.name')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors" />
+                  <input type="text" placeholder={t('laravel_dev_page.cta_section.form.business')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors" />
+                  <input type="email" placeholder={t('laravel_dev_page.cta_section.form.email')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors" />
+                  <input type="tel" placeholder={t('laravel_dev_page.cta_section.form.phone')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors" />
+                </div>
+                <input type="text" placeholder={t('laravel_dev_page.cta_section.form.subject')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors" />
+                <textarea rows="4" placeholder={t('laravel_dev_page.cta_section.form.message')} className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-[#ff2d20] transition-colors"></textarea>
 
-                  <div className="space-y-4">
-                    <label className="flex items-start text-sm text-slate-600">
-                      <input type="checkbox" name="AgreePrivacyPolicy" className="mt-1 mr-3 rounded text-red-500 focus:ring-red-500" required defaultChecked />
-                      <span>I have read and agree to the <a href="#" className="text-red-500 hover:underline">Privacy Policy</a></span>
-                    </label>
-                    <label className="flex items-start text-sm text-slate-600">
-                      <input type="checkbox" name="subscribeCheck" className="mt-1 mr-3 rounded text-red-500 focus:ring-red-500" defaultChecked />
-                      <span>I would like to receive information about GoZooms’ products, services and newsletters.</span>
-                    </label>
-                  </div>
+                <div className="space-y-4">
+                  <label className="flex items-start gap-3 text-slate-400 text-sm cursor-pointer">
+                    <input type="checkbox" className="mt-1" defaultChecked />
+                    <span>{t('laravel_dev_page.cta_section.form.privacy')}</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-slate-400 text-sm cursor-pointer">
+                    <input type="checkbox" className="mt-1" />
+                    <span>{t('laravel_dev_page.cta_section.form.subscribe')}</span>
+                  </label>
+                </div>
 
-                  <div className="pt-4 border-t border-slate-100">
-                    <p className="text-xs text-slate-500 mb-6">
-                      <strong>Why we collect this information and how we use it:</strong> We treat your information with respect, and we will never sell it to other companies. This information is collected out of necessity for basic account creation, billing, and support purposes. We will only email you for support.
-                    </p>
-                    <button type="submit" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold hover:shadow-lg hover:shadow-red-500/30 transition-all hover:-translate-y-1">
-                      Submit Message
-                    </button>
-                  </div>
-                </form>
-              </div>
+                <div className="pt-4 border-t border-white/10">
+                  <h5 className="text-white font-bold mb-2 text-sm">{t('laravel_dev_page.cta_section.form.why_collect_title')}</h5>
+                  <p className="text-slate-500 text-xs leading-relaxed mb-6">
+                    {t('laravel_dev_page.cta_section.form.why_collect_desc')}
+                  </p>
+                  <button type="submit" className="w-full sm:w-auto px-12 py-5 rounded-2xl bg-[#ff2d20] text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-600/40 transition-all hover:-translate-y-1 uppercase tracking-wider">
+                    {t('laravel_dev_page.cta_section.form.submit')}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* EXACT MIGRATED CONTENT END */}
     </div>
   );
 };

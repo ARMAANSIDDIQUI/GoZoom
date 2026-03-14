@@ -5,8 +5,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
+import { useTranslation } from 'react-i18next';
 
 const MobileAppDev = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
@@ -15,7 +18,6 @@ const MobileAppDev = () => {
 
     return (
         <div>
-            {/* Hero Banner — Purple Mobile colors */}
             {/* Hero Banner — Purple Mobile colors */}
             <section className="hero-premium">
                 {/* Layered Animated Background Elements */}
@@ -29,21 +31,21 @@ const MobileAppDev = () => {
                         <div className="w-full lg:w-1/2 text-center flex flex-col items-center">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-                                Mobile Development
+                                {t('mobile_app_dev_page.hero.badge')}
                             </div>
                             <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
-                                Top Mobile App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Company</span>
+                                {t('mobile_app_dev_page.hero.title1')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{t('mobile_app_dev_page.hero.title2')}</span>
                             </h1>
                             <p className="text-hero-desc text-slate-400 mb-8 lg:mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-                                Crafting secure, dynamic solutions for iOS, Android, and Cross-Platform, ensuring robustness and performance.
+                                {t('mobile_app_dev_page.hero.desc')}
                             </p>
 
                             {/* Stats Grid - Glassmorphism */}
                             <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8 lg:mb-10 w-full max-w-md mx-auto" data-aos="fade-up" data-aos-delay="500">
                                 {[
-                                    { label: 'Users', value: '100k' },
-                                    { label: 'Featured', value: '100+' },
-                                    { label: 'Published', value: '600+' },
+                                    { label: t('mobile_app_dev_page.hero.stats.users'), value: '100k' },
+                                    { label: t('mobile_app_dev_page.hero.stats.featured'), value: '100+' },
+                                    { label: t('mobile_app_dev_page.hero.stats.published'), value: '600+' },
                                 ].map((stat, i) => (
                                     <div key={i} className="glass-card p-3 sm:p-4 text-center">
                                         <p className="text-lg lg:text-2xl font-black text-white">{stat.value}</p>
@@ -53,14 +55,18 @@ const MobileAppDev = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="700">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-base lg:text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">Talk to Our Expert <FaArrowRight className="group-hover:translate-x-1 transition-transform" /></Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white text-center font-black text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">Know More</Link>
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-base lg:text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">
+                                    {t('mobile_app_dev_page.hero.cta_expert')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white text-center font-black text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">
+                                    {t('mobile_app_dev_page.hero.cta_more')}
+                                </Link>
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 relative flex justify-center items-center h-full" data-aos="fade-left">
                             <div className="relative group w-full max-w-[300px] lg:max-w-none">
                                 <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[60px] lg:blur-[80px] group-hover:bg-purple-500/30 transition-all duration-700"></div>
-                                <img src="../images/app-mockup.png" alt="App development" className="w-full h-auto relative z-10 animate-float drop-shadow-2xl" />
+                                <img src="../images/app-mockup.png" alt={t('mobile_app_dev_page.hero.img_alt')} className="w-full h-auto relative z-10 animate-float drop-shadow-2xl" />
                             </div>
                         </div>
                     </div>
@@ -72,17 +78,17 @@ const MobileAppDev = () => {
                 <div className="absolute top-0 right-0 w-80 h-80 bg-purple-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
                 <div className="container relative z-10 block">
                     <div className="max-w-4xl mx-auto text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-purple-50 text-purple-600 font-bold text-sm mb-4">We Are Gozoom Technologies</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Award</span> Winning App Development Company</h2>
-                        <p className="text-xl text-slate-600 font-semibold mb-4">#1 Mobile App Company, Awarded for its Top Features/Editor Apps Delivered.</p>
-                        <p className="text-lg text-slate-600 leading-relaxed">Gozoom Technologies is a leading global player in Web, App, and Digital Marketing services. Specializing in Web Design, App Development, Digital Marketing, Product Design, and Cloud Services, we prioritize affordability while delivering top-quality solutions.</p>
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-50 text-purple-600 font-bold text-sm mb-4">{t('mobile_app_dev_page.about.badge')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">{t('mobile_app_dev_page.about.title1')}</span>{t('mobile_app_dev_page.about.title2')}</h2>
+                        <p className="text-xl text-slate-600 font-semibold mb-4">{t('mobile_app_dev_page.about.p1')}</p>
+                        <p className="text-lg text-slate-600 leading-relaxed">{t('mobile_app_dev_page.about.p2')}</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {[
-                            { num: '3000+', label: 'Projects Delivered', color: 'purple' },
-                            { num: '100+', label: 'Enterprise Clients', color: 'violet' },
-                            { num: '30+', label: 'Expert Team', color: 'pink' },
-                            { num: '7+', label: 'Success Years', color: 'fuchsia' },
+                            { num: '3000+', label: t('mobile_app_dev_page.about.stats.projects'), color: 'purple' },
+                            { num: '100+', label: t('mobile_app_dev_page.about.stats.clients'), color: 'violet' },
+                            { num: '30+', label: t('mobile_app_dev_page.about.stats.team'), color: 'pink' },
+                            { num: '7+', label: t('mobile_app_dev_page.about.stats.years'), color: 'fuchsia' },
                         ].map((stat, i) => (
                             <div key={i} className="glass-card bg-white p-6 rounded-2xl text-center shadow-xl border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <h3 className="text-3xl font-extrabold text-slate-800 mb-2">{stat.num}</h3>
@@ -98,17 +104,17 @@ const MobileAppDev = () => {
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(147,51,234,0.5) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(236,72,153,0.5) 0%, transparent 50%)' }}></div>
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Our Services</span>
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold text-sm mb-4 uppercase tracking-wider">{t('mobile_app_dev_page.services.badge')}</span>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         {[
-                            { title: 'Native iOS Apps', desc: 'Secure, high-performance apps built specifically for Apple devices using Swift and Objective-C.', icon: FaMobileAlt },
-                            { title: 'Native Android Apps', desc: 'Robust applications designed to dominate the Google Play Store, utilizing Kotlin and Java.', icon: FaLayerGroup },
-                            { title: 'Cross-Platform Apps', desc: 'Write once, deploy anywhere. We build efficient React Native and Flutter apps that look native.', icon: FaCodeBranch },
-                            { title: 'IoT Mobile Interfaces', desc: 'Applications designed to communicate seamlessly with smart home devices and industrial sensors.', icon: FaLaptopCode },
-                            { title: 'Enterprise Apps', desc: 'Internal communication tools, field service apps, and mobile ERP integrations for your workforce.', icon: FaTabletAlt },
-                            { title: 'App Maintenance', desc: 'Ongoing support, performance tuning, and immediate bug fixes to ensure 99.99% uptime.', icon: FaWrench },
+                            { title: t('mobile_app_dev_page.services.ios.title'), desc: t('mobile_app_dev_page.services.ios.desc'), icon: FaMobileAlt },
+                            { title: t('mobile_app_dev_page.services.android.title'), desc: t('mobile_app_dev_page.services.android.desc'), icon: FaLayerGroup },
+                            { title: t('mobile_app_dev_page.services.cross_platform.title'), desc: t('mobile_app_dev_page.services.cross_platform.desc'), icon: FaCodeBranch },
+                            { title: t('mobile_app_dev_page.services.iot.title'), desc: t('mobile_app_dev_page.services.iot.desc'), icon: FaLaptopCode },
+                            { title: t('mobile_app_dev_page.services.enterprise.title'), desc: t('mobile_app_dev_page.services.enterprise.desc'), icon: FaTabletAlt },
+                            { title: t('mobile_app_dev_page.services.maintenance.title'), desc: t('mobile_app_dev_page.services.maintenance.desc'), icon: FaWrench },
                         ].map((item, i) => (
                             <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 text-center group" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="w-20 h-20 mx-auto mb-6 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -121,26 +127,28 @@ const MobileAppDev = () => {
                     </div>
 
                     <div className="bg-white/5 border border-white/10 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white">Hire World-Class <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Mobile Engineers</span></h3>
-                        <Link to="/contact" className="flex-shrink-0 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:-translate-y-1 flex items-center gap-2">Hire Now <FaArrowRight /></Link>
+                        <h3 className="text-3xl md:text-4xl font-bold text-white">{t('mobile_app_dev_page.services.cta.title1')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{t('mobile_app_dev_page.services.cta.title2')}</span></h3>
+                        <Link to="/contact" className="flex-shrink-0 px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:-translate-y-1 flex items-center gap-2">
+                            {t('mobile_app_dev_page.services.cta.button')} <FaArrowRight />
+                        </Link>
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* Why Choose Us Section */}
-            < section className="py-24 bg-white relative" >
+            <section className="py-24 bg-white relative">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 font-bold text-sm mb-4">Why Us</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">Why Partner With Us?</h2>
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 font-bold text-sm mb-4">{t('mobile_app_dev_page.why_us.badge')}</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">{t('mobile_app_dev_page.why_us.title')}</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
                         {[
-                            { title: 'Uncompromising Security', desc: 'We implement bank-grade encryption and secure authentication flows, protecting your user data against all vectors.', icon: FaShieldAlt },
-                            { title: 'Lightning Fast Time-to-Market', desc: 'Our agile methodologies and deep talent pool allow us to drastically cut development timelines without sacrificing quality.', icon: FaRocket },
-                            { title: 'Perfect App Store Optimization', desc: 'We don’t just build apps; we help you launch them. We guide you through the strict Apple and Google publishing review loops.', icon: FaCheckCircle },
-                            { title: 'Constant Reliability', desc: 'Through rigorous automated testing (unit, UI, integration), we ensure your app performs flawlessly before it ever reaches a user.', icon: FaClock }
+                            { title: t('mobile_app_dev_page.why_us.items.security.title'), desc: t('mobile_app_dev_page.why_us.items.security.desc'), icon: FaShieldAlt },
+                            { title: t('mobile_app_dev_page.why_us.items.speed.title'), desc: t('mobile_app_dev_page.why_us.items.speed.desc'), icon: FaRocket },
+                            { title: t('mobile_app_dev_page.why_us.items.aso.title'), desc: t('mobile_app_dev_page.why_us.items.aso.desc'), icon: FaCheckCircle },
+                            { title: t('mobile_app_dev_page.why_us.items.reliability.title'), desc: t('mobile_app_dev_page.why_us.items.reliability.desc'), icon: FaClock }
                         ].map((item, i) => (
                             <div key={i} className="flex gap-5" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="flex-shrink-0 w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 font-bold text-lg shadow-sm border border-purple-100">
@@ -154,14 +162,14 @@ const MobileAppDev = () => {
                         ))}
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* Technologies Section */}
-            < section className="py-24 bg-slate-50 relative" >
+            <section className="py-24 bg-slate-50 relative">
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 font-bold text-sm mb-4">Tech Stack</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Technologies <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">We Work With</span></h3>
+                        <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 font-bold text-sm mb-4">{t('mobile_app_dev_page.tech.badge')}</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">{t('mobile_app_dev_page.tech.title1')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">{t('mobile_app_dev_page.tech.title2')}</span></h3>
                     </div>
                     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4">
                         {[

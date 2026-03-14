@@ -4,115 +4,131 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
-import { FaArrowRight, FaPython, FaDatabase, FaServer, FaShieldAlt, FaRocket, FaCodeBranch } from 'react-icons/fa';
+import { FaArrowRight, FaPython, FaServer, FaDatabase, FaShieldAlt, FaRocket, FaCode } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Django = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
         wow.init();
     }, []);
 
+    const features = [
+        { icon: <FaServer />, key: 'enterprise' },
+        { icon: <FaCode />, key: 'api' },
+        { icon: <FaDatabase />, key: 'data' },
+        { icon: <FaShieldAlt />, key: 'security' },
+        { icon: <FaPython />, key: 'ai' },
+        { icon: <FaRocket />, key: 'saas' }
+    ];
+
     return (
-        <div className="font-['Lato',sans-serif]">
+        <div className="bg-[#051120]">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#092e20] overflow-hidden">
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-gradient-to-b from-[#092e20] to-[#051120] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-[5%] right-[10%] w-[600px] h-[600px] bg-teal-600/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+                    <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5" style={{ backgroundImage: 'radial-gradient(#092e20 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-right">
-                            <span className="inline-block py-1 px-4 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold text-sm mb-6 uppercase tracking-wider">High-Level Python Framework</span>
-                            <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight tracking-tight uppercase">
-                                Django Web <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Development</span>
+                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                            <span className="inline-block py-2 px-4 rounded-full bg-green-500/10 text-green-400 border border-green-500/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('django_dev_page.hero.badge')}</span>
+                            <h1 className="text-hero-title text-white mb-8 leading-[1.1] uppercase">
+                                {t('django_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">{t('django_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-emerald-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-                                Build ridiculously fast, secure, and scalable web applications and APIs with Django. Perfect for data-heavy applications, machine learning integrations, and enterprise architectures.
+                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
+                                {t('django_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                    Start Your Project <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-green-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                    {t('django_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <Link to="/services" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-4 lg:py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
-                                    Our Services
-                                </Link>
+                                <button className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                    {t('django_dev_page.hero.cta_services')}
+                                </button>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-12 lg:p-16 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] shadow-2xl flex items-center justify-center group hover:scale-105 transition-transform duration-500">
-                                <div className="text-[140px] text-emerald-500 drop-shadow-[0_20px_50px_rgba(16,185,129,0.3)] group-hover:rotate-12 transition-transform duration-500">
-                                    <FaPython />
-                                </div>
+                        <div className="flex-1 relative" data-aos="zoom-in">
+                            <div className="relative z-10 p-8 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-sm shadow-2xl animate-float">
+                                <img src="/images/django-hero.svg" alt="Django Development" className="w-full h-auto drop-shadow-2xl" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* What We Build */}
-            <section className="py-24 bg-slate-50 relative overflow-hidden">
-                <div className="container relative z-10 block px-6">
-                    <div className="text-center mb-16" data-aos="fade-up">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 font-bold text-sm mb-4">Core Python Services</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800">What We Build with Django</h2>
-                        <p className="text-xl text-slate-600 mt-6 max-w-3xl mx-auto">From robust backend APIs powering mobile apps to comprehensive full-stack enterprise portals.</p>
+            {/* Expertise Grid */}
+            <section className="py-24 bg-[#051120] relative">
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-20" data-aos="fade-up">
+                        <span className="text-green-400 font-bold uppercase tracking-widest text-sm">{t('django_dev_page.expertise.badge')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">{t('django_dev_page.expertise.title')}</h2>
+                        <p className="text-slate-400 mt-6 max-w-2xl mx-auto">{t('django_dev_page.expertise.desc')}</p>
                     </div>
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            { icon: <FaServer />, title: 'Enterprise Web Apps', desc: 'Secure, scalable, and highly available web applications capable of handling massive spikes in user traffic.' },
-                            { icon: <FaCodeBranch />, title: 'REST & GraphQL APIs', desc: 'Building seamless data bridges using Django REST Framework (DRF) to power modern React/Vue frontends or mobile apps.' },
-                            { icon: <FaDatabase />, title: 'Data-Heavy Portals', desc: 'Expertly managing complicated databases using Django’s powerful ORM to build dashboards and analytics portals.' },
-                            { icon: <FaShieldAlt />, title: 'High-Security Systems', desc: 'Leveraging Django’s built-in defenses against clickjacking, cross-site scripting, and SQL injection for financial/healthcare apps.' },
-                            { icon: <FaPython />, title: 'AI/ML Integration', desc: 'Natively integrating Python-based Machine Learning models (TensorFlow, PyTorch) directly into your web backend.' },
-                            { icon: <FaRocket />, title: 'SaaS Architecture', desc: 'Designing multi-tenant architectures and subscription billing flows utilizing Django’s rapid development capabilities.' }
-                        ].map((srv, idx) => (
-                            <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
-                                <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 text-3xl mb-6 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
-                                    {srv.icon}
+                        {features.map((item, i) => (
+                            <div key={i} className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="text-3xl text-green-400 mb-6 transform group-hover:scale-110 transition-transform inline-block">
+                                    {item.icon}
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-800 mb-4">{srv.title}</h3>
-                                <p className="text-slate-600 leading-relaxed font-medium">{srv.desc}</p>
+                                <h4 className="text-xl font-bold text-white mb-4">{t(`django_dev_page.expertise.items.${item.key}.title`)}</h4>
+                                <p className="text-slate-400 leading-relaxed text-sm">
+                                    {t(`django_dev_page.expertise.items.${item.key}.desc`)}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Why Choose Us */}
-            <section className="py-24 bg-white relative">
-                <div className="container relative z-10 block px-6">
+            {/* Why GoZoom for Django */}
+            <section className="py-24 bg-[#040d18] relative overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="flex-1" data-aos="fade-right">
-                            <div className="space-y-6">
-                                <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 font-bold text-sm">Why Us</span>
-                                <h2 className="text-4xl md:text-5xl font-bold text-slate-800">Why Choose GoZoom for Django?</h2>
-                                <p className="text-lg text-slate-600 leading-relaxed">
-                                    "The web framework for perfectionists with deadlines." We strictly adhere to Pythonic principles and Django best practices to ensure your backend isn't just fast today, but maintainable for years to come.
-                                </p>
-                                <ul className="space-y-4 pt-4">
-                                    {[
-                                        'Rapid MVP development using fully-featured built-in admin panels',
-                                        'Expertise in celery, redis caching, and async task queues',
-                                        'Impeccable security architecture out-of-the-box',
-                                        'Seamless DevOps CI/CD pipeline integration (Docker, AWS, Heroku)'
-                                    ].map((item, idx) => (
-                                        <li key={idx} className="flex items-center gap-4 text-slate-700 font-medium">
-                                            <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                                                <FaShieldAlt className="text-sm" />
-                                            </div>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
+                            <span className="text-green-400 font-bold uppercase tracking-widest text-sm">{t('django_dev_page.why_us.badge')}</span>
+                            <h3 className="text-3xl md:text-5xl font-bold text-white mt-4 mb-8 leading-tight">
+                                {t('django_dev_page.why_us.title')}
+                            </h3>
+                            <p className="text-slate-300 text-lg mb-10 leading-relaxed italic border-l-4 border-green-500 pl-6">
+                                {t('django_dev_page.why_us.desc')}
+                            </p>
+                            <div className="space-y-4">
+                                {t('django_dev_page.why_us.list', { returnObjects: true }).map((point, i) => (
+                                    <div key={i} className="flex items-center gap-4 text-slate-300">
+                                        <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                                        </div>
+                                        <span>{point}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                        <div className="flex-1 relative" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-teal-50 rounded-[3rem] transform rotate-[-4deg] scale-105 opacity-50"></div>
-                            <img src="/images/Home Page - IT Solutions.png" alt="Django Architecture Team" className="relative z-10 w-full h-auto rounded-[3rem] shadow-xl" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=Backend+Architecture"; }} />
+                        <div className="flex-1 lg:pl-12" data-aos="fade-left">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center">
+                                    <img src="/images/celery.png" alt="Celery" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <span className="text-white font-bold">Celery</span>
+                                </div>
+                                <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center mt-12">
+                                    <img src="/images/redis.png" alt="Redis" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <span className="text-white font-bold">Redis</span>
+                                </div>
+                                <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center">
+                                    <img src="/images/postgresql.png" alt="PostgreSQL" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <span className="text-white font-bold">PostgreSQL</span>
+                                </div>
+                                <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center mt-12">
+                                    <img src="/images/docker.png" alt="Docker" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <span className="text-white font-bold">Docker</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
