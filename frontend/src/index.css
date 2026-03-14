@@ -55,6 +55,7 @@ body::-webkit-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: #e2e8f0 transparent;
     -ms-overflow-style: auto;
+    overscroll-behavior: contain;
 }
 
 .scrollable-dropdown::-webkit-scrollbar {

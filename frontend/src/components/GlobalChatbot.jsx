@@ -179,7 +179,7 @@ const GlobalChatbot = () => {
                     </div>
 
                     {/* Messages */}
-                    <div className="flex-grow overflow-y-auto p-5 space-y-4 scroll-smooth visible-scrollbar">
+                    <div className="flex-grow overflow-y-auto p-5 space-y-4 scroll-smooth visible-scrollbar" data-lenis-prevent>
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
@@ -194,7 +194,7 @@ const GlobalChatbot = () => {
                     </div>
 
                     {/* Suggested Questions */}
-                    <div className="px-5 pb-3 flex overflow-x-auto gap-2 visible-scrollbar flex-nowrap shrink-0">
+                    <div className="px-5 pb-3 flex overflow-x-auto gap-2 visible-scrollbar flex-nowrap shrink-0" data-lenis-prevent>
                         {suggestedQuestions.map((q, i) => (
                             <button
                                 key={i}

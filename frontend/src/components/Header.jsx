@@ -235,7 +235,7 @@ const Header = () => {
                             {/* Services Dropdown Panel */}
                             <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                 }`}>
-                                <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown">
+                                <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown" data-lenis-prevent>
                                     {servicesDropdownSections.map((section) => (
                                         <div key={section.id} className="mb-1">
                                             <p className="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
@@ -287,7 +287,7 @@ const Header = () => {
                             {/* Workforce Solutions Dropdown Panel */}
                             <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopWorkforceOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                 }`}>
-                                <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown">
+                                <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown" data-lenis-prevent>
                                     {workforceDropdownSections.map((section) => (
                                         <div key={section.id} className="mb-1">
                                             <p className="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
@@ -369,7 +369,7 @@ const Header = () => {
                     </button>
                 </div>
 
-                <div className="overflow-y-auto h-[calc(100%-64px)] p-4">
+                <div className="overflow-y-auto h-[calc(100%-64px)] p-4" data-lenis-prevent>
                     <ul className="space-y-1">
                         {[
                             { to: '/#hero', label: 'Home' },
