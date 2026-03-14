@@ -22,13 +22,68 @@ const Home = () => {
             lerp: 0.05,
             wheelMultiplier: 1,
         });
+
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
         }
         requestAnimationFrame(raf);
-        return () => lenis.destroy();
+
+        // Auto-scroll Snap Logic
+        let lastScrollY = window.scrollY;
+        let isTransitioning = false;
+
+        const handleScroll = (e) => {
+            const currentScrollY = e.scrollY;
+            const aboutSection = document.getElementById('about-section');
+            if (!aboutSection || isTransitioning) {
+                lastScrollY = currentScrollY;
+                return;
+            }
+
+            const sectionTop = aboutSection.offsetTop;
+            
+            // AGGRESSIVE SNAP DOWN: If we are on Hero and scroll DOWN even a tiny bit
+            if (currentScrollY > 10 && currentScrollY < sectionTop - 100 && currentScrollY > lastScrollY) {
+                isTransitioning = true;
+                lenis.scrollTo('#about-section', {
+                    offset: -50,
+                    duration: 1.5,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth custom easing
+                    onComplete: () => {
+                        setTimeout(() => { isTransitioning = false; }, 500);
+                    }
+                });
+            }
+            
+            // AGGRESSIVE SNAP UP: If we are at the very top of About and scroll UP
+            if (currentScrollY < sectionTop && currentScrollY > sectionTop - 100 && currentScrollY < lastScrollY) {
+                isTransitioning = true;
+                lenis.scrollTo(0, {
+                    duration: 1.5,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    onComplete: () => {
+                        setTimeout(() => { isTransitioning = false; }, 500);
+                    }
+                });
+            }
+            lastScrollY = currentScrollY;
+        };
+
+        // Sync with Lenis scroll
+        lenis.on('scroll', handleScroll);
+
+        return () => {
+            lenis.destroy();
+        };
     }, []);
+
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about-section');
+        if (aboutSection) {
+            window.scrollTo({ top: aboutSection.offsetTop - 50, behavior: 'smooth' });
+        }
+    };
 
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -58,7 +113,7 @@ const Home = () => {
     return (
         <div className="w-full font-sans relative">
             {/* Hero Parallax Globe */}
-            <Hero />
+            <Hero onScrollNext={scrollToAbout} />
 
             {/* We are Gozoom Technologies */}
             <section id="about-section" className="pb-20 pt-12 -mt-12 bg-gray-50 overflow-hidden relative z-10">

@@ -33,6 +33,19 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
+    let triggered = false;
+    const unsubscribe = scrollYProgress.on('change', (latest) => {
+      // Trigger if user scrolls down just a bit (threshold 0.01)
+      if (!triggered && latest > 0.01 && latest < 0.2) {
+        triggered = true;
+        scrollToNext();
+        setTimeout(() => { triggered = false; }, 2000);
+      }
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress, scrollToNext]);
+
+  useEffect(() => {
     const handleMouseMove = (e) => {
       const { innerWidth, innerHeight } = window;
       const x = (e.clientX / innerWidth) * 2 - 1;
@@ -47,7 +60,7 @@ export default function Hero() {
 
   // Browser zoom triggers a resize; keep the current scroll position stable.
   return (
-    <div ref={containerRef} className="relative h-[180vh] bg-[#020617]">
+    <div ref={containerRef} className="relative h-[110vh] bg-[#020617]">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-[#020617]">
         <ParallaxBackground scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
         <RotatingShape scrollYProgress={smoothScrollYProgress} mouseX={smoothMouseX} mouseY={smoothMouseY} />
