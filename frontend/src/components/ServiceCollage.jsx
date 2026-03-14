@@ -11,7 +11,7 @@ const ServiceCollage = () => {
             icon: <FaCode />,
             link: "/web-development",
             image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-            size: "col-span-2 row-span-1",
+            size: "md:col-span-2",
             color: "from-blue-600/20 to-indigo-600/20"
         },
         {
@@ -20,16 +20,16 @@ const ServiceCollage = () => {
             icon: <FaPalette />,
             link: "/about",
             image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
-            size: "col-span-1 row-span-2",
+            size: "md:col-span-1",
             color: "from-teal-500/20 to-[var(--color-gozoom-green)]/20"
         },
         {
             title: "Software / AI",
-            desc: "Everything in One Place. We replace manual processes with intelligent software tailored to your specific operations.",
+            desc: "We replace manual processes with intelligent software tailored to your specific operations.",
             icon: <FaRobot />,
             link: "/expert-seo-services",
             image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-            size: "col-span-1 row-span-2",
+            size: "md:col-span-1",
             color: "from-[var(--color-gozoom-blue)]/20 to-[var(--color-gozoom-green)]/20"
         },
         {
@@ -38,7 +38,7 @@ const ServiceCollage = () => {
             icon: <FaCube />,
             link: "/mobile-application-development",
             image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
-            size: "col-span-1 row-span-1",
+            size: "md:col-span-1",
             color: "from-cyan-600/20 to-blue-600/20"
         }
     ];
@@ -64,12 +64,12 @@ const ServiceCollage = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[340px]">
                     {services.map((srv, idx) => (
                         <motion.div
                             key={idx}
                             whileHover={{ y: -5 }}
-                            className={`relative rounded-[2rem] overflow-hidden group shadow-2xl shadow-black/5 ${srv.size}`}
+                            className={`relative rounded-[2rem] overflow-hidden group shadow-2xl shadow-black/5 min-h-[400px] md:min-h-0 ${srv.size}`}
                             data-aos="fade-up"
                             data-aos-delay={idx * 100}
                         >
@@ -99,10 +99,10 @@ const ServiceCollage = () => {
                     ))}
 
                     {/* Centered Small Card "Everything in One Place" */}
-                    <div className="col-span-1 row-span-1 bg-black rounded-[2rem] flex items-center justify-center text-center p-8 shadow-2xl shadow-blue-500/10">
+                    <div className="col-span-1 bg-black rounded-[2rem] flex items-center justify-center text-center p-8 shadow-2xl shadow-blue-500/10 min-h-[200px] md:min-h-0">
                         <div>
-                            <h3 className="text-4xl font-black text-white mb-2">Everything</h3>
-                            <p className="text-gray-400 text-xl font-medium">in One Place</p>
+                            <h3 className="text-3xl md:text-4xl font-black text-white mb-2">Everything</h3>
+                            <p className="text-gray-400 text-lg md:text-xl font-medium">in One Place</p>
                         </div>
                     </div>
                 </div>
