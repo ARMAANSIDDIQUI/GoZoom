@@ -6,9 +6,11 @@ const ScrollToTop = () => {
     const { pathname } = useLocation();
     const [isVisible, setIsVisible] = useState(false);
 
-    // Auto-scroll to top on route change
+    // Auto-scroll to top on route change (skip if we have a hash for internal navigation)
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
     }, [pathname]);
 
     // Show/hide floating button

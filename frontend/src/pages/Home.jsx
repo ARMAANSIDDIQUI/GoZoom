@@ -13,6 +13,10 @@ import WOW from 'wow.js';
 import 'animate.css';
 
 const Home = () => {
+    const lenisRef = useRef(null);
+    const isTransitioningRef = useRef(false);
+    const lastScrollYRef = useRef(0);
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
@@ -22,6 +26,7 @@ const Home = () => {
             lerp: 0.05,
             wheelMultiplier: 1,
         });
+        lenisRef.current = lenis;
 
         function raf(time) {
             lenis.raf(time);
@@ -30,60 +35,82 @@ const Home = () => {
         requestAnimationFrame(raf);
 
         // Binary Snap Logic (Discrete Hero transition)
-        let lastScrollY = window.scrollY;
-        let isTransitioning = false;
-
         const handleScroll = (e) => {
             const currentScrollY = e.scrollY;
             const aboutSection = document.getElementById('about-section');
-            if (!aboutSection || isTransitioning) {
-                lastScrollY = currentScrollY;
+            if (!aboutSection || isTransitioningRef.current) {
+                lastScrollYRef.current = currentScrollY;
                 return;
             }
 
             const sectionTop = aboutSection.offsetTop;
             
-            // BINARY SNAP DOWN: From Hero top or within Hero -> Snap all way to content
-            if (currentScrollY > 1 && currentScrollY < sectionTop - 100 && currentScrollY > lastScrollY) {
-                isTransitioning = true;
+            // BINARY SNAP DOWN: From Hero -> Snap all way to content
+            if (currentScrollY > 5 && currentScrollY < sectionTop - 10 && currentScrollY > lastScrollYRef.current) {
+                isTransitioningRef.current = true;
                 lenis.scrollTo('#about-section', {
                     offset: -50,
-                    duration: 1.2,
-                    easing: (t) => 1 - Math.pow(1 - t, 4), // Quantic easing for power
+                    duration: 1.0,
+                    easing: (t) => 1 - Math.pow(1 - t, 4),
                     onComplete: () => {
-                        // Keep lock temporarily to settle
-                        setTimeout(() => { isTransitioning = false; }, 800);
+                        setTimeout(() => { isTransitioningRef.current = false; }, 400);
                     }
                 });
             }
             
             // BINARY SNAP UP: From top of content -> Snap all way to Hero top
-            if (currentScrollY < sectionTop && currentScrollY > sectionTop - 150 && currentScrollY < lastScrollY) {
-                isTransitioning = true;
+            if (currentScrollY < sectionTop + 10 && currentScrollY > 5 && currentScrollY < lastScrollYRef.current) {
+                isTransitioningRef.current = true;
                 lenis.scrollTo(0, {
-                    duration: 1.2,
+                    duration: 1.0,
                     easing: (t) => 1 - Math.pow(1 - t, 4),
                     onComplete: () => {
-                        setTimeout(() => { isTransitioning = false; }, 800);
+                        setTimeout(() => { isTransitioningRef.current = false; }, 400);
                     }
                 });
             }
-            lastScrollY = currentScrollY;
+            lastScrollYRef.current = currentScrollY;
         };
 
         lenis.on('scroll', handleScroll);
 
+        // Initial hash scroll
+        if (window.location.hash) {
+            setTimeout(() => {
+                lenis.scrollTo(window.location.hash, {
+                    offset: -50,
+                    duration: 1.5,
+                });
+            }, 500);
+        }
+
         return () => {
             lenis.destroy();
+            lenisRef.current = null;
         };
     }, []);
 
+    useEffect(() => {
+        if (lenisRef.current && location.hash) {
+            lenisRef.current.scrollTo(location.hash, {
+                offset: -50,
+                duration: 1.2,
+            });
+        }
+    }, [location.hash]);
+
     // Helper for internal Hero components
     const scrollToAbout = () => {
-        const lenis = Lenis.get(); // Or use a ref if needed, but instance should be accessible
-        const aboutSection = document.getElementById('about-section');
-        if (aboutSection) {
-            window.scrollTo({ top: aboutSection.offsetTop - 50, behavior: 'smooth' });
+        if (lenisRef.current) {
+            lenisRef.current.scrollTo('#about-section', {
+                offset: -50,
+                duration: 1.2,
+            });
+        } else {
+            const aboutSection = document.getElementById('about-section');
+            if (aboutSection) {
+                window.scrollTo({ top: aboutSection.offsetTop - 50, behavior: 'smooth' });
+            }
         }
     };
 
@@ -115,7 +142,9 @@ const Home = () => {
     return (
         <div className="w-full font-sans relative">
             {/* Hero Parallax Globe */}
-            <Hero onScrollNext={scrollToAbout} />
+            <div id="hero">
+                <Hero onScrollNext={scrollToAbout} />
+            </div>
 
             {/* We are Gozoom Technologies */}
             <section id="about-section" className="pb-20 pt-12 -mt-12 bg-gray-50 overflow-hidden relative z-10">
@@ -162,7 +191,7 @@ const Home = () => {
             </section>
 
             {/* Workforce Solutions Section */}
-            <section className="py-20 bg-white overflow-hidden relative border-t border-gray-100">
+            <section id="workforce-section" className="py-20 bg-white overflow-hidden relative border-t border-gray-100">
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <div className="lg:w-1/2" data-aos="fade-right">
@@ -214,10 +243,14 @@ const Home = () => {
             </section>
 
             {/* Replace legacy services with Collage */}
-            <ServiceCollage />
+            <div id="services-section">
+                <ServiceCollage />
+            </div>
 
             {/* Build Environment / Tech Spotlight */}
-            <TechSpotlight />
+            <div id="tech-section">
+                <TechSpotlight />
+            </div>
         </div>
     );
 };

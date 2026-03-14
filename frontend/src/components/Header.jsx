@@ -186,8 +186,8 @@ const Header = () => {
                     <nav className="hidden lg:flex items-center gap-1">
 
                         <Link
-                            to="/"
-                            className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/')
+                            to="/#hero"
+                            className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/') && !location.hash
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
@@ -217,7 +217,7 @@ const Header = () => {
                             onMouseLeave={closeServicesWithDelay}
                         >
                             <Link
-                                to="/services"
+                                to="/#services-section"
                                 className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopServicesOpen || isActive('/services')
                                     ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
                                     : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
@@ -269,7 +269,7 @@ const Header = () => {
                             onMouseLeave={closeWorkforceWithDelay}
                         >
                             <Link
-                                to="/workforce-solutions"
+                                to="/#workforce-section"
                                 className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopWorkforceOpen || isActive('/workforce-solutions')
                                     ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
                                     : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
@@ -320,7 +320,7 @@ const Header = () => {
                         >BLOGS</Link>
 
                         <Link
-                            to="/about"
+                            to="/#about-section"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/about')
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
@@ -372,11 +372,11 @@ const Header = () => {
                 <div className="overflow-y-auto h-[calc(100%-64px)] p-4">
                     <ul className="space-y-1">
                         {[
-                            { to: '/', label: 'Home' },
+                            { to: '/#hero', label: 'Home' },
                             { to: '/integration', label: 'Integration' },
                             { to: '/retail', label: 'Retail' },
                             { to: '/blogs', label: 'Blogs' },
-                            { to: '/about', label: 'About Us' },
+                            { to: '/#about-section', label: 'About Us' },
                         ].map(({ to, label }) => (
                             <li key={to}>
                                 <Link
@@ -404,7 +404,8 @@ const Header = () => {
                             </button>
                             {servicesOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
-                                    <Link to="/services" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View All Services</Link>
+                                    <Link to="/#services-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Services Summary</Link>
+                                    <Link to="/services" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">All Services Page</Link>
                                     {servicesDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
@@ -434,7 +435,8 @@ const Header = () => {
                             </button>
                             {workforceOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
-                                    <Link to="/workforce-solutions" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Workforce Services</Link>
+                                    <Link to="/#workforce-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Workforce Summary</Link>
+                                    <Link to="/workforce-solutions" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">All Workforce Page</Link>
                                     {workforceDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
