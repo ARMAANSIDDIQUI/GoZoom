@@ -1,112 +1,107 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaGlobe, FaCode, FaCloud, FaRobot, FaUsers, FaTasks } from 'react-icons/fa';
-
-
-
-const servicesDropdownSections = [
-    {
-        id: 'cloud',
-        heading: <span className="flex items-center gap-1.5"><FaCloud className="text-blue-500" /> Cloud & Infrastructure</span>,
-        links: [
-            { to: '/cloud-services', label: 'Cloud Services (AWS, GCP)' },
-            { to: '/devops-services', label: 'Kubernetes & Docker' },
-            { to: '/service-consulting', label: 'IT Strategy Consulting' }
-        ]
-    },
-    {
-        id: 'ai',
-        heading: <span className="flex items-center gap-1.5"><FaRobot className="text-fuchsia-500" /> Artificial Intelligence</span>,
-        links: [
-            { to: '/ai-applications', label: 'AI Applications' },
-            { to: '/chatbot', label: 'Chatbot' },
-            { to: '/ai-automation', label: 'Task Automation' },
-            { to: '/agentic-development', label: 'Agentic Development' },
-            { to: '/ai-agent-customization', label: 'AI Customization' },
-            { to: '/use-cases', label: 'Industry Use Cases' }
-        ]
-    },
-    {
-        id: 'general',
-        heading: <span className="flex items-center gap-1.5"><FaGlobe className="text-cyan-500" /> General Services</span>,
-        links: [
-            { to: '/services', label: 'All Services Directory' },
-            { to: '/cyber-security', label: 'Cyber Security Services' },
-            { to: '/ui-ux-design', label: 'UI / UX Design' },
-            { to: '/nextjs-development', label: 'Next.js Development' },
-            { to: '/web-development', label: 'Web Development' },
-            { to: '/react-native-development', label: 'React Native Apps' },
-            { to: '/flutter-development', label: 'Flutter Apps' },
-            { to: '/swift-development', label: 'Swift iOS Apps' },
-            { to: '/android-development', label: 'Android Development' },
-            { to: '/ios-development', label: 'iOS Development' },
-            { to: '/angular-development', label: 'Angular Development' },
-            { to: '/react-development', label: 'React Development' },
-            { to: '/django-development', label: 'Django Development' },
-            { to: '/java-development', label: 'Java Enterprise Apps' },
-            { to: '/laravel-development', label: 'Laravel Development' },
-            { to: '/expert-seo-services', label: 'SEO Services' },
-            { to: '/kiosks', label: 'Kiosk Solutions' },
-        ]
-    },
-    {
-        id: 'hire',
-        heading: <span className="flex items-center gap-1.5"><FaCode className="text-purple-500" /> Hire Developers</span>,
-        links: [
-            { to: '/hire-react-developer', label: 'Hire React Developers' },
-            { to: '/hire-angular-developer', label: 'Hire Angular Developers' },
-            { to: '/hire-php-developer', label: 'Hire PHP Developers' },
-            { to: '/hire-jquery-developers', label: 'Hire jQuery Developers' },
-            { to: '/hire-html-developer', label: 'Hire HTML Developers' },
-            { to: '/hire-codeIgniter-developers', label: 'Hire CodeIgniter Developers' },
-            { to: '/laravel-development-company', label: 'Hire Laravel Developers' },
-        ]
-    }
-];
-
-const workforceDropdownSections = [
-    {
-        id: 'staffing',
-        heading: <span className="flex items-center gap-1.5"><FaUsers className="text-blue-500" /> Talent & Acquisition</span>,
-        links: [
-            { to: '/workforce-solutions/contingent-staffing', label: 'Contingent Staffing' },
-            { to: '/workforce-solutions/direct-hire', label: 'Direct Hire' },
-            { to: '/workforce-solutions/nearshore-offshore', label: 'Nearshore and Offshore' },
-            { to: '/workforce-solutions/direct-sourcing', label: 'Direct Sourcing' },
-            { to: '/workforce-solutions/rpo', label: 'Recruitment Process Outsourcing' },
-        ]
-    },
-    {
-        id: 'management',
-        heading: <span className="flex items-center gap-1.5"><FaTasks className="text-cyan-500" /> Compliance & Operations</span>,
-        links: [
-            { to: '/workforce-solutions/global-payroll', label: 'Global Payroll & Compliance' },
-            { to: '/workforce-solutions/statement-of-work', label: 'Statement Of Work (SOW)' },
-            { to: '/workforce-solutions/diversity-spend', label: 'Diversity Spend Capture' },
-            { to: '/workforce-solutions/gcc-bot', label: 'GCC BOT' },
-            { to: '/workforce-solutions/mvp', label: 'Master Vendor Program (MVP)' },
-        ]
-    }
-];
-
-
-
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
+    const { t } = useTranslation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [webOpen, setWebOpen] = useState(false);
-    const [desktopWebOpen, setDesktopWebOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
     const [workforceOpen, setWorkforceOpen] = useState(false);
     const [desktopWorkforceOpen, setDesktopWorkforceOpen] = useState(false);
-    const dropdownRef = useRef(null);
     const servicesRef = useRef(null);
     const workforceRef = useRef(null);
     const servicesHideTimer = useRef(null);
     const workforceHideTimer = useRef(null);
     const location = useLocation();
+
+    const servicesDropdownSections = [
+        {
+            id: 'cloud',
+            heading: <span className="flex items-center gap-1.5"><FaCloud className="text-blue-500" /> {t('header.cloud_infrastructure')}</span>,
+            links: [
+                { to: '/cloud-services', label: t('header.cloud_services') },
+                { to: '/devops-services', label: t('header.kubernetes_docker') },
+                { to: '/service-consulting', label: t('header.it_strategy') }
+            ]
+        },
+        {
+            id: 'ai',
+            heading: <span className="flex items-center gap-1.5"><FaRobot className="text-fuchsia-500" /> {t('header.ai')}</span>,
+            links: [
+                { to: '/ai-applications', label: t('header.ai_apps') },
+                { to: '/chatbot', label: t('header.chatbot') },
+                { to: '/ai-automation', label: t('header.task_automation') },
+                { to: '/agentic-development', label: t('header.agentic_dev') },
+                { to: '/ai-agent-customization', label: t('header.ai_customization') },
+                { to: '/use-cases', label: t('header.industry_use_cases') }
+            ]
+        },
+        {
+            id: 'general',
+            heading: <span className="flex items-center gap-1.5"><FaGlobe className="text-cyan-500" /> {t('header.general_services')}</span>,
+            links: [
+                { to: '/services', label: t('header.all_services') },
+                { to: '/cyber-security', label: t('header.cyber_security') },
+                { to: '/ui-ux-design', label: t('header.ui_ux') },
+                { to: '/nextjs-development', label: t('header.nextjs') },
+                { to: '/web-development', label: t('header.web_dev') },
+                { to: '/react-native-development', label: t('header.react_native') },
+                { to: '/flutter-development', label: t('header.flutter') },
+                { to: '/swift-development', label: t('header.swift_ios') },
+                { to: '/android-development', label: t('header.android_dev') },
+                { to: '/ios-development', label: t('header.ios_dev') },
+                { to: '/angular-development', label: t('header.angular_dev') },
+                { to: '/react-development', label: t('header.react_dev') },
+                { to: '/django-development', label: t('header.django_dev') },
+                { to: '/java-development', label: t('header.java_enterprise') },
+                { to: '/laravel-development', label: t('header.laravel_dev') },
+                { to: '/expert-seo-services', label: t('header.seo_services') },
+                { to: '/kiosks', label: t('header.kiosk') },
+            ]
+        },
+        {
+            id: 'hire',
+            heading: <span className="flex items-center gap-1.5"><FaCode className="text-purple-500" /> {t('header.hire_developers')}</span>,
+            links: [
+                { to: '/hire-react-developer', label: t('header.hire_react') },
+                { to: '/hire-angular-developer', label: t('header.hire_angular') },
+                { to: '/hire-php-developer', label: t('header.hire_php') },
+                { to: '/hire-jquery-developers', label: t('header.hire_jquery') },
+                { to: '/hire-html-developer', label: t('header.hire_html') },
+                { to: '/hire-codeIgniter-developers', label: t('header.hire_codeigniter') },
+                { to: '/laravel-development-company', label: t('header.hire_laravel') },
+            ]
+        }
+    ];
+
+    const workforceDropdownSections = [
+        {
+            id: 'staffing',
+            heading: <span className="flex items-center gap-1.5"><FaUsers className="text-blue-500" /> {t('header.talent_acquisition')}</span>,
+            links: [
+                { to: '/workforce-solutions/contingent-staffing', label: t('header.contingent_staffing') },
+                { to: '/workforce-solutions/direct-hire', label: t('header.direct_hire') },
+                { to: '/workforce-solutions/nearshore-offshore', label: t('header.nearshore_offshore') },
+                { to: '/workforce-solutions/direct-sourcing', label: t('header.direct_sourcing') },
+                { to: '/workforce-solutions/rpo', label: t('header.rpo') },
+            ]
+        },
+        {
+            id: 'management',
+            heading: <span className="flex items-center gap-1.5"><FaTasks className="text-cyan-500" /> {t('header.compliance_ops')}</span>,
+            links: [
+                { to: '/workforce-solutions/global-payroll', label: t('header.global_payroll') },
+                { to: '/workforce-solutions/statement-of-work', label: t('header.sow') },
+                { to: '/workforce-solutions/diversity-spend', label: t('header.diversity_spend') },
+                { to: '/workforce-solutions/gcc-bot', label: t('header.gcc_bot') },
+                { to: '/workforce-solutions/mvp', label: t('header.mvp') },
+            ]
+        }
+    ];
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
@@ -123,7 +118,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close desktop dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (servicesRef.current && !servicesRef.current.contains(e.target)) {
@@ -144,7 +138,12 @@ const Header = () => {
         };
     }, []);
 
-    const isActive = (path) => location.pathname === path;
+    const isActive = (path) => {
+        if (path === '/') {
+            return location.pathname === '/' && !location.hash;
+        }
+        return location.pathname.startsWith(path);
+    };
 
     const openServices = () => {
         if (servicesHideTimer.current) clearTimeout(servicesHideTimer.current);
@@ -171,7 +170,6 @@ const Header = () => {
                 }`}>
                 <div className="max-w-[1280px] mx-auto px-4 lg:px-8 h-full flex items-center justify-between">
 
-                    {/* Logo */}
                     <Link to="/" className="flex-shrink-0 flex items-center group">
                         <div className="relative">
                             <img
@@ -182,16 +180,15 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    {/* Desktop Nav */}
                     <nav className="hidden lg:flex items-center gap-1">
 
                         <Link
-                            to="/#hero"
-                            className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/') && !location.hash
+                            to="/"
+                            className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/')
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
-                        >HOME</Link>
+                        >{t('header.nav_home')}</Link>
 
                         <Link
                             to="/integration"
@@ -199,7 +196,7 @@ const Header = () => {
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
-                        >INTEGRATION</Link>
+                        >{t('header.nav_integration')}</Link>
 
                         <Link
                             to="/retail"
@@ -207,9 +204,8 @@ const Header = () => {
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
-                        >RETAIL</Link>
+                        >{t('header.nav_retail')}</Link>
 
-                        {/* SERVICES Dropdown */}
                         <div
                             className="relative"
                             ref={servicesRef}
@@ -217,13 +213,13 @@ const Header = () => {
                             onMouseLeave={closeServicesWithDelay}
                         >
                             <Link
-                                to="/#services-section"
+                                to="/services"
                                 className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopServicesOpen || isActive('/services')
                                     ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
                                     : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                     }`}
                             >
-                                IT SOLUTIONS!
+                                {t('header.nav_it_solutions')}
                                 <svg
                                     className={`w-3 h-3 transition-transform duration-300 ${desktopServicesOpen ? 'rotate-180' : ''}`}
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
@@ -232,7 +228,6 @@ const Header = () => {
                                 </svg>
                             </Link>
 
-                            {/* Services Dropdown Panel */}
                             <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopServicesOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                 }`}>
                                 <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown" data-lenis-prevent>
@@ -259,9 +254,6 @@ const Header = () => {
                             </div>
                         </div>
 
-
-
-                        {/* WORKFORCE SOLUTIONS Dropdown */}
                         <div
                             className="relative"
                             ref={workforceRef}
@@ -269,13 +261,13 @@ const Header = () => {
                             onMouseLeave={closeWorkforceWithDelay}
                         >
                             <Link
-                                to="/#workforce-section"
+                                to="/workforce-solutions"
                                 className={`flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${desktopWorkforceOpen || isActive('/workforce-solutions')
                                     ? isScrolled ? 'text-cyan-400 bg-white/15' : 'text-cyan-300 bg-white/15'
                                     : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                     }`}
                             >
-                                WORKFORCE SOLUTIONS
+                                {t('header.nav_workforce')}
                                 <svg
                                     className={`w-3 h-3 transition-transform duration-300 ${desktopWorkforceOpen ? 'rotate-180' : ''}`}
                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
@@ -284,7 +276,6 @@ const Header = () => {
                                 </svg>
                             </Link>
 
-                            {/* Workforce Solutions Dropdown Panel */}
                             <div className={`absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-[300px] bg-white rounded-2xl shadow-2xl shadow-black/15 border border-slate-100 overflow-hidden transition-all duration-300 origin-top ${desktopWorkforceOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                 }`}>
                                 <div className="max-h-[420px] overflow-y-auto py-2 px-2 scrollable-dropdown" data-lenis-prevent>
@@ -317,15 +308,15 @@ const Header = () => {
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
-                        >BLOGS</Link>
+                        >{t('header.nav_blogs')}</Link>
 
                         <Link
-                            to="/#about-section"
+                            to="/about"
                             className={`relative px-4 py-2 text-[13px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 ${isActive('/about')
                                 ? isScrolled ? 'text-cyan-400 bg-white/10' : 'text-cyan-300 bg-white/10'
                                 : isScrolled ? 'text-white/80 hover:text-cyan-400 hover:bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/15'
                                 }`}
-                        >ABOUT US</Link>
+                        >{t('header.nav_about')}</Link>
 
                         <Link
                             to="/contact"
@@ -333,10 +324,11 @@ const Header = () => {
                                 ? 'bg-white text-slate-900 shadow-lg shadow-white/10 hover:bg-cyan-50'
                                 : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white hover:text-slate-800'
                                 }`}
-                        >CONTACT US</Link>
+                        >{t('header.nav_contact')}</Link>
+
+                        <LanguageSwitcher isScrolled={isScrolled} />
                     </nav>
 
-                    {/* Hamburger */}
                     <button
                         className="lg:hidden flex flex-col gap-[5px] w-[34px] cursor-pointer group"
                         onClick={() => setIsMobileMenuOpen(true)}
@@ -349,13 +341,11 @@ const Header = () => {
                 </div>
             </header>
 
-            {/* Mobile Overlay */}
             <div
                 className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[10000] lg:hidden transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
             ></div>
 
-            {/* Mobile Drawer */}
             <nav className={`fixed top-0 right-0 h-full w-[300px] bg-white z-[10001] lg:hidden transform transition-transform duration-500 ease-out shadow-2xl ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex items-center justify-between px-5 h-[64px] border-b border-slate-100">
                     <img src="/images/logo2.webp" alt="Gozoom" className="h-9 w-auto object-contain" />
@@ -372,11 +362,11 @@ const Header = () => {
                 <div className="overflow-y-auto h-[calc(100%-64px)] p-4" data-lenis-prevent>
                     <ul className="space-y-1">
                         {[
-                            { to: '/#hero', label: 'Home' },
-                            { to: '/integration', label: 'Integration' },
-                            { to: '/retail', label: 'Retail' },
-                            { to: '/blogs', label: 'Blogs' },
-                            { to: '/#about-section', label: 'About Us' },
+                            { to: '/', label: t('header.home_title') },
+                            { to: '/integration', label: t('header.integration_title') },
+                            { to: '/retail', label: t('header.retail_title') },
+                            { to: '/blogs', label: t('header.blogs_title') },
+                            { to: '/about', label: t('header.about_title') },
                         ].map(({ to, label }) => (
                             <li key={to}>
                                 <Link
@@ -397,15 +387,15 @@ const Header = () => {
                                 onClick={() => setServicesOpen(v => !v)}
                                 className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] font-semibold text-slate-700 hover:bg-slate-50 transition-all"
                             >
-                                IT Solutions!
+                                {t('header.it_solutions_title')}
                                 <svg className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </button>
                             {servicesOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
-                                    <Link to="/#services-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Services Summary</Link>
-                                    <Link to="/services" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">All Services Page</Link>
+                                    <Link to="/#services-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">{t('header.view_services')}</Link>
+                                    <Link to="/services" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">{t('header.all_services_page')}</Link>
                                     {servicesDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
@@ -428,15 +418,15 @@ const Header = () => {
                                 onClick={() => setWorkforceOpen(v => !v)}
                                 className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] font-semibold text-slate-700 hover:bg-slate-50 transition-all"
                             >
-                                Workforce Solutions
+                                {t('header.workforce_title')}
                                 <svg className={`w-4 h-4 transition-transform ${workforceOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </button>
                             {workforceOpen && (
                                 <div className="ml-4 mt-1 pl-3 border-l-2 border-cyan-100 space-y-1">
-                                    <Link to="/#workforce-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">View Workforce Summary</Link>
-                                    <Link to="/workforce-solutions" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">All Workforce Page</Link>
+                                    <Link to="/#workforce-section" className="block px-3 py-2 text-[13px] font-bold text-cyan-700 hover:bg-cyan-50 rounded-lg mb-2">{t('header.view_workforce')}</Link>
+                                    <Link to="/workforce-solutions" className="block px-3 py-2 text-[12px] font-medium text-slate-500 hover:text-cyan-600">{t('header.all_workforce_page')}</Link>
                                     {workforceDropdownSections.map((section) => (
                                         <div key={section.id}>
                                             <p className="px-3 pt-2 pb-0.5 text-[10px] font-bold uppercase tracking-widest text-slate-400">{section.heading}</p>
@@ -456,12 +446,16 @@ const Header = () => {
                         </li>
                     </ul>
 
+                    <div className="mt-6 px-1 flex justify-center border-t border-slate-100 pt-4">
+                        <LanguageSwitcher isScrolled={isScrolled} mobile={true} />
+                    </div>
+
                     <div className="mt-6 px-1">
                         <Link
                             to="/contact"
                             className="block w-full text-center py-3.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-[15px] shadow-lg hover:shadow-cyan-500/30 transition-all hover:-translate-y-0.5"
                         >
-                            Contact Us
+                            {t('header.contact_btn')}
                         </Link>
                     </div>
                 </div>

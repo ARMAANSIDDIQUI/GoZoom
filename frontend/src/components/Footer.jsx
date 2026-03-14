@@ -4,11 +4,13 @@ import axios from 'axios';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useTranslation } from 'react-i18next';
 import { usePhoneCountry } from '../hooks/usePhonePrefix';
 
 const RECAPTCHA_SITE_KEY = '6Lf9TsQnAAAAANxF0lHRxZTC_YMZIMmV1qX1v1qs';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const recaptchaRef = useRef(null);
     const detectedCountry = usePhoneCountry(); // auto-detect from IP
     const [formData, setFormData] = useState({
@@ -32,12 +34,12 @@ const Footer = () => {
         setCaptchaError(false);
         try {
             await axios.post('http://localhost:5001/api/enquiries/submit', { ...formData, captchaToken });
-            alert('Enquiry submitted successfully!');
+            alert(t('footer.success_msg'));
             setFormData({ name: '', email: '', contactNumber: '', interestedIn: '', message: '' });
             recaptchaRef.current?.reset();
         } catch (error) {
             console.error('Error submitting enquiry:', error);
-            alert('Failed to submit enquiry. Please try again.');
+            alert(t('footer.error_msg'));
         }
     };
 
@@ -48,12 +50,12 @@ const Footer = () => {
 
                     {/* Global Locations */}
                     <div>
-                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">Global Locations</h2>
+                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">{t('footer.global_locations')}</h2>
                         <ul className="space-y-6">
                             <li className="flex items-start">
                                 <img className="w-8 h-8 mr-4 object-contain" src="/images/usflag.webp" alt="US" />
                                 <address className="not-italic text-sm leading-relaxed">
-                                    <strong>United States</strong><br />
+                                    <strong>{t('footer.united_states')}</strong><br />
                                     400 River Side CT<br />
                                     Santa Clara<br />
                                     CA 95054-3535
@@ -62,7 +64,7 @@ const Footer = () => {
                             <li className="flex items-start">
                                 <img className="w-8 h-8 mr-4 object-contain" src="/images/indiaflag.png" alt="India" />
                                 <address className="not-italic text-sm leading-relaxed">
-                                    <strong>India</strong><br />
+                                    <strong>{t('footer.india')}</strong><br />
                                     A1B/19 A, Paschim Vihar<br />
                                     New Delhi 110063<br />
                                     <a href="mailto:info@gozoomtech.com" className="hover:text-yellow-500">info@gozoomtech.com</a>
@@ -71,7 +73,7 @@ const Footer = () => {
                             <li className="flex items-start">
                                 <img className="w-8 h-8 mr-4 object-contain" src="/images/canadaflag.png" alt="Canada" />
                                 <address className="not-italic text-sm leading-relaxed">
-                                    <strong>Canada</strong><br />
+                                    <strong>{t('footer.canada')}</strong><br />
                                     5765 Chem. de la Côte St Luc<br />
                                     Montréal, QC H3X 2E9
                                 </address>
@@ -81,34 +83,34 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">Quick Links</h2>
+                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">{t('footer.quick_links')}</h2>
                         <ul className="space-y-3 font-semibold text-sm">
-                            <li><Link to="/" className="hover:text-yellow-500 transition-colors">HOME</Link></li>
-                            <li><Link to="/integration" className="hover:text-yellow-500 transition-colors">INTEGRATION</Link></li>
-                            <li><Link to="/retail" className="hover:text-yellow-500 transition-colors">RETAIL</Link></li>
-                            <li><Link to="/services" className="hover:text-yellow-500 transition-colors">IT SOLUTIONS</Link></li>
-                            <li><Link to="/workforce-solutions" className="hover:text-yellow-500 transition-colors">WORKFORCE SOLUTIONS</Link></li>
-                            <li><Link to="/blogs" className="hover:text-yellow-500 transition-colors">BLOGS</Link></li>
-                            <li><Link to="/about" className="hover:text-yellow-500 transition-colors">ABOUT US</Link></li>
-                            <li><Link to="/contact" className="hover:text-yellow-500 transition-colors">CONTACT US</Link></li>
+                            <li><Link to="/" className="hover:text-yellow-500 transition-colors">{t('footer.nav_home')}</Link></li>
+                            <li><Link to="/integration" className="hover:text-yellow-500 transition-colors">{t('footer.nav_integration')}</Link></li>
+                            <li><Link to="/retail" className="hover:text-yellow-500 transition-colors">{t('footer.nav_retail')}</Link></li>
+                            <li><Link to="/services" className="hover:text-yellow-500 transition-colors">{t('footer.nav_it_solutions')}</Link></li>
+                            <li><Link to="/workforce-solutions" className="hover:text-yellow-500 transition-colors">{t('footer.nav_workforce')}</Link></li>
+                            <li><Link to="/blogs" className="hover:text-yellow-500 transition-colors">{t('footer.nav_blogs')}</Link></li>
+                            <li><Link to="/about" className="hover:text-yellow-500 transition-colors">{t('footer.nav_about')}</Link></li>
+                            <li><Link to="/contact" className="hover:text-yellow-500 transition-colors">{t('footer.nav_contact')}</Link></li>
                         </ul>
                     </div>
 
                     {/* Reach Us Today Form */}
                     <div>
-                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">Reach Us Today</h2>
+                        <h2 className="text-xl font-bold mb-6 text-yellow-500 uppercase">{t('footer.reach_us')}</h2>
                         <div className="bg-white text-gray-800 p-6 rounded shadow-lg">
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-semibold mb-1">Your Name<span className="text-red-500">*</span></label>
-                                    <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full border-b border-gray-300 focus:border-blue-500 outline-none pb-1" placeholder="Name" required />
+                                    <label className="block text-sm font-semibold mb-1">{t('footer.form_name')}<span className="text-red-500">*</span></label>
+                                    <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full border-b border-gray-300 focus:border-blue-500 outline-none pb-1" placeholder={t('footer.form_name_placeholder')} required />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold mb-1">Email<span className="text-red-500">*</span></label>
-                                    <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full border-b border-gray-300 focus:border-blue-500 outline-none pb-1" placeholder="E-mail" required />
+                                    <label className="block text-sm font-semibold mb-1">{t('footer.form_email')}<span className="text-red-500">*</span></label>
+                                    <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full border-b border-gray-300 focus:border-blue-500 outline-none pb-1" placeholder={t('footer.form_email_placeholder')} required />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold mb-1">Phone<span className="text-red-500">*</span></label>
+                                    <label className="block text-sm font-semibold mb-1">{t('footer.form_phone')}<span className="text-red-500">*</span></label>
                                     <PhoneInput
                                         country={detectedCountry}
                                         enableSearch
@@ -131,30 +133,30 @@ const Footer = () => {
                                             background: 'transparent',
                                         }}
                                         dropdownStyle={{ zIndex: 9999 }}
-                                        placeholder="Contact No."
+                                        placeholder={t('footer.form_phone_placeholder')}
                                         inputProps={{ required: true, name: 'contactNumber' }}
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold mb-1">Interested Service</label>
+                                    <label className="block text-sm font-semibold mb-1">{t('footer.form_service')}</label>
                                     <select name="interestedIn" value={formData.interestedIn} onChange={handleChange} className="w-full border-b border-gray-300 focus:border-blue-500 outline-none pb-1 bg-transparent">
-                                        <option value="" disabled>Select Service</option>
-                                        <option value="Web Development">Web Development</option>
-                                        <option value="Mobile Development">Mobile Development</option>
-                                        <option value="Integration">Integration</option>
-                                        <option value="Retail">Retail</option>
+                                        <option value="" disabled>{t('footer.select_service')}</option>
+                                        <option value="Web Development">{t('footer.service_web')}</option>
+                                        <option value="Mobile Development">{t('footer.service_mobile')}</option>
+                                        <option value="Integration">{t('footer.service_integration')}</option>
+                                        <option value="Retail">{t('footer.service_retail')}</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold mb-1">Message</label>
-                                    <textarea name="message" value={formData.message} onChange={handleChange} className="w-full border border-gray-300 rounded p-2 focus:border-blue-500 outline-none h-24" placeholder="Message"></textarea>
+                                    <label className="block text-sm font-semibold mb-1">{t('footer.form_message')}</label>
+                                    <textarea name="message" value={formData.message} onChange={handleChange} className="w-full border border-gray-300 rounded p-2 focus:border-blue-500 outline-none h-24" placeholder={t('footer.form_message_placeholder')}></textarea>
                                 </div>
                                 <div>
                                     <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_SITE_KEY} size="compact" />
-                                    {captchaError && <p className="text-red-500 text-xs mt-1">Please complete the reCAPTCHA.</p>}
+                                    {captchaError && <p className="text-red-500 text-xs mt-1">{t('footer.recaptcha_error')}</p>}
                                 </div>
                                 <div>
-                                    <button type="submit" className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition-colors">Submit</button>
+                                    <button type="submit" className="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition-colors">{t('footer.submit')}</button>
                                 </div>
                             </form>
                         </div>
@@ -163,7 +165,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-center mt-12 pt-6 border-t border-gray-700 text-sm">
-                © COPYRIGHT <span className="font-bold text-yellow-500">GoZoom</span>. All Rights Reserved
+                {t('footer.copyright')} <span className="font-bold text-yellow-500">GoZoom</span>. {t('footer.rights_reserved')}
             </div>
         </footer>
     );

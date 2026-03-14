@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -8,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight, FaQuoteLeft, FaStar, FaShoppingCart, FaUsers, FaChartLine, FaCogs, FaShieldAlt, FaRocket, FaLaptopCode, FaCheckCircle, FaSearch } from 'react-icons/fa';
 
 const Retail = () => {
+    const { t } = useTranslation();
     const [testimonials, setTestimonials] = useState([]);
     const [loadingTestimonials, setLoadingTestimonials] = useState(true);
 
@@ -37,28 +39,17 @@ const Retail = () => {
         : 'http://localhost:5001';
 
     const retailSolutions = [
-        { img: 'images/11.webp', title: 'RETAIL EXECUTION', desc: "GOZOOM's connected retail solutions empower global companies to enhance retail execution, boost sales, and increase profitability through innovative and industry-leading products and solutions." },
-        { img: 'images/brandProtection.jpg', title: 'SECURITY', desc: "GOZOOM offers customized solutions to protect brands comprehensively, safeguard investments and reputation, prevent counterfeits, and increase profits through track and trace capabilities." },
-        { img: 'images/enhance.webp', title: 'CUSTOMER EXPERIENCE', desc: "At GOZOOM, we prioritize enhancing the customer experience. We offer a range of solutions that cater to different shopping experiences such as pop-up stores, web or app shopping, QR or voice-based commerce." },
-    ];
-
-    const products = [
-        { img: 'images/6.png', title: 'CHECKOUT', desc: "GOZOOM's point of sale (PoS) system goes beyond just a cash register. We transform your raw sales data into meaningful insights for accounting and management." },
-        { img: 'images/digitalpay.webp', title: 'ELECTRONIC PAYMENTS', desc: "GOZOOM's integrated digital payment solutions offer greater accuracy, time-saving benefits, and eliminate manual transactions." },
-        { img: 'images/selforder.webp', title: 'INTERACTIVE ORDERING', desc: "GOZOOM's Self-Ordering Kiosks offer customers a user-friendly menu and flexible payment options, allowing them to easily place their orders." },
-        { img: 'images/livereport.webp', title: 'REAL TIME REPORTING', desc: "GOZOOM's LIV Reporting app provides real-time data access from anywhere in the world, empowering informed decisions based on analytics." },
-        { img: 'images/rfid.jpg', title: 'SMART RFID SOLUTIONS', desc: "Smart RFID enables swift and hassle-free shopping. It provides hands free warehouse operations while avoiding thefts and counterfeits." },
-        { img: 'images/webmobilebg.webp', title: 'WEB & MOBILE DEV', desc: "Our design team is committed to giving your customer the best user experience so they are compelled to return to your websites and mobile apps." },
+        { img: 'images/11.webp', title: t('retail_page.solutions.items.execution.title'), desc: t('retail_page.solutions.items.execution.desc') },
+        { img: 'images/brandProtection.jpg', title: t('retail_page.solutions.items.security.title'), desc: t('retail_page.solutions.items.security.desc') },
+        { img: 'images/enhance.webp', title: t('retail_page.solutions.items.experience.title'), desc: t('retail_page.solutions.items.experience.desc') },
     ];
 
     const industrySolutions = [
-        { img: 'images/FB.png', title: 'FOOD & BEVERAGES', features: ['POS', 'KDS', 'CLOUD KITCHEN', 'SELF-ORDER KIOSK', 'CONTACTLESS ORDERING', 'LIVE REPORTING', 'INTEGRATED PAYMENTS'] },
-        { img: 'images/12.webp', title: 'MERCHANDISING', features: ['POS', 'RFID', 'ENDLESS AISLE', 'SELF CHECKOUT', 'LIVE REPORTING', 'INTEGRATED PAYMENTS'] },
-        { img: 'images/cinema.webp', title: 'ENTERTAINMENT', features: ['POS', 'SELF-ORDER KIOSK', 'VOICE ORDERING', 'LIVE REPORTING', 'INTEGRATED PAYMENTS'] },
-        { img: 'images/hospital.png', title: 'HEALTHCARE', features: ['POS', 'HEALTHCARE KIOSK', 'INFORMATION KIOSK', 'LIVE REPORTING', 'INTEGRATED PAYMENTS'] },
+        { img: 'images/FB.png', title: t('retail_page.sectors.food'), features: [t('retail_page.sectors.features.pos'), t('retail_page.sectors.features.kds'), t('retail_page.sectors.features.cloud_kitchen'), t('retail_page.sectors.features.self_order_kiosk'), t('retail_page.sectors.features.contactless'), t('retail_page.sectors.features.live_reporting'), t('retail_page.sectors.features.integrated_payments')] },
+        { img: 'images/12.webp', title: t('retail_page.sectors.merchandising'), features: [t('retail_page.sectors.features.pos'), t('retail_page.sectors.features.rfid'), t('retail_page.sectors.features.endless_aisle'), t('retail_page.sectors.features.self_checkout'), t('retail_page.sectors.features.live_reporting'), t('retail_page.sectors.features.integrated_payments')] },
+        { img: 'images/cinema.webp', title: t('retail_page.sectors.entertainment'), features: [t('retail_page.sectors.features.pos'), t('retail_page.sectors.features.self_order_kiosk'), t('retail_page.sectors.features.voice_ordering'), t('retail_page.sectors.features.live_reporting'), t('retail_page.sectors.features.integrated_payments')] },
+        { img: 'images/hospital.png', title: t('retail_page.sectors.healthcare'), features: [t('retail_page.sectors.features.pos'), t('retail_page.sectors.features.healthcare_kiosk'), t('retail_page.sectors.features.information_kiosk'), t('retail_page.sectors.features.live_reporting'), t('retail_page.sectors.features.integrated_payments')] },
     ];
-
-
 
     return (
         <div>
@@ -75,20 +66,20 @@ const Retail = () => {
                     <div className="max-w-4xl text-center mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Retail Technology
+                            {t('retail_page.hero.subtitle')}
                         </div>
                         <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-                            Beyond <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Retail</span>
+                            {t('retail_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">{t('retail_page.hero.title2')}</span>
                         </h1>
                         <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-                            We aim to revolutionize and enhance the retail experience like never before through innovation and transformation.
+                            {t('retail_page.hero.desc')}
                         </p>
                         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
                             <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                Get In Touch <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                {t('retail_page.hero.button_contact')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link to="/integration" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
-                                Integration
+                                {t('retail_page.hero.button_integration')}
                             </Link>
                         </div>
                     </div>
@@ -99,8 +90,8 @@ const Retail = () => {
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Retail Solutions</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">RETAIL <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">SOLUTIONS</span></h2>
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">{t('retail_page.solutions.subtitle')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">{t('retail_page.solutions.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">{t('retail_page.solutions.title2')}</span></h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {retailSolutions.map((item, i) => (
@@ -124,17 +115,17 @@ const Retail = () => {
                 <div className="container relative z-10 block px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="flex-1" data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 font-bold text-sm mb-4 uppercase">Next-Gen Commerce</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6 font-sans">Empowering Modern Retailers</h2>
+                            <span className="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 font-bold text-sm mb-4 uppercase">{t('retail_page.choose_us.subtitle')}</span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6 font-sans">{t('retail_page.choose_us.title')}</h2>
                             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                                We help brick-and-mortar stores transition into data-driven digital hubs. Our solutions bridge the gap between physical storefronts and the digital marketplace.
+                                {t('retail_page.choose_us.desc')}
                             </p>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {[
-                                    { icon: <FaShoppingCart />, title: "Omnichannel Sync", desc: "Unified inventory across web, mobile, and store." },
-                                    { icon: <FaUsers />, title: "Customer Loyalty", desc: "Deep analytics on buyer behavior and repeat visits." },
-                                    { icon: <FaChartLine />, title: "Real-time Profit", desc: "Live reporting on sales and cost margin metrics." },
-                                    { icon: <FaShieldAlt />, title: "Fraud Prevention", desc: "Enterprise-grade digital payment security." }
+                                    { icon: <FaShoppingCart />, title: t('retail_page.choose_us.benefits.sync.title'), desc: t('retail_page.choose_us.benefits.sync.desc') },
+                                    { icon: <FaUsers />, title: t('retail_page.choose_us.benefits.loyalty.title'), desc: t('retail_page.choose_us.benefits.loyalty.desc') },
+                                    { icon: <FaChartLine />, title: t('retail_page.choose_us.benefits.profit.title'), desc: t('retail_page.choose_us.benefits.profit.desc') },
+                                    { icon: <FaShieldAlt />, title: t('retail_page.choose_us.benefits.fraud.title'), desc: t('retail_page.choose_us.benefits.fraud.desc') }
                                 ].map((benefit, i) => (
                                     <div key={i} className="flex gap-4">
                                         <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20">
@@ -162,8 +153,8 @@ const Retail = () => {
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container relative z-10 block px-6">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Vertical Solutions</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800 font-sans tracking-tight">SPECIALIZED <span className="text-emerald-600">SECTORS</span></h3>
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">{t('retail_page.sectors.subtitle')}</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800 font-sans tracking-tight">{t('retail_page.sectors.title1')} <span className="text-emerald-600">{t('retail_page.sectors.title2')}</span></h3>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {industrySolutions.map((item, i) => (
@@ -196,8 +187,8 @@ const Retail = () => {
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #10b981 0%, transparent 70%)' }}></div>
                 <div className="container relative z-10 block px-6 text-center">
                     <div className="mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-sm mb-4 tracking-wider uppercase border border-emerald-500/30">Client Success</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-white font-sans tracking-tight leading-tight">IMPACTFUL <span className="text-emerald-400">PARTNERSHIPS</span></h3>
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-sm mb-4 tracking-wider uppercase border border-emerald-500/30">{t('retail_page.testimonials.subtitle')}</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-white font-sans tracking-tight leading-tight">{t('retail_page.testimonials.title1')} <span className="text-emerald-400">{t('retail_page.testimonials.title2')}</span></h3>
                     </div>
 
                     {loadingTestimonials ? (
@@ -206,28 +197,28 @@ const Retail = () => {
                         </div>
                     ) : testimonials.length > 0 ? (
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {testimonials.map((t, idx) => (
-                                <div key={t._id} className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/10 text-left hover:border-emerald-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
+                            {testimonials.map((t_item, idx) => (
+                                <div key={t_item._id} className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/10 text-left hover:border-emerald-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
                                     <FaQuoteLeft className="text-4xl text-emerald-500/20 mb-6 group-hover:text-emerald-500/40 transition-colors" />
-                                    <p className="text-slate-300 text-lg mb-8 leading-relaxed italic">"{t.content}"</p>
+                                    <p className="text-slate-300 text-lg mb-8 leading-relaxed italic">"{t_item.content}"</p>
                                     <div className="flex items-center gap-4 pt-6 border-t border-white/5">
                                         <div className="w-14 h-14 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center overflow-hidden">
-                                            {t.avatar ? (
-                                                <img src={`${backendUrl}${t.avatar}`} alt={t.authorName} className="w-full h-full object-cover" />
+                                            {t_item.avatar ? (
+                                                <img src={`${backendUrl}${t_item.avatar}`} alt={t_item.authorName} className="w-full h-full object-cover" />
                                             ) : (
-                                                <span className="text-xl font-bold text-emerald-400">{t.authorName.charAt(0)}</span>
+                                                <span className="text-xl font-bold text-emerald-400">{t_item.authorName.charAt(0)}</span>
                                             )}
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-white">{t.authorName}</h4>
-                                            <p className="text-sm text-emerald-400/80 font-medium">{t.authorRole}</p>
+                                            <h4 className="font-bold text-white">{t_item.authorName}</h4>
+                                            <p className="text-sm text-emerald-400/80 font-medium">{t_item.authorRole}</p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <p className="text-slate-400">Collaborating with global brands to redefine retail excellence.</p>
+                        <p className="text-slate-400">{t('retail_page.testimonials.empty')}</p>
                     )}
                 </div>
             </section>
@@ -236,8 +227,8 @@ const Retail = () => {
             <section className="py-24 bg-white relative">
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">Our Partners</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Trusted <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Partners</span></h3>
+                        <span className="inline-block py-1 px-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm mb-4 uppercase tracking-wider">{t('retail_page.partners.subtitle')}</span>
+                        <h3 className="text-3xl md:text-5xl font-bold text-slate-800">{t('retail_page.partners.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">{t('retail_page.partners.title2')}</span></h3>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
                         {['images/shadani.png', 'images/rajdhani.png', 'images/maisoninfra.png', 'images/cornitos.png'].map((p, i) => (

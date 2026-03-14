@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -7,58 +8,62 @@ import 'animate.css';
 import { FaCloud, FaRobot, FaCode, FaArrowRight, FaCogs, FaProjectDiagram, FaUserTie, FaNetworkWired, FaServer, FaPaintBrush, FaShieldAlt, FaMobileAlt, FaDatabase, FaMagic, FaChartLine, FaDesktop, FaComments, FaSearch, FaAndroid, FaApple, FaTabletAlt, FaGlobe, FaPython, FaLayerGroup, FaJava } from 'react-icons/fa';
 
 const AllServices = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
         wow.init();
     }, []);
 
+    const translatedCategories = t('all_services_page.serviceCategories', { returnObjects: true });
+
     const serviceCategories = [
         {
-            title: "Cloud & Infrastructure",
+            title: translatedCategories[0].title,
             icon: <FaCloud className="w-8 h-8 text-cyan-500" />,
-            description: "Scalable, secure, and robust cloud solutions tailored for modern enterprises.",
+            description: translatedCategories[0].description,
             services: [
-                { name: "Cloud Services (AWS, Oracle, Google)", path: "/cloud-services", desc: "Comprehensive cloud migration and management.", icon: FaCloud },
-                { name: "Kubernetes & Docker", path: "/devops-services", desc: "Containerization and orchestration solutions.", icon: FaServer },
-                { name: "Service Consulting", path: "/service-consulting", desc: "Expert guidance on IT infrastructure and strategy.", icon: FaUserTie }
+                { name: translatedCategories[0].services[0].name, path: "/cloud-services", desc: translatedCategories[0].services[0].desc, icon: FaCloud },
+                { name: translatedCategories[0].services[1].name, path: "/devops-services", desc: translatedCategories[0].services[1].desc, icon: FaServer },
+                { name: translatedCategories[0].services[2].name, path: "/service-consulting", desc: translatedCategories[0].services[2].desc, icon: FaUserTie }
             ]
         },
         {
-            title: "Artificial Intelligence",
+            title: translatedCategories[1].title,
             icon: <FaRobot className="w-8 h-8 text-fuchsia-500" />,
-            description: "Cutting-edge AI solutions to automate and innovate your business processes.",
+            description: translatedCategories[1].description,
             services: [
-                { name: "AI Powered Applications", path: "/ai-applications", desc: "Smart applications leveraging machine learning.", icon: FaRobot },
-                { name: "Chatbot Development", path: "/chatbot", desc: "Intelligent conversational agents for customer support.", icon: FaComments },
-                { name: "AI/Task Automation", path: "/ai-automation", desc: "Streamline operations with smart automation.", icon: FaCogs },
-                { name: "Agentic Development", path: "/agentic-development", desc: "Building autonomous AI agents for complex tasks.", icon: FaProjectDiagram },
-                { name: "AI Agent Customization", path: "/ai-agent-customization", desc: "Tailoring AI agents to specific business needs.", icon: FaMagic },
-                { name: "AI Use Cases", path: "/use-cases", desc: "Explore how AI transforms various industries.", icon: FaChartLine }
+                { name: translatedCategories[1].services[0].name, path: "/ai-applications", desc: translatedCategories[1].services[0].desc, icon: FaRobot },
+                { name: translatedCategories[1].services[1].name, path: "/chatbot", desc: translatedCategories[1].services[1].desc, icon: FaComments },
+                { name: translatedCategories[1].services[2].name, path: "/ai-automation", desc: translatedCategories[1].services[2].desc, icon: FaCogs },
+                { name: translatedCategories[1].services[3].name, path: "/agentic-development", desc: translatedCategories[1].services[3].desc, icon: FaProjectDiagram },
+                { name: translatedCategories[1].services[4].name, path: "/ai-agent-customization", desc: translatedCategories[1].services[4].desc, icon: FaMagic },
+                { name: translatedCategories[1].services[5].name, path: "/use-cases", desc: translatedCategories[1].services[5].desc, icon: FaChartLine }
             ]
         },
         {
-            title: "Web, Mobile & Digital Solutions",
+            title: translatedCategories[2].title,
             icon: <FaCode className="w-8 h-8 text-indigo-500" />,
-            description: "High-performance, responsive applications built with the latest technologies.",
+            description: translatedCategories[2].description,
             services: [
-                { name: "Full-Stack Web Development", path: "/web-development", desc: "End-to-end custom web engineering solutions.", icon: FaGlobe },
-                { name: "UI / UX Design", path: "/ui-ux-design", desc: "Human-centered, conversion-optimized interfaces and design systems.", icon: FaPaintBrush },
-                { name: "Cyber Security", path: "/cyber-security", desc: "Enterprise-grade protection, pen testing, and zero trust architectures.", icon: FaShieldAlt },
-                { name: "Mobile App Development", path: "/mobile-application-development", desc: "Cross-platform and native mobile apps.", icon: FaMobileAlt },
-                { name: "React Native Apps", path: "/react-native-development", desc: "Cross-platform mobile apps with a single codebase.", icon: FaMobileAlt },
-                { name: "Flutter Apps", path: "/flutter-development", desc: "Blazing fast native interfaces built by Google.", icon: FaLayerGroup },
-                { name: "Swift iOS Apps", path: "/swift-development", desc: "Premium native Apple experiences built with Swift.", icon: FaApple },
-                { name: "Android Development", path: "/android-development", desc: "Secure and scalable native Android applications.", icon: FaAndroid },
-                { name: "iOS Development", path: "/ios-development", desc: "Premium iOS mobile experiences built with legacy architectures.", icon: FaApple },
-                { name: "Django Development", path: "/django-development", desc: "High-level Python frameworks for robust backends.", icon: FaPython },
-                { name: "Java Enterprise Apps", path: "/java-development", desc: "Highly robust, scalable backend enterprise applications.", icon: FaJava },
-                { name: "React Development", path: "/react-development", desc: "Interactive and fast user interfaces.", icon: FaCode },
-                { name: "Next.js Development", path: "/nextjs-development", desc: "Server-side rendered React applications.", icon: FaCode },
-                { name: "Angular Development", path: "/angular-development", desc: "Dynamic single-page applications.", icon: FaCode },
-                { name: "Laravel Development", path: "/laravel-development", desc: "Robust and secure PHP web applications.", icon: FaDesktop },
-                { name: "SEO & Digital Marketing", path: "/expert-seo-services", desc: "Data-driven strategies to skyrocket your online presence.", icon: FaSearch },
-                { name: "Kiosk Solutions", path: "/kiosks", desc: "Interactive kiosk software for enhanced customer autonomy.", icon: FaTabletAlt }
+                { name: translatedCategories[2].services[0].name, path: "/web-development", desc: translatedCategories[2].services[0].desc, icon: FaGlobe },
+                { name: translatedCategories[2].services[1].name, path: "/ui-ux-design", desc: translatedCategories[2].services[1].desc, icon: FaPaintBrush },
+                { name: translatedCategories[2].services[2].name, path: "/cyber-security", desc: translatedCategories[2].services[2].desc, icon: FaShieldAlt },
+                { name: translatedCategories[2].services[3].name, path: "/mobile-application-development", desc: translatedCategories[2].services[3].desc, icon: FaMobileAlt },
+                { name: translatedCategories[2].services[4].name, path: "/react-native-development", desc: translatedCategories[2].services[4].desc, icon: FaMobileAlt },
+                { name: translatedCategories[2].services[5].name, path: "/flutter-development", desc: translatedCategories[2].services[5].desc, icon: FaLayerGroup },
+                { name: translatedCategories[2].services[6].name, path: "/swift-development", desc: translatedCategories[2].services[6].desc, icon: FaApple },
+                { name: translatedCategories[2].services[7].name, path: "/android-development", desc: translatedCategories[2].services[7].desc, icon: FaAndroid },
+                { name: translatedCategories[2].services[8].name, path: "/ios-development", desc: translatedCategories[2].services[8].desc, icon: FaApple },
+                { name: translatedCategories[2].services[9].name, path: "/django-development", desc: translatedCategories[2].services[9].desc, icon: FaPython },
+                { name: translatedCategories[2].services[10].name, path: "/java-development", desc: translatedCategories[2].services[10].desc, icon: FaJava },
+                { name: translatedCategories[2].services[11].name, path: "/react-development", desc: translatedCategories[2].services[11].desc, icon: FaCode },
+                { name: translatedCategories[2].services[12].name, path: "/nextjs-development", desc: translatedCategories[2].services[12].desc, icon: FaCode },
+                { name: translatedCategories[2].services[13].name, path: "/angular-development", desc: translatedCategories[2].services[13].desc, icon: FaCode },
+                { name: translatedCategories[2].services[14].name, path: "/laravel-development", desc: translatedCategories[2].services[14].desc, icon: FaDesktop },
+                { name: translatedCategories[2].services[15].name, path: "/expert-seo-services", desc: translatedCategories[2].services[15].desc, icon: FaSearch },
+                { name: translatedCategories[2].services[16].name, path: "/kiosks", desc: translatedCategories[2].services[16].desc, icon: FaTabletAlt }
             ]
         }
     ];
@@ -94,24 +99,21 @@ const AllServices = () => {
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
                         <div className="flex-1 text-center flex flex-col items-center">
                             <h1 className="text-hero-title text-white mb-6 tracking-tight uppercase" data-aos="zoom-in">
-                                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Services</span>
+                                {t('all_services_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">{t('all_services_page.hero.title2')}</span>
                             </h1>
                             <p className="text-hero-desc text-indigo-100 max-w-3xl mb-10 font-medium" data-aos="fade-up" data-aos-delay="200">
-                                Comprehensive digital solutions designed to propel your business forward. From AI and Cloud to robust Web Development.
+                                {t('all_services_page.hero.desc')}
                             </p>
                             <div className="w-full max-w-xl mt-4 space-y-2" data-aos="fade-up" data-aos-delay="250">
                                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs font-semibold text-white uppercase tracking-[0.15em] shadow-lg shadow-black/20 animate-wiggle-attn">
-                                    Search Services
+                                    {t('all_services_page.hero.search_label')}
                                 </span>
                                 <input
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
-                                    placeholder="Search services (e.g., cloud, chatbot, design)..."
+                                    placeholder={t('all_services_page.hero.search_placeholder')}
                                     className="w-full rounded-2xl bg-white/20 border border-white/30 text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-md"
                                 />
-                                {/* <p className="text-white/70 text-xs font-medium">
-                                    Tip: try “cloud”, “chatbot”, or “design”.
-                                </p> */}
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center lg:justify-end w-full" data-aos="zoom-in" data-aos-delay="400">
@@ -142,7 +144,7 @@ const AllServices = () => {
                     <div className="space-y-24">
                         {filteredCategories.length === 0 && (
                             <div className="text-center text-slate-500 text-lg" data-aos="fade-up">
-                                No services match “{query}”. Try another keyword.
+                                {t('all_services_page.categories.no_results', { query })}
                             </div>
                         )}
                         {filteredCategories.map((category, idx) => (
@@ -172,7 +174,7 @@ const AllServices = () => {
                                                 <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition-colors">{service.name}</h3>
                                                 <p className="text-slate-600 flex-grow leading-relaxed">{service.desc}</p>
                                                 <div className="mt-6 pt-4 border-t border-slate-50 relative overflow-hidden">
-                                                    <span className="text-sm font-semibold text-indigo-500 flex items-center gap-2">Explore Service <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" /></span>
+                                                    <span className="text-sm font-semibold text-indigo-500 flex items-center gap-2">{t('all_services_page.categories.explore')} <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" /></span>
                                                 </div>
                                             </div>
                                         </Link>
@@ -188,9 +190,9 @@ const AllServices = () => {
             <section className="py-20 bg-indigo-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/HexPatterngrad4.jpg')] opacity-10 mix-blend-overlay bg-cover bg-center"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">Ready to transform your business?</h2>
-                    <p className="text-indigo-100 mb-10 text-lg">Let's discuss how our services can align with your strategic goals.</p>
-                    <Link to="/contact" className="inline-block px-10 py-4 bg-white text-indigo-600 font-bold rounded-full hover:shadow-xl hover:-translate-y-1 transition-all">Schedule a Consultation</Link>
+                    <h2 className="text-4xl font-bold text-white mb-6">{t('all_services_page.cta.title')}</h2>
+                    <p className="text-indigo-100 mb-10 text-lg">{t('all_services_page.cta.desc')}</p>
+                    <Link to="/contact" className="inline-block px-10 py-4 bg-white text-indigo-600 font-bold rounded-full hover:shadow-xl hover:-translate-y-1 transition-all">{t('all_services_page.cta.button')}</Link>
                 </div>
             </section>
         </div>

@@ -1,0 +1,798 @@
+{
+  "welcome": "Bienvenue chez GoZoom",
+  "header": {
+    "cloud_infrastructure": "Cloud et Infrastructure",
+    "cloud_services": "Services Cloud (AWS, GCP)",
+    "kubernetes_docker": "Kubernetes et Docker",
+    "it_strategy": "Conseil en Stratégie Informatique",
+    "ai": "Intelligence Artificielle",
+    "ai_apps": "Applications IA",
+    "chatbot": "Chatbot",
+    "task_automation": "Automatisation des Tâches",
+    "agentic_dev": "Développement d'Agents",
+    "ai_customization": "Personnalisation IA",
+    "industry_use_cases": "Cas d'Utilisation Industriels",
+    "general_services": "Services Généraux",
+    "all_services": "Annuaire de Tous les Services",
+    "cyber_security": "Services de Cybersécurité",
+    "ui_ux": "Conception UI / UX",
+    "nextjs": "Développement Next.js",
+    "web_dev": "Développement Web",
+    "react_native": "Applications React Native",
+    "flutter": "Applications Flutter",
+    "swift_ios": "Applications Swift iOS",
+    "android_dev": "Développement Android",
+    "ios_dev": "Développement iOS",
+    "angular_dev": "Développement Angular",
+    "react_dev": "Développement React",
+    "django_dev": "Développement Django",
+    "java_enterprise": "Applications d'Entreprise Java",
+    "laravel_dev": "Développement Laravel",
+    "seo_services": "Services SEO",
+    "kiosk": "Solutions de Kiosque",
+    "hire_developers": "Embaucher des Développeurs",
+    "hire_react": "Embaucher des Développeurs React",
+    "hire_angular": "Embaucher des Développeurs Angular",
+    "hire_php": "Embaucher des Développeurs PHP",
+    "hire_jquery": "Embaucher des Développeurs jQuery",
+    "hire_html": "Embaucher des Développeurs HTML",
+    "hire_codeigniter": "Embaucher des Développeurs CodeIgniter",
+    "hire_laravel": "Embaucher des Développeurs Laravel",
+    "talent_acquisition": "Talent et Acquisition",
+    "contingent_staffing": "Dotation en Personnel Temporaire",
+    "direct_hire": "Embauche Directe",
+    "nearshore_offshore": "Nearshore et Offshore",
+    "direct_sourcing": "Sourcing Direct",
+    "rpo": "Externalisation du Processus de Recrutement",
+    "compliance_ops": "Conformité et Opérations",
+    "global_payroll": "Paie Mondiale et Conformité",
+    "sow": "Énoncé des Travaux (SOW)",
+    "diversity_spend": "Capture des Dépenses de Diversité",
+    "gcc_bot": "GCC BOT",
+    "mvp": "Programme de Fournisseur Principal (MVP)",
+    "nav_home": "ACCUEIL",
+    "nav_integration": "INTÉGRATION",
+    "nav_retail": "VENTE AU DÉTAIL",
+    "nav_it_solutions": "SOLUTIONS INFORMATIQUES",
+    "nav_workforce": "SOLUTIONS DE MAIN-D'ŒUVRE",
+    "nav_blogs": "BLOGS",
+    "nav_about": "À PROPOS",
+    "nav_contact": "CONTACT",
+    "view_services": "Voir le Résumé des Services",
+    "all_services_page": "Page de Tous les Services",
+    "view_workforce": "Voir le Résumé de Main-d'œuvre",
+    "all_workforce_page": "Page de Toute la Main-d'œuvre",
+    "contact_btn": "Nous Contacter",
+    "home_title": "Accueil",
+    "integration_title": "Intégration",
+    "retail_title": "Vente au Détail",
+    "blogs_title": "Blogs",
+    "about_title": "À Propos de Nous",
+    "it_solutions_title": "Solutions Informatiques",
+    "workforce_title": "Solutions de Main-d'œuvre"
+  },
+  "footer": {
+    "global_locations": "Emplacements Mondiaux",
+    "united_states": "États-Unis",
+    "india": "Inde",
+    "canada": "Canada",
+    "quick_links": "Liens Rapides",
+    "nav_home": "ACCUEIL",
+    "nav_integration": "INTÉGRATION",
+    "nav_retail": "VENTE AU DÉTAIL",
+    "nav_it_solutions": "SOLUTIONS INFORMATIQUES",
+    "nav_workforce": "SOLUTIONS DE MAIN-D'ŒUVRE",
+    "nav_blogs": "BLOGS",
+    "nav_about": "À PROPOS DE NOUS",
+    "nav_contact": "NOUS CONTACTER",
+    "reach_us": "Contactez-Nous Aujourd'hui",
+    "form_name": "Votre Nom",
+    "form_name_placeholder": "Nom",
+    "form_email": "E-mail",
+    "form_email_placeholder": "E-mail",
+    "form_phone": "Téléphone",
+    "form_phone_placeholder": "N° de Contact",
+    "form_service": "Service Intéressé",
+    "select_service": "Sélectionner un Service",
+    "service_web": "Développement Web",
+    "service_mobile": "Développement Mobile",
+    "service_integration": "Intégration",
+    "service_retail": "Vente au Détail",
+    "form_message": "Message",
+    "form_message_placeholder": "Message",
+    "recaptcha_error": "Veuillez compléter le reCAPTCHA.",
+    "submit": "Soumettre",
+    "copyright": "DROIT D'AUTEUR",
+    "rights_reserved": "Tous Droits Réservés",
+    "success_msg": "Demande soumise avec succès !",
+    "error_msg": "Échec de la soumission de la demande. Veuillez réessayer."
+  },
+  "home": {
+    "about": {
+      "subtitle": "Nous sommes Gozoom Technologies",
+      "title": "Société de Développement de Logiciels Sur Mesure de Bout en Bout",
+      "p1": "Gozoom Technologies est une société de développement de logiciels offshore avec plus de 3 ans d'expérience pour guider les clients dans leur transformation numérique. Nous sommes une équipe d'innovateurs et de technologues offrant des services de développement de produits logiciels futuristes aux entreprises. En tant que l'une des principales sociétés de développement de logiciels, nous avons fait nos preuves et nous nous efforçons de garder une longueur d'avance en innovant constamment et en adoptant les dernières avancées technologiques.",
+      "p2": "Nous nous engageons à aider les entreprises à prospérer sur les marchés en évolution rapide d'aujourd'hui en leur fournissant des solutions de développement de logiciels et de technologies d'entreprise qui offrent des résultats mesurables.",
+      "link": "À Propos de Nous",
+      "stats": {
+        "years": "Années",
+        "years_val": "3+",
+        "years_desc": "Vaste expérience dans la fourniture de solutions et services informatiques.",
+        "clients": "Clients",
+        "clients_val": "100+",
+        "clients_desc": "Des clients à travers le monde témoignant de notre qualité et de nos processus.",
+        "awards": "Récompenses",
+        "awards_val": "7+",
+        "awards_desc": "Prestigieuses récompenses de l'industrie pour l'excellence et l'innovation.",
+        "experts": "Experts",
+        "experts_val": "30+",
+        "experts_desc": "Équipe de professionnels qualifiés, compétents et engagés."
+      }
+    },
+    "workforce": {
+      "subtitle": "Talent et Acquisition",
+      "title_premium": "Premium",
+      "title_solutions": "Solutions de Main-d'œuvre",
+      "desc": "Nous aidons les entreprises à créer et à gérer des équipes performantes à l'échelle mondiale. De la dotation en personnel temporaire à l'embauche directe en passant par la conformité de la paie mondiale, nos solutions de main-d'œuvre sont conçues pour faire évoluer vos opérations de manière transparente.",
+      "list": {
+        "contingent": "Dotation en Personnel Temporaire",
+        "direct": "Embauche Directe",
+        "payroll": "Paie Mondiale",
+        "nearshore": "Nearshore/Offshore",
+        "rpo": "Solutions RPO",
+        "sow": "Gestion SOW"
+      },
+      "link": "Voir les Services de Main-d'œuvre",
+      "img_title": "Mise à l'Échelle des Équipes Mondiales",
+      "img_desc": "Recrutement et gestion sur mesure"
+    }
+  },
+  "about_page": {
+    "hero": {
+      "story": "Notre Histoire",
+      "title1": "À PROPOS DE",
+      "title2": "NOUS",
+      "desc": "Offrir Innovation et Excellence au-delà des Attentes"
+    },
+    "journey": {
+      "subtitle": "Notre Parcours",
+      "title1": "Donner aux Entreprises les Moyens grâce à",
+      "title2": "l'Innovation",
+      "p1_start": "Bienvenue chez ",
+      "p1_strong": "Gozoom Technologies",
+      "p1_end": ", votre partenaire de choix pour des solutions numériques transformatrices. Forts de plusieurs années d'expertise sectorielle approfondie, nous permettons aux organisations de rationaliser leurs opérations, d'engager leurs clients et d'accélérer leur croissance.",
+      "p2": "Nous croyons en la construction de véritables partenariats. En comprenant profondément vos défis uniques, notre équipe élabore des stratégies informatiques sur mesure — des intégrations avancées et des technologies de vente au détail aux solutions cloud et IA complètes — conçues spécifiquement pour vous donner un avantage concurrentiel.",
+      "p3": "Nous sommes animés par une mission singulière : offrir l'excellence et façonner l'avenir de la technologie pour nos clients à l'échelle mondiale."
+    },
+    "stand_for": {
+      "subtitle": "Valeurs et Vision",
+      "title1": "Ce Que Nous",
+      "title2": "Défendons",
+      "desc": "Notre passion réside dans le développement de technologies de pointe qui génèrent une valeur substantielle. Nous nous engageons à créer un environnement collaboratif qui ne se contente de rien de moins que l'excellence.",
+      "cards": {
+        "innovation": {
+          "title": "INNOVATION",
+          "items": [
+            "+ Idéer une stratégie meilleure et innovante",
+            "+ Créer des solutions pour aujourd'hui et pour demain",
+            "+ S'adapter facilement aux tendances changeantes",
+            "+ Surpasser et distancer vos concurrents"
+          ]
+        },
+        "commitments": {
+          "title": "ENGAGEMENTS",
+          "items": [
+            "+ S'assurer que toutes les parties prenantes travaillent de concert",
+            "+ Communiquer sans tracas",
+            "+ Générer de meilleurs résultats",
+            "+ Améliorer la croissance"
+          ]
+        },
+        "excellence": {
+          "title": "EXCELLENCE",
+          "items": [
+            "+ Être orienté client plus que jamais",
+            "+ Offrir une qualité exceptionnelle. Toujours !",
+            "+ Prendre des décisions éclairées en temps réel",
+            "+ Améliorer l'expérience client"
+          ]
+        }
+      }
+    },
+    "stats": {
+      "years": "ANNÉES EN\nAFFAIRES",
+      "outlets": "POINTS DE VENTE\nINSTALLÉS",
+      "transactions": "TRANSACTIONS\nCAPTURÉES",
+      "value": "VALEUR DES\nTRANSACTIONS"
+    },
+    "testimonials": {
+      "subtitle": "Histoires de Clients",
+      "title1": "Ce Que Nos Clients",
+      "title2": "Disent",
+      "empty": "Les témoignages sont en cours de mise à jour. Veuillez revenir bientôt !"
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "get_in_touch": "Entrer en Contact",
+      "title1": "Lancez Votre ",
+      "title2": "Avenir Numérique",
+      "desc": "Prêt à transformer vos idées en réalité ? Notre équipe d'experts est là pour vous guider à chaque étape de votre parcours de développement.",
+      "fast_response_label": "Réponse Rapide",
+      "fast_response_val": "Moins de 24 Heures",
+      "confidential_label": "Confidentiel",
+      "confidential_val": "Protection Complète NDA"
+    },
+    "form": {
+      "title": "Demander un Devis",
+      "desc": "Parlez-nous de votre projet et nous vous répondrons sous peu.",
+      "full_name": "Nom Complet",
+      "full_name_placeholder": "Jean Dupont",
+      "work_email": "E-mail Professionnel",
+      "work_email_placeholder": "jean@entreprise.com",
+      "phone_number": "Numéro de Téléphone",
+      "interested_service": "Service Intéressé",
+      "select_service": "Sélectionner un Service",
+      "project_desc": "Description du Projet",
+      "project_desc_placeholder": "Parlez-nous un peu de votre vision...",
+      "captcha_error": "Veuillez vérifier que vous êtes humain.",
+      "submitting": "Envoi en cours...",
+      "send_message": "Envoyer le Message",
+      "services": {
+        "retail": "Solutions de Vente au Détail",
+        "integration": "Services d'Intégration",
+        "web": "Développement Web",
+        "mobile": "Développement d'Applications Mobiles",
+        "seo": "SEO & Marketing Numérique",
+        "kiosks": "Kiosques et Affichage Numérique",
+        "other": "Autre"
+      }
+    },
+    "process": {
+      "subtitle": "Le Parcours",
+      "title": "Notre Processus Collaboratif",
+      "desc": "Nous ne nous contentons pas de créer des logiciels ; nous concevons des solutions. Voici comment nous passons d'un concept initial à un produit numérique abouti.",
+      "steps": {
+        "step1": {
+          "title": "Partagez Vos Besoins",
+          "desc": "Nous écoutons attentivement votre vision, analysant vos besoins commerciaux dès le premier jour pour garantir une base solide."
+        },
+        "step2": {
+          "title": "Protection NDA",
+          "desc": "Votre propriété intellectuelle est sacrée. Nous signons des accords de confidentialité stricts pour garder vos idées 100% sécurisées."
+        },
+        "step3": {
+          "title": "Consultation d'Experts",
+          "desc": "Nos architectes seniors évaluent vos besoins pour recommander la pile technologique parfaite en termes d'évolutivité et de rapidité."
+        }
+      }
+    }
+  },
+  "integration_page": {
+    "hero": {
+      "subtitle": "Intégration d'Entreprise",
+      "title1": "SOLUTIONS",
+      "title2": "D'INTÉGRATION",
+      "desc": "Alimenté par des connaissances approfondies, des recherches minutieuses et une vaste expérience de l'industrie — connectant vos systèmes d'entreprise de manière transparente.",
+      "button_connect": "Connecter les Systèmes",
+      "button_capabilities": "Capacités"
+    },
+    "expertise": {
+      "subtitle": "Notre Expertise",
+      "title1": "Expertise en Intégration",
+      "title2": "GZ",
+      "desc1": "Notre compétence en intégration est attestée par notre expérience de plus de 1800 heures de consultation croisée, travaillant avec tous les principaux outils d'intégration, qu'ils soient sur site ou dans le cloud.",
+      "desc2": "Nous excellons dans l'intégration transparente de tous les principaux systèmes ERP et d'entreprise, y compris SAP, Salesforce, ServiceNow, Oracle ERP, SuccessFactors, Workday, Coupa et Concur."
+    },
+    "apart": {
+      "subtitle": "Différenciateurs",
+      "title1": "Ce Qui",
+      "title2": "Nous Distingue ?",
+      "p1": "Alors que les organisations traversent des phases de transformation, telles que l'expansion par croissance organique ou les fusions et acquisitions, elles ont souvent besoin d'ajouter de nouveaux systèmes à leur paysage informatique.",
+      "p2": "Notre engagement consiste à aider les organisations à garantir la continuité de leurs activités, à exploiter tout le potentiel de leurs données, à assurer une intégration système transparente et à tirer parti de la technologie pour se transformer.",
+      "button": "Découvrir Plus",
+      "cards": {
+        "card1": {
+          "title": "Exploitez votre Paysage Informatique Actuel",
+          "desc": "Nous proposons des solutions qui capitalisent sur vos investissements informatiques actuels, facilitant la transformation vers un paysage applicatif évolutif et agile."
+        },
+        "card2": {
+          "title": "Faites l'Expérience d'Intégrations Puissantes",
+          "desc": "L'intégration de systèmes est un processus complet — qu'il implique un petit nombre d'interfaces ou un projet d'intégration à grande échelle avec de nombreux points de connexion."
+        },
+        "card3": {
+          "title": "Atteignez les Résultats Commerciaux Souhaités",
+          "desc": "Nous allons au-delà de vos objectifs — en examinant vos obstacles existants, vos tentatives précédentes et vos aspirations globales pour fournir des résultats optimaux à votre entreprise."
+        }
+      }
+    },
+    "partners": {
+      "subtitle": "Partenaires",
+      "title1": "Nos Partenaires",
+      "title2": "de Confiance"
+    }
+  },
+  "retail_page": {
+    "hero": {
+      "subtitle": "Technologie de Vente au Détail",
+      "title1": "Au-delà de la",
+      "title2": "Vente au Détail",
+      "desc": "Nous visons à révolutionner et à améliorer l'expérience de vente au détail comme jamais auparavant grâce à l'innovation et à la transformation.",
+      "button_contact": "Entrer en Contact",
+      "button_integration": "Intégration"
+    },
+    "solutions": {
+      "subtitle": "Solutions de Vente au Détail",
+      "title1": "SOLUTIONS DE",
+      "title2": "VENTE AU DÉTAIL",
+      "items": {
+        "execution": {
+          "title": "EXÉCUTION DE VENTE AU DÉTAIL",
+          "desc": "Les solutions de vente au détail connectées de GOZOOM permettent aux entreprises mondiales d'améliorer l'exécution de la vente au détail, de stimuler les ventes et d'augmenter la rentabilité grâce à des produits et solutions innovants et leaders sur le marché."
+        },
+        "security": {
+          "title": "SÉCURITÉ",
+          "desc": "GOZOOM propose des solutions personnalisées pour protéger les marques de manière exhaustive, sauvegarder les investissements et la réputation, prévenir les contrefaçons et augmenter les bénéfices grâce à des capacités de suivi et de traçabilité."
+        },
+        "experience": {
+          "title": "EXPÉRIENCE CLIENT",
+          "desc": "Chez GOZOOM, nous donnons la priorité à l'amélioration de l'expérience client. Nous proposons une gamme de solutions adaptées à différentes expériences d'achat telles que les magasins éphémères, les achats sur le web ou via des applications, le commerce basé sur QR ou vocal."
+        }
+      }
+    },
+    "choose_us": {
+      "subtitle": "Commerce de Nouvelle Génération",
+      "title": "Donner les Moyens aux Détaillants Modernes",
+      "desc": "Nous aidons les magasins physiques à se transformer en hubs numériques axés sur les données. Nos solutions comblent le fossé entre les vitrines physiques et le marché numérique.",
+      "benefits": {
+        "sync": {
+          "title": "Synchronisation Omnicanale",
+          "desc": "Inventaire unifié sur le web, le mobile et en magasin."
+        },
+        "loyalty": {
+          "title": "Fidélisation de la Clientèle",
+          "desc": "Analyses approfondies sur le comportement des acheteurs et les visites répétées."
+        },
+        "profit": {
+          "title": "Bénéfice en Temps Réel",
+          "desc": "Rapports en direct sur les ventes et les marges de coûts."
+        },
+        "fraud": {
+          "title": "Prévention de la Fraude",
+          "desc": "Sécurité des paiements numériques de niveau entreprise."
+        }
+      }
+    },
+    "sectors": {
+      "subtitle": "Solutions Verticales",
+      "title1": "SECTEURS",
+      "title2": "SPÉCIALISÉS",
+      "food": "NOURRITURE ET BOISSONS",
+      "merchandising": "MERCHANDISAGE",
+      "entertainment": "DIVERTISSEMENT",
+      "healthcare": "SANTÉ",
+      "features": {
+        "pos": "PDV",
+        "kds": "KDS",
+        "cloud_kitchen": "CUISINE CLOUD",
+        "self_order_kiosk": "KIOSQUE DE COMMANDE",
+        "contactless": "COMMANDE SANS CONTACT",
+        "live_reporting": "RAPPORT EN DIRECT",
+        "integrated_payments": "PAIEMENTS INTÉGRÉS",
+        "rfid": "RFID",
+        "endless_aisle": "ALLÉE INFINIE",
+        "self_checkout": "CAISSE LIBRE-SERVICE",
+        "voice_ordering": "COMMANDE VOCALE",
+        "healthcare_kiosk": "KIOSQUE DE SANTÉ",
+        "information_kiosk": "KIOSQUE D'INFORMATION"
+      }
+    },
+    "testimonials": {
+      "subtitle": "Succès Client",
+      "title1": "PARTENARIATS",
+      "title2": "PERCUTANTS",
+      "empty": "Collaborer avec des marques mondiales pour redéfinir l'excellence du commerce de détail."
+    },
+    "partners": {
+      "subtitle": "Nos Partenaires",
+      "title1": "Partenaires de",
+      "title2": "Confiance"
+    }
+  },
+  "web_dev_page": {
+    "hero": {
+      "subtitle": "Développement Web",
+      "title1": "Services de Développement Web",
+      "title2": "En Lesquels Vous Pouvez Avoir Confiance",
+      "desc": "Créer des expériences web puissantes, efficaces et engageantes pour les entreprises de toutes tailles",
+      "button_explore": "Explorer les Services",
+      "button_enquire": "Se Renseigner"
+    },
+    "offer": {
+      "subtitle": "Ce Que Nous Proposons",
+      "title1": "Nos Services de",
+      "title2": "Développement de Sites Web"
+    },
+    "services": {
+      "php": {
+        "title": "PHP",
+        "desc": "Un langage de script à usage général populaire alimentant tout, des blogs aux sites web les plus populaires au monde.",
+        "link_text": "Embaucher des Développeurs PHP"
+      },
+      "laravel": {
+        "title": "Laravel",
+        "desc": "Un framework d'application web accessible et puissant avec une syntaxe expressive et élégante pour les artisans modernes.",
+        "link_text": "Embaucher des Développeurs Laravel"
+      },
+      "angular": {
+        "title": "Angular",
+        "desc": "Une plate-forme complète pour créer des applications web mobiles et de bureau expressives avec des interfaces attrayantes.",
+        "link_text": "Embaucher des Développeurs Angular"
+      },
+      "react": {
+        "title": "React",
+        "desc": "Une bibliothèque JavaScript flexible pour créer des interfaces utilisateur remarquables et hautement réactives et des applications web SPA.",
+        "link_text": "Embaucher des Développeurs React"
+      },
+      "html": {
+        "title": "HTML/CSS",
+        "desc": "Convertissez vos conceptions web personnalisées en HTML réactif avec des performances améliorées et des expériences utilisateur fluides.",
+        "link_text": "Embaucher des Développeurs Front-End"
+      },
+      "jquery": {
+        "title": "jQuery",
+        "desc": "Une bibliothèque JS rapide, petite et riche en fonctionnalités qui permet aux développeurs d'apprendre et d'accomplir rapidement des tâches structurelles.",
+        "link_text": "Embaucher des Développeurs jQuery"
+      },
+      "mobile": {
+        "title": "Applications Mobiles",
+        "desc": "Des technologies de pointe pour développer des applications mobiles modernes, conçues et propulsées par des piles multiplateformes émergentes.",
+        "link_text": "Embaucher des Développeurs Mobiles"
+      },
+      "android": {
+        "title": "Application Android",
+        "desc": "Développement d'applications Android sécurisées et évolutives utilisant les dernières architectures Kotlin et les SDK Android.",
+        "link_text": "Embaucher des Développeurs Android"
+      },
+      "ios": {
+        "title": "Application iOS",
+        "desc": "Développement d'applications iOS natives haut de gamme conçues pour les entreprises et les marchés grand public à l'aide de Swift.",
+        "link_text": "Embaucher des Développeurs iOS"
+      },
+      "chatbot": {
+        "title": "Chatbot",
+        "desc": "Des bots intelligents basés sur l'IA qui automatisent l'interaction client et élèvent radicalement l'expérience du service client.",
+        "link_text": "Embaucher des Développeurs Chatbot"
+      },
+      "seo": {
+        "title": "SEO & Marketing",
+        "desc": "Stratégies de référencement white-hat basées sur les données prêtes à faire monter en flèche votre présence en ligne et à atteindre votre public cible de manière native.",
+        "link_text": "Parler à des Experts SEO"
+      },
+      "kiosk": {
+        "title": "Solutions de Kiosque",
+        "desc": "Solutions logicielles de kiosque de point de vente interactives qui améliorent l'autonomie des clients et rationalisent les opérations de vente au détail.",
+        "link_text": "Explorer les Kiosques"
+      },
+      "codeigniter": {
+        "title": "CodeIgniter",
+        "desc": "Un framework PHP puissant avec une petite empreinte, conçu pour les développeurs ayant besoin d'une boîte à outils simple pour des applications web complètes.",
+        "link_text": "Embaucher des Développeurs CodeIgniter"
+      }
+    },
+    "choose_us": {
+      "subtitle": "Pourquoi Nous Choisir",
+      "title1": "Pourquoi les Marques Choisissent",
+      "title2": "Gozoom",
+      "title3": "pour le Développement Web",
+      "points": {
+        "p1": "Méthodologie de conception et de développement web sur mesure",
+        "p2": "Reconnue comme une entreprise de développement de sites web primée",
+        "p3": "Des tarifs abordables pour une expertise en conception et développement de sites web",
+        "p4": "Spécialistes front-end internes : BA, Conception UX/UI, Dév Réactif",
+        "p5": "Une approche client amicale, ouverte, communicative et collaborative",
+        "p6": "Historique démontré de livraison de projets réussie",
+        "p7": "Tests d'assurance qualité (AQ) approfondis avant le lancement",
+        "p8": "Temps de développement réduits conduisant à des économies massives"
+      },
+      "button": "Entrer en Contact"
+    },
+    "team": {
+      "subtitle": "Notre Équipe",
+      "title1": "Notre Équipe de",
+      "title2": "Développeurs Internes",
+      "desc1": "Ayez l'esprit tranquille en sachant que nous livrerons des solutions exceptionnelles tout en gardant l'abordabilité à l'esprit !",
+      "desc2": "Notre équipe de professionnels du développement web est prête à donner vie à votre site web de rêve, votre boutique en ligne ou votre application web personnalisée avec rapidité et précision.",
+      "button": "Obtenez des Développeurs Aujourd'hui",
+      "stats": {
+        "projects": "Projets Livrés",
+        "clients": "Clients Entreprises",
+        "developers": "Développeurs Experts",
+        "experience": "Années d'Expérience"
+      }
+    },
+    "testimonials_static": {
+      "subtitle": "Témoignages",
+      "title1": "Ce Que",
+      "title2": "Nos Clients Disent !",
+      "t1": {
+        "name": "Aditya Rathor",
+        "company": "Maison Infra",
+        "text": "Nous avons fait appel à Gozoom Web Development pour la refonte du site web de notre entreprise, et les résultats ont été exceptionnels. Leur équipe a fait preuve d'une profonde expertise technique, livrant un site web moderne et convivial."
+      },
+      "t2": {
+        "name": "Rishabh",
+        "company": "Bucket Bun",
+        "text": "Travailler avec Gozoom Web Development a changé la donne pour notre entreprise. Leur équipe de développeurs a fait preuve d'une compétence et d'une créativité inégalées pour donner vie à notre vision."
+      },
+      "t3": {
+        "name": "Himanshu Singh",
+        "company": "Exon SAHA",
+        "text": "Nous nous sommes associés à Gozoom Web Development pour moderniser la présence en ligne de notre entreprise, et le résultat a dépassé nos attentes. Leur prouesse technique et leur approche innovante ont transformé notre site web."
+      },
+      "t4": {
+        "name": "Ravi Kumar",
+        "company": "Sokkiefy",
+        "text": "Embaucher Gozoom Web Development a été l'une des meilleures décisions que nous ayons prises pour notre entreprise de commerce électronique. Leur expertise en développement web et en solutions de commerce électronique nous a aidés à créer une boutique en ligne robuste."
+      }
+    }
+  },
+  "blogs_page": {
+    "hero": {
+      "subtitle": "Aperçus et Actualités",
+      "title1": "Nos Derniers",
+      "title2": "Blogs",
+      "desc": "Explorez notre collection d'articles, d'idées et de mises à jour sur les dernières tendances technologiques et d'innovation."
+    },
+    "tech": {
+      "subtitle": "L'Avenir de la Tech",
+      "title1": "Pionniers des",
+      "title2": "Solutions de Nouvelle Génération",
+      "items": {
+        "spatial": {
+          "title": "Informatique Spatiale",
+          "desc": "Brisez les limites des écrans plats. Nous construisons des environnements 3D immersifs qui intègrent de manière transparente le contenu numérique à l'espace physique."
+        },
+        "neural": {
+          "title": "Interfaces Neuronales",
+          "desc": "La prochaine frontière de l'interaction. Des interfaces intuitives axées sur la pensée qui anticipent les besoins des utilisateurs avant même qu'ils ne cliquent."
+        },
+        "quantum": {
+          "title": "Rendu Quantique",
+          "desc": "Des graphismes photoréalistes rendus en millisecondes. Découvrez une fidélité visuelle inégalée alimentée par un traitement de nouvelle génération."
+        },
+        "holographic": {
+          "title": "Interface Holographique",
+          "desc": "Des interfaces qui flottent dans les airs. Interagissez avec les données dans une toute nouvelle dimension grâce à notre moteur holographique propriétaire."
+        }
+      }
+    },
+    "articles": {
+      "subtitle": "Nos Articles",
+      "title1": "Dernières Nouvelles du",
+      "title2": "Journal",
+      "empty": "Aucun blog publié pour le moment. Revenez bientôt !",
+      "category": "Technologie",
+      "read_more": "Lire la Suite"
+    }
+  },
+  "blog_details_page": {
+    "not_found": {
+      "title": "Blog Non Trouvé",
+      "return": "Retour aux Blogs"
+    },
+    "loading": "Chargement d'un contenu incroyable...",
+    "hero": {
+      "subtitle": "Perspectives et Idées"
+    },
+    "content": {
+      "back": "Retour aux Explorations",
+      "read_time": "5 Min de Lecture",
+      "summary": "Résumé Exécutif",
+      "conclusion": "Conclusion Stratégique"
+    }
+  },
+  "all_services_page": {
+    "hero": {
+      "title1": "Nos",
+      "title2": "Services",
+      "desc": "Des solutions numériques complètes conçues pour propulser votre entreprise. De l'IA et du Cloud au développement web robuste.",
+      "search_label": "Rechercher des Services",
+      "search_placeholder": "Rechercher des services (ex: cloud, chatbot, design)..."
+    },
+    "categories": {
+      "no_results": "Aucun service ne correspond à “{{query}}”. Essayez un autre mot-clé.",
+      "explore": "Explorer le Service"
+    },
+    "cta": {
+      "title": "Prêt à transformer votre entreprise ?",
+      "desc": "Discutons de la manière dont nos services peuvent s'aligner sur vos objectifs stratégiques.",
+      "button": "Planifier une Consultation"
+    },
+    "serviceCategories": [
+      {
+        "title": "Cloud et Infrastructure",
+        "description": "Solutions cloud évolutives, sécurisées et robustes adaptées aux entreprises modernes.",
+        "services": [
+          {
+            "name": "Services Cloud (AWS, Oracle, Google)",
+            "desc": "Migration et gestion complètes du cloud."
+          },
+          {
+            "name": "Kubernetes et Docker",
+            "desc": "Solutions de conteneurisation et d'orchestration."
+          },
+          {
+            "name": "Conseil en Stratégie",
+            "desc": "Conseils d'experts sur l'infrastructure et la stratégie informatiques."
+          }
+        ]
+      },
+      {
+        "title": "Intelligence Artificielle",
+        "description": "Des solutions d'IA de pointe pour automatiser et innover vos processus commerciaux.",
+        "services": [
+          {
+            "name": "Applications basées sur l'IA",
+            "desc": "Applications intelligentes tirant parti de l'apprentissage automatique."
+          },
+          {
+            "name": "Développement de Chatbot",
+            "desc": "Agents conversationnels intelligents pour le support client."
+          },
+          {
+            "name": "Automatisation des Tâches / IA",
+            "desc": "Rationaliser les opérations avec une automatisation intelligente."
+          },
+          {
+            "name": "Développement d'Agents",
+            "desc": "Création d'agents IA autonomes pour des tâches complexes."
+          },
+          {
+            "name": "Personnalisation d'Agents IA",
+            "desc": "Adaptation des agents IA aux besoins spécifiques de l'entreprise."
+          },
+          {
+            "name": "Cas d'Utilisation de l'IA",
+            "desc": "Découvrez comment l'IA transforme diverses industries."
+          }
+        ]
+      },
+      {
+        "title": "Web, Mobile et Solutions Numériques",
+        "description": "Applications hautement performantes et réactives construites avec les dernières technologies.",
+        "services": [
+          {
+            "name": "Développement Web Full-Stack",
+            "desc": "Solutions d'ingénierie web sur mesure de bout en bout."
+          },
+          {
+            "name": "Conception UI / UX",
+            "desc": "Interfaces centrées sur l'humain et optimisées pour la conversion."
+          },
+          {
+            "name": "Cybersécurité",
+            "desc": "Protection de niveau entreprise, tests d'intrusion et architectures zero trust."
+          },
+          {
+            "name": "Développement d'Applications Mobiles",
+            "desc": "Applications mobiles multiplateformes et natives."
+          },
+          {
+            "name": "Applications React Native",
+            "desc": "Applications mobiles multiplateformes avec une seule base de code."
+          },
+          {
+            "name": "Applications Flutter",
+            "desc": "Interfaces natives ultra-rapides créées par Google."
+          },
+          {
+            "name": "Applications Swift iOS",
+            "desc": "Expériences natives Apple haut de gamme créées avec Swift."
+          },
+          {
+            "name": "Développement Android",
+            "desc": "Applications Android natives sécurisées et évolutives."
+          },
+          {
+            "name": "Développement iOS",
+            "desc": "Expériences mobiles iOS haut de gamme avec des architectures héritées."
+          },
+          {
+            "name": "Développement Django",
+            "desc": "Frameworks Python de haut niveau pour des backends robustes."
+          },
+          {
+            "name": "Applications d'Entreprise Java",
+            "desc": "Applications d'entreprise backend très robustes et évolutives."
+          },
+          {
+            "name": "Développement React",
+            "desc": "Interfaces utilisateur interactives et rapides."
+          },
+          {
+            "name": "Développement Next.js",
+            "desc": "Applications React rendues côté serveur."
+          },
+          {
+            "name": "Développement Angular",
+            "desc": "Applications dynamiques à page unique."
+          },
+          {
+            "name": "Développement Laravel",
+            "desc": "Applications web PHP robustes et sécurisées."
+          },
+          {
+            "name": "SEO & Marketing Numérique",
+            "desc": "Stratégies basées sur les données pour propulser votre présence en ligne."
+          },
+          {
+            "name": "Solutions de Kiosque",
+            "desc": "Logiciel de kiosque interactif pour une meilleure autonomie client."
+          }
+        ]
+      }
+    ]
+  },
+  "workforce_solutions_page": {
+    "hero": {
+      "subtitle": "Stratégie de Talent Complète",
+      "title1": "Solutions de",
+      "title2": "Main-d'œuvre",
+      "desc": "Renforcez votre organisation avec nos solutions de main-d'œuvre de bout en bout. De la dotation en personnel temporaire et de l'embauche directe à la paie mondiale et à la gestion complète des fournisseurs, nous optimisons la façon dont vous construisez et gérez vos équipes.",
+      "search_label": "Rechercher des solutions",
+      "search_placeholder": "Rechercher des solutions de main-d'œuvre (ex: paie, RPO, sourcing)...",
+      "button": "Associez-vous à Nous"
+    },
+    "offerings": {
+      "subtitle": "Nos Offres",
+      "title1": "Transformez Votre",
+      "title2": "Écosystème de Main-d'œuvre",
+      "desc": "Découvrez les solutions sur mesure que nous proposons pour vous aider à acquérir, gérer et optimiser les talents dont votre entreprise a besoin pour prospérer à l'échelle mondiale.",
+      "no_results": "Aucune solution ne correspond à “{{query}}”. Essayez un autre mot-clé.",
+      "explore": "Explorer la Solution"
+    },
+    "solutions": [
+      {
+        "title": "Dotation en Personnel Temporaire",
+        "desc": "GoZoom propose des solutions de dotation en personnel temporaire pour créer et gérer de manière transparente une main-d'œuvre flexible et à la demande."
+      },
+      {
+        "title": "Embauche Directe",
+        "desc": "Nous sélectionnons et trions sur le volet les meilleurs candidats, en associant les meilleurs talents à l'emploi parfait pour un succès à long terme."
+      },
+      {
+        "title": "Paie Mondiale et Conformité",
+        "desc": "Faites confiance à nos services EOR/AOR avec une facturation, une gestion de la conformité et un traitement de la paie transparents."
+      },
+      {
+        "title": "Énoncé des Travaux (SOW)",
+        "desc": "Des services de premier ordre pour rationaliser les projets, définir la portée, définir les livrables et gérer les ressources dans les délais et le budget impartis."
+      },
+      {
+        "title": "Nearshore et Offshore",
+        "desc": "Des centres de livraison mondiaux flexibles offrant un accès aux meilleurs talents, garantissant une collaboration transparente et des économies de coûts."
+      },
+      {
+        "title": "Sourcing Direct",
+        "desc": "Exploitez notre réseau mondial pour vous connecter directement avec les meilleurs candidats, en éliminant les intermédiaires et les retards."
+      },
+      {
+        "title": "Externalisation du Processus de Recrutement (RPO)",
+        "desc": "Nous gérons tous les aspects de l'embauche, du sourcing à l'intégration, ce qui vous fait gagner du temps et vous donne accès à un plus grand vivier de talents."
+      },
+      {
+        "title": "Capture des Dépenses de Diversité",
+        "desc": "Consolidez les dépenses de main-d'œuvre pour atteindre les objectifs de diversité avec des analyses de données avancées et des rapports de conformité sur mesure."
+      },
+      {
+        "title": "GCC BOT",
+        "desc": "Notre modèle Build-Operate-Transfer (BOT) vous aide à établir des opérations évolutives et des transitions transparentes avec un risque réduit."
+      },
+      {
+        "title": "Programme de Fournisseur Principal (MVP)",
+        "desc": "Une solution complète éliminant la complexité de la gestion de plusieurs fournisseurs grâce à un partenariat unique et rationalisé."
+      }
+    ]
+  }
+}

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowRight, FaMicrochip, FaBrain, FaCube, FaLayerGroup } from 'react-icons/fa';
 import ShootingStars from '../components/ShootingStars';
 
 const Blogs = () => {
+    const { t } = useTranslation();
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
@@ -24,28 +26,28 @@ const Blogs = () => {
 
     const techInsights = [
         {
-            title: "Spatial Computing",
+            title: t('blogs_page.tech.items.spatial.title'),
             icon: FaCube,
             color: "text-cyan-400",
-            desc: "Break the boundaries of flat screens. We build immersive 3D environments that blend digital content with physical space seamlessly."
+            desc: t('blogs_page.tech.items.spatial.desc')
         },
         {
-            title: "Neural Interfaces",
+            title: t('blogs_page.tech.items.neural.title'),
             icon: FaBrain,
             color: "text-purple-400",
-            desc: "The next frontier of interaction. Intuitive, thought-driven interfaces that anticipate user needs before they even click."
+            desc: t('blogs_page.tech.items.neural.desc')
         },
         {
-            title: "Quantum Rendering",
+            title: t('blogs_page.tech.items.quantum.title'),
             icon: FaMicrochip,
             color: "text-blue-400",
-            desc: "Photorealistic graphics rendered in milliseconds. Experience unparalleled visual fidelity powered by next-gen processing."
+            desc: t('blogs_page.tech.items.quantum.desc')
         },
         {
-            title: "Holographic UI",
+            title: t('blogs_page.tech.items.holographic.title'),
             icon: FaLayerGroup,
             color: "text-indigo-400",
-            desc: "Interfaces that float in mid-air. Interact with data in a completely new dimension with our proprietary holographic engine."
+            desc: t('blogs_page.tech.items.holographic.desc')
         }
     ];
 
@@ -76,7 +78,7 @@ const Blogs = () => {
                         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-black uppercase tracking-widest mb-8"
                     >
                         <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span>
-                        Insights & News
+                        {t('blogs_page.hero.subtitle')}
                     </motion.div>
                     
                     <motion.h1 
@@ -85,7 +87,7 @@ const Blogs = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-hero-title text-white font-extrabold leading-[1.05] tracking-tight drop-shadow-2xl"
                     >
-                        Our Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blogs</span>
+                        {t('blogs_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">{t('blogs_page.hero.title2')}</span>
                     </motion.h1>
 
                     <motion.p
@@ -94,7 +96,7 @@ const Blogs = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-hero-desc text-slate-400 mt-8 max-w-2xl mx-auto font-medium"
                     >
-                        Explore our collection of articles, insights, and updates on the latest trends in technology and innovation.
+                        {t('blogs_page.hero.desc')}
                     </motion.p>
                 </div>
             </section>
@@ -109,7 +111,7 @@ const Blogs = () => {
                             viewport={{ once: true }}
                             className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider"
                         >
-                            The Future of Tech
+                            {t('blogs_page.tech.subtitle')}
                         </motion.span>
                         <motion.h2 
                             initial={{ opacity: 0, y: 20 }}
@@ -117,7 +119,7 @@ const Blogs = () => {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold text-white"
                         >
-                            Pioneering <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Next-Gen Solutions</span>
+                            {t('blogs_page.tech.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">{t('blogs_page.tech.title2')}</span>
                         </motion.h2>
                     </div>
 
@@ -150,14 +152,14 @@ const Blogs = () => {
                 <div className="container mx-auto px-4 max-w-7xl">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div className="max-w-2xl">
-                            <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">Our Articles</span>
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Latest From The <span className="text-blue-600">Journal</span></h2>
+                            <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">{t('blogs_page.articles.subtitle')}</span>
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">{t('blogs_page.articles.title1')} <span className="text-blue-600">{t('blogs_page.articles.title2')}</span></h2>
                         </div>
                     </div>
 
                     {blogs.length === 0 ? (
                         <div className="text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm">
-                            <p className="text-gray-500 text-xl font-medium">No blogs published yet. Check back soon!</p>
+                            <p className="text-gray-500 text-xl font-medium">{t('blogs_page.articles.empty')}</p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -182,7 +184,7 @@ const Blogs = () => {
                                                 onError={(e) => { e.target.src = '/images/placeholder.jpg'; }}
                                             />
                                             <div className="absolute top-6 left-6">
-                                                <span className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Technology</span>
+                                                <span className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">{t('blogs_page.articles.category')}</span>
                                             </div>
                                         </div>
                                         <div className="p-8 flex flex-col flex-grow">
@@ -194,7 +196,7 @@ const Blogs = () => {
                                                 to={`/blog/${blog._id}`} 
                                                 className="inline-flex items-center gap-3 bg-slate-900 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 self-start group/btn shadow-lg hover:shadow-blue-500/40"
                                             >
-                                                Read More 
+                                                {t('blogs_page.articles.read_more')} 
                                                 <FaArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
                                             </Link>
                                         </div>

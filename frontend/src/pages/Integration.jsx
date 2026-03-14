@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -156,6 +157,8 @@ const ConstellationBackground = () => {
 };
 
 const Integration = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     const wow = new WOW({ live: false });
@@ -196,20 +199,20 @@ const Integration = () => {
           <div className="max-w-4xl text-center mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down" data-aos="fade-down">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-              Enterprise Integration
+              {t('integration_page.hero.subtitle')}
             </div>
             <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-              INTEGRATION <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Solutions</span>
+              {t('integration_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">{t('integration_page.hero.title2')}</span>
             </h1>
             <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-              Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.
+              {t('integration_page.hero.desc')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
               <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-base lg:text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                Connect Systems <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                {t('integration_page.hero.button_connect')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
               </Link>
               <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
-                Capabilities
+                {t('integration_page.hero.button_capabilities')}
               </a>
             </div>
           </div>
@@ -221,9 +224,9 @@ const Integration = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-sky-50 rounded-full blur-[80px] -mr-32 -mt-32"></div>
         <div className="container relative z-10 block">
           <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-sky-50 text-sky-700 font-bold text-sm mb-4">Our Expertise</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">GZ Integration <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">Expertise</span></h2>
-            <p className="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">Our proficiency in integration is evidenced by our experience of over 1800 cross-consulting hours, working with all major integration tools, whether on-premises or in the cloud.</p>
+            <span className="inline-block py-1 px-3 rounded-full bg-sky-50 text-sky-700 font-bold text-sm mb-4">{t('integration_page.expertise.subtitle')}</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">{t('integration_page.expertise.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">{t('integration_page.expertise.title2')}</span></h2>
+            <p className="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">{t('integration_page.expertise.desc1')}</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-3 sm:gap-4 mb-12">
             {partners.map((p, i) => (
@@ -235,7 +238,7 @@ const Integration = () => {
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-600 text-lg">We excel in seamlessly integrating all major ERP and business systems, encompassing SAP, Salesforce, ServiceNow, Oracle ERP, SuccessFactors, Workday, Coupa, and Concur.</p>
+          <p className="text-center text-slate-600 text-lg">{t('integration_page.expertise.desc2')}</p>
         </div>
       </section>
 
@@ -245,23 +248,23 @@ const Integration = () => {
         <div className="container relative z-10 block">
           <div className="grid lg:grid-cols-2 gap-16">
             <div data-aos="fade-right">
-              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Differentiators</span>
-              <h3 className="text-3xl md:text-5xl font-bold text-white mb-8">What <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Sets Us Apart?</span></h3>
+              <span className="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold text-sm mb-4 uppercase tracking-wider">{t('integration_page.apart.subtitle')}</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-white mb-8">{t('integration_page.apart.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">{t('integration_page.apart.title2')}</span></h3>
               <div className="space-y-5">
                 <p className="text-slate-300 text-lg leading-relaxed">
-                  As organizations go through transformational phases, such as expansion through organic growth or mergers and acquisitions, they often require new systems to be added to their IT landscape.
+                  {t('integration_page.apart.p1')}
                 </p>
                 <p className="text-slate-300 text-lg leading-relaxed">
-                  Our commitment lies in aiding organizations in guaranteeing business continuity, harnessing the full potential of data, seamless system integration, and leveraging technology for transformation.
+                  {t('integration_page.apart.p2')}
                 </p>
-                <Link to="/contact" className="inline-block px-8 py-4 rounded-full border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white transition-all font-bold">Discover More</Link>
+                <Link to="/contact" className="inline-block px-8 py-4 rounded-full border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white transition-all font-bold">{t('integration_page.apart.button')}</Link>
               </div>
             </div>
             <div className="space-y-6" data-aos="fade-left">
               {[
-                { title: 'Harness your Current IT Landscape', desc: 'We offer solutions that capitalize on your current IT landscape investments, facilitating transformation to a scalable and agile application landscape.' },
-                { title: 'Experience Powerful Integrations', desc: 'System integration is a comprehensive process — whether it involves a small number of interfaces or a large-scale integration project with extensive connection points.' },
-                { title: 'Attain Your Desired Business Results', desc: 'We go beyond your objectives — examining your existing obstacles, previous attempts, and overarching aspirations to deliver optimal outcomes for your enterprise.' },
+                { title: t('integration_page.apart.cards.card1.title'), desc: t('integration_page.apart.cards.card1.desc') },
+                { title: t('integration_page.apart.cards.card2.title'), desc: t('integration_page.apart.cards.card2.desc') },
+                { title: t('integration_page.apart.cards.card3.title'), desc: t('integration_page.apart.cards.card3.desc') },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:-translate-y-1 transition-all">
                   <h4 className="text-sky-400 text-xl font-bold mb-3">{item.title}</h4>
@@ -277,8 +280,8 @@ const Integration = () => {
       <section className="py-24 bg-slate-50 relative">
         <div className="container relative z-10 block">
           <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-700 font-bold text-sm mb-4 uppercase tracking-wider">Partners</span>
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">Our Trusted <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">Partners</span></h3>
+            <span className="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-700 font-bold text-sm mb-4 uppercase tracking-wider">{t('integration_page.partners.subtitle')}</span>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-800">{t('integration_page.partners.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-600">{t('integration_page.partners.title2')}</span></h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             {[

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -209,6 +210,7 @@ const ValueCard = ({ img, title, items }) => (
 );
 
 const About = () => {
+  const { t } = useTranslation();
   const [testimonials, setTestimonials] = useState([]);
   const [loadingTestimonials, setLoadingTestimonials] = useState(true);
 
@@ -258,13 +260,13 @@ const About = () => {
           <div className="max-w-4xl text-center mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
-              Our Story
+              {t('about_page.hero.story')}
             </div>
             <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
-              ABOUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">US</span>
+              {t('about_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('about_page.hero.title2')}</span>
             </h1>
             <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-              Delivering Innovation and Excellence beyond Expectation
+              {t('about_page.hero.desc')}
             </p>
           </div>
         </div>
@@ -282,19 +284,19 @@ const About = () => {
             </div>
             {/* Content */}
             <div className="w-full lg:w-1/2" data-aos="fade-left">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-6 tracking-widest uppercase border border-blue-100">Our Journey</span>
+              <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-6 tracking-widest uppercase border border-blue-100">{t('about_page.journey.subtitle')}</span>
               <h2 className="text-4xl md:text-5xl font-black text-slate-800 mb-8 leading-tight">
-                Empowering Businesses Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Innovation</span>
+                {t('about_page.journey.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">{t('about_page.journey.title2')}</span>
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Welcome to <span className="font-bold text-slate-800">Gozoom Technologies</span>, your premier partner for transformative digital solutions. With years of deep industry expertise, we empower organizations to streamline operations, engage customers, and accelerate growth.
+                  {t('about_page.journey.p1_start')}<span className="font-bold text-slate-800">{t('about_page.journey.p1_strong')}</span>{t('about_page.journey.p1_end')}
                 </p>
                 <p>
-                  We believe in building true partnerships. By deeply understanding your unique challenges, our team crafts bespoke IT strategies—from advanced integrations and retail tech to comprehensive cloud and AI solutions—designed specifically to give you a competitive edge.
+                  {t('about_page.journey.p2')}
                 </p>
                 <p className="font-medium text-slate-800 border-l-4 border-blue-500 pl-4 py-2 bg-slate-50 rounded-r-xl">
-                  We are driven by a singular mission: to deliver excellence and shape the future of technology for our clients globally.
+                  {t('about_page.journey.p3')}
                 </p>
               </div>
             </div>
@@ -306,49 +308,34 @@ const About = () => {
       <section className="py-24 bg-slate-50 relative">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center max-w-4xl mx-auto" data-aos="fade-up">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 tracking-widest uppercase border border-blue-200">Values & Vision</span>
+            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 tracking-widest uppercase border border-blue-200">{t('about_page.stand_for.subtitle')}</span>
             <h2 className="text-4xl md:text-5xl font-black text-slate-800 mb-6">
-              What We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Stand For</span>
+              {t('about_page.stand_for.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">{t('about_page.stand_for.title2')}</span>
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Our passion lies in developing cutting-edge technology that drives substantial value. We are committed to a collaborative environment that settles for nothing less than excellence.
+              {t('about_page.stand_for.desc')}
             </p>
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-12">
             <div data-aos="fade-up" data-aos-delay="100" className="w-full md:w-auto">
               <ValueCard
                 img="/images/about_innovation.jpeg"
-                title="INNOVATION"
-                items={[
-                  '+ To ideate better and innovative strategy',
-                  '+ To create Now and future proof solutions',
-                  '+ To adapt to changing trends effortlessly',
-                  '+ To outplace and outpace your competitors',
-                ]}
+                title={t('about_page.stand_for.cards.innovation.title')}
+                items={t('about_page.stand_for.cards.innovation.items', { returnObjects: true })}
               />
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className="w-full md:w-auto">
               <ValueCard
                 img="/images/commitment.png"
-                title="COMMITMENTS"
-                items={[
-                  '+ To ensure all stakeholders are working',
-                  '+ To communicate hassle-free',
-                  '+ To drive better results',
-                  '+ To enhance growth',
-                ]}
+                title={t('about_page.stand_for.cards.commitments.title')}
+                items={t('about_page.stand_for.cards.commitments.items', { returnObjects: true })}
               />
             </div>
             <div data-aos="fade-up" data-aos-delay="500" className="w-full md:w-auto">
               <ValueCard
                 img="/images/excellence.webp"
-                title="EXCELLENCE"
-                items={[
-                  '+ To be customer-driven more than ever',
-                  '+ To deliver exceptional quality. Always!',
-                  '+ To take real time and informed decisions',
-                  '+ To enhance customer experience',
-                ]}
+                title={t('about_page.stand_for.cards.excellence.title')}
+                items={t('about_page.stand_for.cards.excellence.items', { returnObjects: true })}
               />
             </div>
           </div>
@@ -362,10 +349,10 @@ const About = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
               {[
-                { prefix: '', value: '3', suffix: '', label: 'YEARS IN\nBUSINESS' },
-                { prefix: '', value: '5', suffix: '+', label: 'OUTLETS\nINSTALLED' },
-                { prefix: '', value: '8000', suffix: '+', label: 'TRANSACTIONS\nCAPTURED' },
-                { prefix: '$', value: '1000', suffix: 'k+', label: 'TRANSACTION\nVALUE' },
+                { prefix: '', value: '3', suffix: '', label: t('about_page.stats.years') },
+                { prefix: '', value: '5', suffix: '+', label: t('about_page.stats.outlets') },
+                { prefix: '', value: '8000', suffix: '+', label: t('about_page.stats.transactions') },
+                { prefix: '$', value: '1000', suffix: 'k+', label: t('about_page.stats.value') },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col items-center group">
                   <div className="w-[150px] md:w-[200px] mx-auto border-b-2 border-blue-400/50 h-[90px] mb-6 flex items-end justify-center pb-3 group-hover:border-blue-400 transition-colors">
@@ -389,8 +376,8 @@ const About = () => {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16" data-aos="fade-up">
-            <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-4 tracking-wider uppercase border border-blue-100">Client Stories</span>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-800">What Our Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Say</span></h2>
+            <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-4 tracking-wider uppercase border border-blue-100">{t('about_page.testimonials.subtitle')}</span>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-800">{t('about_page.testimonials.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t('about_page.testimonials.title2')}</span></h2>
           </div>
 
           {loadingTestimonials ? (
@@ -399,29 +386,29 @@ const About = () => {
             </div>
           ) : testimonials.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((t, idx) => (
-                <div key={t._id} className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
+              {testimonials.map((t_item, idx) => (
+                <div key={t_item._id} className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={idx * 100}>
                   <FaQuoteLeft className="text-4xl text-blue-200 mb-6 group-hover:text-blue-400 transition-colors" />
-                  <p className="text-slate-600 text-lg mb-8 leading-relaxed italic relative z-10">"{t.content}"</p>
+                  <p className="text-slate-600 text-lg mb-8 leading-relaxed italic relative z-10">"{t_item.content}"</p>
 
                   <div className="flex items-center justify-between border-t border-slate-200 pt-6 mt-auto">
                     <div className="flex items-center gap-4">
                       <div className="w-14 h-14 rounded-full bg-white shadow-sm border border-slate-200 p-1 flex items-center justify-center overflow-hidden">
-                        {t.avatar ? (
-                          <img src={`${backendUrl}${t.avatar}`} alt={t.authorName} className="w-full h-full object-cover rounded-full" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150"; }} />
+                        {t_item.avatar ? (
+                          <img src={`${backendUrl}${t_item.avatar}`} alt={t_item.authorName} className="w-full h-full object-cover rounded-full" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150"; }} />
                         ) : (
                           <div className="w-full h-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl rounded-full">
-                            {t.authorName.charAt(0)}
+                            {t_item.authorName.charAt(0)}
                           </div>
                         )}
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-lg">{t.authorName}</h4>
-                        <p className="text-sm text-slate-500 font-medium">{t.authorRole}</p>
+                        <h4 className="font-bold text-slate-800 text-lg">{t_item.authorName}</h4>
+                        <p className="text-sm text-slate-500 font-medium">{t_item.authorRole}</p>
                       </div>
                     </div>
                     <div className="flex gap-1 text-amber-400 text-sm">
-                      {[...Array(t.rating || 5)].map((_, i) => <FaStar key={i} />)}
+                      {[...Array(t_item.rating || 5)].map((_, i) => <FaStar key={i} />)}
                     </div>
                   </div>
                 </div>
@@ -429,7 +416,7 @@ const About = () => {
             </div>
           ) : (
             <div className="text-center py-12 text-slate-500 bg-slate-50 rounded-2xl border border-slate-100 max-w-2xl mx-auto">
-              Testimonials are currently being updated. Please check back soon!
+              {t('about_page.testimonials.empty')}
             </div>
           )}
         </div>

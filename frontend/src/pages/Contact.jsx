@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { usePhoneCountry } from '../hooks/usePhonePrefix';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -13,6 +14,7 @@ import { FaEdit, FaLock, FaLightbulb } from 'react-icons/fa';
 const RECAPTCHA_SITE_KEY = '6Lf9TsQnAAAAANxF0lHRxZTC_YMZIMmV1qX1v1qs';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const recaptchaRef = useRef(null);
   const detectedCountry = usePhoneCountry(); // auto-detect from IP
@@ -21,8 +23,13 @@ const Contact = () => {
   const [captchaError, setCaptchaError] = useState(false);
 
   const services = [
-    'Retail Solutions', 'Integration Services', 'Web Development',
-    'Mobile App Development', 'SEO & Digital Marketing', 'Kiosks & Digital Signage', 'Other'
+    { key: 'retail', value: 'Retail Solutions' },
+    { key: 'integration', value: 'Integration Services' },
+    { key: 'web', value: 'Web Development' },
+    { key: 'mobile', value: 'Mobile App Development' },
+    { key: 'seo', value: 'SEO & Digital Marketing' },
+    { key: 'kiosks', value: 'Kiosks & Digital Signage' },
+    { key: 'other', value: 'Other' }
   ];
 
   useEffect(() => {
@@ -86,7 +93,7 @@ const Contact = () => {
                 data-aos="fade-down"
               >
                 <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                Get in Touch
+                {t('contact_page.hero.get_in_touch')}
               </div>
 
               <h1
@@ -94,9 +101,9 @@ const Contact = () => {
                 data-aos="fade-right"
                 data-aos-delay="100"
               >
-                Kickstart Your <br />
+                {t('contact_page.hero.title1')}<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-300">
-                  Digital Future
+                  {t('contact_page.hero.title2')}
                 </span>
               </h1>
 
@@ -105,7 +112,7 @@ const Contact = () => {
                 data-aos="fade-right"
                 data-aos-delay="300"
               >
-                Ready to transform your ideas into reality? Our expert team is here to guide you through every step of your development journey.
+                {t('contact_page.hero.desc')}
               </p>
 
               <div className="flex flex-wrap gap-6 justify-center mb-12">
@@ -114,8 +121,8 @@ const Contact = () => {
                     <FaEdit className="text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Fast Response</p>
-                    <p className="text-sm font-semibold">Under 24 Hours</p>
+                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">{t('contact_page.hero.fast_response_label')}</p>
+                    <p className="text-sm font-semibold">{t('contact_page.hero.fast_response_val')}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-blue-200/80" data-aos="fade-up" data-aos-delay="700">
@@ -123,8 +130,8 @@ const Contact = () => {
                     <FaLock className="text-emerald-400" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Confidential</p>
-                    <p className="text-sm font-semibold">Full NDA Protection</p>
+                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">{t('contact_page.hero.confidential_label')}</p>
+                    <p className="text-sm font-semibold">{t('contact_page.hero.confidential_val')}</p>
                   </div>
                 </div>
               </div>
@@ -139,25 +146,25 @@ const Contact = () => {
               <div className="glass-premium p-2 sm:p-3 bg-white/95 backdrop-blur-3xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] !rounded-[2.5rem]">
                 <div className="px-8 md:px-14 py-16 md:py-20">
                   <div className="text-center mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Request a Quote</h2>
-                    <p className="text-slate-500 text-xs sm:text-sm">Tell us about your project and we'll get back to you shortly.</p>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">{t('contact_page.form.title')}</h2>
+                    <p className="text-slate-500 text-xs sm:text-sm">{t('contact_page.form.desc')}</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-1">
-                        <label className={labelClass}>Full Name<span className="text-blue-500/80 ml-1">*</span></label>
+                        <label className={labelClass}>{t('contact_page.form.full_name')}<span className="text-blue-500/80 ml-1">*</span></label>
                         <input
-                          type="text" required maxLength={50} placeholder="John Doe"
+                          type="text" required maxLength={50} placeholder={t('contact_page.form.full_name_placeholder')}
                           value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
                           className={inputClass}
                         />
                       </div>
 
                       <div className="space-y-1">
-                        <label className={labelClass}>Work Email<span className="text-blue-500/80 ml-1">*</span></label>
+                        <label className={labelClass}>{t('contact_page.form.work_email')}<span className="text-blue-500/80 ml-1">*</span></label>
                         <input
-                          type="email" required placeholder="john@company.com"
+                          type="email" required placeholder={t('contact_page.form.work_email_placeholder')}
                           value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                           className={inputClass}
                         />
@@ -166,7 +173,7 @@ const Contact = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                       <div className="space-y-1">
-                        <label className={labelClass}>Phone Number<span className="text-blue-500/80 ml-1">*</span></label>
+                        <label className={labelClass}>{t('contact_page.form.phone_number')}<span className="text-blue-500/80 ml-1">*</span></label>
                         <div className="phone-input-premium">
                           <PhoneInput
                             country={detectedCountry}
@@ -184,14 +191,14 @@ const Contact = () => {
                       </div>
 
                       <div className="space-y-1">
-                        <label className={labelClass}>Interested Service</label>
+                        <label className={labelClass}>{t('contact_page.form.interested_service')}</label>
                         <div className="relative">
                           <select
                             value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}
                             className={`${inputClass} appearance-none cursor-pointer`}
                           >
-                            <option value="">Select Service</option>
-                            {services.map(s => <option key={s} value={s}>{s}</option>)}
+                            <option value="">{t('contact_page.form.select_service')}</option>
+                            {services.map(s => <option key={s.key} value={s.value}>{t(`contact_page.form.services.${s.key}`)}</option>)}
                           </select>
                           <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -201,9 +208,9 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-1">
-                      <label className={labelClass}>Project Description</label>
+                      <label className={labelClass}>{t('contact_page.form.project_desc')}</label>
                       <textarea
-                        placeholder="Tell us a bit about your vision..."
+                        placeholder={t('contact_page.form.project_desc_placeholder')}
                         value={form.message}
                         onChange={e => setForm({ ...form, message: e.target.value })}
                         rows={3}
@@ -216,7 +223,7 @@ const Contact = () => {
                       <div className="transform scale-[0.85] sm:scale-100 origin-center">
                         <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_SITE_KEY} />
                         {captchaError && (
-                          <p className="text-red-500 text-xs text-center mt-2 font-medium">Please verify you are human.</p>
+                          <p className="text-red-500 text-xs text-center mt-2 font-medium">{t('contact_page.form.captcha_error')}</p>
                         )}
                       </div>
                     </div>
@@ -230,11 +237,11 @@ const Contact = () => {
                         {submitting ? (
                           <>
                             <svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                            Submitting...
+                            {t('contact_page.form.submitting')}
                           </>
                         ) : (
                           <>
-                            Send Message
+                            {t('contact_page.form.send_message')}
                           </>
                         )}
                       </button>
@@ -256,33 +263,33 @@ const Contact = () => {
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20" data-aos="fade-up">
             <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-blue-50 text-blue-600 font-bold text-xs mb-6 uppercase tracking-widest border border-blue-100">
-              The Journey
+              {t('contact_page.process.subtitle')}
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Our Collaborative Process</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">{t('contact_page.process.title')}</h2>
             <p className="text-lg mt-6 text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              We don't just build software; we architect solutions. Here's how we move from initial concept to a polished digital product.
+              {t('contact_page.process.desc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-12">
             {[
               {
-                title: 'Share Your Requirement',
-                desc: 'We listen deeply to your vision, analyzing your business needs from day one to ensure a solid foundation.',
+                title: t('contact_page.process.steps.step1.title'),
+                desc: t('contact_page.process.steps.step1.desc'),
                 color: 'from-amber-400 to-orange-500',
                 icon: <FaEdit />,
                 step: '01'
               },
               {
-                title: 'NDA Protection',
-                desc: 'Your intellectual property is sacred. We sign strict confidentiality agreements to keep your ideas 100% secure.',
+                title: t('contact_page.process.steps.step2.title'),
+                desc: t('contact_page.process.steps.step2.desc'),
                 color: 'from-blue-500 to-indigo-600',
                 icon: <FaLock />,
                 step: '02'
               },
               {
-                title: 'Expert Consultation',
-                desc: 'Our senior architects evaluate your needs to recommend the perfect tech stack for scalability and speed.',
+                title: t('contact_page.process.steps.step3.title'),
+                desc: t('contact_page.process.steps.step3.desc'),
                 color: 'from-emerald-400 to-teal-600',
                 icon: <FaLightbulb />,
                 step: '03'

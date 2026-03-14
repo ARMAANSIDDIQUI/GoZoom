@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import ServiceCollage from '../components/ServiceCollage';
 import TechSpotlight from '../components/TechSpotlight';
 import Hero from '../components/parallaxGlobe/Hero';
 import { useScroll } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,9 +14,11 @@ import WOW from 'wow.js';
 import 'animate.css';
 
 const Home = () => {
+    const { t } = useTranslation();
     const lenisRef = useRef(null);
     const isTransitioningRef = useRef(false);
     const lastScrollYRef = useRef(0);
+    const location = useLocation();
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -148,39 +151,39 @@ const Home = () => {
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-7/12" data-aos="fade-right">
-                            <span className="text-gray-500 uppercase tracking-wider text-sm font-semibold block mb-2">We are Gozoom Technologies</span>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">End-to-End Custom Software Development Company</h2>
+                            <span className="text-gray-500 uppercase tracking-wider text-sm font-semibold block mb-2">{t('home.about.subtitle')}</span>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">{t('home.about.title')}</h2>
                             <p className="text-gray-600 mb-6 leading-relaxed">
-                                Gozoom Technologies is an offshore software development company with more than 3 years of experience in steering clients through digital transformation. We are a team of innovators and technologists offering futuristic software product development services to enterprises. As one of the leading software development companies, we have a proven track record of success and strive to stay ahead of the curve by constantly innovating and embracing the latest advancements in technology.
+                                {t('home.about.p1')}
                             </p>
                             <p className="text-gray-600 mb-8 leading-relaxed">
-                                We are dedicated to helping businesses thrive in today's rapidly evolving markets by empowering them with software development & enterprise technology solutions that deliver measurable results.
+                                {t('home.about.p2')}
                             </p>
                             <Link to="/about" className="inline-flex items-center text-[var(--color-gozoom-blue)] font-bold hover:text-blue-800 transition-colors gap-2">
-                                About Us <FaArrowRight className="ml-1" />
+                                {t('home.about.link')} <FaArrowRight className="ml-1" />
                             </Link>
                         </div>
 
                         <div className="lg:w-5/12 grid grid-cols-2 gap-8" data-aos="fade-left">
                             <div className="border-l-4 border-[var(--color-gozoom-blue)] pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
-                                <span className="text-gray-500 uppercase text-xs font-bold block">Years</span>
-                                <span className="text-4xl font-bold text-[var(--color-gozoom-blue)] block my-2 transition-colors">3+</span>
-                                <p className="text-sm text-gray-600">Extensive experience in delivering IT Solutions & Services.</p>
+                                <span className="text-gray-500 uppercase text-xs font-bold block">{t('home.about.stats.years')}</span>
+                                <span className="text-4xl font-bold text-[var(--color-gozoom-blue)] block my-2 transition-colors">{t('home.about.stats.years_val')}</span>
+                                <p className="text-sm text-gray-600">{t('home.about.stats.years_desc')}</p>
                             </div>
                             <div className="border-l-4 border-[var(--color-gozoom-green)] pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
-                                <span className="text-gray-500 uppercase text-xs font-bold block">Clients</span>
-                                <span className="text-4xl font-bold text-[var(--color-gozoom-green)] block my-2 transition-colors">100+</span>
-                                <p className="text-sm text-gray-600">Clients across the globe testifying our quality & processes.</p>
+                                <span className="text-gray-500 uppercase text-xs font-bold block">{t('home.about.stats.clients')}</span>
+                                <span className="text-4xl font-bold text-[var(--color-gozoom-green)] block my-2 transition-colors">{t('home.about.stats.clients_val')}</span>
+                                <p className="text-sm text-gray-600">{t('home.about.stats.clients_desc')}</p>
                             </div>
                             <div className="border-l-4 border-[var(--color-gozoom-blue)] pl-4 py-2 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
-                                <span className="text-gray-500 uppercase text-xs font-bold block">Awards</span>
-                                <span className="text-4xl font-bold text-[var(--color-gozoom-blue)] block my-2 transition-colors">7+</span>
-                                <p className="text-sm text-gray-600">Industry prestigious awards for excellence and innovation.</p>
+                                <span className="text-gray-500 uppercase text-xs font-bold block">{t('home.about.stats.awards')}</span>
+                                <span className="text-4xl font-bold text-[var(--color-gozoom-blue)] block my-2 transition-colors">{t('home.about.stats.awards_val')}</span>
+                                <p className="text-sm text-gray-600">{t('home.about.stats.awards_desc')}</p>
                             </div>
                             <div className="border-l-4 border-[var(--color-gozoom-green)] pl-4 py-2 mt-8 lg:mt-0 lg:translate-y-8 hover:-translate-y-2 transition-transform duration-300 cursor-default bg-white shadow-sm p-4 rounded group">
-                                <span className="text-gray-500 uppercase text-xs font-bold block">Experts</span>
-                                <span className="text-4xl font-bold text-[var(--color-gozoom-green)] block my-2 transition-colors">30+</span>
-                                <p className="text-sm text-gray-600">Team of qualified, skilled and committed professionals.</p>
+                                <span className="text-gray-500 uppercase text-xs font-bold block">{t('home.about.stats.experts')}</span>
+                                <span className="text-4xl font-bold text-[var(--color-gozoom-green)] block my-2 transition-colors">{t('home.about.stats.experts_val')}</span>
+                                <p className="text-sm text-gray-600">{t('home.about.stats.experts_desc')}</p>
                             </div>
                         </div>
                     </div>
@@ -192,21 +195,21 @@ const Home = () => {
                 <div className="container mx-auto px-8 md:px-16">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <div className="lg:w-1/2" data-aos="fade-right">
-                            <span className="text-cyan-600 uppercase tracking-widest text-sm font-bold block mb-4">Talent & Acquisition</span>
+                            <span className="text-cyan-600 uppercase tracking-widest text-sm font-bold block mb-4">{t('home.workforce.subtitle')}</span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                                Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Workforce Solutions</span>
+                                {t('home.workforce.title_premium')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">{t('home.workforce.title_solutions')}</span>
                             </h2>
                             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                                We help enterprises build and manage high-performing teams globally. From contingent staffing and direct hire to global payroll compliance, our workforce solutions are designed to scale your operations seamlessly.
+                                {t('home.workforce.desc')}
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                                 {[
-                                    'Contingent Staffing',
-                                    'Direct Hire',
-                                    'Global Payroll',
-                                    'Nearshore/Offshore',
-                                    'RPO Solutions',
-                                    'SOW Management'
+                                    t('home.workforce.list.contingent'),
+                                    t('home.workforce.list.direct'),
+                                    t('home.workforce.list.payroll'),
+                                    t('home.workforce.list.nearshore'),
+                                    t('home.workforce.list.rpo'),
+                                    t('home.workforce.list.sow')
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-3">
                                         <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
@@ -215,7 +218,7 @@ const Home = () => {
                                 ))}
                             </div>
                             <Link to="/workforce-solutions" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gray-900 text-white font-bold hover:bg-cyan-600 transition-all gap-3 group">
-                                View Workforce Services <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                {t('home.workforce.link')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
                         <div className="lg:w-1/2 relative" data-aos="fade-left">
@@ -227,8 +230,8 @@ const Home = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-8 left-8">
-                                    <p className="text-white text-2xl font-bold">Scaling Global Teams</p>
-                                    <p className="text-white/80">Tailored recruitment & management</p>
+                                    <p className="text-white text-2xl font-bold">{t('home.workforce.img_title')}</p>
+                                    <p className="text-white/80">{t('home.workforce.img_desc')}</p>
                                 </div>
                             </div>
                             {/* Decorative element */}

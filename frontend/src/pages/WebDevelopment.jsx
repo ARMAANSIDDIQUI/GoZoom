@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
@@ -8,6 +9,8 @@ import { FaArrowRight, FaCode, FaMobileAlt, FaApple, FaAndroid, FaRobot, FaSearc
 import { SiPhp, SiLaravel, SiAngular, SiReact, SiHtml5, SiJquery, SiCodeigniter } from 'react-icons/si';
 
 const WebDevelopment = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         const wow = new WOW({ live: false });
@@ -15,26 +18,26 @@ const WebDevelopment = () => {
     }, []);
 
     const services = [
-        { icon: SiPhp, color: 'text-indigo-400', title: 'PHP', desc: 'A popular general-purpose scripting language powering everything from blogs to the most popular websites globally.', link: '/hire-php-developer', linkText: 'Hire PHP Developers' },
-        { icon: SiLaravel, color: 'text-red-500', title: 'Laravel', desc: 'An accessible and powerful web application framework with expressive and elegant syntax for modern artisans.', link: '/laravel-development-company', linkText: 'Hire Laravel Developers' },
-        { icon: SiAngular, color: 'text-red-600', title: 'Angular', desc: 'An extensive platform for building expressive mobile and desktop web applications with compelling interfaces.', link: '/hire-angular-developer', linkText: 'Hire Angular Developers' },
-        { icon: SiReact, color: 'text-cyan-400', title: 'React', desc: 'A flexible JavaScript library for building remarkable, highly-responsive user interfaces and SPA web applications.', link: '/hire-react-developer', linkText: 'Hire React Developers' },
-        { icon: SiHtml5, color: 'text-orange-500', title: 'HTML/CSS', desc: 'Convert your custom web designs to responsive HTML with enhanced performance and smooth user experiences.', link: '/hire-html-developer', linkText: 'Hire Front-End Developers' },
-        { icon: SiJquery, color: 'text-blue-500', title: 'jQuery', desc: "A fast, small, and feature-rich JS library which allows developers to quickly learn and accomplish structural tasks.", link: '/hire-jquery-developers', linkText: 'Hire jQuery Developers' },
-        { icon: FaMobileAlt, color: 'text-slate-600', title: 'Mobile Apps', desc: 'State-of-the-art technologies to develop modern mobile apps, designed & powered by emerging cross-platform stacks.', link: '/mobile-application-development', linkText: 'Hire Mobile Developers' },
-        { icon: FaAndroid, color: 'text-green-500', title: 'Android App', desc: 'Secure and scalable Android application development utilizing the latest Kotlin architectures and Android SDKs.', link: '/android-development', linkText: 'Hire Android Developers' },
-        { icon: FaApple, color: 'text-slate-800', title: 'iOS App', desc: 'Premium, native iOS application development tailored for enterprises and consumer markets using Swift.', link: '/ios-development', linkText: 'Hire iOS Developers' },
-        { icon: FaComments, color: 'text-purple-500', title: 'Chatbot', desc: 'Intelligent AI-powered bots that automate customer interaction and radically elevate the customer service experience.', link: '/chatbot', linkText: 'Hire Chatbot Developers' },
-        { icon: FaSearch, color: 'text-yellow-500', title: 'SEO & Marketing', desc: 'Data-driven white-hat SEO strategies ready to skyrocket your online presence and reach your target audience natively.', link: '/expert-seo-services', linkText: 'Talk to SEO Experts' },
-        { icon: FaDesktop, color: 'text-blue-400', title: 'Kiosk Solutions', desc: 'Interactive point-of-sale kiosk software solutions that enhance customer autonomy and streamline retail operations.', link: '/kiosks', linkText: 'Explore Kiosks' },
-        { icon: SiCodeigniter, color: 'text-orange-600', title: 'CodeIgniter', desc: 'A powerful PHP framework with a tiny footprint, built for developers needing a simple toolkit for full-featured web apps.', link: '/hire-codeIgniter-developers', linkText: 'Hire CodeIgniter Developers' },
+        { icon: SiPhp, color: 'text-indigo-400', title: t('web_dev_page.services.php.title'), desc: t('web_dev_page.services.php.desc'), link: '/hire-php-developer', linkText: t('web_dev_page.services.php.link_text') },
+        { icon: SiLaravel, color: 'text-red-500', title: t('web_dev_page.services.laravel.title'), desc: t('web_dev_page.services.laravel.desc'), link: '/laravel-development-company', linkText: t('web_dev_page.services.laravel.link_text') },
+        { icon: SiAngular, color: 'text-red-600', title: t('web_dev_page.services.angular.title'), desc: t('web_dev_page.services.angular.desc'), link: '/hire-angular-developer', linkText: t('web_dev_page.services.angular.link_text') },
+        { icon: SiReact, color: 'text-cyan-400', title: t('web_dev_page.services.react.title'), desc: t('web_dev_page.services.react.desc'), link: '/hire-react-developer', linkText: t('web_dev_page.services.react.link_text') },
+        { icon: SiHtml5, color: 'text-orange-500', title: t('web_dev_page.services.html.title'), desc: t('web_dev_page.services.html.desc'), link: '/hire-html-developer', linkText: t('web_dev_page.services.html.link_text') },
+        { icon: SiJquery, color: 'text-blue-500', title: t('web_dev_page.services.jquery.title'), desc: t('web_dev_page.services.jquery.desc'), link: '/hire-jquery-developers', linkText: t('web_dev_page.services.jquery.link_text') },
+        { icon: FaMobileAlt, color: 'text-slate-600', title: t('web_dev_page.services.mobile.title'), desc: t('web_dev_page.services.mobile.desc'), link: '/mobile-application-development', linkText: t('web_dev_page.services.mobile.link_text') },
+        { icon: FaAndroid, color: 'text-green-500', title: t('web_dev_page.services.android.title'), desc: t('web_dev_page.services.android.desc'), link: '/android-development', linkText: t('web_dev_page.services.android.link_text') },
+        { icon: FaApple, color: 'text-slate-800', title: t('web_dev_page.services.ios.title'), desc: t('web_dev_page.services.ios.desc'), link: '/ios-development', linkText: t('web_dev_page.services.ios.link_text') },
+        { icon: FaComments, color: 'text-purple-500', title: t('web_dev_page.services.chatbot.title'), desc: t('web_dev_page.services.chatbot.desc'), link: '/chatbot', linkText: t('web_dev_page.services.chatbot.link_text') },
+        { icon: FaSearch, color: 'text-yellow-500', title: t('web_dev_page.services.seo.title'), desc: t('web_dev_page.services.seo.desc'), link: '/expert-seo-services', linkText: t('web_dev_page.services.seo.link_text') },
+        { icon: FaDesktop, color: 'text-blue-400', title: t('web_dev_page.services.kiosk.title'), desc: t('web_dev_page.services.kiosk.desc'), link: '/kiosks', linkText: t('web_dev_page.services.kiosk.link_text') },
+        { icon: SiCodeigniter, color: 'text-orange-600', title: t('web_dev_page.services.codeigniter.title'), desc: t('web_dev_page.services.codeigniter.desc'), link: '/hire-codeIgniter-developers', linkText: t('web_dev_page.services.codeigniter.link_text') },
     ];
 
     const testimonials = [
-        { name: 'Aditya Rathor', company: 'Maison Infra', text: "We engaged with Gozoom Web Development for our company's website overhaul, and the results were exceptional. Their team exhibited profound technical expertise, delivering a modern and user-friendly website." },
-        { name: 'Rishabh', company: 'Bucket Bun', text: "Working with Gozoom Web Development was a game-changer for our business. Their team of developers demonstrated unparalleled skill and creativity in bringing our vision to life." },
-        { name: 'Himanshu Singh', company: 'Exon SAHA', text: "We partnered with Gozoom Web Development to revamp our company's online presence, and the outcome exceeded our expectations. Their technical prowess and innovative approach transformed our website." },
-        { name: 'Ravi Kumar', company: 'Sokkiefy', text: "Hiring Gozoom Web Development was one of the best decisions we made for our e-commerce venture. Their expertise in web development and e-commerce solutions helped us create a robust online store." },
+        { name: t('web_dev_page.testimonials_static.t1.name'), company: t('web_dev_page.testimonials_static.t1.company'), text: t('web_dev_page.testimonials_static.t1.text') },
+        { name: t('web_dev_page.testimonials_static.t2.name'), company: t('web_dev_page.testimonials_static.t2.company'), text: t('web_dev_page.testimonials_static.t2.text') },
+        { name: t('web_dev_page.testimonials_static.t3.name'), company: t('web_dev_page.testimonials_static.t3.company'), text: t('web_dev_page.testimonials_static.t3.text') },
+        { name: t('web_dev_page.testimonials_static.t4.name'), company: t('web_dev_page.testimonials_static.t4.company'), text: t('web_dev_page.testimonials_static.t4.text') },
     ];
 
     return (
@@ -52,17 +55,17 @@ const WebDevelopment = () => {
                         <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
-                                Web Development
+                                {t('web_dev_page.hero.subtitle')}
                             </div>
                             <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
-                                Web Development Services <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">You Can Trust</span>
+                                {t('web_dev_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('web_dev_page.hero.title2')}</span>
                             </h1>
                             <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="400">
-                                Creating powerful, effective, and engaging web experiences for businesses of all sizes
+                                {t('web_dev_page.hero.desc')}
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
-                                <a href="#explore" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Explore Services</a>
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">Enquire Now</Link>
+                                <a href="#explore" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">{t('web_dev_page.hero.button_explore')}</a>
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">{t('web_dev_page.hero.button_enquire')}</Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
@@ -88,8 +91,8 @@ const WebDevelopment = () => {
                 <div className="absolute top-0 right-0 w-80 h-80 bg-blue-50 rounded-full blur-[80px] -mr-40 -mt-40"></div>
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">What We Offer</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">Our Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Development Services</span></h2>
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4">{t('web_dev_page.offer.subtitle')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">{t('web_dev_page.offer.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t('web_dev_page.offer.title2')}</span></h2>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((svc, i) => (
@@ -114,18 +117,18 @@ const WebDevelopment = () => {
                 <div className="container relative z-10 block">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Why Choose Us</span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Why Brands Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Gozoom</span> for Web Development</h2>
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">{t('web_dev_page.choose_us.subtitle')}</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">{t('web_dev_page.choose_us.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('web_dev_page.choose_us.title2')}</span> {t('web_dev_page.choose_us.title3')}</h2>
                             <div className="space-y-4">
                                 {[
-                                    { text: 'Custom web design and development methodology', icon: FaCode },
-                                    { text: 'Recognized as an award-winning website development firm', icon: FaCheckCircle },
-                                    { text: 'Affordable rates for website design and development expertise', icon: FaRocket },
-                                    { text: 'In-house front-end specialists: BA, UX/UI Design, Responsive Dev', icon: FaDesktop },
-                                    { text: 'A friendly, open, communicative, and collaborative client approach', icon: FaComments },
-                                    { text: 'Demonstrated history of successful project delivery', icon: FaShieldAlt },
-                                    { text: 'Thorough quality assurance (QA) testing prior to launch', icon: FaSearch },
-                                    { text: 'Reduced development times leading to massive cost savings', icon: FaAndroid },
+                                    { text: t('web_dev_page.choose_us.points.p1'), icon: FaCode },
+                                    { text: t('web_dev_page.choose_us.points.p2'), icon: FaCheckCircle },
+                                    { text: t('web_dev_page.choose_us.points.p3'), icon: FaRocket },
+                                    { text: t('web_dev_page.choose_us.points.p4'), icon: FaDesktop },
+                                    { text: t('web_dev_page.choose_us.points.p5'), icon: FaComments },
+                                    { text: t('web_dev_page.choose_us.points.p6'), icon: FaShieldAlt },
+                                    { text: t('web_dev_page.choose_us.points.p7'), icon: FaSearch },
+                                    { text: t('web_dev_page.choose_us.points.p8'), icon: FaAndroid },
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-blue-500/10 transition-colors">
                                         <div className="flex-shrink-0 w-10 h-10 bg-blue-500/30 rounded-xl flex items-center justify-center">
@@ -136,7 +139,7 @@ const WebDevelopment = () => {
                                 ))}
                             </div>
                             <div className="mt-8">
-                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Get In Touch</Link>
+                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">{t('web_dev_page.choose_us.button')}</Link>
                             </div>
                         </div>
                         <div className="relative hidden lg:block" data-aos="fade-left">
@@ -155,18 +158,18 @@ const WebDevelopment = () => {
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-[80px]"></div>
                         <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
                             <div>
-                                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">Our Team</span>
-                                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Team of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">In-House Developers</span></h3>
-                                <p className="text-slate-300 text-lg italic mb-4">Have peace of mind knowing we'll deliver outstanding solutions with affordability in mind!</p>
-                                <p className="text-slate-400 mb-6">Our team of web development professionals is ready to bring your dream website, online store, or custom web application to life with speed and precision.</p>
-                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">Get Developers Today</Link>
+                                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-4 uppercase tracking-wider">{t('web_dev_page.team.subtitle')}</span>
+                                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('web_dev_page.team.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('web_dev_page.team.title2')}</span></h3>
+                                <p className="text-slate-300 text-lg italic mb-4">{t('web_dev_page.team.desc1')}</p>
+                                <p className="text-slate-400 mb-6">{t('web_dev_page.team.desc2')}</p>
+                                <Link to="/contact" className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">{t('web_dev_page.team.button')}</Link>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {[
-                                    { num: '3000+', label: 'Projects Delivered', color: 'blue' },
-                                    { num: '100+', label: 'Enterprise Clients', color: 'indigo' },
-                                    { num: '300+', label: 'Expert Developers', color: 'sky' },
-                                    { num: '7+', label: 'Years Experience', color: 'cyan' },
+                                    { num: '3000+', label: t('web_dev_page.team.stats.projects'), color: 'blue' },
+                                    { num: '100+', label: t('web_dev_page.team.stats.clients'), color: 'indigo' },
+                                    { num: '300+', label: t('web_dev_page.team.stats.developers'), color: 'sky' },
+                                    { num: '7+', label: t('web_dev_page.team.stats.experience'), color: 'cyan' },
                                 ].map((stat, i) => (
                                     <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center">
                                         <p className="text-3xl font-extrabold text-white mb-1">{stat.num}</p>
@@ -183,22 +186,22 @@ const WebDevelopment = () => {
             <section className="py-24 bg-white relative">
                 <div className="container relative z-10 block">
                     <div className="text-center mb-16">
-                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 uppercase tracking-wider">Testimonials</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Clients Say!</span></h2>
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-4 uppercase tracking-wider">{t('web_dev_page.testimonials_static.subtitle')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-800">{t('web_dev_page.testimonials_static.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t('web_dev_page.testimonials_static.title2')}</span></h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
-                        {testimonials.map((t, i) => (
+                        {testimonials.map((t_item, i) => (
                             <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-1 transition-transform duration-300" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <span className="text-xl font-bold text-blue-600">{t.name[0]}</span>
+                                        <span className="text-xl font-bold text-blue-600">{t_item.name[0]}</span>
                                     </div>
                                     <div>
-                                        <h5 className="font-bold text-slate-800">{t.name}</h5>
-                                        <span className="text-slate-500 text-sm">{t.company}</span>
+                                        <h5 className="font-bold text-slate-800">{t_item.name}</h5>
+                                        <span className="text-slate-500 text-sm">{t_item.company}</span>
                                     </div>
                                 </div>
-                                <p className="text-slate-600 leading-relaxed italic">"{t.text}"</p>
+                                <p className="text-slate-600 leading-relaxed italic">"{t_item.text}"</p>
                             </div>
                         ))}
                     </div>
