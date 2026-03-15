@@ -1,5 +1,68 @@
 {
   "welcome": "Welcome to GoZoom",
+  "service_consulting_page": {
+    "hero": {
+      "badge": "Strategic Consulting",
+      "title_main": "Empowering Your Business with ",
+      "title_gradient": "Expert Strategy",
+      "desc": "Navigate the complexities of modern technology with GoZoom. We provide high-impact consulting services to streamline your operations and drive digital excellence.",
+      "cta_book": "Book a Consultation",
+      "alt_team": "Consulting Team"
+    },
+    "offerings": {
+      "badge": "Our Offerings",
+      "title": "Comprehensive Consulting Services",
+      "desc": "Tailored strategies designed to accelerate your growth and solve your most pressing technical challenges.",
+      "items": {
+        "transformation": {
+          "title": "Digital Transformation",
+          "desc": "Re-engineering your business processes for the digital age through innovation and modern technology adoption."
+        },
+        "audits": {
+          "title": "Technical Audits",
+          "desc": "Thorough assessments of your codebase, security protocols, and infrastructure to identify and mitigate risks."
+        },
+        "strategy": {
+          "title": "Technology Strategy",
+          "desc": "Crafting long-term technical roadmaps that align perfectly with your unique business objectives."
+        },
+        "vendor": {
+          "title": "Vendor Management",
+          "desc": "Expert guidance on selecting, onboarding, and managing the right technology partners for your ecosystem."
+        },
+        "coaching": {
+          "title": "Agile Team Coaching",
+          "desc": "Upskilling your development teams in modern methodologies, high-performance culture, and technical best practices."
+        },
+        "cto": {
+          "title": "Fractional CTO Services",
+          "desc": "High-level technical leadership and governance on a part-time basis, providing senior expertise without full-time costs."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Partner with Our Consultants?",
+      "items": {
+        "experience": {
+          "title": "Deep Industry Experience",
+          "desc": "Our consultants bring years of multi-domain expertise to solve even the most complex technical hurdles."
+        },
+        "unbiased": {
+          "title": "Agnostic & Unbiased",
+          "desc": "We remain strictly independent of specific vendors, ensuring our advice is always in your best interest."
+        },
+        "roadmaps": {
+          "title": "Actionable Roadmaps",
+          "desc": "We provide clear, step-by-step execution plans that take the guesswork out of technical growth."
+        },
+        "collaborative": {
+          "title": "Collaborative Spirit",
+          "desc": "We work as a seamless extension of your team, ensuring knowledge transfer and long-term sustainability."
+        }
+      }
+    }
+  },
   "header": {
     "cloud_infrastructure": "Cloud & Infrastructure",
     "cloud_services": "Cloud Services (AWS, GCP)",
@@ -733,6 +796,327 @@
         ]
       }
     ]
+  },
+  "chatbot_page": {
+    "hero": {
+      "badge": "AI-Powered Solutions",
+      "title_main": "Hire Experienced ",
+      "title_gradient": "Chatbot Developers",
+      "desc": "Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.",
+      "cta_enquire": "Enquire Now",
+      "cta_learn": "Learn More"
+    },
+    "transform": {
+      "title_main": "Helping Businesses Transform Their Customers Engagement into ",
+      "title_gradient": "Amazing Experiences",
+      "desc_1": "At GoZoom Technologies, we pride ourselves on housing a team of highly skilled chatbot developers dedicated to transforming your ideas into intelligent, interactive solutions. Our developers leverage cutting-edge technologies to build sophisticated chatbots tailored to meet your business needs.",
+      "quote": "Whether it's streamlining customer support, automating tasks, or enhancing user engagement, our team excels in creating robust and user-friendly chatbot solutions.",
+      "desc_2": "With a focus on innovation and efficiency, our chatbot development process is characterized by a client-centric approach. We collaborate closely with you to understand your unique requirements and objectives, ensuring the delivery of customized chatbot solutions that seamlessly integrate into your existing systems."
+    },
+    "specialization": {
+      "badge": "Expertise",
+      "title_main": "Our Chatbot Developers ",
+      "title_gradient": "Specialize In...",
+      "items": {
+        "ux": {
+          "title": "Conversational UX Design:",
+          "desc": "Crafting natural and intuitive chatbot interactions for enhanced user engagement."
+        },
+        "integration": {
+          "title": "Integration Expertise:",
+          "desc": "Seamlessly integrating chatbots into your existing systems for streamlined operations."
+        },
+        "ai": {
+          "title": "AI-Powered Solutions:",
+          "desc": "Harnessing the power of artificial intelligence for intelligent and adaptive chatbot functionalities."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Choose Us",
+      "title_main": "Why You Should Choose our ",
+      "title_gradient": "Chatbot Experts.",
+      "items": {
+        "expertise": {
+          "title": "Expertise Matters",
+          "desc": "Our experienced team ensures precision in chatbot development, bringing in-depth knowledge to every project."
+        },
+        "tailored": {
+          "title": "Tailored Solutions",
+          "desc": "Custom chatbot development catering to your unique business needs ensures optimal performance and user satisfaction."
+        },
+        "agile": {
+          "title": "Agile Development",
+          "desc": "Embracing an agile approach, we deliver chatbot solutions that evolve with your business, ensuring long-term relevance."
+        },
+       "scalability": {
+          "title": "Scalability",
+          "desc": "Our chatbots are designed for scalability, adapting seamlessly to growing user interactions and expanding business requirements."
+        },
+        "security": {
+          "title": "Security Focus",
+          "desc": "Implementing robust security measures to protect user data, ensuring trust and compliance with industry standards."
+        },
+        "support": {
+          "title": "Continuous Support",
+          "desc": "Post-deployment, our team provides ongoing support, updates, and improvements to keep your chatbot at peak performance."
+        }
+      }
+    },
+    "cta_section": {
+      "title_main": "Ask our Chatbot Experts",
+      "title_sub": "about their services today!",
+      "cta_start": "Get Started"
+    }
+  },
+  "ai_agent_customization_page": {
+    "hero": {
+      "badge": "Tailored Intelligence",
+      "title_gradient": "Customization",
+      "title_main": "AI Agent ",
+      "desc": "Off-the-shelf AI models are just the beginning. We fine-tune, constrain, and customize AI agents to operate exactly within your domain, mimicking your brand voice and adhering strictly to your rules.",
+      "cta_customize": "Customize Your AI"
+    },
+    "core_services": {
+      "items": {
+        "fine_tuning": {
+          "title": "Fine-Tuning",
+          "desc": "Training foundation models (like GPT-4 or Llama 3) on your proprietary datasets to improve domain-specific accuracy and relevance without hallucination."
+        },
+        "guardrails": {
+          "title": "Guardrails & Safety",
+          "desc": "Implementing strict moderation and operational boundaries to ensure the AI acts safely, legally, and within corporate compliance guidelines."
+        },
+        "persona": {
+          "title": "Persona Design",
+          "desc": "Engineering the system prompt and instructions so the output tone perfectly mimics your brand's voice—be it professional, witty, or deeply empathetic."
+        }
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "Customization Capabilities",
+      "desc": "We configure and fine-tune AI agents to integrate flawlessly into your existing technology stack.",
+      "items": {
+        "rag": {
+          "title": "RAG Architecture Integration",
+          "desc": "Implementing Retrieval-Augmented Generation (RAG) so your AI agents can accurately query your private databases and knowledge bases in real-time."
+        },
+        "voice": {
+          "title": "Brand Voice Alignment",
+          "desc": "Extensive system prompt engineering and persona drafting to ensure the agent communicates exactly like your best human employees."
+        },
+        "compliance": {
+          "title": "Safety & Compliance Guardrails",
+          "desc": "Hardcoding strict boundaries to prevent the AI from generating inappropriate content, leaking PII, or executing dangerous tasks."
+        },
+        "tools": {
+          "title": "Tool Calling & APIs",
+          "desc": "Empowering your agents to utilize external tools—allowing them to fetch weather data, execute SQL queries, or send emails through the Salesforce API."
+        },
+        "rbac": {
+          "title": "Role-Based Access Control",
+          "desc": "Customizing agent behavior based on the user interacting with it, ensuring execs see full data while frontline staff only see relevant scopes."
+        },
+        "automated_retraining": {
+          "title": "Continuous Model Fine-Tuning",
+          "desc": "Setting up automated pipelines that use feedback loops (RLHF) to constantly retrain and improve the model over time using real user interactions."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our Customization Engineering?",
+      "items": {
+        "accuracy": {
+          "title": "Zero Hallucination Tolerance",
+          "desc": "Through rigorous vector database structuring and strict temperature controls, we minimize AI hallucinations, guaranteeing accuracy."
+        },
+        "agnostic": {
+          "title": "Model Agnostic Approach",
+          "desc": "We do not lock you into OpenAI. We assess and customize across Anthropic, Google Gemini, Mistral, and open-source models (like Llama 3) to find the perfect fit."
+        },
+        "privacy": {
+          "title": "Data Privacy Standard",
+          "desc": "Your fine-tuning datasets are sacred. We deploy models on private VPCs and never send your proprietary data to public training sets."
+        },
+        "enterprise": {
+          "title": "Enterprise-Scale Deployment",
+          "desc": "Custom models require sophisticated hosting. We manage the MLOps, inference optimization, and auto-scaling to keep your latency low and costs manageable."
+        }
+      }
+    }
+  },
+  "agentic_development_page": {
+    "hero": {
+      "badge": "The Future is Autonomous",
+      "title_gradient": "Agentic",
+      "title_main": " Development",
+      "desc": "We design, build, and deploy multi-agent LLM systems capable of reasoning, planning, and executing complex, multi-step tasks autonomously.",
+      "cta_build": "Build Agents"
+    },
+    "paradigm": {
+      "title": "Beyond Simple Prompts",
+      "desc": "Agentic development shifts the paradigm from chatbots that just answer questions to active agents that act. We utilize frameworks like LangChain, AutoGen, and custom cognitive architectures to build agents that break down goals, use external tools, and self-correct.",
+      "items": {
+        "swarms": {
+          "title": "Multi-Agent Swarms",
+          "desc": "Agents that collaborate, critique each other, and delegate tasks based on specialized roles."
+        },
+        "tool_integration": {
+          "title": "Tool Integration (RAG & APIs)",
+          "desc": "Agents that can browse the web, query private databases via RAG, and execute code in sandboxes."
+        }
+      },
+      "agent_types": {
+        "planner": {
+          "title": "Planner Agent",
+          "desc": "Decomposes objectives into actionable JSON steps."
+        },
+        "executor": {
+          "title": "Executor Agent",
+          "desc": "Runs Python scripts and queries APIs based on plan."
+        },
+        "reviewer": {
+          "title": "Reviewer Agent",
+          "desc": "Validates output and requests revisions if constraints fail."
+        }
+      }
+    },
+    "expertise": {
+      "badge": "Capabilities",
+      "title": "What We Build",
+      "desc": "We architect specialized autonomous agents capable of transforming entire operational pipelines.",
+      "items": {
+        "research": {
+          "title": "Research & Intelligence Agents",
+          "desc": "Agents that scrape the web, read PDFs, synthesize vast amounts of competitive intelligence, and output structured reports automatically."
+        },
+        "coding": {
+          "title": "Autonomous Coding Agents",
+          "desc": "Engineering assistants that not only write boilerplate code but debug their own errors, write tests, and submit pull requests."
+        },
+        "trading": {
+          "title": "Dynamic Trading Bots",
+          "desc": "Agents that ingest live market data, interpret financial news sentiments, and execute algorithmic trades in real-time."
+        },
+        "success": {
+          "title": "Customer Success Swarms",
+          "desc": "A network of agents where one drafts an email, another reviews it for tone, and a third fetches account data, ensuring perfect responses."
+        },
+        "supply_chain": {
+          "title": "Supply Chain Orchestrators",
+          "desc": "Autonomous systems that monitor global logistics, predict disruptions based on news feeds, and automatically reroute shipments."
+        },
+        "defense": {
+          "title": "Cyber Defense Agents",
+          "desc": "Active security bots that monitor network traffic, isolate compromised endpoints autonomously, and draft incident reports."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Pioneer with GoZoom?",
+      "items": {
+        "frameworks": {
+          "title": "Advanced Framework Mastery",
+          "desc": "We are experts in leveraging cutting-edge autonomous frameworks like AutoGen, LangGraph, and CrewAI to build robust multi-agent systems."
+        },
+        "guardrails": {
+          "title": "Deterministic Guardrails",
+          "desc": "Agents can hallucinate. We specialize in building strict verification layers and deterministic fallback mechanisms to ensure agents never take destructive actions."
+        },
+        "infrastructure": {
+          "title": "Scalable Infrastructure",
+          "desc": "Running swarms of LLM agents requires intense compute management. Our DevOps team ensures your infrastructure auto-scales efficiently to manage API rate limits and costs."
+        },
+        "cognitive": {
+          "title": "Custom Cognitive Architectures",
+          "desc": "We don’t just use off-the-shelf scaffolding; we design custom reasoning loops (ReAct, Tree of Thoughts) tailored specifically to your business logic."
+        }
+      }
+    }
+  },
+  "ai_automation_page": {
+    "hero": {
+      "badge": "Efficiency Redefined",
+      "title_main": "AI / Task ",
+      "title_gradient": "Automation",
+      "desc": "Eliminate bottlenecks. Accelerate workflows. Deploy intelligent automation agents that handle repetitive tasks with zero errors.",
+      "cta_automate": "Automate Now"
+    },
+    "operations": {
+      "badge": "Operations",
+      "title_main": "Smarter ",
+      "title_gradient": "Workflows",
+      "items": {
+        "execution": {
+          "title": "Rapid Execution",
+          "desc": "Reduce manual data entry and processing from days down to seconds."
+        },
+        "sync": {
+          "title": "Continuous Sync",
+          "desc": "Keep platforms, CRMs, and databases perfectly aligned in real-time without human intervention."
+        },
+        "pipelines": {
+          "title": "Custom Pipelines",
+          "desc": "Tailored automation pipelines that map exactly to your unique organizational processes."
+        }
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Automate",
+      "desc": "From back-office operations to customer-facing interactions, we build intelligent pipelines.",
+      "items": {
+        "data_entry": {
+          "title": "Data Entry Automation",
+          "desc": "OCR and NLP models that read invoices, extract key-value pairs, and insert them directly into your database."
+        },
+        "triaging": {
+          "title": "Customer Support Triaging",
+          "desc": "AI agents that categorize incoming tickets, route them to the correct department, and draft initial responses."
+        },
+        "integrations": {
+          "title": "Workflow Integrations",
+          "desc": "Connecting disjointed SaaS platforms (Stripe, Salesforce, Slack) to trigger actions seamlessly across your entire stack."
+        },
+        "reports": {
+          "title": "Report Generation",
+          "desc": "Automated scraping of analytics tools to generate weekly, beautifully formatted executive summaries."
+        },
+        "inventory": {
+          "title": "Inventory Management",
+          "desc": "Smart scripts that monitor stock levels, predict depletion rates, and automatically trigger re-order processes."
+        },
+        "auditing": {
+          "title": "Security Auditing",
+          "desc": "Automated compliance checks and vulnerability scans running constantly to ensure infrastructure integrity."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our AI Automation Experts?",
+      "items": {
+        "precision": {
+          "title": "Error-Free Precision",
+          "desc": "Humans get tired; code does not. Our automation scripts ensure 100% accuracy in repetitive, high-volume tasks."
+        },
+        "cost_reduction": {
+          "title": "Massive Cost Reduction",
+          "desc": "By replacing thousands of hours of manual labor with efficient serverless functions, your operational overhead plummets."
+        },
+        "scalability": {
+          "title": "Scalability on Demand",
+          "desc": "Whether you need to process ten documents a day or ten million, our cloud-native automation scales instantly."
+        },
+        "legacy": {
+          "title": "Seamless Legacy Integration",
+          "desc": "We specialize in writing connective tissue that allows modern AI platforms to interact securely with legacy, on-premise databases."
+        }
+      }
+    }
   },
   "workforce_solutions_page": {
     "hero": {
@@ -1586,6 +1970,332 @@
         "Deep expertise in the Spring Ecosystem (Spring Boot, Security, Data)",
         "Extensive performance tuning for JVM multi-threading and memory management",
         "Guaranteed 99.9% uptime architecture design"
+      ]
+    }
+  },
+  "cloud_services_page": {
+    "hero": {
+      "badge": "Cloud Infrastructure",
+      "title_main": "Enterprise ",
+      "title_gradient": "Cloud Services",
+      "desc": "Unlock unparalleled scalability and security with our managed cloud services across AWS, Google Cloud, Azure, and Oracle environments.",
+      "cta_deploy": "Deploy Now"
+    },
+    "ecosystems": {
+      "badge": "Ecosystems",
+      "title_main": "Supported ",
+      "title_gradient": "Cloud Providers",
+      "providers": {
+        "aws": {
+          "title": "Amazon Web Services",
+          "desc": "Comprehensive AWS architecture, migration, and management. Leveraging EC2, S3, Lambda, and more for scalable solutions."
+        },
+        "gcp": {
+          "title": "Google Cloud Platform",
+          "desc": "High-performance computing and data analytics on GCP. Perfect for AI/ML workloads and Kubernetes orchestration."
+        },
+        "oracle": {
+          "title": "Oracle Cloud Network",
+          "desc": "Enterprise-grade cloud infrastructure providing high performance, security, and integrated data management solutions."
+        },
+        "azure": {
+          "title": "Microsoft Azure",
+          "desc": "Empower your enterprise with scalable, reliable, and highly secure cloud computing services tailored to your workflows."
+        },
+        "digital_ocean": {
+          "title": "DigitalOcean",
+          "desc": "Simple, developer-friendly cloud infrastructure designed to build, deploy, and scale applications quickly and efficiently."
+        }
+      }
+    },
+    "secure_scalable": {
+      "title": "Secure & Scalable Infrastructure",
+      "desc": "Modern businesses require IT infrastructure that scales on-demand while maintaining strict security and compliance postures. We architect cloud environments that guarantee uptime, withstand traffic spikes, and protect sensitive data.",
+      "features": [
+        "Zero Trust Architecture implementation",
+        "Automated backups and Disaster Recovery",
+        "Cost optimization and resource scaling",
+        "24/7 Monitoring and DevOps support"
+      ]
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build in the Cloud",
+      "desc": "From complete architecture redesigns to seamless migrations, our expert engineers deliver robust cloud solutions.",
+      "items": {
+        "setup": {
+          "title": "Cloud Infrastructure Setup",
+          "desc": "We architect and build highly available, fault-tolerant infrastructure tailored perfectly to your application requirements using AWS, GCP, Azure, or Oracle."
+        },
+        "serverless": {
+          "title": "Serverless Applications",
+          "desc": "Develop modern, event-driven applications using AWS Lambda or Google Cloud Functions to eliminate server management overhead."
+        },
+        "migration": {
+          "title": "Cloud Migration Strategy",
+          "desc": "Secure, zero-downtime migrations mapping your legacy on-premise systems seamlessly to optimized cloud-native environments."
+        },
+        "database": {
+          "title": "Database Optimization",
+          "desc": "Managed relational or NoSQL database tuning designed for massive scale and instant response times."
+        },
+        "devops": {
+          "title": "DevOps & CI/CD Pipelines",
+          "desc": "Automate your software delivery process with continuous integration and continuous deployment tailored to the cloud."
+        },
+        "monitoring": {
+          "title": "Performance Monitoring",
+          "desc": "Implement deep observability tools and metrics dashboards to pre-emptively manage system health and optimize performance."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our Cloud Services?",
+      "items": [
+        {
+          "title": "Certified Cloud Architects",
+          "desc": "Our team comprises certified engineers deeply experienced across AWS, Google Cloud, Azure, and Oracle environments."
+        },
+        {
+          "title": "Uncompromising Security",
+          "desc": "Security is embedded into every layer of our infrastructure design, employing IAM, encryption, and zero-trust principles."
+        },
+        {
+          "title": "Cost Optimization",
+          "desc": "We continuously analyze infrastructure usage to implement FinOps strategies, ensuring you only pay for compute power you actually utilize."
+        },
+        {
+          "title": "24/7 Managed Support",
+          "desc": "Rest easy knowing our operations team is actively monitoring, patching, and maintaining your cloud ecosystem around the clock."
+        },
+        {
+          "title": "Seamless Scalability",
+          "desc": "We design architectures that automatically scale horizontally and vertically, handling traffic spikes effortlessly without downtime."
+        },
+        {
+          "title": "Rapid Disaster Recovery",
+          "desc": "Robust multi-region failover configurations and automated backup testing to ensure rapid recovery and business continuity."
+        }
+      ]
+    }
+  },
+  "cyber_security_page": {
+    "hero": {
+      "badge": "Uncompromising Defense",
+      "title_main": "Cyber ",
+      "title_gradient": "Security",
+      "desc": "Protect your digital assets, secure your infrastructure, and ensure compliance with our enterprise-grade cybersecurity solutions.",
+      "cta_secure": "Secure Your Data"
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build & Protect",
+      "desc": "From offensive security testing to defensive architecture, we secure every layer.",
+      "items": {
+        "pen_testing": {
+          "title": "Penetration Testing",
+          "desc": "Ethical hacking services mimicking real-world attacks to identify vulnerabilities in your web apps, APIs, and networks."
+        },
+        "vulnerability": {
+          "title": "Vulnerability Assessments",
+          "desc": "Comprehensive scanning and auditing of your entire IT infrastructure to proactively discover and patch security flaws."
+        },
+        "cloud": {
+          "title": "Cloud Security",
+          "desc": "Securing AWS, Azure, and GCP environments with strict IAM policies, data encryption, and configuration management."
+        },
+        "compliance": {
+          "title": "Compliance & Governance",
+          "desc": "Mapping your security posture to industry standards like HIPAA, SOC2, PCI-DSS, and GDPR to guarantee compliance."
+        },
+        "threat": {
+          "title": "24/7 Threat Monitoring",
+          "desc": "Deploying advanced SIEM solutions and Security Operations Center (SOC) capabilities for round-the-clock vigilance."
+        },
+        "zero_trust": {
+          "title": "Zero Trust Architectures",
+          "desc": "Implementing modern security frameworks where every access request is strongly authenticated, authorized, and continuously validated."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our Security Experts?",
+      "items": {
+        "hackers": {
+          "title": "Elite Ethical Hackers",
+          "desc": "Our team comprises certified professionals (OSCP, CISSP) who possess a deep understanding of attacker methodologies and evasion techniques."
+        },
+        "intelligence": {
+          "title": "Proactive Threat Intelligence",
+          "desc": "We don’t just react; we consume global threat feeds to anticipate zero-day vulnerabilities and apply patches before exploitation."
+        },
+        "devsecops": {
+          "title": "DevSecOps Integration",
+          "desc": "Security should not slow down development. We weave automated security gates directly into your CI/CD pipelines for frictionless deployment."
+        },
+        "response": {
+          "title": "Rapid Incident Response",
+          "desc": "In the event of a breach attempt, our rapid response team is on standby to isolate, contain, and remediate the threat immediately."
+        }
+      }
+    }
+  },
+  "devops_services_page": {
+    "hero": {
+      "badge": "DevOps & Infrastructure",
+      "title_main": "Kubernetes ",
+      "title_gradient": "& Docker",
+      "desc": "Modernize your deployment pipeline. We specialize in containerization, microservices architecture, and deploying high-availability clusters using Kubernetes and Docker.",
+      "cta_scale": "Scale Your App"
+    },
+    "services": {
+      "containerization": {
+        "title": "Containerization (Docker)",
+        "desc": "Standardizing your application environment so it runs identically on developer machines, staging, and production servers."
+      },
+      "orchestration": {
+        "title": "K8s Orchestration",
+        "desc": "Managing containerized workloads natively with Kubernetes. We handle load balancing, self-healing, and automated rollouts/rollbacks."
+      },
+      "cicd": {
+        "title": "CI/CD Pipelines",
+        "desc": "Automating the building, testing, and deployment of Docker images to your Kubernetes cluster on every commit using GitHub Actions or GitLab CI."
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build & Automate",
+      "desc": "From complete architecture redesigns to seamless migrations, our expert engineers deliver robust cloud solutions.",
+      "items": {
+        "microservices": {
+          "title": "Microservices Architecture",
+          "desc": "Transitioning monolithic applications into agile, loosely-coupled microservices that scale independently and deploy rapidly."
+        },
+        "iac": {
+          "title": "Infrastructure as Code (IaC)",
+          "desc": "Managing your IT infrastructure using configuration files (Terraform, Ansible) to ensure repeatability, fewer errors, and instant environment spin-ups."
+        },
+        "ci": {
+          "title": "Continuous Integration",
+          "desc": "Automated code testing and merging pipelines (GitHub Actions, Jenkins) to detect bugs early and maintain a pristine codebase."
+        },
+        "cd": {
+          "title": "Continuous Deployment",
+          "desc": "Automated release strategies (blue/green, canary) ensuring zero-downtime updates and rapid feature delivery to your users."
+        },
+        "monitoring": {
+          "title": "Server Health Monitoring",
+          "desc": "Implementing robust logging and monitoring stacks (Prometheus, Grafana, ELK) for real-time visibility into cluster health and alerting."
+        },
+        "devsecops": {
+          "title": "DevSecOps Implementation",
+          "desc": "Integrating security checks, vulnerability scanning, and compliance audits directly into your deployment pipeline automatically."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our DevOps Engineers?",
+      "items": {
+        "k8s_certified": {
+          "title": "Kubernetes Certified",
+          "desc": "Our team includes Certified Kubernetes Administrators (CKA) deeply experienced in designing and troubleshooting complex clusters."
+        },
+        "market_speed": {
+          "title": "Faster Time to Market",
+          "desc": "By automating testing and deployment pipelines, we drastically reduce the time it takes to get new features from development to production."
+        },
+        "high_availability": {
+          "title": "High Availability Guarantees",
+          "desc": "We design architectures with auto-scaling and self-healing configurations to ensure your application remains online during massive traffic spikes."
+        },
+        "cloud_agnostic": {
+          "title": "Cloud-Agnostic Approach",
+          "desc": "We build portable containerized solutions that prevent vendor lock-in, allowing seamless migration between AWS, GCP, or Azure if needed."
+        }
+      }
+    }
+  },
+  "ai_applications_page": {
+    "hero": {
+      "badge": "Machine Learning",
+      "title_main": "AI Powered ",
+      "title_gradient": "Applications",
+      "desc": "Transform your business with intelligent applications that learn, adapt, and drive growth. Let data be your ultimate competitive advantage.",
+      "cta_build": "Build AI App"
+    },
+    "capabilities": {
+      "badge": "Core Capabilities",
+      "title_main": "Intelligence ",
+      "title_gradient": "Engineered",
+      "items": {
+        "predictive": {
+          "title": "Predictive Analytics",
+          "desc": "Anticipate market trends and customer behavior using historical data and complex machine learning algorithms."
+        },
+        "neural": {
+          "title": "Neural Networks",
+          "desc": "Deep learning models designed for image recognition, natural language processing, and complex pattern mapping."
+        },
+        "automation": {
+          "title": "Smart Automation",
+          "desc": "End-to-end automation of repetitive cognitive tasks, freeing your team to focus on strategic initiatives."
+        }
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build",
+      "desc": "From cutting-edge Generative AI to robust Recommendation Engines, our bespoke AI solutions cater to diverse industry needs.",
+      "items": {
+        "gen_ai": {
+          "title": "Generative AI Applications",
+          "desc": "Custom apps powered by LLMs (GPT-4, Llama 3) for content generation, coding assistants, and complex problem solving."
+        },
+        "recommendation": {
+          "title": "Recommendation Engines",
+          "desc": "Highly personalized product and content recommendation systems that drastically improve user engagement and sales."
+        },
+        "anomaly": {
+          "title": "Anomaly Detection System",
+          "desc": "Real-time monitoring systems that use AI to detect fraud, network intrusions, or manufacturing defects instantly."
+        },
+        "crm": {
+          "title": "AI-Enhanced CRMs",
+          "desc": "Integrating AI into customer relationship management tools to predict leads, churn, and draft customer responses automatically."
+        },
+        "speech": {
+          "title": "Speech & Audio Processing",
+          "desc": "Applications capable of real-time transcription, sentiment analysis from voice, and voice cloning."
+        },
+        "workflows": {
+          "title": "Autonomous Workflows",
+          "desc": "Systems that chain multiple AI agents together to execute long-running, multi-step processes autonomously."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our AI Experts?",
+      "items": [
+        {
+          "title": "Deep Technical Expertise",
+          "desc": "Our engineers are proficient in PyTorch, TensorFlow, LangChain, and deploying models to edge devices or scalable cloud architectures."
+        },
+        {
+          "title": "Data Privacy & Security",
+          "desc": "We build systems with strict data segregation, ensuring your proprietary data never leaks into public models or third-party APIs inadvertently."
+        },
+        {
+          "title": "End-to-End Delivery",
+          "desc": "From initial data pipeline architecture and model training to frontend integration and MLOps maintenance, we handle the entire lifecycle."
+        },
+        {
+          "title": "Performance Optimization",
+          "desc": "We specialize in model quantization and caching strategies to ensure your AI applications respond instantly without exorbitant compute costs."
+        }
       ]
     }
   }
