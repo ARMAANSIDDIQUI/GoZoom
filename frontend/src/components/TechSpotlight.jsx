@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const TechSpotlight = () => {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const [isHovered, setIsHovered] = useState(false);
     const [hoveredTech, setHoveredTech] = useState(null);
@@ -59,18 +61,18 @@ const TechSpotlight = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-2/5" data-aos="fade-right">
                         <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-[1.1]">
-                            The build <br />
-                            <span className="text-white/40">environment.</span>
+                            {t('home.tech_spotlight.title_main')} <br />
+                            <span className="text-white/40">{t('home.tech_spotlight.title_sub')}</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-10 max-w-md leading-relaxed">
-                            A proven stack for speed and scale. We leverage these high-trend technologies to ensure reliability and uncompromising polish.
+                            {t('home.tech_spotlight.desc')}
                         </p>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="px-10 py-4 bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-bold rounded-full shadow-[0_10px_30px_rgba(27,211,97,0.3)] transition-all"
                         >
-                            Start a project
+                            {t('home.tech_spotlight.cta')}
                         </motion.button>
                     </div>
 

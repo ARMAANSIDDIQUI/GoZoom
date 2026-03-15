@@ -207,7 +207,79 @@
       "link": "View Workforce Services",
       "img_title": "Scaling Global Teams",
       "img_desc": "Tailored recruitment & management"
+    },
+    "services_collage": {
+      "title": "The full spectrum of",
+      "subtitle": "core capabilities",
+      "desc": "We replace the need for multiple vendors. From brand identity to custom software, we build the entire ecosystem your business runs on.",
+      "cta_work": "Work With Us",
+      "cta_explore": "Explore our Services",
+      "services": {
+        "web": {
+          "title": "Web Development",
+          "desc": "Transform concepts into high-performance experiences. Engineering story-driven websites and premium digital products."
+        },
+        "branding": {
+          "title": "Branding",
+          "desc": "We build strategic identities designed to secure a premium market position."
+        },
+        "software_ai": {
+          "title": "Software / AI",
+          "desc": "We replace manual processes with intelligent software tailored to your specific operations."
+        },
+        "animation": {
+          "title": "3D Animation",
+          "desc": "We build cinematic 3D assets designed to give your brand a premium feel."
+        }
+      },
+      "everything": {
+        "title": "Everything",
+        "subtitle": "in One Place"
+      }
+    },
+    "tech_spotlight": {
+      "title_main": "The build",
+      "title_sub": "environment.",
+      "desc": "A proven stack for speed and scale. We leverage these high-trend technologies to ensure reliability and uncompromising polish.",
+      "cta": "Start a project"
     }
+  },
+  "chatbot": {
+    "greeting": "Hi! I'm Alex, GoZoom's AI assistant. How can I help you today?",
+    "online": "Online",
+    "placeholder": "Type your message...",
+    "suggested": {
+      "why_gozoom": "Why should I choose GoZoom?",
+      "services": "What services do you provide?",
+      "process": "Tell me about your process.",
+      "contact": "How can I contact you?",
+      "tech_stack": "What is your tech stack?",
+      "security": "Is my data secure?",
+      "pricing": "Tell me about pricing.",
+      "support": "Do you provide support?",
+      "hire": "I want to hire a developer.",
+      "mobile": "Do you build mobile apps?"
+    },
+    "responses": {
+      "default": "I'm not sure I understand that. Would you like to speak to a human expert?",
+      "why_gozoom": "Choosing GoZoom means choosing excellence. We offer:\n• Deep Technical Expertise: 30+ specialists across modern stacks.\n• Global Delivery: 100+ successful projects for international clients.\n• Agile Speed: Fast turnarounds without compromising on quality.\n• Cost-Effective: High-end solutions tailored to your budget.\n• Long-term Partnership: We don't just build; we scale with you.",
+      "services": "GoZoom specializes in comprehensive tech solutions: \n• Web Development (React, Angular, Node, Laravel)\n• Mobile Apps (Android, iOS, Flutter)\n• Software Engineering & Architecture\n• Cloud Integration & DevOps\n• AI, ML & Chatbot Solutions. \nWhich specific service can I tell you more about?",
+      "process": "We follow a transparent, Agile-driven process:\n1. Discovery: Understanding your vision.\n2. Design: Creating intuitive UI/UX.\n3. Development: Sprints with regular updates.\n4. Testing: Rigorous QA for bug-free code.\n5. Launch & Support: Seamless deployment and ongoing maintenance.",
+      "contact": "You can reach our team directly at contact@gozoom.com or by calling our support line. Our headquarters is located in the primary business district. Check our 'Contact Us' page for a full map and contact form!",
+      "tech_stack": "We are experts in modern stacks! Whether you need a React/Next.js frontend, a robust Laravel/Node backend, or a full-stack Angular enterprise app, we can build it. You can also hire our developers for your existing team.",
+      "security": "Your data is our priority. We sign strict NDAs (Non-Disclosure Agreements) with all clients, use secure encrypted servers, and follow industry-best practices for code security and data protection.",
+      "pricing": "Pricing depends on the scope and complexity of your project. For a quick estimate, please share your requirements via our 'Contact' form, and one of our consultants will provide a free quote within 24 hours.",
+      "support": "Our relationship doesn't end at launch! We provide dedicated post-launch support, 24/7 monitoring, and scalable maintenance packages to ensure your application stays modern and bug-free.",
+      "hire": "Looking for talent or a new role? \n• Hire Experts: Check our 'Hire Developers' section for tech-specific talent.\n• Join Us: Visit our 'Careers' page for current job openings and internships!",
+      "mobile": "We deliver high-end mobile experiences. Our team builds native Android/iOS apps and cross-platform solutions using Flutter/React Native, handling everything from design to store submission.",
+      "hello": "Hello! Welcome to GoZoom Technologies. How can I assist you with your digital goals today? I'm here to help with services, pricing, or hiring expert talent.",
+      "thank": "My pleasure! I'm glad I could provide the information you needed. Is there anything else about GoZoom technologies you'd like to explore?",
+      "bye": "Goodbye! It was a pleasure chatting. Feel free to reach out anytime you need assistance. Have an amazing day!",
+      "seo": "Our Digital Marketing division helps products grow. We offer technical SEO, Google Ads management, and data-driven marketing strategies to ensure you rank #1 and drive traffic."
+    }
+  },
+  "loading_screen": {
+    "title": "GoZoom Technologies"
   },
   "home_page": {
     "hero": {
@@ -2075,6 +2147,20 @@
         "Deep expertise in the Spring Ecosystem (Spring Boot, Security, Data)",
         "Extensive performance tuning for JVM multi-threading and memory management",
         "Guaranteed 99.9% uptime architecture design"
+      ],
+      "tech_cards": [
+        {
+          "title": "Spring Boot Expert",
+          "desc": "Microservices architecture with Spring Cloud and Netflix OSS."
+        },
+        {
+          "title": "Hibernate & JPA",
+          "desc": "Efficient data persistence and complex query optimization."
+        },
+        {
+          "title": "Kubernetes & Docker",
+          "desc": "Modern containerized deployment and orchestration."
+        }
       ]
     }
   },

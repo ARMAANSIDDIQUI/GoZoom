@@ -66,8 +66,8 @@ const Java = () => {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-20" data-aos="fade-up">
-                        <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">{t('java_dev_page.features.badge')}</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-4">{t('java_dev_page.features.title')}</h2>
+                        <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">{t('java_dev_page.expertise.badge')}</span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-4">{t('java_dev_page.expertise.title')}</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,9 +76,9 @@ const Java = () => {
                                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-[#0073b7] text-3xl mb-8 group-hover:scale-110 transition-transform">
                                     {feature.icon}
                                 </div>
-                                <h4 className="text-2xl font-bold text-slate-900 mb-4">{t(`java_dev_page.features.items.${feature.key}.title`)}</h4>
+                                <h4 className="text-2xl font-bold text-slate-900 mb-4">{t(`java_dev_page.expertise.items.${feature.key}.title`)}</h4>
                                 <p className="text-slate-600 leading-relaxed font-medium text-sm">
-                                    {t(`java_dev_page.features.items.${feature.key}.desc`)}
+                                    {t(`java_dev_page.expertise.items.${feature.key}.desc`)}
                                 </p>
                             </div>
                         ))}
@@ -109,18 +109,12 @@ const Java = () => {
                         <div className="flex-1" data-aos="fade-left">
                             <div className="p-8 bg-white/5 rounded-[3rem] border border-white/10 backdrop-blur-xl">
                                 <div className="space-y-8">
-                                    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                                        <h4 className="font-bold text-xl mb-2">Spring Boot Expert</h4>
-                                        <p className="text-slate-400">Microservices architecture with Spring Cloud and Netflix OSS.</p>
-                                    </div>
-                                    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                                        <h4 className="font-bold text-xl mb-2">Hibernate & JPA</h4>
-                                        <p className="text-slate-400">Efficient data persistence and complex query optimization.</p>
-                                    </div>
-                                    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                                        <h4 className="font-bold text-xl mb-2">Kubernetes & Docker</h4>
-                                        <p className="text-slate-400">Modern containerized deployment and orchestration.</p>
-                                    </div>
+                                    {(t('java_dev_page.why_us.tech_cards', { returnObjects: true }) || []).map((card, idx) => (
+                                        <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                            <h4 className="font-bold text-xl mb-2">{card.title}</h4>
+                                            <p className="text-slate-400">{card.desc}</p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

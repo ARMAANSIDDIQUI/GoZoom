@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const LoadingScreen = ({ onFinished }) => {
+    const { t } = useTranslation();
     const [isWritingDone, setIsWritingDone] = useState(false);
 
     useEffect(() => {
@@ -113,7 +115,7 @@ const LoadingScreen = ({ onFinished }) => {
                     transition={{ delay: 0.5, duration: 1 }}
                     className="mt-8 tracking-[0.3em] font-medium uppercase text-xs bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
                 >
-                    GoZoom Technologies
+                    {t('loading_screen.title')}
                 </motion.div>
             </div>
         </motion.div>

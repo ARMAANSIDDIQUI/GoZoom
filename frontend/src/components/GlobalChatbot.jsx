@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaComments, FaTimes, FaPaperPlane, FaRobot } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const GlobalChatbot = () => {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    
     const [messages, setMessages] = useState([
-        { role: 'bot', text: 'Hi! I\'m Alex, GoZoom\'s AI assistant. How can I help you today?' }
+        { role: 'bot', text: t('chatbot.greeting') }
     ]);
     const [input, setInput] = useState('');
     const messagesEndRef = useRef(null);
@@ -17,99 +20,102 @@ const GlobalChatbot = () => {
         scrollToBottom();
     }, [messages]);
 
+    // Update greeting if language changes and no messages yet
+    useEffect(() => {
+        if (messages.length === 1 && messages[0].role === 'bot') {
+            setMessages([{ role: 'bot', text: t('chatbot.greeting') }]);
+        }
+    }, [t]);
+
     const knowledgeBase = [
         {
-            pattern: /hello|hi|hey|greetings|morning|evening|hey there|howdy|hi there|yo|whats up|hola|asalam|namaste|morning|evening|afternoon/i,
-            response: "Hello! Welcome to GoZoom Technologies. How can I assist you with your digital goals today? I'm here to help with services, pricing, or hiring expert talent."
+            pattern: /hello|hi|hey|greetings|morning|evening|hey there|howdy|hi there|yo|whats up|hola|asalam|namaste|morning|evening|afternoon|bonjour|salut|coucou/i,
+            responseKey: 'hello'
         },
         {
-            pattern: /services|what do you do|capability|expert|offer|portfolio|work|products|expertise|specialties|features|solutions|skills|development|design/i,
-            response: "GoZoom specializes in comprehensive tech solutions: \n• Web Development (React, Angular, Node, Laravel)\n• Mobile Apps (Android, iOS, Flutter)\n• Software Engineering & Architecture\n• Cloud Integration & DevOps\n• AI, ML & Chatbot Solutions. \nWhich specific service can I tell you more about?"
+            pattern: /services|what do you do|capability|expert|offer|portfolio|work|products|expertise|specialties|features|solutions|skills|development|design|services|offres/i,
+            responseKey: 'services'
         },
         {
-            pattern: /contact|call|email|reach|address|location|office|phone|number|whatsapp|map|support|help me|talk to human|representative|agent|chat with person|speak with someone/i,
-            response: "You can reach our team directly at contact@gozoom.com or by calling our support line. Our headquarters is located in the primary business district. Check our 'Contact Us' page for a full map and contact form!"
+            pattern: /contact|call|email|reach|address|location|office|phone|number|whatsapp|map|support|help me|talk to human|representative|agent|chat with person|speak with someone|contacter|appel|courriel|adresse|bureau/i,
+            responseKey: 'contact'
         },
         {
-            pattern: /price|cost|quote|budget|how much|rate|estimation|pricing|fees|expensive|cheap|charges|payment|billing|invoice|estimate/i,
-            response: "Pricing depends on the scope and complexity of your project. For a quick estimate, please share your requirements via our 'Contact' form, and one of our consultants will provide a free quote within 24 hours."
+            pattern: /price|cost|quote|budget|how much|rate|estimation|pricing|fees|expensive|cheap|charges|payment|billing|invoice|estimate|prix|coût|devis|budget/i,
+            responseKey: 'pricing'
         },
         {
             pattern: /angular|react|laravel|php|node|frontend|backend|java|python|javascript|stack|vue|nextjs|typescript|golang|ruby|asp\.net|c#|spring|mern|mean/i,
-            response: "We are experts in modern stacks! Whether you need a React/Next.js frontend, a robust Laravel/Node backend, or a full-stack Angular enterprise app, we can build it. You can also hire our developers for your existing team."
+            responseKey: 'tech_stack'
         },
         {
             pattern: /mobile|android|ios|app dev|flutter|react native|smartphone|iphone|playstore|appstore|tablet|ipad|native|hybrid|cross platform/i,
-            response: "We deliver high-end mobile experiences. Our team builds native Android/iOS apps and cross-platform solutions using Flutter/React Native, handling everything from design to store submission."
+            responseKey: 'mobile'
         },
         {
-            pattern: /ai|machine learning|ml|chatbot|automation|intelligent|bot|nlp|data science|gpt|llm|neural|deep learning|vision|predictive/i,
-            response: "AI is our forte. We build smart automation tools, predictive analytics models, and custom NLP chatbots (just like me!) to streamline your business workflows."
+            pattern: /ai|machine learning|ml|chatbot|automation|intelligent|bot|nlp|data science|gpt|llm|neural|deep learning|vision|predictive|ia|intelligence/i,
+            responseKey: 'services' // Maps to services which covers AI
         },
         {
-            pattern: /hire|recruit|career|job|join|work at|position|vacancy|internship|hiring|employment|developer for hire|talent|staffing|candidate/i,
-            response: "Looking for talent or a new role? \n• Hire Experts: Check our 'Hire Developers' section for tech-specific talent.\n• Join Us: Visit our 'Careers' page for current job openings and internships!"
+            pattern: /hire|recruit|career|job|join|work at|position|vacancy|internship|hiring|employment|developer for hire|talent|staffing|candidate|recruter|embaucher|emploi/i,
+            responseKey: 'hire'
         },
         {
-            pattern: /about|company|who are you|history|team|gozoom|corporate|vision|mission|background|founded|ceo|owner|director/i,
-            response: "GoZoom Technologies is a premier offshore software delivery partner. With 3+ years of excellence, a team of 30+ experts, and 100+ happy global clients, we transform ideas into digital reality."
+            pattern: /about|company|who are you|history|team|gozoom|corporate|vision|mission|background|founded|ceo|owner|director|propos|entreprise/i,
+            responseKey: 'why_gozoom'
         },
         {
             pattern: /seo|marketing|digital|rank|google|ads|sem|social media|traffic|optimization|growth|content|strategy|adwords/i,
-            response: "Our Digital Marketing division helps products grow. We offer technical SEO, Google Ads management, and data-driven marketing strategies to ensure you rank #1 and drive traffic."
+            responseKey: 'seo'
         },
         {
-            pattern: /thank|great|perfect|awesome|thanks|cool|ok|thanks bot|good bot|well done|excellent|helpful|superb/i,
-            response: "My pleasure! I'm glad I could provide the information you needed. Is there anything else about GoZoom technologies you'd like to explore?"
+            pattern: /thank|great|perfect|awesome|thanks|cool|ok|thanks bot|good bot|well done|excellent|helpful|superb|merci|génial|parfait/i,
+            responseKey: 'thank'
         },
         {
-            pattern: /bye|goodbye|see you|later|exit|close|quit|leave|stop|done/i,
-            response: "Goodbye! It was a pleasure chatting. Feel free to reach out anytime you need assistance. Have an amazing day!"
+            pattern: /bye|goodbye|see you|later|exit|close|quit|leave|stop|done|au revoir|salut|quitter/i,
+            responseKey: 'bye'
         },
         {
-            pattern: /why choose|why gozoom|benefits|advantages|reliable|trust|different|unique|select|pick|reason/i,
-            response: "Choosing GoZoom means choosing excellence. We offer:\n• Deep Technical Expertise: 30+ specialists across modern stacks.\n• Global Delivery: 100+ successful projects for international clients.\n• Agile Speed: Fast turnarounds without compromising on quality.\n• Cost-Effective: High-end solutions tailored to your budget.\n• Long-term Partnership: We don't just build; we scale with you."
+            pattern: /why choose|why gozoom|benefits|advantages|reliable|trust|different|unique|select|pick|reason|pourquoi/i,
+            responseKey: 'why_gozoom'
         },
         {
-            pattern: /process|methodology|how you work|workflow|steps|lifecycle|sprint|agile|managed|delivery|timeline/i,
-            response: "We follow a transparent, Agile-driven process:\n1. Discovery: Understanding your vision.\n2. Design: Creating intuitive UI/UX.\n3. Development: Sprints with regular updates.\n4. Testing: Rigorous QA for bug-free code.\n5. Launch & Support: Seamless deployment and ongoing maintenance."
+            pattern: /process|methodology|how you work|workflow|steps|lifecycle|sprint|agile|managed|delivery|timeline|processus|méthodologie/i,
+            responseKey: 'process'
         },
         {
-            pattern: /security|privacy|data|safe|secure|nda|confidential|protection|legal|compliance/i,
-            response: "Your data is our priority. We sign strict NDAs (Non-Disclosure Agreements) with all clients, use secure encrypted servers, and follow industry-best practices for code security and data protection."
+            pattern: /security|privacy|data|safe|secure|nda|confidential|protection|legal|compliance|sécurité|confidentialité|données/i,
+            responseKey: 'security'
         },
         {
             pattern: /support|maintenance|after sales|update|fix|bug|warranty|uptime|hosting/i,
-            response: "Our relationship doesn't end at launch! We provide dedicated post-launch support, 24/7 monitoring, and scalable maintenance packages to ensure your application stays modern and bug-free."
-        },
-        {
-            pattern: /help|guide|manual|instructions|how to/i,
-            response: "I can help you navigate our services, explain why to choose us, or walk you through our development process. Just type a keyword like 'Process', 'Security', or 'Hiring' to get started!"
+            responseKey: 'support'
         }
     ];
 
     const handleBotResponse = (userInput) => {
-        let botResponse = "I'm not sure I understand that. Would you like to speak to a human expert?";
+        let botResponse = t('chatbot.responses.default');
 
-        const exactMatches = {
-            "Why should I choose GoZoom?": "Choosing GoZoom means choosing excellence. We offer:\n• Deep Technical Expertise: 30+ specialists across modern stacks.\n• Global Delivery: 100+ successful projects for international clients.\n• Agile Speed: Fast turnarounds without compromising on quality.\n• Cost-Effective: High-end solutions tailored to your budget.\n• Long-term Partnership: We don't just build; we scale with you.",
-            "What services do you provide?": "GoZoom specializes in comprehensive tech solutions: \n• Web Development (React, Angular, Node, Laravel)\n• Mobile Apps (Android, iOS, Flutter)\n• Software Engineering & Architecture\n• Cloud Integration & DevOps\n• AI, ML & Chatbot Solutions. \nWhich specific service can I tell you more about?",
-            "Tell me about your process.": "We follow a transparent, Agile-driven process:\n1. Discovery: Understanding your vision.\n2. Design: Creating intuitive UI/UX.\n3. Development: Sprints with regular updates.\n4. Testing: Rigorous QA for bug-free code.\n5. Launch & Support: Seamless deployment and ongoing maintenance.",
-            "How can I contact you?": "You can reach our team directly at contact@gozoom.com or by calling our support line. Our headquarters is located in the primary business district. Check our 'Contact Us' page for a full map and contact form!",
-            "What is your tech stack?": "We are experts in modern stacks! Whether you need a React/Next.js frontend, a robust Laravel/Node backend, or a full-stack Angular enterprise app, we can build it. You can also hire our developers for your existing team.",
-            "Is my data secure?": "Your data is our priority. We sign strict NDAs (Non-Disclosure Agreements) with all clients, use secure encrypted servers, and follow industry-best practices for code security and data protection.",
-            "Tell me about pricing.": "Pricing depends on the scope and complexity of your project. For a quick estimate, please share your requirements via our 'Contact' form, and one of our consultants will provide a free quote within 24 hours.",
-            "Do you provide support?": "Our relationship doesn't end at launch! We provide dedicated post-launch support, 24/7 monitoring, and scalable maintenance packages to ensure your application stays modern and bug-free.",
-            "I want to hire a developer.": "Looking for talent or a new role? \n• Hire Experts: Check our 'Hire Developers' section for tech-specific talent.\n• Join Us: Visit our 'Careers' page for current job openings and internships!",
-            "Do you build mobile apps?": "We deliver high-end mobile experiences. Our team builds native Android/iOS apps and cross-platform solutions using Flutter/React Native, handling everything from design to store submission.",
-        };
+        // Check suggested questions (exact match regardless of language)
+        const suggestedKeys = [
+            'why_gozoom', 'services', 'process', 'contact', 'tech_stack', 
+            'security', 'pricing', 'support', 'hire', 'mobile'
+        ];
 
-        if (exactMatches[userInput]) {
-            botResponse = exactMatches[userInput];
-        } else {
+        let found = false;
+        for (const key of suggestedKeys) {
+            if (userInput === t(`chatbot.suggested.${key}`)) {
+                botResponse = t(`chatbot.responses.${key}`);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
             for (const item of knowledgeBase) {
                 if (item.pattern.test(userInput)) {
-                    botResponse = item.response;
+                    botResponse = t(`chatbot.responses.${item.responseKey}`);
                     break;
                 }
             }
@@ -124,15 +130,17 @@ const GlobalChatbot = () => {
 
         const userMsg = { role: 'user', text: input };
         setMessages(prev => [...prev, userMsg]);
+        const currentInput = input;
         setInput('');
 
         // Simulate bot typing
         setTimeout(() => {
-            handleBotResponse(input);
+            handleBotResponse(currentInput);
         }, 800);
     };
 
-    const handleSuggestedClick = (question) => {
+    const handleSuggestedClick = (key) => {
+        const question = t(`chatbot.suggested.${key}`);
         const userMsg = { role: 'user', text: question };
         setMessages(prev => [...prev, userMsg]);
 
@@ -141,17 +149,9 @@ const GlobalChatbot = () => {
         }, 800);
     };
 
-    const suggestedQuestions = [
-        "Why should I choose GoZoom?",
-        "What services do you provide?",
-        "Tell me about your process.",
-        "How can I contact you?",
-        "What is your tech stack?",
-        "Is my data secure?",
-        "Tell me about pricing.",
-        "Do you provide support?",
-        "I want to hire a developer.",
-        "Do you build mobile apps?",
+    const suggestedKeys = [
+        'why_gozoom', 'services', 'process', 'contact', 'tech_stack', 
+        'security', 'pricing', 'support', 'hire', 'mobile'
     ];
 
     return (
@@ -169,7 +169,7 @@ const GlobalChatbot = () => {
                                 <h3 className="text-white font-bold text-sm">Alex</h3>
                                 <div className="flex items-center gap-1">
                                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                                    <span className="text-white/70 text-xs">Online</span>
+                                    <span className="text-white/70 text-xs">{t('chatbot.online')}</span>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ const GlobalChatbot = () => {
                     <div className="flex-grow overflow-y-auto p-5 space-y-4 scroll-smooth visible-scrollbar" data-lenis-prevent>
                         {messages.map((msg, i) => (
                             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
+                                <div className={`max-w-[80%] p-3 rounded-2xl text-sm whitespace-pre-wrap ${msg.role === 'user'
                                     ? 'bg-[var(--color-gozoom-blue)] text-white rounded-tr-none'
                                     : 'bg-white/10 text-slate-200 border border-white/10 rounded-tl-none'
                                     } shadow-lg`}>
@@ -195,13 +195,13 @@ const GlobalChatbot = () => {
 
                     {/* Suggested Questions */}
                     <div className="px-5 pb-3 flex overflow-x-auto gap-2 visible-scrollbar flex-nowrap shrink-0" data-lenis-prevent>
-                        {suggestedQuestions.map((q, i) => (
+                        {suggestedKeys.map((key) => (
                             <button
-                                key={i}
-                                onClick={() => handleSuggestedClick(q)}
+                                key={key}
+                                onClick={() => handleSuggestedClick(key)}
                                 className="text-[10px] sm:text-xs bg-white/10 border border-white/10 hover:bg-[var(--color-gozoom-blue)]/30 hover:border-[var(--color-gozoom-blue)]/50 text-slate-200 py-1.5 px-4 rounded-full transition-all text-left whitespace-nowrap shadow-sm active:scale-95"
                             >
-                                {q}
+                                {t(`chatbot.suggested.${key}`)}
                             </button>
                         ))}
                     </div>
@@ -213,7 +213,7 @@ const GlobalChatbot = () => {
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                placeholder="Type your message..."
+                                placeholder={t('chatbot.placeholder')}
                                 className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 pr-12 text-sm text-white focus:outline-none focus:border-[var(--color-gozoom-blue)] transition-colors"
                             />
                             <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] flex items-center justify-center text-white hover:opacity-90 transition-colors">

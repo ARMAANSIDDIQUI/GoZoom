@@ -264,7 +264,79 @@
       "link": "Voir les Services de Main-d'œuvre",
       "img_title": "Mise à l'Échelle des Équipes Mondiales",
       "img_desc": "Recrutement et gestion sur mesure"
+    },
+    "services_collage": {
+      "title": "Le spectre complet des",
+      "subtitle": "capacités de base",
+      "desc": "Nous remplaçons le besoin de plusieurs fournisseurs. De l’identité de marque aux logiciels personnalisés, nous construisons l’écosystème complet sur lequel repose votre entreprise.",
+      "cta_work": "Travaillez avec nous",
+      "cta_explore": "Explorez nos services",
+      "services": {
+        "web": {
+          "title": "Développement Web",
+          "desc": "Transformez les concepts en expériences de haute performance. Ingénierie de sites Web orientés narration et produits numériques haut de gamme."
+        },
+        "branding": {
+          "title": "Branding",
+          "desc": "Nous construisons des identités stratégiques conçues pour garantir une position de marché privilégiée."
+        },
+        "software_ai": {
+          "title": "Logiciels / IA",
+          "desc": "Nous remplaçons les processus manuels par des logiciels intelligents adaptés à vos opérations spécifiques."
+        },
+        "animation": {
+          "title": "Animation 3D",
+          "desc": "Nous construisons des actifs 3D cinématiques conçus pour donner à votre marque une sensation haut de gamme."
+        }
+      },
+      "everything": {
+        "title": "Tout",
+        "subtitle": "en un seul endroit"
+      }
+    },
+    "tech_spotlight": {
+      "title_main": "L'environnement",
+      "title_sub": "de construction.",
+      "desc": "Une pile éprouvée pour la vitesse et l'évolutivité. Nous exploitons ces technologies de pointe pour garantir fiabilité et finition sans compromis.",
+      "cta": "Démarrer un projet"
     }
+  },
+  "chatbot": {
+    "greeting": "Salut ! Je suis Alex, l'assistant IA de GoZoom. Comment puis-je vous aider aujourd'hui ?",
+    "online": "En ligne",
+    "placeholder": "Tapez votre message...",
+    "suggested": {
+      "why_gozoom": "Pourquoi devrais-je choisir GoZoom ?",
+      "services": "Quels services fournissez-vous ?",
+      "process": "Parlez-moi de votre processus.",
+      "contact": "Comment puis-je vous contacter ?",
+      "tech_stack": "Quelle est votre pile technologique ?",
+      "security": "Mes données sont-elles sécurisées ?",
+      "pricing": "Parlez-moi des tarifs.",
+      "support": "Fournissez-vous un support ?",
+      "hire": "Je veux embaucher un développeur.",
+      "mobile": "Construisez-vous des applications mobiles ?"
+    },
+    "responses": {
+      "default": "Je ne suis pas sûr de comprendre. Souhaitez-vous parler à un expert humain ?",
+      "why_gozoom": "Choisir GoZoom, c'est choisir l'excellence. Nous offrons :\n• Expertise technique approfondie : 30+ spécialistes à travers les piles modernes.\n• Livraison mondiale : 100+ projets réussis pour des clients internationaux.\n• Vitesse agile : Délais rapides sans compromis sur la qualité.\n• Rentabilité : Solutions haut de gamme adaptées à votre budget.\n• Partenariat à long terme : Nous ne nous contentons pas de construire ; nous évoluons avec vous.",
+      "services": "GoZoom se spécialise dans les solutions technologiques complètes :\n• Développement Web (React, Angular, Node, Laravel)\n• Applications mobiles (Android, iOS, Flutter)\n• Ingénierie et architecture logicielles\n• Intégration Cloud et DevOps\n• Solutions d'IA, ML et Chatbot.\nDe quel service spécifique puis-je vous parler davantage ?",
+      "process": "Nous suivons un processus transparent et piloté par l'Agile :\n1. Découverte : Comprendre votre vision.\n2. Conception : Créer une UI/UX intuitive.\n3. Développement : Sprints avec des mises à jour régulières.\n4. Tests : QA rigoureuse pour un code sans bug.\n5. Lancement et Support : Déploiement transparent et maintenance continue.",
+      "contact": "Vous pouvez contacter notre équipe directement à contact@gozoom.com ou en appelant notre ligne d'assistance. Notre siège social est situé dans le principal quartier des affaires. Consultez notre page 'Contactez-nous' pour une carte complète et un formulaire de contact !",
+      "tech_stack": "Nous sommes experts dans les piles modernes ! Que vous ayez besoin d'un frontend React/Next.js, d'un backend Laravel/Node robuste ou d'une application d'entreprise Angular full-stack, nous pouvons le construire. Vous pouvez également embaucher nos développeurs pour votre équipe existante.",
+      "security": "Vos données sont notre priorité. Nous signons des accords de confidentialité (NDA) stricts avec tous les clients, utilisons des serveurs sécurisés cryptés et suivons les meilleures pratiques de l'industrie pour la sécurité du code et la protection des données.",
+      "pricing": "Les tarifs dépendent de la portée et de la complexité de votre projet. Pour une estimation rapide, veuillez partager vos besoins via notre formulaire de 'Contact', et l'un de nos consultants vous fournira un devis gratuit sous 24 heures.",
+      "support": "Notre relation ne s'arrête pas au lancement ! Nous fournissons un support post-lancement dédié, une surveillance 24/7 et des forfaits de maintenance évolutifs pour garantir que votre application reste moderne et sans bug.",
+      "hire": "Vous cherchez du talent ou un nouveau rôle ?\n• Embauchez des experts : Consultez notre section 'Embaucher des développeurs' pour les talents technologiques spécifiques.\n• Rejoignez-nous : Visitez notre page 'Carrières' pour les offres d'emploi et les stages actuels !",
+      "mobile": "Nous offrons des expériences mobiles haut de gamme. Notre équipe construit des applications natives Android/iOS et des solutions multiplateformes utilisant Flutter/React Native, gérant tout, de la conception à la soumission sur les stores.",
+      "hello": "Bonjour ! Bienvenue chez GoZoom Technologies. Comment puis-je vous aider dans vos objectifs numériques aujourd'hui ? Je suis ici pour vous aider avec les services, les tarifs ou l'embauche de talents experts.",
+      "thank": "Tout le plaisir est pour moi ! Je suis ravi d'avoir pu vous fournir les informations dont vous aviez besoin. Y a-t-il autre chose sur GoZoom Technologies que vous aimeriez explorer ?",
+      "bye": "Au revoir ! Ce fut un plaisir de discuter. N'hésitez pas à nous contacter à tout moment si vous avez besoin d'aide. Passez une excellente journée !",
+      "seo": "Notre division Marketing numérique aide les produits à se développer. Nous offrons du SEO technique, la gestion de Google Ads et des stratégies de marketing basées sur les données pour garantir que vous soyez n°1 et génériez du trafic."
+    }
+  },
+  "loading_screen": {
+    "title": "GoZoom Technologies"
   },
   "about_page": {
     "hero": {
@@ -2061,6 +2133,20 @@
         "Expertise approfondie de l'écosystème Spring (Spring Boot, Security, Data)",
         "Réglage étendu des performances pour le multi-threading JVM et la gestion de la mémoire",
         "Conception d'architecture avec un temps de fonctionnement garanti de 99,9 %"
+      ],
+      "tech_cards": [
+        {
+          "title": "Expert Spring Boot",
+          "desc": "Architecture de microservices avec Spring Cloud et Netflix OSS."
+        },
+        {
+          "title": "Hibernate & JPA",
+          "desc": "Persistance efficace des données et optimisation des requêtes complexes."
+        },
+        {
+          "title": "Kubernetes & Docker",
+          "desc": "Déploiement et orchestration conteneurisés modernes."
+        }
       ]
     }
   },
