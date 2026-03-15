@@ -2,6 +2,7 @@ import { motion, useTransform } from 'motion/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
 import { FaChevronDown } from 'react-icons/fa';
 
@@ -15,56 +16,8 @@ export default function HeroText({ scrollYProgress, onScrollNext }) {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 
-  const slides = [
-      {
-          id: 1,
-          tagline: 'Enterprise',
-          titleLines: [
-            [{ text: 'Software', accent: false }],
-            [{ text: 'Development', accent: true }, { text: ' Company', accent: false }],
-          ],
-          descLines: [
-            'Delivering software solutions to build intelligent',
-            'enterprises with speed and agility.',
-          ],
-      },
-      {
-          id: 2,
-          tagline: 'Innovative',
-          titleLines: [
-            [{ text: 'Websites', accent: false }, { text: ' & ', accent: false }, { text: 'Mobile', accent: true }],
-            [{ text: 'App Development', accent: false }],
-          ],
-          descLines: [
-            'Transforming ideas into digital experiences and',
-            'powering your presence across screens.',
-          ],
-      },
-      {
-          id: 3,
-          tagline: 'Offshore',
-          titleLines: [
-            [{ text: 'Dedicated', accent: false }],
-            [{ text: 'Development', accent: false }, { text: ' Team', accent: true }],
-          ],
-          descLines: [
-            'Fuel digital transformation initiatives and empower',
-            'your business with an expert team.',
-          ],
-      },
-      {
-          id: 4,
-          tagline: 'performance-driven',
-          titleLines: [
-            [{ text: 'Digital', accent: false }],
-            [{ text: 'Marketing', accent: true }, { text: ' Solutions', accent: false }],
-          ],
-          descLines: [
-            'Elevate your business to new heights with',
-            'unparalleled digital marketing expertise.',
-          ],
-      },
-  ];
+  const { t } = useTranslation();
+  const slides = t('home_page.hero.slides', { returnObjects: true });
 
   return (
     <motion.div
@@ -127,10 +80,10 @@ export default function HeroText({ scrollYProgress, onScrollNext }) {
 
                         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 w-full pointer-events-auto">
                             <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[160px] sm:min-w-[200px] gap-3 px-7 sm:px-10 lg:px-12 py-3.5 sm:py-4 lg:py-5 rounded-full bg-gradient-to-r from-[var(--color-gozoom-blue)] to-[var(--color-gozoom-green)] text-white font-black text-center text-sm sm:text-base lg:text-lg hover:shadow-[0_0_40px_rgba(27,211,97,0.3)] transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                Get Started <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                {slide.cta_start} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[160px] sm:min-w-[200px] gap-3 px-7 sm:px-10 lg:px-12 py-3.5 sm:py-4 lg:py-5 rounded-full bg-white/5 text-white font-black text-center text-sm sm:text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-sm border border-white/20 uppercase tracking-wider">
-                                Learn More
+                                {slide.cta_learn}
                             </Link>
                             {/* <button
                               type="button"

@@ -24,7 +24,7 @@ const Header = () => {
             heading: <span className="flex items-center gap-1.5"><FaCloud className="text-blue-500" /> {t('header.cloud_infrastructure')}</span>,
             links: [
                 { to: '/cloud-services', label: t('header.cloud_services') },
-                { to: '/devops-services', label: t('header.kubernetes_docker') },
+                { to: '/devops-services', label: t('header.devops_cloud_automation') },
                 { to: '/service-consulting', label: t('header.it_strategy') }
             ]
         },
@@ -49,6 +49,7 @@ const Header = () => {
                 { to: '/ui-ux-design', label: t('header.ui_ux') },
                 { to: '/nextjs-development', label: t('header.nextjs') },
                 { to: '/web-development', label: t('header.web_dev') },
+                { to: '/mobile-application-development', label: t('header.mobile_dev_page') },
                 { to: '/react-native-development', label: t('header.react_native') },
                 { to: '/flutter-development', label: t('header.flutter') },
                 { to: '/swift-development', label: t('header.swift_ios') },

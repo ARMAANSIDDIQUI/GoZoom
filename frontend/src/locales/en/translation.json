@@ -66,7 +66,7 @@
   "header": {
     "cloud_infrastructure": "Cloud & Infrastructure",
     "cloud_services": "Cloud Services (AWS, GCP)",
-    "kubernetes_docker": "Kubernetes & Docker",
+    "devops_cloud_automation": "DevOps & Cloud Automation",
     "it_strategy": "IT Strategy Consulting",
     "ai": "Artificial Intelligence",
     "ai_apps": "AI Applications",
@@ -86,6 +86,7 @@
     "swift_ios": "Swift iOS Apps",
     "android_dev": "Android Development",
     "ios_dev": "iOS Development",
+    "mobile_dev_page": "Mobile App Development",
     "angular_dev": "Angular Development",
     "react_dev": "React Development",
     "django_dev": "Django Development",
@@ -122,8 +123,6 @@
     "nav_about": "ABOUT US",
     "nav_contact": "CONTACT US",
     "view_services": "View Services Summary",
-    "all_services_page": "All Services Page",
-    "view_workforce": "View Workforce Summary",
     "all_workforce_page": "All Workforce Page",
     "contact_btn": "Contact Us",
     "home_title": "Home",
@@ -208,6 +207,64 @@
       "link": "View Workforce Services",
       "img_title": "Scaling Global Teams",
       "img_desc": "Tailored recruitment & management"
+    }
+  },
+  "home_page": {
+    "hero": {
+      "slides": [
+        {
+          "tagline": "Enterprise",
+          "titleLines": [
+            [{"text": "Software", "accent": false}],
+            [{"text": "Development", "accent": true}, {"text": " Company", "accent": false}]
+          ],
+          "descLines": [
+            "Delivering software solutions to build intelligent",
+            "enterprises with speed and agility."
+          ],
+          "cta_start": "Get Started",
+          "cta_learn": "Learn More"
+        },
+        {
+          "tagline": "Innovative",
+          "titleLines": [
+            [{"text": "Websites", "accent": false}, {"text": " & ", "accent": false}, {"text": "Mobile", "accent": true}],
+            [{"text": "App Development", "accent": false}]
+          ],
+          "descLines": [
+            "Transforming ideas into digital experiences and",
+            "powering your presence across screens."
+          ],
+          "cta_start": "Get Started",
+          "cta_learn": "Learn More"
+        },
+        {
+          "tagline": "Offshore",
+          "titleLines": [
+            [{"text": "Dedicated", "accent": false}],
+            [{"text": "Development", "accent": false}, {"text": " Team", "accent": true}]
+          ],
+          "descLines": [
+            "Fuel digital transformation initiatives and empower",
+            "your business with an expert team."
+          ],
+          "cta_start": "Get Started",
+          "cta_learn": "Learn More"
+        },
+        {
+          "tagline": "Performance-Driven",
+          "titleLines": [
+            [{"text": "Digital", "accent": false}],
+            [{"text": "Marketing", "accent": true}, {"text": " Solutions", "accent": false}]
+          ],
+          "descLines": [
+            "Elevate your business to new heights with",
+            "unparalleled digital marketing expertise."
+          ],
+          "cta_start": "Get Started",
+          "cta_learn": "Learn More"
+        }
+      ]
     }
   },
   "about_page": {
@@ -682,7 +739,7 @@
             "desc": "Comprehensive cloud migration and management."
           },
           {
-            "name": "Kubernetes & Docker",
+            "name": "DevOps & Cloud Automation",
             "desc": "Containerization and orchestration solutions."
           },
           {
@@ -1118,6 +1175,422 @@
       }
     }
   },
+  "mobile_app_dev_page": {
+    "hero": {
+      "badge": "Mobile Excellence",
+      "title1": "Crafting Next-Gen ",
+      "title2": "Mobile Experiences",
+      "desc": "From concept to App Store glory, we build high-performance mobile applications that engage users and drive business growth.",
+      "stats": {
+        "users": "Active Users",
+        "featured": "Featured Apps",
+        "published": "Apps Published"
+      },
+      "cta_expert": "Talk to an Expert",
+      "cta_more": "Learn More",
+      "img_alt": "Mobile App Mockup"
+    },
+    "about": {
+      "badge": "Leading Mobile Agency",
+      "title1": "Elite Mobile ",
+      "title2": "Development",
+      "p1": "Gozoom Technologies is a powerhouse for mobile innovation.",
+      "p2": "We combine strategic thinking with technical brilliance to deliver apps that don't just work—they wow. Our team of veteran developers and designers focus on creating seamless, intuitive, and robust mobile solutions.",
+      "stats": {
+        "projects": "Projects Done",
+        "clients": "Happy Clients",
+        "team": "Expert Team",
+        "years": "Years Exp"
+      }
+    },
+    "services": {
+      "badge": "Mobile Ecosystem",
+      "ios": {
+        "title": "iOS Development",
+        "desc": "Premium native Apple experiences built with Swift and SwiftUI for maximum performance."
+      },
+      "android": {
+        "title": "Android Development",
+        "desc": "Scaleable and secure native Android apps optimized for a fragmented device ecosystem."
+      },
+      "cross_platform": {
+        "title": "Cross-Platform",
+        "desc": "Feature-rich apps for both iOS and Android using Flutter or React Native to save time."
+      },
+      "iot": {
+        "title": "IoT Integration",
+        "desc": "Connecting your mobile apps to hardware and smart devices for a connected experience."
+      },
+      "enterprise": {
+        "title": "Enterprise Mobility",
+        "desc": "Internal tools and secure business applications tailored for corporate workflows."
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "desc": "Post-launch updates, performance tuning, and 24/7 monitoring to keep your app ahead."
+      },
+      "cta": {
+        "title1": "Ready to launch your ",
+        "title2": "Mobile Revolution?",
+        "button": "Get a Free Quote"
+      }
+    },
+    "why_us": {
+      "badge": "The Gozoom Edge",
+      "title": "Why Choose Our Mobile Team?",
+      "items": {
+        "security": {
+          "title": "Bank-Grade Security",
+          "desc": "We implement end-to-end encryption and zero-trust architectures to protect your user data."
+        },
+        "speed": {
+          "title": "Lightning Speed",
+          "desc": "Our apps are optimized for low latency and high-speed interaction, ensuring zero frustration."
+        },
+        "aso": {
+          "title": "App Store Optimized",
+          "desc": "We build with ASO in mind, helping your app climb the rankings from day one."
+        },
+        "reliability": {
+          "title": "Proven Reliability",
+          "desc": "With 99.9% crash-free sessions, our apps are built to handle massive user loads seamlessly."
+        }
+      }
+    },
+    "tech": {
+      "badge": "Tech Stack",
+      "title1": "Our Mobile ",
+      "title2": "Tech Universe"
+    }
+  },
+  "android_dev_page": {
+    "hero": {
+      "badge": "Android Powerhouse",
+      "title1": "Premium ",
+      "title2": "Android Development",
+      "desc": "Building high-performance, native Android applications that leverage the full power of the Google ecosystem.",
+      "cta_enquire": "Enquire Now",
+      "cta_learn": "Learn More",
+      "img_alt": "Android Logo"
+    },
+    "about": {
+      "badge": "Android Experts",
+      "title1": "The Apex of ",
+      "title2": "Android",
+      "title3": " Engineering",
+      "p1": "Gozoom Technologies delivers enterprise-grade Android solutions that are secure, scalable, and stunning.",
+      "p2_start": "Our ",
+      "p2_team": "team of dedicated Android engineers",
+      "p2_end": " specializes in Kotlin and Java to build apps that perform flawlessly across thousands of different device configurations."
+    },
+    "expertise": {
+      "badge": "Our Specialization",
+      "title1": "Android ",
+      "title2": "Capabilities",
+      "items": {
+        "native": {
+          "title": "Native Performance",
+          "desc": "Leveraging Kotlin Coroutines and Jetpack Compose for the smoothest user experience."
+        },
+        "tv": {
+          "title": "Android TV & Wearables",
+          "desc": "Expanding your reach to the living room and the wrist with specialized Android builds."
+        },
+        "legacy": {
+          "title": "Legacy Modernization",
+          "desc": "Refactoring old Java codebases into modern, performant Kotlin architectures."
+        },
+        "ar_vr": {
+          "title": "AR Core Integration",
+          "desc": "Building immersive augmented reality experiences directly into your Android app."
+        },
+        "ml": {
+          "title": "Edge AI & ML",
+          "desc": "Running machine learning models locally on device with TensorFlow Lite for instant results."
+        },
+        "enterprise": {
+          "title": "Enterprise Security",
+          "desc": "Implementing Knox-level security and biometric authentication for sensitive business data."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Partner With Us",
+      "title1": "Why Choose Our ",
+      "title2": "Android Experts?",
+      "items": {
+        "compose": {
+          "title": "Jetpack Compose Mastery",
+          "desc": "We use modern declarative UI frameworks to build beautiful, responsive layouts faster."
+        },
+        "play_store": {
+          "title": "Play Store Success",
+          "desc": "We handle the entire submission process, ensuring your app meets all Google Play guidelines."
+        },
+        "cicd": {
+          "title": "Automated CI/CD",
+          "desc": "Regular updates and bug fixes delivered seamlessly through automated build pipelines."
+        },
+        "support": {
+          "title": "Dedicated Support",
+          "desc": "Post-launch maintenance and optimization to ensure your app stays compatible with new Android versions."
+        }
+      },
+      "cta": {
+        "img_alt": "Android Expert",
+        "title1": "Ready to dominate the",
+        "title2": "Android Market?",
+        "button": "Get Started"
+      }
+    }
+  },
+  "ios_dev_page": {
+    "hero": {
+      "badge": "iOS Specialists",
+      "title1": "Elite ",
+      "title2": "iOS Application Development",
+      "desc": "Creating premium, native iOS experiences that define the standard for elegance and performance on the Apple ecosystem.",
+      "cta_enquire": "Enquire Now",
+      "cta_about": "About Us",
+      "img_alt": "App Store Logo"
+    },
+    "about": {
+      "badge": "Apple Ecosystem Experts",
+      "title1": "Pioneering ",
+      "title2": "iOS",
+      "title3": " Innovation",
+      "p1": "Gozoom Technologies crafts world-class iOS applications that seamlessly blend luxury with utility.",
+      "p2": "Our veteran Swift developers utilize the latest iOS frameworks to build applications that are not only visually stunning but technically superior, ensuring your brand stands out in the App Store."
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title1": "Comprehensive ",
+      "capabilities": "iOS Capabilities ",
+      "title2": "& Solutions",
+      "items": {
+        "iphone": {
+          "title": "iPhone App Dev",
+          "desc": "Bespoke iPhone applications optimized for the latest iOS versions and hardware features."
+        },
+        "ipad": {
+          "title": "iPadOS Productivity",
+          "desc": "Taking full advantage of Large Screen features, multitasking, and Apple Pencil integration."
+        },
+        "watch": {
+          "title": "watchOS Experiences",
+          "desc": "Lightweight, high-impact extensions for the wrist that keep users connected on the go."
+        },
+        "tvos": {
+          "title": "tvOS Entertainment",
+          "desc": "Building immersive media and gaming experiences for the big screen."
+        },
+        "uiux": {
+          "title": "Human Interface Design",
+          "desc": "Strict adherence to Apple's HIG to ensure an intuitive and native feel for every user."
+        },
+        "deployment": {
+          "title": "App Store Management",
+          "desc": "Expert handling of certificates, provisioning profiles, and the App Store Connect submission process."
+        }
+      }
+    },
+    "hire": {
+      "title1": "Hire Dedicated ",
+      "title2": "iOS ",
+      "title3": "Developers",
+      "p": "Scale your mobile team with our top-tier iOS engineers who specialize in Swift, SwiftUI, and Objective-C.",
+      "button": "Hire Experts Now"
+    },
+    "why_us": {
+      "badge": "The Gozoom Advantage",
+      "title1": "Why Choose Our ",
+      "title2": "iOS Team?",
+      "items": {
+        "customized": {
+          "title": "Fully Customized",
+          "desc": "We don’t use templates. Every app is built from the ground up to match your specific vision."
+        },
+        "satisfaction": {
+          "title": "100% Satisfaction",
+          "desc": "Our iterative development process ensures the final product exceeds your expectations."
+        },
+        "security": {
+          "title": "Advanced Security",
+          "desc": "Implementing Bio-metrics, Keychain, and App Sandbox to protect sensitive user information."
+        },
+        "fast": {
+          "title": "Fast Deployment",
+          "desc": "Our agile methodology ensures your iOS app hits the market faster without compromising quality."
+        },
+        "premium": {
+          "title": "Premium Coding",
+          "desc": "Clean, documented, and maintainable Swift code that follows industry best practices."
+        },
+        "support": {
+          "title": "24/7 Support",
+          "desc": "Continuous monitoring and rapid response support to keep your app running perfectly."
+        }
+      }
+    }
+  },
+  "flutter_dev_page": {
+    "hero": {
+      "badge": "Cross-Platform Masters",
+      "title_main": "Future-Ready ",
+      "title_gradient": "Flutter Development",
+      "desc": "Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase with Gozoom’s Flutter experts.",
+      "cta_hire": "Hire Flutter Experts",
+      "img_alt": "Flutter Logo"
+    },
+    "expertise": {
+      "badge": "Our Specialization",
+      "title": "What We Build with Flutter",
+      "desc": "Leveraging the power of Dart to deliver exceptional performance and stunning UIs across all platforms.",
+      "items": {
+        "cross_platform": {
+          "title": "Cross-Platform Apps",
+          "desc": "Identical UI and logic for iOS and Android with high-performance native rendering."
+        },
+        "web_desktop": {
+          "title": "Flutter for Web & Desktop",
+          "desc": "Expanding your reach to browsers and desktops with zero extra effort."
+        },
+        "widgets": {
+          "title": "Custom Widget Design",
+          "desc": "Creating unique, reusable UI components that give your app a distinct identity."
+        },
+        "backend": {
+          "title": "Firebase Integration",
+          "desc": "Building real-time, scalable backends with seamless authentication and hosting."
+        },
+        "migration": {
+          "title": "App Migration",
+          "desc": "Migrating your legacy mobile apps to Flutter for easier maintenance and faster updates."
+        },
+        "mvp": {
+          "title": "Rapid MVP Dev",
+          "desc": "The fastest way to take your idea from concept to market with a dual-platform launch."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Flutter?",
+      "title": "Why Choose Our Flutter Team?",
+      "desc": "We specialize in writing clean, performant Dart code that maximizes the efficiency of the Flutter framework.",
+      "list": [
+        "Single Codebase for iOS & Android",
+        "Fast Development with Hot Reload",
+        "Native Performance & Smooth 60 FPS",
+        "Rich & Customizable UI Componentry"
+      ],
+      "img_alt": "App Mockup"
+    }
+  },
+  "swift_dev_page": {
+    "hero": {
+      "badge": "Native Power",
+      "title_main": "High-Performance ",
+      "title_gradient": "Swift Development",
+      "desc": "Unleash the full potential of Apple hardware with native Swift applications that are fast, secure, and intuitive.",
+      "cta_start": "Get Started"
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "Specialized Swift Solutions",
+      "desc": "Our team masters the Swift language and its ecosystem to deliver premium native experiences.",
+      "items": {
+        "custom_ios": {
+          "title": "Custom iOS Apps",
+          "desc": "Tailor-made applications built with Swift and SwiftUI for the ultimate user experience."
+        },
+        "uiux": {
+          "title": "Modern UI/UX",
+          "desc": "Implementing fluid animations and responsive designs following Apple's guidelines."
+        },
+        "wearables": {
+          "title": "Apple Ecosystem",
+          "desc": "Extending your presence to Apple Watch, iPad, and macOS with optimized native code."
+        },
+        "apple": {
+          "title": "Legacy Migration",
+          "desc": "Modernizing Objective-C codebases into safe and performant Swift architectures."
+        },
+        "next_gen": {
+          "title": "Next-Gen Features",
+          "desc": "Integrating ARKit, CoreML, and SiriKit for cutting-edge app functionalities."
+        },
+        "deployment": {
+          "title": "Deployment",
+          "desc": "Seamless publishing to the App Store with full compliance and optimization."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Swift?",
+      "title": "Why Choose Our Swift Team?",
+      "desc": "We build with a focus on safety, speed, and long-term maintainability for the most demanding Apple users.",
+      "list": [
+        "Superior Native Performance",
+        "Maximum Device Feature Access",
+        "Type-Safe Code Architecture",
+        "Scalable & Maintainable Build"
+      ],
+      "img_alt": "iOS App Mockup"
+    }
+  },
+  "react_native_dev_page": {
+    "hero": {
+      "badge": "Hybrid Specialists",
+      "title_main": "Agile ",
+      "title_gradient": "React Native Development",
+      "desc": "Combine the speed of web development with the power of native mobile apps through our expert React Native services.",
+      "cta_start": "Get Started",
+      "cta_explore": "Explore Services"
+    },
+    "expertise": {
+      "badge": "Capabilities",
+      "title": "What We Build with React Native",
+      "desc": "We leverage the 'Learn once, write anywhere' philosophy to deliver stunning mobile experiences efficiently.",
+      "items": {
+        "custom": {
+          "title": "Custom Mobile Apps",
+          "desc": "Built with JavaScript and React to reach both iOS and Android with a single team."
+        },
+        "uiux": {
+          "title": "Native Look & Feel",
+          "desc": "Optimizing mobile interfaces to ensure they feel native on every platform."
+        },
+        "migration": {
+          "title": "Migration Services",
+          "desc": "Converting web apps or legacy mobile apps to performant React Native builds."
+        },
+        "integration": {
+          "title": "API & Third-Party",
+          "desc": "Seamlessly connecting your mobile app to any backend or service provider."
+        },
+        "qa": {
+          "title": "Rigorous QA",
+          "desc": "Comprehensive testing on multiple devices to ensure consistent cross-platform quality."
+        },
+        "maintenance": {
+          "title": "Maintenance",
+          "desc": "Constant updates to keep your app compatible with the latest OS releases."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "The React Native Edge",
+      "title": "Why Choose Our React Native Experts?",
+      "desc": "Our team focuses on bridge optimization and performance tuning to ensure your hybrid app feels truly native.",
+      "list": [
+        "Reduced Development Costs",
+        "Faster Time to Market",
+        "Live Updates via CodePush",
+        "Vibrant Community Support"
+      ],
+      "img_alt": "Mobile App Design"
+    }
+  },
   "workforce_solutions_page": {
     "hero": {
       "subtitle": "Comprehensive Talent Strategy",
@@ -1178,374 +1651,6 @@
         "desc": "A comprehensive solution eliminating the complexity of managing multiple vendors through a single, streamlined partnership."
       }
     ]
-  },
-  "mobile_app_dev_page": {
-    "hero": {
-      "badge": "UI/UX & Mobile Specialist",
-      "title": "Build the Next Generation of ",
-      "title_gradient": "Mobile Experiences",
-      "desc": "We create high-performance, beautiful mobile applications that scale. From startups to enterprises, we deliver excellence across iOS and Android.",
-      "cta_contact": "Get Started",
-      "cta_services": "Our Services"
-    },
-    "expertise": {
-      "subtitle": "Our Expertise",
-      "title": "Tailored Mobile Solutions",
-      "cards": {
-        "ios": {
-          "title": "iOS Development",
-          "desc": "Premium Swift and SwiftUI applications built for the Apple ecosystem."
-        },
-        "android": {
-          "title": "Android Development",
-          "desc": "Robust Kotlin and Java apps designed for the global Android market."
-        },
-        "hybrid": {
-          "title": "Cross-Platform",
-          "desc": "High-efficiency Flutter and React Native solutions for shared codebases."
-        },
-        "uiux": {
-          "title": "Mobile UI/UX",
-          "desc": "Intuitive, gesture-driven designs that users love to interact with."
-        }
-      }
-    }
-  },
-  "android_dev_page": {
-    "hero": {
-      "badge": "Android Specialist",
-      "title1": "Build Your Next ",
-      "title2": "Android App",
-      "title3": " with Experts",
-      "desc": "We develop high-performance, secure, and scalable Android applications tailored to your business needs.",
-      "cta_enquire": "Enquire Now",
-      "cta_about": "About Us",
-      "img_alt": "Android Specialist"
-    },
-    "about": {
-      "badge": "Android Development",
-      "title1": "Full-Cycle ",
-      "title2": "Android App",
-      "title3": " Development",
-      "p1": "Our team of seasoned Android developers uses Kotlin and Java to build robust applications that deliver seamless user experiences.",
-      "p2": "From initial concept to Google Play Store deployment, we handle every aspect of the development process with precision and care."
-    },
-    "expertise": {
-      "badge": "Expertise",
-      "title1": "Our Android ",
-      "title2": "Capabilities",
-      "items": {
-        "custom": {
-          "title": "Custom Android Apps",
-          "desc": "Tailor-made solutions designed specifically for your unique business requirements."
-        },
-        "uiux": {
-          "title": "Android UI/UX Design",
-          "desc": "Beautiful and intuitive interfaces that follow Material Design guidelines."
-        },
-        "integration": {
-          "title": "API Integration",
-          "desc": "Seamless connection with third-party services and internal systems."
-        },
-        "maintenance": {
-          "title": "Support & Maintenance",
-          "desc": "Ensuring your app stays up-to-date and performs at its best."
-        },
-        "qa": {
-          "title": "Quality Assurance",
-          "desc": "Rigorous testing across multiple devices and Android versions."
-        },
-        "deployment": {
-          "title": "Store Deployment",
-          "desc": "Expert guidance through the Google Play Store submission process."
-        }
-      }
-    },
-    "hire": {
-      "title1": "Hire ",
-      "title2": "Android Developer",
-      "title3": " for Your Project",
-      "p": "Get access to top-tier talent and accelerate your mobile strategy with GoZoom.",
-      "button": "Hire Android Developer"
-    },
-    "why_us": {
-      "badge": "Why Us",
-      "title1": "Why Choose ",
-      "title2": "GoZoom?",
-      "items": {
-        "security": {
-          "title": "Data Security",
-          "desc": "We prioritize your data privacy and implement the highest security standards."
-        },
-        "scalability": {
-          "title": "Scalable Solutions",
-          "desc": "Our apps are built to grow alongside your business."
-        },
-        "support": {
-          "title": "24/7 Support",
-          "desc": "Our dedicated team is always here to help you."
-        },
-        "experience": {
-          "title": "Years of Experience",
-          "desc": "Proven track record of delivering successful Android projects."
-        },
-        "cost": {
-          "title": "Cost-Effective",
-          "desc": "High-quality development services at competitive prices."
-        },
-        "quality": {
-          "title": "Premium Quality",
-          "desc": "We never compromise on the quality of our code or design."
-        }
-      }
-    }
-  },
-  "ios_dev_page": {
-    "hero": {
-      "badge": "iOS Development",
-      "title1": "Get iOS Expert for ",
-      "title2": "Enterprises",
-      "desc": "Our expert iOS developers help you build custom, scalable, and secure applications that deliver premium user experiences.",
-      "cta_enquire": "Enquire Now",
-      "cta_about": "About Us",
-      "img_alt": "iOS Specialist"
-    },
-    "about": {
-      "badge": "iOS Development",
-      "title1": "We Provide Full ",
-      "title2": "iOS App",
-      "title3": " Development Support",
-      "p1": "Streamline iOS app development with Swift, a versatile and intuitive programming language. Swift's syntax simplifies coding tasks, from UI design to backend functionality, enhancing app performance and user experience.",
-      "p2": "At GoZooms, we focus on elevating your digital presence with comprehensive iOS app development services. Our seasoned team leverages Swift, Apple's powerful programming language, to craft cutting-edge mobile solutions tailored to your business objectives. From concept ideation to app store deployment, we guide you through every step of the development process."
-    },
-    "expertise": {
-      "badge": "Expertise",
-      "title1": "Our iOS Development ",
-      "title2": "Capabilities",
-      "items": {
-        "iphone": {
-          "title": "iPhone App Development",
-          "desc": "Custom applications engineered from the ground up to utilize the full capabilities of modern iPhones and iOS features."
-        },
-        "ipad": {
-          "title": "iPad App Development",
-          "desc": "Tablet-optimized interfaces that take advantage of the larger screen real-estate for productivity and media consumption."
-        },
-        "watch": {
-          "title": "Apple Watch Apps",
-          "desc": "Glanceable, highly-efficient watchOS companion applications for fitness, notifications, and rapid interactions."
-        },
-        "tvos": {
-          "title": "Apple TV (tvOS) Apps",
-          "desc": "Immersive media streaming and gaming applications designed specifically for the living room experience."
-        },
-        "uiux": {
-          "title": "iOS UI/UX Design",
-          "desc": "Human Interface Guidelines (HIG) compliant designs that feel natural, premium, and inherently Apple."
-        },
-        "deployment": {
-          "title": "App Store Deployment",
-          "desc": "End-to-end assistance slicing through the red tape of the Apple App Store review process for rapid publishing."
-        }
-      }
-    },
-    "hire": {
-      "title1": "Hire ",
-      "title2": "iOS App Developer",
-      "title3": " for All your Needs",
-      "p": "iOS app developers from GoZoom are known for their ability to come up with unique ideas and develop feature-rich yet customer-centric applications using domain-oriented methodologies.",
-      "button": "Hire iOS Developer"
-    },
-    "why_us": {
-      "badge": "Why Us",
-      "title1": "Why Should You ",
-      "title2": "Choose Us?",
-      "items": {
-        "customized": {
-          "title": "Customized Experiences",
-          "desc": "Our specialized iOS development process utilizes the latest stable iOS frameworks (SwiftUI) to provide extended functionality tailored for your business."
-        },
-        "satisfaction": {
-          "title": "Satisfaction Guarantee",
-          "desc": "For us, customer satisfaction is of the utmost importance. We will provide you with dedicated iOS developers focused entirely on your project."
-        },
-        "security": {
-          "title": "Uncompromising Security",
-          "desc": "We implement the highest standards of data protection, utilizing Keychain and secure enclaves for enterprise-grade security."
-        },
-        "fast": {
-          "title": "Fast Development",
-          "desc": "Having developers that possess strong time management skills is our specialty. You can trust us to efficiently deliver results on time and on budget."
-        },
-        "premium": {
-          "title": "Premium Code Quality",
-          "desc": "By strictly adhering to SOLID principles and Clean Architecture, we guarantee that your codebase remains stable and scalable for years."
-        },
-        "support": {
-          "title": "18/5 Technical Support",
-          "desc": "Our dedicated support team and strong technical assistance helps your business through any issues via email, Slack, or direct calls."
-        }
-      }
-    }
-  },
-  "flutter_dev_page": {
-    "hero": {
-      "badge": "UI Toolkit by Google",
-      "title_main": "Flutter App ",
-      "title_gradient": "Development",
-      "desc": "Create natively compiled, visually stunning applications for mobile, web, and desktop from a single codebase. Delivering expressive and flexible UI without compromising on speed.",
-      "cta_hire": "Hire Flutter Devs",
-      "img_alt": "Flutter App Development"
-    },
-    "expertise": {
-      "badge": "Our Services",
-      "title": "What We Build with Flutter",
-      "desc": "From MVP launches to enterprise-scale systems, we harness Dart and Flutter for maximum impact.",
-      "items": {
-        "cross_platform": {
-          "title": "Cross-Platform Apps",
-          "desc": "Reach billions of Android and iOS users simultaneously using custom, feature-rich apps compiled ahead-of-time."
-        },
-        "web_desktop": {
-          "title": "Flutter for Web & Desktop",
-          "desc": "Expand your mobile application immediately into progressive web apps (PWA) and macOS, Windows, or Linux clients."
-        },
-        "widgets": {
-          "title": "Custom Widget Design",
-          "desc": "Building beautiful, highly intricate custom UI widgets matching your specific brand guidelines perfectly."
-        },
-        "backend": {
-          "title": "Backend Integration",
-          "desc": "Hooking up scalable Firebase backgrounds, AWS configurations, or custom REST/GraphQL APIs securely."
-        },
-        "migration": {
-          "title": "UI/UX Migration",
-          "desc": "Modernizing legacy application interfaces into the blazing fast Flutter render engine."
-        },
-        "mvp": {
-          "title": "MVP Development",
-          "desc": "Launch start-up ideas reliably and affordably in record time, proving market fit without building twice."
-        }
-      }
-    },
-    "why_us": {
-      "badge": "Why Us",
-      "title": "The Power of Flutter Framework",
-      "desc": "At GoZoom, we have embraced Flutter's revolutionary widget-based architecture to bypass native performance bridges, meaning your app looks and feels 100% native while costing significantly less to develop and maintain.",
-      "list": [
-        "Hot Reload dramatically reduces coding and testing times in Dart",
-        "A single codebase that easily deploys to 6 platforms max",
-        "60 & 120 FPS performance out of the box using Skia/Impeller",
-        "Extensive catalog of highly customizable materialistic & cupertino widgets"
-      ],
-      "img_alt": "Flutter Dev Team"
-    }
-  },
-  "swift_dev_page": {
-    "hero": {
-      "badge": "Apple Ecosystem Mastery",
-      "title_main": "Swift iOS ",
-      "title_gradient": "Development",
-      "desc": "Build powerful, lightning-fast native applications for iOS, macOS, watchOS, and tvOS using Apple's modern Swift programming language and SwiftUI.",
-      "cta_start": "Start Exploring Swift"
-    },
-    "expertise": {
-      "badge": "Our Services",
-      "title": "What We Build with Swift",
-      "desc": "From iPhone apps to comprehensive enterprise systems across the Apple ecosystem, we provide end-to-end Swift development.",
-      "items": {
-        "custom_ios": {
-          "title": "Custom iOS Apps",
-          "desc": "Feature-rich, scalable iPhone and iPad applications engineered for maximum performance and stability."
-        },
-        "uiux": {
-          "title": "UI/UX with SwiftUI",
-          "desc": "Crafting stunning, state-driven interfaces across all Apple platforms faster and more consistently using SwiftUI."
-        },
-        "wearables": {
-          "title": "watchOS & tvOS",
-          "desc": "Expanding your digital footprint directly to users’ wrists and living rooms through dedicated native Apple experiences."
-        },
-        "migration": {
-          "title": "Swift Migration",
-          "desc": "Updating your legacy Objective-C codebases into clean, type-safe, and maintainable Swift architectures."
-        },
-        "next_gen": {
-          "title": "ARKit & CoreML Integration",
-          "desc": "Building next-generation applications utilizing Apple’s native augmented reality and machine learning frameworks."
-        },
-        "deployment": {
-          "title": "App Store Deployment",
-          "desc": "Navigating the strict Apple App Store review guidelines to guarantee seamless approval and launch."
-        }
-      }
-    },
-    "why_us": {
-      "badge": "Why Us",
-      "title": "Why Choose GoZoom for Swift?",
-      "desc": "Modern iOS users demand flawless performance, smooth animations, and adherence to Apple's Human Interface Guidelines. Our native Swift developers ensure your product surpasses these high expectations.",
-      "list": [
-        "Type-safe language features prevent crashes in production",
-        "Maximum hardware performance unmatched by hybrid frameworks",
-        "Immediate access to the latest iOS APIs the day they are released",
-        "Deep integration with Apple Pay, SiriKit, HealthKit, and passes"
-      ],
-      "img_alt": "Swift Dev Team"
-    }
-  },
-  "react_native_dev_page": {
-    "hero": {
-      "badge": "Cross-Platform Excellence",
-      "title_main": "React Native ",
-      "title_gradient": "Development",
-      "desc": "Build native apps for Android and iOS using a single, robust codebase. Our expert React Native developers deliver high-performance, cost-effective mobile solutions tailored to your business needs.",
-      "cta_start": "Start Your Project",
-      "cta_explore": "Explore Services"
-    },
-    "expertise": {
-      "badge": "Our Offerings",
-      "title": "What We Build with React Native",
-      "desc": "We leverage React Native's shared codebase architecture to deliver versatile, scalable mobile applications.",
-      "items": {
-        "custom": {
-          "title": "Custom App Development",
-          "desc": "From startup ideas to enterprise mobility solutions, we build fully customized apps that hit both app stores simultaneously."
-        },
-        "uiux": {
-          "title": "UI/UX Design for RN",
-          "desc": "Creating native-feeling, fluid, and brilliantly intuitive interfaces optimized for React Native’s rendering engine."
-        },
-        "migration": {
-          "title": "App Migration",
-          "desc": "Seamlessly port your existing native or hybrid (Cordova/Ionic) apps over to the powerful React Native framework."
-        },
-        "integration": {
-          "title": "API Integrations",
-          "desc": "Extending app functionality by securely linking third-party RESTful APIs, payment gateways, and backend services."
-        },
-        "qa": {
-          "title": "Testing & QA",
-          "desc": "Rigorous automated and manual testing on real devices across iOS and Android ecosystems to guarantee zero crashes."
-        },
-        "maintenance": {
-          "title": "Post-Launch Maintenance",
-          "desc": "Ongoing support, performance monitoring, OS updates, and feature enhancements to keep your app ahead."
-        }
-      }
-    },
-    "why_us": {
-      "badge": "Why Us",
-      "title": "Why Choose GoZoom for React Native?",
-      "desc": "React Native speeds up development and maintains high native performance. Combining this powerful technology with our experienced talent ensures your mobile product hits the market faster and scales seamlessly.",
-      "list": [
-        "Single codebase for Android & iOS lowers cost by ~40%",
-        "Hot reloading guarantees faster development cycles",
-        "True native UI components and deep OS integration",
-        "Massive community support and pre-built libraries",
-        "Dedicated React framework experts on staff"
-      ],
-      "img_alt": "React Native Dev Team"
-    }
   },
   "react_js_dev_page": {
     "hero": {
@@ -2297,6 +2402,313 @@
           "desc": "We specialize in model quantization and caching strategies to ensure your AI applications respond instantly without exorbitant compute costs."
         }
       ]
+    }
+  },
+  "seo_services_page": {
+    "hero": {
+      "badge": "Digital Marketing",
+      "title_main": "Transform Your Online Presence with ",
+      "title_gradient": "Expert SEO Services",
+      "desc": "Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.",
+      "cta_start": "Get Started",
+      "cta_about": "About Us"
+    },
+    "about": {
+      "badge": "Our Approach",
+      "title_main": "Optimize Your Online Impact with ",
+      "title_gradient": "Professional SEO Services",
+      "p1": "In the digital landscape, effective SEO is the key to unlocking unparalleled online visibility and success. Our expert SEO services are meticulously crafted to propel your business to new heights.",
+      "p2": "Harnessing the power of cutting-edge SEO strategies, we navigate the complexities of search algorithms, keyword optimization, and content enhancement. Our dedicated specialists work collaboratively with you to drive organic traffic, foster brand authority, and maximize your impact."
+    },
+    "features": {
+      "badge": "Expertise",
+      "title_main": "What Our SEO Experts ",
+      "title_gradient": "Offer",
+      "items": {
+        "keyword": {
+          "title": "Strategic Keyword Research",
+          "desc": "Identifying high-value, intent-driven search terms to capture your target audience effectively."
+        },
+        "on_page": {
+          "title": "On-Page Optimization",
+          "desc": "Enhancing meta tags, headers, and internal linking structures for maximum search engine crawlability."
+        },
+        "content": {
+          "title": "Quality Content Creation",
+          "desc": "Producing engaging, SEO-rich blogs, articles, and landing pages that rank and convert."
+        },
+        "technical": {
+          "title": "Technical SEO Excellence",
+          "desc": "Fixing site speed, mobile responsiveness, and schema markup to meet Core Web Vitals criteria."
+        },
+        "local": {
+          "title": "Local SEO Strategies",
+          "desc": "Dominating local packs and Maps through optimized Google Business Profiles and localized citations."
+        },
+        "links": {
+          "title": "Strategic Link Building",
+          "desc": "Acquiring high-authority backlinks from reputable domains to massively boost your domain rating."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title_main": "Why Choose Our ",
+      "title_gradient": "SEO Experts?",
+      "items": {
+        "track_record": {
+          "title": "Proven Track Record",
+          "desc": "Rely on our seasoned SEO experts with an extensive track record of successfully delivering measurable results."
+        },
+        "tailored": {
+          "title": "Tailored Strategies",
+          "desc": "Crafting personalized SEO strategies tailored to align with your unique business objectives, providing a distinct competitive advantage."
+        },
+        "expertise": {
+          "title": "Cutting-Edge Expertise",
+          "desc": "Stay at the forefront of industry trends and technologies, allowing us to optimize your digital footprint for sustained growth."
+        },
+        "reporting": {
+          "title": "Transparent Reporting",
+          "desc": "Get regular, clear reports on your campaign performance with data-driven insights to guide ongoing optimization."
+        },
+        "growth": {
+          "title": "Long-Term Growth",
+          "desc": "We focus on sustainable, organic growth strategies that deliver lasting results and continuously improve your rankings."
+        },
+        "support": {
+          "title": "Dedicated Support",
+          "desc": "A committed team available to answer questions, provide updates, and refine strategies as your business evolves."
+        }
+      },
+      "cta": {
+        "text": "Get in touch with our",
+        "gradient": "SEO Experts Today!",
+        "button": "Get Started"
+      }
+    }
+  },
+  "kiosks_page": {
+    "hero": {
+      "badge": "Kiosk Solutions",
+      "title_main": "GoZooms ",
+      "title_gradient": "Kiosk Technologies!",
+      "desc": "Interactive kiosk solutions that enhance customer experience and streamline business operations across all industries.",
+      "cta_integration": "Integration",
+      "cta_retail": "Retail"
+    },
+    "about": {
+      "badge": "Our Solutions",
+      "title_main": "Interactive ",
+      "title_gradient": "Kiosk Solutions",
+      "desc": "We provide state-of-the-art kiosk solutions for various industries, including retail, healthcare, and entertainment. Our kiosks are designed to enhance customer experience and streamline business operations.",
+      "items": {
+        "self_ordering": {
+          "title": "Self-Ordering Kiosks",
+          "desc": "Allow customers to browse menus, customize orders, and make payments independently — reducing wait times and increasing order accuracy."
+        },
+        "info": {
+          "title": "Information Kiosks",
+          "desc": "Provide visitors with wayfinding, product info, and interactive content in retail spaces, hotels, and public venues."
+        },
+        "payment": {
+          "title": "Payment Kiosks",
+          "desc": "Secure, fast, and reliable payment processing terminals integrated with your existing POS and accounting systems."
+        },
+        "healthcare": {
+          "title": "Healthcare Kiosks",
+          "desc": "Patient check-in, registration, and information retrieval solutions that reduce administrative burden and improve patient flow."
+        },
+        "entertainment": {
+          "title": "Entertainment Kiosks",
+          "desc": "Ticketing, loyalty programs, and interactive entertainment solutions for cinemas, theme parks, and venues."
+        },
+        "custom": {
+          "title": "Custom Kiosks",
+          "desc": "Bespoke kiosk solutions tailored to your specific industry needs, workflows, and brand identity."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Choose Us",
+      "title_main": "Why GoZooms ",
+      "title_gradient": "Kiosk Solutions?",
+      "items": {
+        "reliability": {
+          "title": "Reliability First",
+          "desc": "99.9% uptime guarantee with proactive monitoring and rapid response support around the clock."
+        },
+        "integration": {
+          "title": "Seamless Integration",
+          "desc": "Easily integrates with your existing POS, ERP, and payment systems for a unified business ecosystem."
+        },
+        "consistency": {
+          "title": "Brand Consistency",
+          "desc": "Fully customizable UI to match your brand identity and deliver a consistent customer experience."
+        },
+        "analytics": {
+          "title": "Data Analytics",
+          "desc": "Real-time dashboards and reports on kiosk usage, transactions, and customer behavior patterns."
+        },
+        "scalable": {
+          "title": "Scalable Platform",
+          "desc": "Scale from a single unit to hundreds of kiosks across multiple locations with centralized management."
+        },
+        "expertise": {
+          "title": "Industry Expertise",
+          "desc": "Years of experience deploying kiosks in retail, hospitality, healthcare, and entertainment industries."
+        }
+      },
+      "cta": {
+        "text": "Ready to transform",
+        "gradient": "your customer experience?",
+        "desc": "Talk to our kiosk specialists and get a customized solution for your business today.",
+        "button": "Get Started"
+      }
+    }
+  },
+  "ui_ux_design_page": {
+    "hero": {
+      "badge": "Human-Centered Design",
+      "title_main": "UI / UX ",
+      "title_gradient": "Design Agency",
+      "desc": "We craft intuitive, engaging, and utterly beautiful digital experiences that convert users into loyal brand advocates.",
+      "cta_start": "Start Designing"
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "What We Build",
+      "desc": "Our design philosophy merges aesthetics with rigorous user empathy.",
+      "items": {
+        "research": {
+          "title": "UX Research & Strategy",
+          "desc": "Conducting deep user interviews, persona mapping, and journey creation to ensure your product solves real problems."
+        },
+        "web": {
+          "title": "Web Interface Design",
+          "desc": "Creating breathtaking, pixel-perfect web interfaces that are responsive, accessible, and optimized for high conversion rates."
+        },
+        "mobile": {
+          "title": "Mobile App UX/UI",
+          "desc": "Designing intuitive native iOS and Android experiences aligned with Human Interface Guidelines and Material Design."
+        },
+        "branding": {
+          "title": "Brand Identity",
+          "desc": "Developing cohesive visual languages, typography pairs, and color palettes that make your brand memorable."
+        },
+        "testing": {
+          "title": "Prototyping & Testing",
+          "desc": "Building high-fidelity interactive Figma prototypes to validate assumptions before a single line of code is written."
+        },
+        "systems": {
+          "title": "Design Systems",
+          "desc": "Constructing robust, scalable component libraries ensuring design consistency across all your enterprise platforms."
+        }
+      }
+    },
+    "why_us": {
+      "badge": "Why Us",
+      "title": "Why Choose Our Designers?",
+      "items": {
+        "empathy": {
+          "title": "Empathy-Driven Process",
+          "desc": "We don’t guess; we research. Our designs are rooted in deep understanding of your end-users’ psychographics and behavioral patterns."
+        },
+        "figma": {
+          "title": "Collaborative Figma Workflows",
+          "desc": "Enjoy full transparency as we invite you into our iterative Figma files, providing feedback loops every step of the way."
+        },
+        "developer": {
+          "title": "Developer-Ready Assets",
+          "desc": "Our designers speak code. We hand off meticulously organized files with design tokens, making implementation a breeze for engineers."
+        },
+        "conversion": {
+          "title": "Conversion Focused",
+          "desc": "Beautiful design means nothing if it doesn’t sell. Our UX audits specifically target friction points to maximize your application’s ROI."
+        }
+      }
+    }
+  },
+  "use_cases_page": {
+    "hero": {
+      "badge": "Industry Applications",
+      "title_main": "Real World ",
+      "title_gradient": "Use Cases",
+      "desc": "Discover how our customized AI and Cloud solutions are resolving complex challenges across diverse industries worldwide.",
+      "cta_explore": "Explore Industries"
+    },
+    "industries": {
+      "items": {
+        "healthcare": {
+          "title": "Healthcare",
+          "desc": "Predictive diagnostics, automated patient scheduling, and AI-driven personalized treatment plans."
+        },
+        "ecommerce": {
+          "title": "E-Commerce",
+          "desc": "Smart product recommendations, dynamic pricing models, and automated inventory management."
+        },
+        "finance": {
+          "title": "Finance",
+          "desc": "Fraud detection, algorithmic trading bots, and automated risk assessment algorithms."
+        },
+        "manufacturing": {
+          "title": "Manufacturing",
+          "desc": "Predictive maintenance for machinery, supply chain optimization, and quality control automation."
+        }
+      }
+    },
+    "innovations": {
+      "badge": "Deep Dive",
+      "title": "Industry Innovations",
+      "desc": "Explore specific scenarios where our technological interventions have created massive leaps in efficiency and revenue.",
+      "items": {
+        "edtech": {
+          "title": "EdTech Personalization",
+          "desc": "Deploying adaptive learning algorithms that tailor educational content dynamically to a student’s real-time performance and learning pace."
+        },
+        "automotive": {
+          "title": "Automotive Telematics",
+          "desc": "Analyzing vast arrays of sensor data from connected vehicles to predict component failures before they occur, reducing fleet downtime."
+        },
+        "retail": {
+          "title": "Retail Supply Chain",
+          "desc": "Implementing AI-driven demand forecasting that accurately predicts inventory needs across hundreds of locations, minimizing stockouts and overstock."
+        },
+        "healthcare_diag": {
+          "title": "Healthcare Diagnostics",
+          "desc": "Developing computer vision models capable of analyzing medical imaging (X-rays, MRIs) to assist radiologists in detecting anomalies faster."
+        },
+        "fraud": {
+          "title": "Financial Fraud Detection",
+          "desc": "Building real-time anomaly detection pipelines that scrutinize millions of transactions per second to catch fraudulent activity instantly."
+        },
+        "manufacturing_smart": {
+          "title": "Smart Manufacturing",
+          "desc": "Integrating IoT sensors with machine learning to optimize production lines, reducing waste and energy consumption automatically."
+        }
+      }
+    },
+    "why_custom": {
+      "badge": "Strategic Advantage",
+      "title": "Why Build Custom Solutions?",
+      "items": {
+        "workflow": {
+          "title": "Tailored to Your Workflow",
+          "desc": "Off-the-shelf software forces you to change your business processes. Custom solutions are built entirely around the way you already work."
+        },
+        "scalability": {
+          "title": "Unmatched Scalability",
+          "desc": "As your user base or data volume grows exponentially, custom architectures ensure your software scales seamlessly without licensing bottlenecks."
+        },
+        "proprietary": {
+          "title": "Proprietary Advantage",
+          "desc": "Building your own AI models or complex software gives you Intellectual Property that your competitors cannot easily replicate or purchase."
+        },
+        "security": {
+          "title": "Absolute Security Control",
+          "desc": "With complete ownership of the source code and infrastructure, you govern data privacy, compliance, and security entirely on your terms."
+        }
+      }
     }
   }
 }

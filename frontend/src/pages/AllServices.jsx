@@ -25,7 +25,7 @@ const AllServices = () => {
             description: translatedCategories[0].description,
             services: [
                 { name: translatedCategories[0].services[0].name, path: "/cloud-services", desc: translatedCategories[0].services[0].desc, icon: FaCloud },
-                { name: translatedCategories[0].services[1].name, path: "/devops-services", desc: translatedCategories[0].services[1].desc, icon: FaServer },
+                { name: t('header.devops_cloud_automation'), path: "/devops-services", desc: translatedCategories[0].services[1].desc, icon: FaServer },
                 { name: translatedCategories[0].services[2].name, path: "/service-consulting", desc: translatedCategories[0].services[2].desc, icon: FaUserTie }
             ]
         },
