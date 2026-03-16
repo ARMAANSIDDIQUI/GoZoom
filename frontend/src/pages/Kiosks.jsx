@@ -43,19 +43,23 @@ const Kiosks = () => {
                 <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/20 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <div className="absolute top-1/3 left-1/3 w-48 h-48 rounded-full bg-emerald-500/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10 w-full">
-                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="flex-1 text-center mx-auto">
-                            <span className="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">{t('kiosks_page.hero.badge')}</span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+                            <span className="inline-block py-1 px-4 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('kiosks_page.hero.badge')}</span>
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight uppercase">
                                 {t('kiosks_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">{t('kiosks_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium">
                                 {t('kiosks_page.hero.desc')}
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
-                                <Link to="/integration" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1 w-full text-center">{t('kiosks_page.hero.cta_integration')}</Link>
-                                <Link to="/retail" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 w-full text-center">{t('kiosks_page.hero.cta_retail')}</Link>
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-teal-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('kiosks_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('kiosks_page.hero.cta_about')}
+                                </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">

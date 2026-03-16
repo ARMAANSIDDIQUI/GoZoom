@@ -19,37 +19,43 @@ const Swift = () => {
     return (
         <div className="font-['Lato',sans-serif]">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#1e293b] overflow-hidden">
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#1e293b] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-[10%] left-[5%] w-[clamp(150px,40vw,500px)] h-[clamp(150px,40vw,500px)] bg-orange-500/20 rounded-full blur-[120px] animate-pulse"></div>
                     <div className="absolute bottom-[5%] right-[10%] w-[clamp(200px,50vw,600px)] h-[clamp(200px,50vw,600px)] bg-amber-500/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#f97316 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+                    <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
                 </div>
 
-                <div className="container relative z-10">
-                    <div className="flex flex-col items-center text-center gap-12">
-                        <div className="w-full max-w-4xl flex flex-col items-center" data-aos="fade-down">
+                <div className="container relative z-10 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('swift_dev_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('swift_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">{t('swift_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('swift_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('swift_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('swift_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full max-w-2xl relative flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-                            {/* Swift Stylized Placeholder / Graphic because of missing image */}
-                            <div className="relative z-10 p-10 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl flex items-center justify-center group hover:scale-105 transition-all duration-500 animate-float">
-                                <FaApple className="text-[12rem] text-white/20 filter blur-[2px]" />
-                                <FaMobileAlt className="absolute text-[8rem] text-orange-400/80 drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]" />
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px] flex flex-col items-center justify-center">
+                                <FaApple className="text-[8rem] sm:text-[12rem] text-white/20 filter blur-[2px]" />
+                                <FaMobileAlt className="absolute text-[6rem] sm:text-[8rem] text-orange-400/80 drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]" />
                             </div>
                         </div>
                     </div>

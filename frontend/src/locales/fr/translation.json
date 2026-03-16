@@ -1004,7 +1004,7 @@
             "title_gradient": "Chatbots Expérimentés",
             "desc": "Améliorez l'engagement des utilisateurs avec nos développeurs de chatbots compétents, créant des expériences conversationnelles fluides qui boostent l'interaction et l'efficacité de votre entreprise.",
             "cta_enquire": "S'informer Maintenant",
-            "cta_learn": "En Savoir Plus"
+            "cta_about": "À Propos de Nous"
         },
         "transform": {
             "title_main": "Aider les Entreprises à Transformer l'Engagement de Leurs Clients en ",
@@ -1075,7 +1075,8 @@
             "title_gradient": "Customisation",
             "title_main": "Agent d'IA ",
             "desc": "Les modèles d'IA prêts à l'emploi ne sont que le début. Nous affinons, contraignons et personnalisons les agents d'IA pour qu'ils fonctionnent exactement dans votre domaine, imitant la voix de votre marque et respectant strictement vos règles.",
-            "cta_customize": "Personnalisez Votre IA"
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "core_services": {
             "items": {

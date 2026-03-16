@@ -1004,7 +1004,7 @@
             "title_gradient": "Chatbot Developers",
             "desc": "Elevate user engagement with our adept chatbot developers, crafting seamless conversational experiences that enhance your business's interaction and efficiency.",
             "cta_enquire": "Enquire Now",
-            "cta_learn": "Learn More"
+            "cta_about": "About Us"
         },
         "transform": {
             "title_main": "Helping Businesses Transform Their Customers Engagement into ",
@@ -1075,7 +1075,8 @@
             "title_gradient": "Customization",
             "title_main": "AI Agent ",
             "desc": "Off-the-shelf AI models are just the beginning. We fine-tune, constrain, and customize AI agents to operate exactly within your domain, mimicking your brand voice and adhering strictly to your rules.",
-            "cta_customize": "Customize Your AI"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us"
         },
         "core_services": {
             "items": {
@@ -1245,7 +1246,8 @@
             "title_main": "AI / Task ",
             "title_gradient": "Automation",
             "desc": "Eliminate bottlenecks. Accelerate workflows. Deploy intelligent automation agents that handle repetitive tasks with zero errors.",
-            "cta_automate": "Automate Now"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us"
         },
         "operations": {
             "badge": "Operations",

@@ -40,49 +40,57 @@ const AiAgentCustomization = () => {
 
     return (
         <div>
-            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-slate-950 overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[30%] left-[5%] w-[clamp(150px,30vw,300px)] h-[clamp(150px,30vw,300px)] bg-pink-500/20 rounded-full blur-[100px] animate-pulse"></div>
-                    <div className="absolute top-[10%] right-[10%] w-[clamp(200px,40vw,400px)] h-[clamp(200px,40vw,400px)] bg-cyan-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute bottom-[20%] right-[40%] w-[clamp(175px,35vw,350px)] h-[clamp(175px,35vw,350px)] bg-purple-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                </div>
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-slate-950 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[30%] left-[5%] w-[clamp(150px,30vw,300px)] h-[clamp(150px,30vw,300px)] bg-pink-500/20 rounded-full blur-[100px] animate-pulse"></div>
+          <div className="absolute top-[10%] right-[10%] w-[clamp(200px,40vw,400px)] h-[clamp(200px,40vw,400px)] bg-cyan-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-[20%] right-[40%] w-[clamp(175px,35vw,350px)] h-[clamp(175px,35vw,350px)] bg-purple-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
 
-                <div className="container relative z-10">
-                    <div className="flex flex-col items-center text-center gap-12 w-full">
-                        <div className="w-full max-w-4xl flex flex-col items-center">
-                            <span className="inline-block py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">{t('ai_agent_customization_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase" data-aos="fade-down" data-aos-delay="100">
-                                {t('ai_agent_customization_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">{t('ai_agent_customization_page.hero.title_gradient')}</span>
-                            </h1>
-                            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="200">
-                                {t('ai_agent_customization_page.hero.desc')}
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="300">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-pink-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('ai_agent_customization_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
-                                </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
-                                    {t('ai_agent_customization_page.hero.cta_about')}
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="w-full max-w-2xl relative flex justify-center" data-aos="zoom-in" data-aos-delay="400">
-                            <div className="relative w-full aspect-video lg:aspect-square animate-float">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-purple-500/20 to-cyan-500/20 rounded-[3rem] blur-3xl"></div>
-                                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-6 sm:p-8 flex flex-col items-center justify-center gap-6 sm:gap-8">
-                                    <div className="grid grid-cols-2 gap-6 sm:gap-8 w-full place-items-center">
-                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-pink-500/10 flex items-center justify-center shadow-lg border border-pink-500/20"><FaSlidersH className="w-8 h-8 sm:w-12 sm:h-12 text-pink-400" /></div>
-                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-purple-500/10 flex items-center justify-center shadow-lg border border-purple-500/20"><FaCodeBranch className="w-8 h-8 sm:w-12 sm:h-12 text-purple-400" /></div>
-                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-cyan-500/10 flex items-center justify-center shadow-lg border border-cyan-500/20"><FaShieldAlt className="w-8 h-8 sm:w-12 sm:h-12 text-cyan-400" /></div>
-                                        <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-indigo-500/10 flex items-center justify-center shadow-lg border border-indigo-500/20"><FaPuzzlePiece className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-400" /></div>
-                                    </div>
-                                    <div className="w-2/3 h-1.5 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-cyan-500/50 rounded-full mt-4"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10 w-full">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+              <span className="inline-block py-1 px-4 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('ai_agent_customization_page.hero.badge')}</span>
+              <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
+                {t('ai_agent_customization_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">{t('ai_agent_customization_page.hero.title_gradient')}</span>
+              </h1>
+              <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                {t('ai_agent_customization_page.hero.desc')}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
+                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-pink-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                  {t('ai_agent_customization_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                </Link>
+                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                  {t('ai_agent_customization_page.hero.cta_about')}
+                </Link>
+              </div>
+            </div>
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+              <div className="relative w-full max-w-[450px] aspect-square animate-float">
+                <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-purple-500/20 to-cyan-500/20 rounded-[3rem] blur-3xl"></div>
+                <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-6 sm:p-8 flex flex-col items-center justify-center gap-6 sm:gap-8">
+                  <div className="grid grid-cols-2 gap-6 sm:gap-8 w-full place-items-center">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-pink-500/10 flex items-center justify-center shadow-lg border border-pink-500/20"><FaSlidersH className="w-8 h-8 sm:w-12 sm:h-12 text-pink-400" /></div>
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-purple-500/10 flex items-center justify-center shadow-lg border border-purple-500/20"><FaCodeBranch className="w-8 h-8 sm:w-12 sm:h-12 text-purple-400" /></div>
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-cyan-500/10 flex items-center justify-center shadow-lg border border-cyan-500/20"><FaShieldAlt className="w-8 h-8 sm:w-12 sm:h-12 text-cyan-400" /></div>
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-3xl bg-indigo-500/10 flex items-center justify-center shadow-lg border border-indigo-500/20"><FaPuzzlePiece className="w-8 h-8 sm:w-12 sm:h-12 text-indigo-400" /></div>
+                  </div>
+                  <div className="w-2/3 h-1.5 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-cyan-500/50 rounded-full mt-4"></div>
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container relative z-10 block px-6">

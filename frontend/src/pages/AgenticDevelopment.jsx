@@ -112,11 +112,11 @@ const AgenticDevelopment = () => {
                             </div>
                         </div>
                         <div className="relative" data-aos="fade-left">
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 {agentTypes.map((agent, i) => (
-                                    <div key={agent.key} className={`bg-white/5 p-6 rounded-3xl border border-white/10 ${i === 2 ? 'col-span-2 text-center' : ''} ${i === 0 ? 'mt-12' : ''} backdrop-blur-md`}>
+                                    <div key={agent.key} className={`bg-white/5 p-6 rounded-3xl border border-white/10 backdrop-blur-md`}>
                                         <h4 className={`text-${agent.color}-400 font-bold mb-2`}>{t(`agentic_development_page.paradigm.agent_types.${agent.key}.title`)}</h4>
-                                        <p className={`text-slate-400 text-xs ${i === 2 ? '' : 'text-left'}`}>{t(`agentic_development_page.paradigm.agent_types.${agent.key}.desc`)}</p>
+                                        <p className={`text-slate-400 text-xs text-left`}>{t(`agentic_development_page.paradigm.agent_types.${agent.key}.desc`)}</p>
                                     </div>
                                 ))}
                             </div>
