@@ -46,22 +46,22 @@ const AiAutomation = () => {
                     <div className="absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] animate-pulse"></div>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('ai_automation_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+                            <span className="inline-block py-1 px-4 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('ai_automation_page.hero.badge')}</span>
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight uppercase">
                                 {t('ai_automation_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">{t('ai_automation_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium">
                                 {t('ai_automation_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-amber-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('ai_automation_page.hero.cta_automate')} < FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-amber-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('ai_automation_page.hero.cta_automate')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
-                                    {t('common.learn_more')}
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('ai_automation_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>

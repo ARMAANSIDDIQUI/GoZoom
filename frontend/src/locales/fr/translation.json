@@ -484,9 +484,9 @@
             "title": "Demander un Devis",
             "desc": "Parlez-nous de votre projet et nous vous répondrons sous peu.",
             "full_name": "Nom Complet",
-            "full_name_placeholder": "Jean Dupont",
+            "full_name_placeholder": "Votre Nom",
             "work_email": "E-mail Professionnel",
-            "work_email_placeholder": "jean@entreprise.com",
+            "work_email_placeholder": "votre@exemple.com",
             "phone_number": "Numéro de Téléphone",
             "interested_service": "Service Intéressé",
             "select_service": "Sélectionner un Service",
@@ -1755,6 +1755,8 @@
             "desc": "Renforcez votre organisation avec nos solutions de main-d'œuvre de bout en bout. De la dotation en personnel temporaire et de l'embauche directe à la paie mondiale et à la gestion complète des fournisseurs, nous optimisons la façon dont vous construisez et gérez vos équipes.",
             "search_label": "Rechercher des solutions",
             "search_placeholder": "Rechercher des solutions de main-d'œuvre (ex: paie, RPO, sourcing)...",
+            "cta_enquire": "Associez-vous à Nous",
+            "cta_about": "À Propos de Nous",
             "button": "Associez-vous à Nous"
         },
         "offerings": {
@@ -3334,9 +3336,18 @@
             "playbookTitle": "Notre Playbook Angular",
             "advantageTitle": "L'Avantage Angular",
             "advantageFeatures": [
-                { "title": "Maîtrise des Micro-Frontends", "text": "Division des grandes applications monolithiques en modules gérables et déployables indépendamment." },
-                { "title": "Efficacité Pilotée par CLI", "text": "Exploiter toute la puissance d'Angular CLI pour un développement de boilerplate cohérent et de haute qualité." },
-                { "title": "Performance du Moteur Ivy", "text": "Débloquer des temps de construction plus rapides et des tailles de bundle plus petites avec les dernières optimisations du compilateur." }
+                {
+                    "title": "Maîtrise des Micro-Frontends",
+                    "text": "Division des grandes applications monolithiques en modules gérables et déployables indépendamment."
+                },
+                {
+                    "title": "Efficacité Pilotée par CLI",
+                    "text": "Exploiter toute la puissance d'Angular CLI pour un développement de boilerplate cohérent et de haute qualité."
+                },
+                {
+                    "title": "Performance du Moteur Ivy",
+                    "text": "Débloquer des temps de construction plus rapides et des tailles de bundle plus petites avec les dernières optimisations du compilateur."
+                }
             ],
             "transmission_sub": "Notre architecte principal examinera vos besoins d'entreprise et vous contactera dans les 24 heures."
         },
@@ -3376,9 +3387,18 @@
             ],
             "reasonsTitle": "Raisons d'Embaucher nos Experts CodeIgniter",
             "reasons": [
-                { "title": "Orienté Vitesse", "text": "Nous construisons des backends rapides et sécurisés avec un minimum de surcharge pour des applications hautes performances." },
-                { "title": "Architecture Propre", "text": "Le respect strict des modèles MVC garantit que votre base de code est maintenable pendant des années." },
-                { "title": "Spécialistes API", "text": "Expertise dans la construction de services RESTful légers qui s'intègrent parfaitement aux frontends modernes." }
+                {
+                    "title": "Orienté Vitesse",
+                    "text": "Nous construisons des backends rapides et sécurisés avec un minimum de surcharge pour des applications hautes performances."
+                },
+                {
+                    "title": "Architecture Propre",
+                    "text": "Le respect strict des modèles MVC garantit que votre base de code est maintenable pendant des années."
+                },
+                {
+                    "title": "Spécialistes API",
+                    "text": "Expertise dans la construction de services RESTful légers qui s'intègrent parfaitement aux frontends modernes."
+                }
             ]
         },
         "html": {
@@ -3417,9 +3437,18 @@
             ],
             "featuresTitle": "Fonctionnalités Standard de notre Livraison HTML",
             "features": [
-                { "title": "Optimisé pour le SEO", "text": "Nous utilisons des balises sémantiques pour garantir que votre contenu est facilement indexé par les moteurs de recherche." },
-                { "title": "La Performance Avant Tout", "text": "Chargement d'actifs optimisé et code propre pour des chargements de page quasi instantanés." },
-                { "title": "Multi-Navigateur", "text": "Rendu parfait sur toutes les versions de Chrome, Safari, Firefox et Edge." }
+                {
+                    "title": "Optimisé pour le SEO",
+                    "text": "Nous utilisons des balises sémantiques pour garantir que votre contenu est facilement indexé par les moteurs de recherche."
+                },
+                {
+                    "title": "La Performance Avant Tout",
+                    "text": "Chargement d'actifs optimisé et code propre pour des chargements de page quasi instantanés."
+                },
+                {
+                    "title": "Multi-Navigateur",
+                    "text": "Rendu parfait sur toutes les versions de Chrome, Safari, Firefox et Edge."
+                }
             ]
         },
         "jquery": {
@@ -3458,9 +3487,18 @@
             ],
             "reasonsTitle": "Raisons d'Embaucher nos Vétérans de la Bibliothèque",
             "reasons": [
-                { "title": "Support de l'Existant", "text": "Expertise dans la maintenance et l'évolution des anciens systèmes d'entreprise avec des builds jQuery stables." },
-                { "title": "Interactivité Rapide", "text": "Ajout rapide d'interactions DOM complexes sans la surcharge de frameworks lourds." },
-                { "title": "Maîtres des Plugins", "text": "Construction et personnalisation de plugins complexes pour des exigences UI/UX uniques." }
+                {
+                    "title": "Support de l'Existant",
+                    "text": "Expertise dans la maintenance et l'évolution des anciens systèmes d'entreprise avec des builds jQuery stables."
+                },
+                {
+                    "title": "Interactivité Rapide",
+                    "text": "Ajout rapide d'interactions DOM complexes sans la surcharge de frameworks lourds."
+                },
+                {
+                    "title": "Maîtres des Plugins",
+                    "text": "Construction et personnalisation de plugins complexes pour des exigences UI/UX uniques."
+                }
             ]
         },
         "laravel": {
@@ -3498,18 +3536,39 @@
                 }
             ],
             "ecosystem": [
-                { "title": "Eloquent ORM", "desc": "Interaction avec la base de données expressive et magnifique qui ressemble à un langage naturel." },
-                { "title": "La Sécurité Avant Tout", "desc": "Protection intégrée contre l'injection SQL, la falsification de requête intersite et le cross-site scripting." },
-                { "title": "Prêt pour Redis", "desc": "Support natif pour la mise en cache à haut débit et la diffusion d'événements en temps réel." },
-                { "title": "Déploiement Forge", "desc": "Déploiements sans temps d'arrêt et gestion de serveurs optimisés spécifiquement pour Laravel." }
+                {
+                    "title": "Eloquent ORM",
+                    "desc": "Interaction avec la base de données expressive et magnifique qui ressemble à un langage naturel."
+                },
+                {
+                    "title": "La Sécurité Avant Tout",
+                    "desc": "Protection intégrée contre l'injection SQL, la falsification de requête intersite et le cross-site scripting."
+                },
+                {
+                    "title": "Prêt pour Redis",
+                    "desc": "Support natif pour la mise en cache à haut débit et la diffusion d'événements en temps réel."
+                },
+                {
+                    "title": "Déploiement Forge",
+                    "desc": "Déploiements sans temps d'arrêt et gestion de serveurs optimisés spécifiquement pour Laravel."
+                }
             ],
             "universeTitle": "L'Univers Laravel",
             "universeDesc": "Nous ne nous contentons pas d'écrire du PHP ; nous créons de l'art numérique en utilisant le framework backend le plus sophistiqué au monde.",
             "whyTitle": "Pourquoi Embaucher des Experts Laravel ?",
             "whyFeatures": [
-                { "title": "Conformité Norme PSR", "text": "Bases de code propres, compréhensibles et hautement maintenables qui suivent les meilleures pratiques du secteur." },
-                { "title": "Performance à l'Échelle", "text": "Optimisation des requêtes de base de données et des constructeurs de requêtes pour des temps de réponse ultra-rapides." },
-                { "title": "Intégration Transparente", "text": "Connexion avec des APIs et services tiers avec des classes wrapper expressives." }
+                {
+                    "title": "Conformité Norme PSR",
+                    "text": "Bases de code propres, compréhensibles et hautement maintenables qui suivent les meilleures pratiques du secteur."
+                },
+                {
+                    "title": "Performance à l'Échelle",
+                    "text": "Optimisation des requêtes de base de données et des constructeurs de requêtes pour des temps de réponse ultra-rapides."
+                },
+                {
+                    "title": "Intégration Transparente",
+                    "text": "Connexion avec des APIs et services tiers avec des classes wrapper expressives."
+                }
             ],
             "success_msg": "Notre architecte Laravel vous contactera sous peu."
         },
@@ -3548,18 +3607,39 @@
                 }
             ],
             "techStack": [
-                { "title": "Moteurs Personnalisés", "desc": "Construction de systèmes de base légers et rapides adaptés à votre logique spécifique." },
-                { "title": "Optimisation de Base de Données", "desc": "Maîtrise des requêtes MySQL complexes et de l'indexation pour une récupération rapide des données." },
-                { "title": "Infrastructure Cloud", "desc": "Déploiement sur AWS, Azure ou GCP avec des configurations côté serveur optimisées." },
-                { "title": "Hooks d'Automatisation", "desc": "Intégration de tâches CRON et de processus en arrière-plan pour des opérations fluides." }
+                {
+                    "title": "Moteurs Personnalisés",
+                    "desc": "Construction de systèmes de base légers et rapides adaptés à votre logique spécifique."
+                },
+                {
+                    "title": "Optimisation de Base de Données",
+                    "desc": "Maîtrise des requêtes MySQL complexes et de l'indexation pour une récupération rapide des données."
+                },
+                {
+                    "title": "Infrastructure Cloud",
+                    "desc": "Déploiement sur AWS, Azure ou GCP avec des configurations côté serveur optimisées."
+                },
+                {
+                    "title": "Hooks d'Automatisation",
+                    "desc": "Intégration de tâches CRON et de processus en arrière-plan pour des opérations fluides."
+                }
             ],
             "fullstackTitle": "Full-Stack PHP Mastery",
             "fullstackDesc": "Beyond simple scripts — we deliver integrated web ecosystems that scale with your business growth.",
             "partnerTitle": "Pourquoi S'associer à nos Vanguards PHP ?",
             "partnerFeatures": [
-                { "title": "Paradigme axé sur la Sécurité", "text": "Nous mettons en œuvre des protocoles rigoureux d'assainissement, de hachage et de chiffrement pour protéger vos données." },
-                { "title": "Spécifications à Haute Concurrence", "text": "Optimisé pour de lourdes charges de trafic, assurant une performance fluide pendant les pics d'activité des utilisateurs." },
-                { "title": "Modernisation de l'Existant", "text": "Nous donnons un nouveau souffle aux anciennes bases de code PHP, en les migrant vers des versions modernes et sécurisées." }
+                {
+                    "title": "Paradigme axé sur la Sécurité",
+                    "text": "Nous mettons en œuvre des protocoles rigoureux d'assainissement, de hachage et de chiffrement pour protéger vos données."
+                },
+                {
+                    "title": "Spécifications à Haute Concurrence",
+                    "text": "Optimisé pour de lourdes charges de trafic, assurant une performance fluide pendant les pics d'activité des utilisateurs."
+                },
+                {
+                    "title": "Modernisation de l'Existant",
+                    "text": "Nous donnons un nouveau souffle aux anciennes bases de code PHP, en les migrant vers des versions modernes et sécurisées."
+                }
             ],
             "success_msg": "Notre responsable PHP senior examinera vos besoins et vous contactera dans les 12 heures."
         },
@@ -3598,19 +3678,40 @@
                 }
             ],
             "coreExpertise": [
-                { "title": "Architecture Next.js", "desc": "Rendu côté serveur et génération de sites statiques pour un SEO et une vitesse ultimes." },
-                { "title": "React Native", "desc": "Excellence mobile multiplateforme avec une base de code unique et haute performance." },
-                { "title": "Gestion d'État", "desc": "Redux, Context API ou Zustand pour un flux d'application prévisible et évolutif." },
-                { "title": "Interface sur Mesure", "desc": "Systèmes de conception personnalisés construits avec Tailwind CSS ou Styled Components pour une perfection au pixel près." }
+                {
+                    "title": "Architecture Next.js",
+                    "desc": "Rendu côté serveur et génération de sites statiques pour un SEO et une vitesse ultimes."
+                },
+                {
+                    "title": "React Native",
+                    "desc": "Excellence mobile multiplateforme avec une base de code unique et haute performance."
+                },
+                {
+                    "title": "Gestion d'État",
+                    "desc": "Redux, Context API ou Zustand pour un flux d'application prévisible et évolutif."
+                },
+                {
+                    "title": "Interface sur Mesure",
+                    "desc": "Systèmes de conception personnalisés construits avec Tailwind CSS ou Styled Components pour une perfection au pixel près."
+                }
             ],
             "ecosystemTitle": "Notre Écosystème React",
             "ecosystemDesc": "Nous maîtrisons toute la galaxie React, garantissant que votre application n'est pas seulement fonctionnelle, mais construite pour l'avenir.",
             "why_our_team": "Pourquoi Notre Équipe ?",
             "advantageTitle": "L'Avantage GoZoom",
             "advantageFeatures": [
-                { "title": "Architecture Basée sur les Composants", "text": "Nous construisons des composants modulaires et réutilisables qui facilitent la maintenance et l'évolution." },
-                { "title": "Optimisation du DOM Virtuel", "text": "Attention méticuleuse aux cycles de rendu assurant des interactions utilisateur à 60 FPS même dans les applications lourdes en données." },
-                { "title": "Développement Typé", "text": "Utilisation de TypeScript pour détecter les bugs tôt et fournir une documentation solide pour votre équipe." }
+                {
+                    "title": "Architecture Basée sur les Composants",
+                    "text": "Nous construisons des composants modulaires et réutilisables qui facilitent la maintenance et l'évolution."
+                },
+                {
+                    "title": "Optimisation du DOM Virtuel",
+                    "text": "Attention méticuleuse aux cycles de rendu assurant des interactions utilisateur à 60 FPS même dans les applications lourdes en données."
+                },
+                {
+                    "title": "Développement Typé",
+                    "text": "Utilisation de TypeScript pour détecter les bugs tôt et fournir une documentation solide pour votre équipe."
+                }
             ],
             "success_msg": "Votre demande a été reçue. Nos experts React vous appelleront sous peu."
         },

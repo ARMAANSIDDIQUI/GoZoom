@@ -62,29 +62,38 @@ const WorkforceSolutions = () => {
                     </svg>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto" data-aos="fade-up">
-                        <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('workforce_solutions_page.hero.subtitle')}</span>
-                        <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
-                            {t('workforce_solutions_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{t('workforce_solutions_page.hero.title2')}</span>
-                        </h1>
-                        <p className="text-xl text-slate-300 mb-10 font-medium leading-relaxed">
-                            {t('workforce_solutions_page.hero.desc')}
-                        </p>
-                        <div className="w-full max-w-xl space-y-2 mb-6">
-                            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs font-semibold text-white uppercase tracking-[0.15em] shadow-lg shadow-black/20 animate-wiggle-attn">
-                                {t('workforce_solutions_page.hero.search_label')}
-                            </span>
-                            <input
-                                value={query}
-                                onChange={(e) => setQuery(e.target.value)}
-                                placeholder={t('workforce_solutions_page.hero.search_placeholder')}
-                                className="w-full rounded-2xl bg-white/10 border border-white/25 text-white placeholder-white/75 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-md"
-                            />
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+                        <div data-aos="fade-down">
+                            <span className="inline-block py-1 px-4 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('workforce_solutions_page.hero.subtitle')}</span>
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
+                                {t('workforce_solutions_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{t('workforce_solutions_page.hero.title2')}</span>
+                            </h1>
+                            <p className="text-xl text-slate-300 mb-10 font-medium leading-relaxed max-w-3xl mx-auto">
+                                {t('workforce_solutions_page.hero.desc')}
+                            </p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
-                            <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                {t('workforce_solutions_page.hero.button')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        
+                        <div className="w-full max-w-xl space-y-4 mb-10" data-aos="fade-up" data-aos-delay="200">
+                            <div className="relative group/search">
+                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <FaSearchPlus className="text-cyan-400/50 group-focus-within/search:text-cyan-400 transition-colors" />
+                                </div>
+                                <input
+                                    value={query}
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    placeholder={t('workforce_solutions_page.hero.search_placeholder')}
+                                    className="w-full rounded-2xl bg-white/5 border border-white/10 text-white placeholder-white/40 pl-11 pr-4 py-4 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all shadow-2xl backdrop-blur-xl"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="400">
+                            <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                {t('workforce_solutions_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                            </Link>
+                            <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                {t('workforce_solutions_page.hero.cta_about')}
                             </Link>
                         </div>
                     </div>

@@ -484,9 +484,9 @@
             "title": "Request a Quote",
             "desc": "Tell us about your project and we'll get back to you shortly.",
             "full_name": "Full Name",
-            "full_name_placeholder": "John Doe",
+            "full_name_placeholder": "Your Name",
             "work_email": "Work Email",
-            "work_email_placeholder": "john@company.com",
+            "work_email_placeholder": "you@example.com",
             "phone_number": "Phone Number",
             "interested_service": "Interested Service",
             "select_service": "Select Service",
@@ -1753,6 +1753,8 @@
             "desc": "Empower your organization with our end-to-end workforce solutions. From contingent staffing and direct hire to global payroll and comprehensive vendor management, we optimize how you build and manage your teams.",
             "search_label": "Search solutions",
             "search_placeholder": "Search workforce solutions (e.g., payroll, RPO, sourcing)...",
+            "cta_enquire": "Partner With Us",
+            "cta_about": "About Us",
             "button": "Partner With Us"
         },
         "offerings": {
