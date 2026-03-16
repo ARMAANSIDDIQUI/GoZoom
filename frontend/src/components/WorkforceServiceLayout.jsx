@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaArrowRight, FaCheckCircle, FaStar } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const WorkforceServiceLayout = ({ heroTitle, heroSubtitle, heroDesc, reasonsTitle, reasons, caseStudyTitle, caseStudyDesc }) => {
+    const { t } = useTranslation();
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         window.scrollTo(0, 0);
@@ -37,7 +39,7 @@ const WorkforceServiceLayout = ({ heroTitle, heroSubtitle, heroDesc, reasonsTitl
                     <div data-aos="fade-up" data-aos-delay="400">
                         <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all hover:-translate-y-1 uppercase tracking-wider relative overflow-hidden group/btn">
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-in-out"></div>
-                            <span className="relative z-10 flex items-center gap-3">Request Service <FaArrowRight /></span>
+                            <span className="relative z-10 flex items-center gap-3">{t('workforce_common.request_service')} <FaArrowRight /></span>
                         </Link>
                     </div>
                 </div>
@@ -48,7 +50,7 @@ const WorkforceServiceLayout = ({ heroTitle, heroSubtitle, heroDesc, reasonsTitl
                 <section className="py-24 relative">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16" data-aos="fade-up">
-                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100/50 text-blue-700 font-bold text-xs mb-4 uppercase tracking-wider border border-blue-200"><FaStar className="text-amber-500" /> Core Benefits</span>
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-blue-100/50 text-blue-700 font-bold text-xs mb-4 uppercase tracking-wider border border-blue-200"><FaStar className="text-amber-500" /> {t('workforce_common.core_benefits')}</span>
                             <h2 className="text-3xl md:text-5xl font-black text-slate-800">{reasonsTitle}</h2>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -74,11 +76,11 @@ const WorkforceServiceLayout = ({ heroTitle, heroSubtitle, heroDesc, reasonsTitl
                             <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-600/30 blur-[100px] rounded-full mix-blend-screen"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/30 blur-[100px] rounded-full mix-blend-screen"></div>
                             <div className="relative z-10 md:w-3/4">
-                                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/30">Case Study</span>
+                                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-500/30">{t('workforce_common.case_study')}</span>
                                 <h2 className="text-3xl font-black text-white mb-6 leading-tight">{caseStudyTitle}</h2>
                                 <p className="text-lg text-slate-300 mb-10 leading-relaxed">{caseStudyDesc}</p>
                                 <Link to="/contact" className="inline-flex items-center gap-3 text-cyan-400 font-bold hover:text-cyan-300 transition-colors uppercase tracking-wider text-sm group">
-                                    Discuss Your Project <span className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/40 transition-colors"><FaArrowRight /></span>
+                                    {t('workforce_common.discuss_project')} <span className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/40 transition-colors"><FaArrowRight /></span>
                                 </Link>
                             </div>
                         </div>

@@ -45,7 +45,7 @@ const UiUxDesign = () => {
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0" data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('ui_ux_design_page.hero.badge')}</span>
+                            <span className="block w-fit mx-auto py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('ui_ux_design_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-white mb-6 leading-tight uppercase">
                                 {t('ui_ux_design_page.hero.title_main')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">{t('ui_ux_design_page.hero.title_gradient')}</span>
                             </h1>

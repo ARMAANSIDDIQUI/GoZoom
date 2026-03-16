@@ -4,7 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WOW from 'wow.js';
 import 'animate.css';
-import { FaArrowRight, FaPython, FaServer, FaDatabase, FaShieldAlt, FaRocket, FaCode } from 'react-icons/fa';
+import { FaArrowRight, FaPython, FaServer, FaDatabase, FaShieldAlt, FaRocket, FaCode, FaCogs } from 'react-icons/fa';
+import { SiRedis, SiPostgresql, SiDocker } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 
 const Django = () => {
@@ -44,18 +45,18 @@ const Django = () => {
                             <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
                                 {t('django_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-green-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto lg:mx-0">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-green-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('django_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <button className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                                <button className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('django_dev_page.hero.cta_services')}
                                 </button>
                             </div>
                         </div>
                         <div className="flex-1 relative" data-aos="zoom-in">
                             <div className="relative z-10 p-8 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-sm shadow-2xl animate-float">
-                                <img src="/images/django-hero.svg" alt="Django Development" className="w-full h-auto drop-shadow-2xl" />
+                                <img src="/django_hero_illustration_1773661224396.png" alt="Django Development" className="w-full h-auto rounded-[2.5rem] drop-shadow-2xl" />
                             </div>
                         </div>
                     </div>
@@ -113,19 +114,19 @@ const Django = () => {
                         <div className="flex-1 lg:pl-12" data-aos="fade-left">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center">
-                                    <img src="/images/celery.png" alt="Celery" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <FaCogs className="text-5xl mb-4 text-green-500 opacity-80" />
                                     <span className="text-white font-bold">Celery</span>
                                 </div>
                                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center mt-12">
-                                    <img src="/images/redis.png" alt="Redis" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <SiRedis className="text-5xl mb-4 text-[#FF4438] opacity-80" />
                                     <span className="text-white font-bold">Redis</span>
                                 </div>
                                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center">
-                                    <img src="/images/postgresql.png" alt="PostgreSQL" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <SiPostgresql className="text-5xl mb-4 text-[#4169E1] opacity-80" />
                                     <span className="text-white font-bold">PostgreSQL</span>
                                 </div>
                                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex flex-col items-center justify-center text-center mt-12">
-                                    <img src="/images/docker.png" alt="Docker" className="h-12 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+                                    <SiDocker className="text-5xl mb-4 text-[#2496ED] opacity-80" />
                                     <span className="text-white font-bold">Docker</span>
                                 </div>
                             </div>

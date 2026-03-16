@@ -28,23 +28,23 @@ const Flutter = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-right">
+                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('flutter_dev_page.hero.badge')}</span>
                             <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight tracking-tight uppercase">
                                 {t('flutter_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">{t('flutter_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('flutter_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('flutter_dev_page.hero.cta_hire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-12 lg:p-16 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[500px] shadow-2xl flex items-center justify-center group hover:scale-105 transition-transform duration-500">
-                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/400?text=Flutter"; }} />
+                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto rounded-[2.5rem] drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/400?text=Flutter"; }} />
                             </div>
                         </div>
                     </div>

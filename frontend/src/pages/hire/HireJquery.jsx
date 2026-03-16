@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCheckCircle, FaArrowRight, FaJs, FaLayerGroup, FaBolt, FaPuzzlePiece, FaSync, FaShieldAlt, FaDesktop, FaCode } from 'react-icons/fa';
-import { SiJquery, SiJavascript, SiHtml5 } from 'react-icons/si';
+import { FaCheckCircle, FaBolt, FaArrowRight, FaJsSquare, FaMousePointer, FaCode, FaRocket, FaExchangeAlt, FaShieldAlt, FaLayerGroup, FaHistory, FaTools } from 'react-icons/fa';
+import { SiJquery, SiJavascript } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const HireJquery = () => {
+    const { t } = useTranslation();
     const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
 
@@ -20,61 +22,59 @@ const HireJquery = () => {
         setSubmitted(true);
     };
 
-    const jqueryExpertise = [
-        { icon: <FaBolt />, title: 'DOM Manipulation', desc: 'Crafting lightning-fast DOM updates and dynamic content injections for interactive experiences.' },
-        { icon: <FaPuzzlePiece />, title: 'Plugin Development', desc: 'Building custom, reusable jQuery plugins to extend functionality across your entire site.' },
-        { icon: <FaSync />, title: 'AJAX Real-time', desc: 'Implementing seamless, asynchronous data transfers without page reloads for a modern feel.' },
-        { icon: <FaShieldAlt />, title: 'Cross-Browser', desc: 'Ensuring your website functions flawlessly across all legacy and modern browsers.' },
-    ];
+    const strengths = (t('hire_pages.jquery.strengths', { returnObjects: true }) || []).map((item, i) => ({
+        ...item,
+        icon: [<FaRocket />, <FaTools />, <FaShieldAlt />][i]
+    }));
+
+    const reasons = (t('hire_pages.jquery.reasons', { returnObjects: true }) || []).map((item, i) => ({
+        ...item,
+        icon: [<FaHistory />, <FaBolt />, <FaCode />][i]
+    }));
 
     return (
         <div className="bg-white overflow-hidden font-['Lato',sans-serif]">
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#070e1b]">
-                {/* Technical Blue Background */}
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#071624]">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[15%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-slate-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    {/* SVG Code Pattern */}
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 opacity-[0.05] flex items-end justify-center">
-                        <span className="text-[20rem] font-black text-white select-none pointer-events-none">$()</span>
-                    </div>
+                    <div className="absolute top-[10%] right-[10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-[10%] left-[5%] w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#0769ad 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }}></div>
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
                         <div className="flex-1 text-center" data-aos="fade-right">
-                            <div className="inline-flex items-center gap-3 py-2 px-6 bg-blue-600/10 border border-blue-600/20 rounded-lg text-blue-400 font-black text-xs mb-8 uppercase tracking-[0.4em]">
-                                <FaJs className="text-lg" /> Lightweight DOM Mastery
+                            <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-black text-xs mb-8 uppercase tracking-[0.4em]">
+                                <SiJquery className="text-lg" /> {t('hire_common.lightweight_dom_mastery')}
                             </div>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
-                                Streamline Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-slate-400">Interaction</span> with jQuery Experts
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tighter">
+                                {t('hire_pages.jquery.heroTitle').split('Efficient DOM')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Efficient DOM</span> {t('hire_pages.jquery.heroTitle').split('Efficient DOM')[1]}
                             </h1>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto">
-                                Hire developers who leverage jQuery's power to build fast, interactive, and cross-browser compatible web experiences with surgical precision.
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto italic">
+                                "{t('hire_pages.jquery.heroDesc')}"
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-blue-600 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-blue-600/20 hover:scale-105 transition-all group uppercase tracking-wider">
-                                    Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-blue-600 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-blue-500/20 hover:bg-blue-700 hover:-translate-y-1 transition-all group uppercase tracking-wider">
+                                    {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#plugins" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 border border-white/20 text-white text-center font-black text-lg rounded-2xl hover:bg-white/10 transition-all uppercase tracking-wider backdrop-blur-md">
-                                    Case Studies
+                                <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-10 py-5 bg-white/5 border border-white/20 text-white font-black text-center text-lg rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
+                                    {t('hire_common.jquery_toolset')}
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-6 bg-gradient-to-tr from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
-                                <img src="/images/programmer-working-with-software.webp" alt="jQuery Developer" className="w-full h-auto rounded-[2.5rem] shadow-4xl filter saturate-[0.8] contrast-[1.1]" />
+                        <div className="flex-1 relative" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 p-4 bg-gradient-to-tr from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[400px] mx-auto animate-float">
+                                <img src="/images/software-developers.webp" alt="jQuery Expert" className="w-full h-auto rounded-[3.5rem] shadow-4xl filter grayscale-[0.2]" />
                             </div>
 
-                            {/* Integrated Info Badge */}
-                            <div className="relative w-full max-w-[400px] bg-white border border-slate-100 p-6 rounded-3xl shadow-3xl flex items-center gap-4 group hover:border-blue-500/30 transition-all duration-300">
-                                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl text-blue-600 group-hover:rotate-12 transition-transform">
-                                    <SiJquery />
+                            <div className="relative w-full max-w-[400px] mx-auto mt-8 bg-white border border-slate-100 p-6 rounded-3xl shadow-2xl flex items-center gap-4 group hover:shadow-blue-500/10 transition-all duration-300">
+                                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl text-blue-600 group-hover:scale-110 transition-transform">
+                                    <FaMousePointer />
                                 </div>
                                 <div>
-                                    <p className="font-black text-lg text-slate-900 leading-tight">Write Less.</p>
-                                    <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1">Do More.</p>
+                                    <p className="font-black text-lg text-slate-900 uppercase leading-none">{t('hire_common.write_less_do_more')}</p>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">{t('hire_common.performance_layer')}</p>
                                 </div>
                             </div>
                         </div>
@@ -82,49 +82,48 @@ const HireJquery = () => {
                 </div>
             </section>
 
-            {/* Plugin Grid */}
-            <section id="plugins" className="py-32 bg-slate-50 relative">
+            {/* Capabilities Grid */}
+            <section id="capabilities" className="py-40 bg-slate-50 relative">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <div className="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
-                        <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 uppercase italic">Our jQuery <span className="text-blue-600">Toolset</span></h2>
-                        <div className="w-20 h-2 h-px bg-blue-600 mx-auto rounded-full mb-8"></div>
-                        <p className="text-lg text-slate-500 font-bold">From legacy support to modern lightweight animations, we bring the best of jQuery to your stack.</p>
+                    <div className="max-w-4xl mx-auto text-center mb-24" data-aos="fade-up">
+                        <h2 className="text-4xl lg:text-6xl font-black text-slate-900 mb-8 uppercase tracking-tighter leading-none">{t('hire_pages.jquery.fleetTitle').split('Interactivity')[0]} <span className="text-blue-600 italic">Interactivity</span></h2>
+                        <div className="w-32 h-2 bg-blue-600 mx-auto rounded-full mb-10 shadow-lg shadow-blue-500/30"></div>
+                        <p className="text-xl text-slate-500 font-bold italic max-w-2xl mx-auto">{t('hire_pages.jquery.fleetDesc')}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        {jqueryExpertise.map((item, i) => (
-                            <div key={i} className="bg-white p-12 rounded-[2.5rem] shadow-xl border border-slate-100 hover:border-blue-500/30 hover:-translate-y-4 transition-all duration-500 group" data-aos="fade-up" data-aos-delay={i * 100}>
-                                <div className="text-5xl text-slate-800 mb-8 group-hover:text-blue-600 transition-colors uppercase italic">{item.icon}</div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {strengths.map((item, i) => (
+                            <div key={i} className="group p-12 bg-white rounded-[3.5rem] border border-slate-200 shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-4 transition-all duration-500" data-aos="fade-up" data-aos-delay={i * 100}>
+                                <div className="text-5xl text-blue-600 mb-8 group-hover:scale-110 transition-transform origin-left">{item.icon}</div>
                                 <h3 className="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter">{item.title}</h3>
-                                <p className="text-slate-500 font-bold leading-relaxed">{item.desc}</p>
+                                <p className="text-slate-600 font-bold leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Why Jquery Section */}
-            <section className="py-32 bg-[#070e1b] text-white">
+            {/* Why Hire Veterans */}
+            <section className="py-40 bg-white">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <div className="order-2 lg:order-1 relative" data-aos="fade-right">
-                            <img src="/images/jquerybgg.webp" alt="Work Process" className="w-full h-auto rounded-[3rem] shadow-3xl opacity-80" />
+                        <div data-aos="fade-right">
+                            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-blue-50 to-transparent"></div>
+                            <img src="/images/jqueryboy1.svg" alt="Legacy Maintenance" className="relative z-10 w-full h-auto drop-shadow-3xl" />
                         </div>
-                        <div className="order-1 lg:order-2" data-aos="fade-left">
-                            <h2 className="text-4xl lg:text-6xl font-black mb-10 uppercase leading-none italic">Why Hire Our <span className="text-blue-400">Library Veterans?</span></h2>
+                        <div data-aos="fade-left">
+                            <span className="text-blue-600 font-black uppercase tracking-[0.5em] text-sm mb-6 block">{t('hire_common.standard_features')}</span>
+                            <h2 className="text-4xl lg:text-7xl font-black text-slate-900 mb-12 uppercase leading-[0.9] tracking-tighter">{t('hire_pages.jquery.reasonsTitle').split('Library Veterans')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">Veterans</span></h2>
+
                             <div className="space-y-12">
-                                {[
-                                    { icon: <FaDesktop />, title: 'UI/UX Interactive Elements', text: 'Developing smooth sliders, modals, and navigation systems that users love.' },
-                                    { icon: <FaCode />, title: 'Legacy Support & Migration', text: 'Optimizing and maintaining older jQuery codebases while planning future migrations.' },
-                                    { icon: <FaLayerGroup />, title: 'Event-Driven Logic', text: 'Complex event handling and bubbling management for predictable application behavior.' }
-                                ].map((feature, i) => (
-                                    <div key={i} className="flex gap-8 group">
-                                        <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-3xl text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 flex-shrink-0">
-                                            {feature.icon}
+                                {reasons.map((item, idx) => (
+                                    <div key={idx} className="flex gap-8 group">
+                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-3xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 flex-shrink-0">
+                                            {item.icon}
                                         </div>
                                         <div>
-                                            <h4 className="text-2xl font-black mb-2 uppercase tracking-tight">{feature.title}</h4>
-                                            <p className="text-slate-400 font-bold leading-relaxed">{feature.text}</p>
+                                            <h4 className="text-2xl font-black text-slate-900 mb-2 uppercase tracking-tight">{item.title}</h4>
+                                            <p className="text-slate-500 font-bold leading-relaxed">{item.text}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -134,19 +133,18 @@ const HireJquery = () => {
                 </div>
             </section>
 
-            {/* Functional CTA */}
-            <section className="py-32">
-                <div className="container mx-auto px-6 lg:px-16 text-center">
-                    <div className="max-w-4xl mx-auto rounded-[4rem] bg-gradient-to-br from-blue-700 to-slate-900 p-16 lg:p-24 shadow-4xl relative overflow-hidden" data-aos="zoom-in">
-                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-                        <h2 className="text-4xl lg:text-6xl font-black text-white mb-8 uppercase leading-[0.9]">Reliability That <span className="text-cyan-400 italic">Wins Brands</span></h2>
-                        <p className="text-xl text-blue-100 mb-12 font-bold opacity-80">Simple integrations. Rock-solid performance. Global Reach.</p>
-                        <div className="flex flex-wrap justify-center gap-6">
-                            <Link to="/contact" className="px-12 py-5 bg-white text-slate-900 font-black text-lg rounded-xl shadow-2xl hover:scale-105 transition-all uppercase tracking-widest italic">
-                                Enquire Today
-                            </Link>
-                            <div className="flex items-center gap-4 text-blue-300 font-bold border-l border-white/10 pl-10 hidden md:flex font-black uppercase text-xs italic tracking-widest">
-                                Quick Onboarding<br />Guaranteed
+            {/* Legacy CTA */}
+            <section className="pb-40 bg-white">
+                <div className="container mx-auto px-6 lg:px-16">
+                    <div className="relative rounded-[4rem] bg-[#071624] p-16 lg:p-32 text-center text-white shadow-4xl overflow-hidden" data-aos="zoom-in">
+                        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                        <div className="relative z-10 max-w-4xl mx-auto">
+                            <h2 className="text-5xl lg:text-7xl font-black mb-10 uppercase leading-tight italic tracking-tighter">{t('hire_pages.jquery.heroTitle').split('Legacy Support')[0]} <span className="text-blue-400">Reliable Support</span></h2>
+                            <p className="text-xl text-slate-400 mb-16 font-bold uppercase tracking-widest">{t('hire_pages.jquery.heroSubtitle')}</p>
+                            <div className="flex justify-center">
+                                <Link to="/contact" className="px-14 py-6 bg-blue-600 text-white font-black text-xl rounded-full shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] hover:scale-110 transition-transform uppercase tracking-widest">
+                                    {t('hire_common.enquire_now')}
+                                </Link>
                             </div>
                         </div>
                     </div>

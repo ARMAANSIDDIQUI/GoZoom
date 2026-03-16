@@ -4,8 +4,10 @@ import { FaCheckCircle, FaArrowRight, FaPhp, FaDatabase, FaServer, FaCogs, FaShi
 import { SiMysql, SiApache, SiLinux } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const HirePhp = () => {
+    const { t } = useTranslation();
     const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
 
@@ -20,12 +22,15 @@ const HirePhp = () => {
         setSubmitted(true);
     };
 
-    const techStack = [
-        { icon: <FaPhp />, title: 'Core & OOP PHP', desc: 'Expertise in modern PHP 8.x, adhering to PSR standards and SOLID principles.' },
-        { icon: <SiMysql />, title: 'Database Design', desc: 'High-performance SQL optimization and complex relational database architecture.' },
-        { icon: <FaServer />, title: 'Server Ops', desc: 'Proficiency in LEMP/LAMP stack tuning and secure server configurations.' },
-        { icon: <FaCogs />, title: 'API Integration', desc: 'Seamlessly connecting your web app with any third-party REST or SOAP service.' },
-    ];
+    const techStack = (t('hire_pages.php.techStack', { returnObjects: true }) || []).map((tech, i) => ({
+        ...tech,
+        icon: [<FaPhp />, <SiMysql />, <FaServer />, <FaCogs />][i]
+    }));
+
+    const partnerFeatures = (t('hire_pages.php.partnerFeatures', { returnObjects: true }) || []).map((item, idx) => ({
+        ...item,
+        icon: [<FaShieldAlt />, <FaChartLine />, <FaClock />][idx]
+    }));
 
     return (
         <div className="bg-white overflow-hidden font-['Lato',sans-serif]">
@@ -50,20 +55,20 @@ const HirePhp = () => {
                     <div className="flex flex-col lg:flex-row items-center gap-20">
                         <div className="flex-1 text-center" data-aos="fade-right">
                             <span className="inline-block py-2 px-5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-black text-sm mb-8 uppercase tracking-[0.2em]">
-                                Reliable Enterprise Solutions
+                                {t('hire_common.reliable_enterprise')}
                             </span>
                             <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-[1.05]">
-                                Power Your Vision with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Robust PHP</span> Engineering
+                                {t('hire_pages.php.heroTitle').split('Robust PHP')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Robust PHP</span> {t('hire_pages.php.heroTitle').split('Robust PHP')[1]}
                             </h1>
                             <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto">
-                                Hire veteran PHP developers who specialize in building ultra-secure, highly-performant, and scalable backend architectures that drive 80% of the web.
+                                {t('hire_pages.php.heroDesc')}
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
                                 <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-indigo-600 text-white font-black text-center text-lg transition-all hover:bg-indigo-700 hover:-translate-y-1 shadow-2xl shadow-indigo-500/20 group uppercase tracking-wider">
-                                    Enquire Now <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                    {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                                 <a href="#why-php" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 border border-white/20 text-white text-center font-black text-lg hover:bg-white/10 transition-all backdrop-blur-sm uppercase tracking-wider">
-                                    Our Approach
+                                    {t('hire_common.our_approach')}
                                 </a>
                             </div>
                         </div>
@@ -78,8 +83,8 @@ const HirePhp = () => {
                                     <FaDatabase />
                                 </div>
                                 <div>
-                                    <p className="font-black text-xl leading-none">99.9% Up-time</p>
-                                    <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-bold mt-1">Stable Architectures</p>
+                                    <p className="font-black text-xl leading-none">{t('hire_common.uptime')}</p>
+                                    <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-bold mt-1">{t('hire_common.stable_architectures')}</p>
                                 </div>
                             </div>
                         </div>
@@ -91,9 +96,9 @@ const HirePhp = () => {
             <section className="py-32 bg-white relative">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
-                        <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 uppercase italic">Full-Stack <span className="text-indigo-600">PHP Mastery</span></h2>
+                        <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 uppercase italic">{t('hire_pages.php.fullstackTitle').split('Mastery')[0]} <span className="text-indigo-600">{t('hire_pages.php.fullstackTitle').split('Mastery')[1] || 'Mastery'}</span></h2>
                         <div className="w-20 h-1.5 bg-indigo-600 mx-auto rounded-full mb-8"></div>
-                        <p className="text-lg text-slate-600 font-medium">Beyond simple scripts — we deliver integrated web ecosystems that scale with your business growth.</p>
+                        <p className="text-lg text-slate-600 font-medium">{t('hire_pages.php.fullstackDesc')}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -117,13 +122,9 @@ const HirePhp = () => {
                             <img src="/images/phpboy2.svg" alt="PHP Workflow" className="w-full h-auto drop-shadow-2xl animate-float" />
                         </div>
                         <div data-aos="fade-left">
-                            <h2 className="text-4xl lg:text-6xl font-black mb-10 uppercase leading-none">Why Partner with Our <span className="text-indigo-400 italic">PHP Vanguards?</span></h2>
+                            <h2 className="text-4xl lg:text-6xl font-black mb-10 uppercase leading-none">{t('hire_pages.php.partnerTitle').split('Vanguards')[0]} <span className="text-indigo-400 italic">{t('hire_pages.php.partnerTitle').split('Vanguards')[1] || 'Vanguards'}?</span></h2>
                             <div className="space-y-10">
-                                {[
-                                    { icon: <FaShieldAlt />, title: 'Security-First Paradigm', text: 'We implement rigorous sanitization, hashing, and encryption protocols to protect your data.' },
-                                    { icon: <FaChartLine />, title: 'High-Concurrency Specs', text: 'Optimized for heavy traffic loads, ensuring fluid performance during peak user activity.' },
-                                    { icon: <FaClock />, title: 'Legacy Modernization', text: 'We breathe new life into older PHP codebases, migrating them to modern, secure versions.' }
-                                ].map((item, idx) => (
+                                {partnerFeatures.map((item, idx) => (
                                     <div key={idx} className="flex gap-8 group">
                                         <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500 flex-shrink-0">
                                             {item.icon}
@@ -146,15 +147,15 @@ const HirePhp = () => {
                     <div className="relative rounded-[4rem] bg-[#1e1e2f] p-12 lg:p-24 overflow-hidden" data-aos="zoom-in">
                         <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-600/20 rounded-full blur-[100px]"></div>
                         <div className="relative z-10 flex flex-col items-center text-center">
-                            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8 uppercase leading-tight max-w-4xl">Accelerate Your <span className="text-indigo-400">Backend</span> Development Today</h2>
-                            <p className="text-xl text-slate-400 mb-12 max-w-2xl font-medium">Join 100+ global brands that rely on our PHP expertise for their mission-critical applications.</p>
+                            <h2 className="text-4xl lg:text-6xl font-black text-white mb-8 uppercase leading-tight max-w-4xl">{t('hire_pages.php.accelerateTitle').split('Backend')[0]}<span className="text-indigo-400">Backend</span>{t('hire_pages.php.accelerateTitle').split('Backend')[1]}</h2>
+                            <p className="text-xl text-slate-400 mb-12 max-w-2xl font-medium">{t('hire_pages.php.accelerateDesc')}</p>
                             <div className="flex flex-wrap justify-center gap-6">
                                 <Link to="/contact" className="px-12 py-5 rounded-2xl bg-white text-slate-900 font-black text-lg uppercase tracking-wider hover:scale-105 transition-transform shadow-2xl">
-                                    Get A Quote
+                                    {t('hire_common.get_quote')}
                                 </Link>
                                 <div className="flex items-center gap-4 text-slate-400 font-bold border-l border-white/10 pl-10 hidden md:flex">
                                     <FaHeadset className="text-2xl text-indigo-400" />
-                                    <span className="text-left">24/7 Expert<br />Consultation</span>
+                                    <span className="text-left">{t('hire_common.expert_consult').replace('Consultation', '')}<br />Consultation</span>
                                 </div>
                             </div>
                         </div>
@@ -169,20 +170,20 @@ const HirePhp = () => {
                         {submitted ? (
                             <div className="text-center py-20 animate-fade-in">
                                 <FaCheckCircle className="text-6xl text-green-500 mx-auto mb-8 shadow-xl" />
-                                <h3 className="text-4xl font-black text-slate-900 mb-4 uppercase">Request Sent</h3>
-                                <p className="text-slate-600 text-lg font-medium">Our senior PHP lead will review your requirements and reach out within 12 hours.</p>
+                                <h3 className="text-4xl font-black text-slate-900 mb-4 uppercase">{t('hire_common.transmission_sent')}</h3>
+                                <p className="text-slate-600 text-lg font-medium">{t('hire_pages.php.success_msg')}</p>
                             </div>
                         ) : (
                             <div className="grid lg:grid-cols-5 gap-16">
                                 <div className="lg:col-span-2">
-                                    <h3 className="text-3xl font-black text-slate-900 mb-6 uppercase">Consult an <span className="text-indigo-600">Architect</span></h3>
-                                    <p className="text-slate-600 mb-10 leading-relaxed font-medium">Have a complex legacy system or a fresh idea? Let's discuss the technical blueprints.</p>
+                                    <h3 className="text-3xl font-black text-slate-900 mb-6 uppercase">{t('hire_common.consult_architect').split('Architect')[0]}<span className="text-indigo-600">Architect</span></h3>
+                                    <p className="text-slate-600 mb-10 leading-relaxed font-medium">{t('hire_pages.php.consultDesc')}</p>
                                     <div className="space-y-6">
                                         <div className="flex items-center gap-4 text-slate-800 font-black uppercase tracking-widest text-sm">
-                                            <FaLightbulb className="text-indigo-600" /> Innovation Driven
+                                            <FaLightbulb className="text-indigo-600" /> {t('hire_common.innovation_driven')}
                                         </div>
                                         <div className="flex items-center gap-4 text-slate-800 font-black uppercase tracking-widest text-sm">
-                                            <FaShieldAlt className="text-indigo-600" /> Security Focused
+                                            <FaShieldAlt className="text-indigo-600" /> {t('hire_common.security_focused')}
                                         </div>
                                     </div>
                                 </div>
@@ -190,16 +191,16 @@ const HirePhp = () => {
                                     <form onSubmit={handleSubmit} className="space-y-8">
                                         <div className="grid md:grid-cols-2 gap-8">
                                             <div>
-                                                <input type="text" name="name" value={form.name} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder="Full Name *" />
+                                                <input type="text" name="name" value={form.name} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder={t('hire_common.name_label')} />
                                             </div>
                                             <div>
-                                                <input type="email" name="email" value={form.email} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder="Email Address *" />
+                                                <input type="email" name="email" value={form.email} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder={t('hire_common.email_label')} />
                                             </div>
                                         </div>
-                                        <input type="tel" name="phone" value={form.phone} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder="Phone Number *" />
-                                        <textarea name="message" value={form.message} onChange={handleChange} rows={3} className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg resize-none" placeholder="Project Description" />
+                                        <input type="tel" name="phone" value={form.phone} onChange={handleChange} required className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg" placeholder={t('hire_common.phone_label')} />
+                                        <textarea name="message" value={form.message} onChange={handleChange} rows={3} className="w-full bg-white border-b-2 border-slate-200 px-0 py-4 focus:outline-none focus:border-indigo-600 transition-all font-bold text-slate-800 text-lg resize-none" placeholder={t('hire_common.project_desc')} />
                                         <button type="submit" className="px-12 py-5 bg-indigo-600 text-white font-black text-lg uppercase tracking-widest hover:bg-slate-900 transition-all rounded-xl shadow-xl">
-                                            Submit Message
+                                            {t('hire_common.submit_message')}
                                         </button>
                                     </form>
                                 </div>

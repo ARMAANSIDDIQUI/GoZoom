@@ -28,16 +28,16 @@ const Swift = () => {
 
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0" data-aos="fade-right">
+                        <div className="flex-1 text-center flex flex-col items-center mx-auto" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('swift_dev_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-white mb-6 leading-tight tracking-tight uppercase">
                                 {t('swift_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">{t('swift_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('swift_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('swift_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>

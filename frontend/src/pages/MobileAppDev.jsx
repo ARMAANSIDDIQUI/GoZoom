@@ -53,12 +53,11 @@ const MobileAppDev = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="700">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-base lg:text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="700">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-black text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider gap-3 group w-full">
                                     {t('mobile_app_dev_page.hero.cta_expert')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 text-white text-center font-black text-base lg:text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3">
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white text-center font-black text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider gap-3 w-full">
                                     {t('mobile_app_dev_page.hero.cta_more')}
                                 </Link>
                             </div>
@@ -66,7 +65,7 @@ const MobileAppDev = () => {
                         <div className="w-full lg:w-1/2 relative flex justify-center items-center h-full" data-aos="fade-left">
                             <div className="relative group w-full max-w-[300px] lg:max-w-none">
                                 <div className="absolute inset-0 bg-purple-500/20 rounded-full blur-[60px] lg:blur-[80px] group-hover:bg-purple-500/30 transition-all duration-700"></div>
-                                <img src="../images/app-mockup.png" alt={t('mobile_app_dev_page.hero.img_alt')} className="w-full h-auto relative z-10 animate-float drop-shadow-2xl" />
+                                <img src="../images/app-mockup.png" alt={t('mobile_app_dev_page.hero.img_alt')} className="w-full h-auto relative z-10 rounded-[2.5rem] animate-float drop-shadow-2xl" />
                             </div>
                         </div>
                     </div>

@@ -52,7 +52,7 @@ const WebDevelopment = () => {
 
                 <div className="container relative z-10 min-h-[85vh] lg:min-h-screen py-16 lg:py-24 flex items-center">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0">
+                        <div className="flex-1 text-center mx-auto">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-8 animate-fade-down" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                 {t('web_dev_page.hero.subtitle')}
@@ -60,12 +60,12 @@ const WebDevelopment = () => {
                             <h1 className="text-hero-title text-white mb-8 leading-[1.05] tracking-tight" data-aos="fade-up" data-aos-delay="200">
                                 {t('web_dev_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('web_dev_page.hero.title2')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl font-medium" data-aos="fade-up" data-aos-delay="400">
+                            <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                                 {t('web_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
-                                <a href="#explore" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">{t('web_dev_page.hero.button_explore')}</a>
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] px-10 py-4 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">{t('web_dev_page.hero.button_enquire')}</Link>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                                <a href="#explore" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-black hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1 uppercase tracking-wider w-full">{t('web_dev_page.hero.button_explore')}</a>
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white text-center font-bold hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">{t('web_dev_page.hero.button_enquire')}</Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">

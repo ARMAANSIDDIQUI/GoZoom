@@ -46,7 +46,7 @@ const UseCases = () => {
 
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+                        <div className="flex-1 text-center flex flex-col items-center mx-auto">
                             <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">{t('use_cases_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-white mb-6 leading-tight tracking-tight" data-aos="fade-down" data-aos-delay="100">
                                 {t('use_cases_page.hero.title_main')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">{t('use_cases_page.hero.title_gradient')}</span>
@@ -55,7 +55,7 @@ const UseCases = () => {
                                 {t('use_cases_page.hero.desc')}
                             </p>
                             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#industries" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                                <a href="#industries" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-emerald-500/50 transition-all hover:-translate-y-1 uppercase tracking-wider group">
                                     {t('use_cases_page.hero.cta_explore')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </div>

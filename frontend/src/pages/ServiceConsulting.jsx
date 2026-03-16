@@ -42,7 +42,7 @@ const ServiceConsulting = () => {
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
-                            <span className="inline-block py-1 px-3 rounded-full bg-teal-50 text-teal-600 font-bold text-sm mb-6 uppercase tracking-wider">{t('service_consulting_page.hero.badge')}</span>
+                            <span className="block w-fit mx-auto py-1 px-3 rounded-full bg-teal-50 text-teal-600 font-bold text-sm mb-6 uppercase tracking-wider">{t('service_consulting_page.hero.badge')}</span>
                             <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight tracking-tight text-slate-800">
                                 {t('service_consulting_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-500">{t('service_consulting_page.hero.title_gradient')}</span>
                             </h1>

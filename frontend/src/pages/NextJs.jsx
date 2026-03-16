@@ -41,11 +41,11 @@ const NextJs = () => {
                             <p className="text-hero-desc text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
                                 {t('nextjs_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-full bg-white text-black font-black text-center text-lg hover:bg-gray-200 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto lg:mx-0">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-white text-black font-black text-center text-lg hover:bg-gray-200 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('nextjs_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] gap-3 px-10 py-5 rounded-full bg-transparent text-white font-black text-center text-lg border border-white/20 hover:bg-white/5 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider">
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-transparent text-white font-black text-center text-lg border border-white/20 hover:bg-white/5 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider w-full">
                                     {t('nextjs_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
@@ -53,7 +53,7 @@ const NextJs = () => {
                         <div className="flex-1 relative" data-aos="zoom-in">
                             <div className="relative z-10 p-1 bg-gradient-to-br from-white/20 to-transparent rounded-[3rem] animate-float">
                                 <div className="bg-black rounded-[2.9rem] p-8">
-                                    <img src="/images/nextjs-hero.svg" alt="Next.js Development" className="w-full h-auto invert" />
+                                    <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto rounded-[2.5rem]" />
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ const NextJs = () => {
                                 {t('nextjs_dev_page.why_us.title')}
                             </h3>
                             <div className="space-y-8">
-                                {t('nextjs_dev_page.why_us.items', { returnObjects: true }).map((item, i) => (
+                                {Array.isArray(t('nextjs_dev_page.why_us.items', { returnObjects: true })) && t('nextjs_dev_page.why_us.items', { returnObjects: true }).map((item, i) => (
                                     <div key={i} className="flex gap-6">
                                         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center font-bold">
                                             0{i + 1}
