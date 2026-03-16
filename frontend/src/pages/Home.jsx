@@ -224,7 +224,7 @@ const Home = () => {
                         <div className="lg:w-1/2 relative" data-aos="fade-left">
                             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                                    src="/images/workforce_solutions_hero_realistic.png"
                                     alt="Workforce Solutions"
                                     className="w-full h-full object-cover"
                                 />

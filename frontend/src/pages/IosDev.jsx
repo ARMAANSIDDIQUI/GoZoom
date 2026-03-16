@@ -38,18 +38,18 @@ const IosDev = () => {
                             <p className="text-hero-desc text-blue-100 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium">
                                 {t('ios_dev_page.hero.desc')}
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('ios_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('ios_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
                         <div className="w-full lg:flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-8 lg:p-12 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] lg:rounded-[5rem] border border-white/10 backdrop-blur-xl w-full max-w-[300px] lg:max-w-[380px] shadow-2xl flex items-center justify-center group/ios hover:scale-105 transition-transform duration-500">
-                                <img src="/images/apple-ios-app-store-seeklogo.svg" alt={t('ios_dev_page.hero.img_alt')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] filter brightness-110" />
+                                <img src="/images/mobile_app_mockup_realistic_premium.png" alt={t('ios_dev_page.hero.img_alt')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] filter brightness-110" />
                             </div>
                         </div>
                     </div>

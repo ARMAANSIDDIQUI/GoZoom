@@ -74,12 +74,12 @@ const Retail = () => {
                         <p className="text-hero-desc text-slate-400 mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
                             {t('retail_page.hero.desc')}
                         </p>
-                        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
-                            <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-emerald-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                {t('retail_page.hero.button_contact')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                            <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-teal-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                {t('retail_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link to="/integration" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
-                                {t('retail_page.hero.button_integration')}
+                            <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                {t('retail_page.hero.cta_about')}
                             </Link>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ const Retail = () => {
                         </div>
                         <div className="flex-1 relative" data-aos="fade-left">
                             <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl">
-                                <img src="/images/Home Page - IT Solutions.png" alt="Retail Excellence" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=Retail+Tech"; }} />
+                                <img src="/images/Home Page - IT Solutions.png" alt="Retail Excellence" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
                             </div>
                         </div>

@@ -82,9 +82,11 @@ const WorkforceSolutions = () => {
                                 className="w-full rounded-2xl bg-white/10 border border-white/25 text-white placeholder-white/75 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-md"
                             />
                         </div>
-                        <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                            {t('workforce_solutions_page.hero.button')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
+                            <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                {t('workforce_solutions_page.hero.button')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

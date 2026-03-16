@@ -1,4 +1,7 @@
 {
+    "common": {
+        "learn_more": "En savoir plus"
+    },
     "welcome": "Bienvenue chez GoZoom",
     "service_consulting_page": {
         "hero": {
@@ -7,6 +10,8 @@
             "title_gradient": "Stratégie d'Expert",
             "desc": "Naviguez dans les complexités de la technologie moderne avec GoZoom. Nous fournissons des services de conseil à fort impact pour rationaliser vos opérations et favoriser l'excellence numérique.",
             "cta_book": "Réserver une Consultation",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "alt_team": "Équipe de Conseil"
         },
         "offerings": {
@@ -526,6 +531,8 @@
             "title1": "SOLUTIONS",
             "title2": "D'INTÉGRATION",
             "desc": "Alimenté par des connaissances approfondies, des recherches minutieuses et une vaste expérience de l'industrie — connectant vos systèmes d'entreprise de manière transparente.",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "button_connect": "Connecter les Systèmes",
             "button_capabilities": "Capacités"
         },
@@ -570,6 +577,8 @@
             "title1": "Au-delà de la",
             "title2": "Vente au Détail",
             "desc": "Nous visons à révolutionner et à améliorer l'expérience de vente au détail comme jamais auparavant grâce à l'innovation et à la transformation.",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "button_contact": "Entrer en Contact",
             "button_integration": "Intégration"
         },
@@ -658,7 +667,9 @@
             "title2": "En Lesquels Vous Pouvez Avoir Confiance",
             "desc": "Créer des expériences web puissantes, efficaces et engageantes pour les entreprises de toutes tailles",
             "button_explore": "Explorer les Services",
-            "button_enquire": "Se Renseigner"
+            "button_enquire": "Se Renseigner",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "offer": {
             "subtitle": "Ce Que Nous Proposons",
@@ -1142,7 +1153,9 @@
             "title_gradient": "Agentic",
             "title_main": " Development",
             "desc": "Nous concevons, construisons et déployons des systèmes LLM multi-agents capables de raisonner, de planifier et d'exécuter des tâches complexes en plusieurs étapes de manière autonome.",
-            "cta_build": "Construire des Agents"
+            "cta_build": "Construire des Agents",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "paradigm": {
             "title": "Au-delà des Simples Prompts",
@@ -1232,7 +1245,9 @@
             "title_main": "IA / ",
             "title_gradient": "Automatisation des Tâches",
             "desc": "Éliminez les goulots d'étranglement. Accélérez les flux de travail. Déployez des agents d'automatisation intelligents qui gèrent les tâches répétitives sans erreur.",
-            "cta_automate": "Automatiser Maintenant"
+            "cta_automate": "Automatiser Maintenant",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "operations": {
             "badge": "Opérations",
@@ -1320,6 +1335,8 @@
             },
             "cta_expert": "Parler à un Expert",
             "cta_more": "En savoir plus",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "img_alt": "Maquette d'Application Mobile"
         },
         "about": {
@@ -1401,7 +1418,8 @@
             "title1": "Développement ",
             "title2": "Android Premium",
             "desc": "Développement d'applications Android natives de haute performance qui exploitent toute la puissance de l'écosystème Google.",
-            "cta_enquire": "Demander un Devis",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "cta_learn": "En savoir plus",
             "img_alt": "Logo Android"
         },
@@ -1572,6 +1590,8 @@
             "title_gradient": "Flutter tourné vers l'avenir",
             "desc": "Créez de superbes applications compilées nativement pour mobile, web et bureau à partir d'une base de code unique avec les experts Flutter de Gozoom.",
             "cta_hire": "Embaucher des Experts Flutter",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous",
             "img_alt": "Logo Flutter"
         },
         "expertise": {
@@ -1624,7 +1644,9 @@
             "title_main": "Développement ",
             "title_gradient": "Swift Haute Performance",
             "desc": "Libérez tout le potentiel du matériel Apple avec des applications Swift natives rapides, sécurisées et intuitives.",
-            "cta_start": "Commencer"
+            "cta_start": "Commencer",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "expertise": {
             "badge": "Notre Expertise",
@@ -1677,7 +1699,9 @@
             "title_gradient": "React Native Agile",
             "desc": "Combinez la rapidité du développement web avec la puissance des applications mobiles natives grâce à nos services experts React Native.",
             "cta_start": "Commencer",
-            "cta_explore": "Explorer les Services"
+            "cta_explore": "Explorer les Services",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "expertise": {
             "badge": "Capacités",
@@ -1791,7 +1815,8 @@
             "title_gradient": "Développeurs React",
             "desc": "Construisez l'avenir des applications web avec les développeurs React.js de GoZooms — priorité à la performance et prêts pour les composants.",
             "cta_start": "Commencer",
-            "cta_about": "À Propos de Nous"
+            "cta_about": "À Propos de Nous",
+            "cta_enquire": "S'informer Maintenant"
         },
         "about": {
             "title_main": "Niveau Supérieur de ",
@@ -1878,7 +1903,8 @@
             "title_gradient": "Développeurs Angular",
             "desc": "Tout ce dont vous avez besoin pour démarrer votre projet en 24 heures — architecture, rapidité et fiabilité.",
             "cta_start": "Commencer",
-            "cta_about": "À Propos de Nous"
+            "cta_about": "À Propos de Nous",
+            "cta_enquire": "S'informer Maintenant"
         },
         "about": {
             "badge": "À Propos d'Angular",
@@ -1974,7 +2000,8 @@
             "title_end": " Experte",
             "desc": "Nous fournissons des développeurs Laravel dédiés pour les projets de votre entreprise — créant des applications robustes, sécurisées et artisanales.",
             "cta_start": "Commencer",
-            "cta_about": "À Propos de Nous"
+            "cta_about": "À Propos de Nous",
+            "cta_enquire": "S'informer Maintenant"
         },
         "about": {
             "title": "Solutions d'experts d'une entreprise experte en développement Laravel",
@@ -2091,7 +2118,8 @@
             "title_gradient": "Next.js",
             "desc": "Nous construisons des applications web ultra-rapides, optimisées pour le référencement et évolutives en utilisant la puissance de React et du rendu côté serveur avec Next.js.",
             "cta_start": "Commencer",
-            "cta_about": "À Propos de Nous"
+            "cta_about": "À Propos de Nous",
+            "cta_enquire": "S'informer Maintenant"
         },
         "about": {
             "title": "Pourquoi Next.js est le meilleur framework React pour la production",
@@ -2230,7 +2258,9 @@
             "title_main": "Services ",
             "title_gradient": "Cloud d'Entreprise",
             "desc": "Débloquez une évolutivité et une sécurité inégalées grâce à nos services cloud gérés dans les environnements AWS, Google Cloud, Azure et Oracle.",
-            "cta_deploy": "Déployer Maintenant"
+            "cta_deploy": "Déployer Maintenant",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "ecosystems": {
             "badge": "Écosystèmes",
@@ -2337,7 +2367,9 @@
             "title_main": "Cyber ",
             "title_gradient": "Sécurité",
             "desc": "Protégez vos actifs numériques, sécurisez votre infrastructure et assurez la conformité grâce à nos solutions de cybersécurité de classe entreprise.",
-            "cta_secure": "Sécurisez Vos Données"
+            "cta_secure": "Sécurisez Vos Données",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "expertise": {
             "badge": "Notre Expertise",
@@ -2399,7 +2431,9 @@
             "title_main": "Applications Propulsées par ",
             "title_gradient": "l'IA",
             "desc": "Transformez votre entreprise grâce à des applications intelligentes qui apprennent, s'adaptent et stimulent la croissance. Laissez les données être votre avantage concurrentiel ultime.",
-            "cta_build": "Créer une Application IA"
+            "cta_build": "Créer une Application IA",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "capabilities": {
             "badge": "Capacités de Base",
@@ -2480,7 +2514,9 @@
             "title_main": "Kubernetes ",
             "title_gradient": "et Docker",
             "desc": "Modernisez votre pipeline de déploiement. Nous nous spécialisons dans la conteneurisation, l'architecture de microservices et le déploiement de clusters haute disponibilité utilisant Kubernetes et Docker.",
-            "cta_scale": "Faire Évoluer votre App"
+            "cta_scale": "Faire Évoluer votre App",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "services": {
             "containerization": {
@@ -2557,7 +2593,8 @@
             "title_gradient": "des Services SEO Experts",
             "desc": "Débloquez des solutions sur mesure pour les projets de votre entreprise en faisant appel à nos spécialistes SEO dédiés. Visibilité accrue et succès avec une assistance de premier ordre.",
             "cta_start": "Commencer",
-            "cta_about": "À Propos de Nous"
+            "cta_about": "À Propos de Nous",
+            "cta_enquire": "S'informer Maintenant"
         },
         "about": {
             "badge": "Notre Approche",
@@ -2719,7 +2756,9 @@
             "title_main": "Agence de Design ",
             "title_gradient": "UI / UX",
             "desc": "Nous concevons des expériences numériques intuitives, engageantes et magnifiques qui transforment les utilisateurs en défenseurs fidèles de la marque.",
-            "cta_start": "Commencer à Concevoir"
+            "cta_start": "Commencer à Concevoir",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "expertise": {
             "badge": "Notre Expertise",
@@ -2781,7 +2820,9 @@
             "title_main": "Cas d'Utilisation du ",
             "title_gradient": "Monde Réel",
             "desc": "Découvrez comment nos solutions IA et Cloud personnalisées résolvent des défis complexes dans divers secteurs à travers le monde.",
-            "cta_explore": "Explorer les Secteurs"
+            "cta_explore": "Explorer les Secteurs",
+            "cta_enquire": "S'informer Maintenant",
+            "cta_about": "À Propos de Nous"
         },
         "industries": {
             "items": {
@@ -3572,6 +3613,179 @@
                 { "title": "Développement Typé", "text": "Utilisation de TypeScript pour détecter les bugs tôt et fournir une documentation solide pour votre équipe." }
             ],
             "success_msg": "Votre demande a été reçue. Nos experts React vous appelleront sous peu."
+        },
+        "nextjs_dev_page": {
+            "hero": {
+                "badge": "Développement Next.js",
+                "title_main": "Next.js ",
+                "title_gradient": "Développement",
+                "desc": "Exploitez la puissance de React avec le rendu côté serveur. Nous construisons des applications web ultra-rapides et optimisées pour le SEO en utilisant le moderne App Router et les capacités Edge compute.",
+                "cta_start": "Construire avec Next.js",
+                "cta_about": "En savoir plus"
+            },
+            "about": {
+                "title": "Développement Next.js",
+                "p1": "Next.js est le framework React leader pour construire des applications web haute performance. Il offre une expérience développeur fluide avec des fonctionnalités comme le Server-Side Rendering (SSR), le Static Site Generation (SSG) et la régénération statique incrémentale.",
+                "p2": "Notre équipe est spécialisée dans l'exploitation des dernières fonctionnalités de Next.js, y compris l'App Router, les Server Components et la gestion optimisée des images, pour offrir des expériences utilisateur supérieures et une visibilité accrue sur les moteurs de recherche."
+            },
+            "services": {
+                "badge": "Nos Services",
+                "title": "Ce que nous construisons avec Next.js",
+                "items": {
+                    "ssr": {
+                        "title": "Rendu côté serveur",
+                        "desc": "Boostez les performances et le SEO en rendant les pages à chaque requête."
+                    },
+                    "static": {
+                        "title": "Génération de site statique",
+                        "desc": "Temps de chargement ultra-rapides avec des pages statiques pré-rendues."
+                    },
+                    "pwa": {
+                        "title": "Progressive Web Apps",
+                        "desc": "Capacités hors ligne et expériences de type natif sur le web."
+                    },
+                    "seo": {
+                        "title": "Optimisation SEO",
+                        "desc": "Gestion avancée des métadonnées et du head pour un meilleur classement."
+                    },
+                    "api": {
+                        "title": "Routes API",
+                        "desc": "Construction de backends serverless robustes directement dans Next.js."
+                    },
+                    "enterprise": {
+                        "title": "Solutions d'entreprise",
+                        "desc": "Architectures évolutives, sécurisées et maintenables pour les grandes organisations."
+                    }
+                }
+            },
+            "why_us": {
+                "title": "Pourquoi GoZoom pour Next.js ?",
+                "items": [
+                    {
+                        "title": "Architectes experts",
+                        "desc": "Notre équipe connaît Next.js sur le bout des doigts, garantissant les meilleures pratiques."
+                    },
+                    {
+                        "title": "Obsédés par la performance",
+                        "desc": "Nous optimisons chaque octet pour que votre application se charge instantanément."
+                    },
+                    {
+                        "title": "Focus SEO",
+                        "desc": "Les meilleures pratiques SEO intégrées aident votre site à mieux se classer dès le premier jour."
+                    }
+                ]
+            }
+        },
+        "java_dev_page": {
+            "hero": {
+                "badge": "Robustesse de niveau entreprise",
+                "title_main": "Applications d'entreprise ",
+                "title_gradient": "Java",
+                "desc": "Créez des solutions logicielles sécurisées, hautement évolutives et exceptionnellement fiables avec Java. Nous sommes spécialisés dans les applications d'entreprise robustes, les architectures complexes et les systèmes backend hautes performances.",
+                "cta_start": "Démarrez votre projet",
+                "cta_about": "À propos de Java"
+            },
+            "expertise": {
+                "badge": "Offres de base",
+                "title": "Ce que nous construisons avec Java",
+                "items": {
+                    "enterprise": {
+                        "title": "Applications Web d'entreprise",
+                        "desc": "Portails B2B sécurisés, ERP et systèmes CRM construits à l'aide de frameworks robustes comme Spring Boot et Java EE."
+                    },
+                    "microservices": {
+                        "title": "Architectures de microservices",
+                        "desc": "Découplage d'applications monolithiques en microservices évolutifs et déployables indépendamment."
+                    },
+                    "secure": {
+                        "title": "Systèmes sécurisés",
+                        "desc": "Mise en œuvre de protocoles de sécurité et de protection des données de niveau bancaire."
+                    },
+                    "performance": {
+                        "title": "Haute performance",
+                        "desc": "Optimisation des systèmes backend pour des opérations à haut débit et faible latence."
+                    },
+                    "cloud": {
+                        "title": "Java natif du cloud",
+                        "desc": "Optimisation des applications d'entreprise à l'aide de Kubernetes, Docker et des environnements cloud."
+                    },
+                    "legacy": {
+                        "title": "Modernisation de l'existant",
+                        "desc": "Mise à jour et migration des anciens systèmes Java vers des architectures modernes et performantes."
+                    }
+                }
+            },
+            "why_us": {
+                "title": "Pourquoi choisir Java pour votre entreprise ?",
+                "list": [
+                    "Évolutivité exceptionnelle pour les entreprises en croissance",
+                    "Typage fort et fonctionnalités de sécurité robustes",
+                    "Fiabilité prouvée dans les systèmes critiques",
+                    "Vaste écosystème et support à long terme"
+                ],
+                "tech_cards": [
+                    {
+                        "title": "Spring Boot",
+                        "desc": "Développement rapide d'applications avec le framework Java le plus populaire."
+                    },
+                    {
+                        "title": "Hibernate",
+                        "desc": "Puissant mapping objet-relationnel pour les structures de données complexes."
+                    }
+                ]
+            }
+        },
+        "django_dev_page": {
+            "hero": {
+                "badge": "Développement rapide",
+                "title_main": "Solutions Django ",
+                "title_gradient": "& Python",
+                "desc": "Construisez des applications web sécurisées, évolutives et maintenables plus rapidement avec Django. Le framework pour les perfectionnistes avec des délais.",
+                "cta_start": "Démarrez votre projet",
+                "cta_services": "Nos Services"
+            },
+            "expertise": {
+                "badge": "Notre expertise",
+                "title": "Services de développement Django",
+                "desc": "Des startups aux entreprises, nous fournissons des solutions Python/Django de haute qualité.",
+                "items": {
+                    "enterprise": {
+                        "title": "Solutions d'entreprise",
+                        "desc": "Backends robustes pour des exigences commerciales complexes."
+                    },
+                    "api": {
+                        "title": "APIs RESTful",
+                        "desc": "APIs évolutives construites avec Django REST Framework (DRF)."
+                    },
+                    "data": {
+                        "title": "Apps orientées données",
+                        "desc": "Exploitation de l'ORM puissant de Django pour les applications riches en données."
+                    },
+                    "security": {
+                        "title": "La sécurité d'abord",
+                        "desc": "Protection intégrée contre les vulnérabilités web courantes."
+                    },
+                    "ai": {
+                        "title": "Intégration IA",
+                        "desc": "Combinaison de Django avec des modèles d'IA et de Machine Learning."
+                    },
+                    "saas": {
+                        "title": "Développement SaaS",
+                        "desc": "Construction d'applications multi-locataires avec une logique complexe."
+                    }
+                }
+            },
+            "why_us": {
+                "badge": "Pourquoi nous",
+                "title": "Pourquoi GoZoom pour Django ?",
+                "desc": "Nous sommes experts dans l'écosystème Python, fournissant un code propre et efficace.",
+                "list": [
+                    "Mise sur le marché rapide avec prototypage rapide",
+                    "Backends hautement sécurisés et évolutifs",
+                    "Expertise dans Django REST Framework",
+                    "Intégration fluide avec les services tiers"
+                ]
+            }
         }
     }
 }

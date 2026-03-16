@@ -207,11 +207,11 @@ const Integration = () => {
             <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
               {t('integration_page.hero.desc')}
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-base lg:text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+              <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                 {t('integration_page.hero.button_connect')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
               </Link>
-              <a href="#capabilities" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[200px] px-8 lg:px-12 py-4 lg:py-5 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-base lg:text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider">
+              <a href="#capabilities" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider w-full">
                 {t('integration_page.hero.button_capabilities')}
               </a>
             </div>

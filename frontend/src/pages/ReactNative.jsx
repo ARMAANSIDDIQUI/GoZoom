@@ -36,12 +36,12 @@ const ReactNative = () => {
                             <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('react_native_dev_page.hero.desc')}
                             </p>
-                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('react_native_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('react_native_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/services" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
-                                    {t('react_native_dev_page.hero.cta_explore')}
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('react_native_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
@@ -108,7 +108,7 @@ const ReactNative = () => {
                         </div>
                         <div className="flex-1 relative" data-aos="fade-left">
                             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-100 to-blue-50 rounded-[3rem] transform rotate-3 scale-105 opacity-50"></div>
-                            <img src="/images/app-mockup.png" alt={t('react_native_dev_page.why_us.img_alt')} className="relative z-10 w-full h-auto rounded-[3rem] shadow-xl" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=Mobile+App+Design"; }} />
+                            <img src="/images/mobile_app_mockup_realistic_premium.png" alt={t('react_native_dev_page.why_us.img_alt')} className="relative z-10 w-full h-auto rounded-[3rem] shadow-xl" />
                         </div>
                     </div>
                 </div>

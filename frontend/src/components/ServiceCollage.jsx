@@ -13,7 +13,7 @@ const ServiceCollage = () => {
             desc: t('home.services_collage.services.web.desc'),
             icon: <FaCode />,
             link: "/web-development",
-            image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+            image: "/images/web_development_collage_realistic_premium.png",
             size: "md:col-span-2",
             color: "from-blue-600/20 to-indigo-600/20"
         },
@@ -22,7 +22,7 @@ const ServiceCollage = () => {
             desc: t('home.services_collage.services.branding.desc'),
             icon: <FaPalette />,
             link: "/about",
-            image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
+            image: "/images/branding_design_collage_realistic_premium.png",
             size: "md:col-span-1",
             color: "from-teal-500/20 to-[var(--color-gozoom-green)]/20"
         },
@@ -31,7 +31,7 @@ const ServiceCollage = () => {
             desc: t('home.services_collage.services.software_ai.desc'),
             icon: <FaRobot />,
             link: "/expert-seo-services",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+            image: "/images/software_ai_collage_realistic_premium.png",
             size: "md:col-span-1",
             color: "from-[var(--color-gozoom-blue)]/20 to-[var(--color-gozoom-green)]/20"
         },
@@ -40,7 +40,7 @@ const ServiceCollage = () => {
             desc: t('home.services_collage.services.animation.desc'),
             icon: <FaCube />,
             link: "/mobile-application-development",
-            image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
+            image: "/images/three_d_animation_collage.png",
             size: "md:col-span-1",
             color: "from-cyan-600/20 to-blue-600/20"
         }

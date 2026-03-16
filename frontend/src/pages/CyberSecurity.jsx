@@ -50,23 +50,26 @@ const CyberSecurity = () => {
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-right">
+                    <div className="flex flex-col items-center text-center gap-12">
+                        <div className="w-full max-w-4xl flex flex-col items-center" data-aos="fade-down">
                             <span className="inline-block py-1 px-3 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('cyber_security_page.hero.badge')}</span>
                             <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight uppercase">
                                 {t('cyber_security_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">{t('cyber_security_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('cyber_security_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-red-600 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                    {t('cyber_security_page.hero.cta_secure')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('cyber_security_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('cyber_security_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-10 bg-white/5 rounded-[3rem] border border-white/10 backdrop-blur-md w-full shadow-2xl animate-float">
+                        <div className="w-full max-w-2xl relative flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="relative z-10 p-10 bg-white/5 rounded-[3rem] border border-white/10 backdrop-blur-md w-full shadow-2xl animate-float max-w-lg">
                                 <FaShieldAlt className="text-red-500 w-full h-auto drop-shadow-[0_20px_60px_rgba(239,68,68,0.5)]" size={300} />
                             </div>
                         </div>

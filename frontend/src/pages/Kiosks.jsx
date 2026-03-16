@@ -45,7 +45,7 @@ const Kiosks = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10 w-full">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="flex-1 text-center lg:text-left mx-auto lg:mx-0">
+                        <div className="flex-1 text-center mx-auto">
                             <span className="inline-block py-1 px-3 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">{t('kiosks_page.hero.badge')}</span>
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
                                 {t('kiosks_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">{t('kiosks_page.hero.title_gradient')}</span>
@@ -53,9 +53,9 @@ const Kiosks = () => {
                             <p className="text-xl text-slate-300 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                                 {t('kiosks_page.hero.desc')}
                             </p>
-                            <div className="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
-                                <Link to="/integration" className="px-8 py-4 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1">{t('kiosks_page.hero.cta_integration')}</Link>
-                                <Link to="/retail" className="px-8 py-4 rounded-xl bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20">{t('kiosks_page.hero.cta_retail')}</Link>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/integration" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-1 w-full text-center">{t('kiosks_page.hero.cta_integration')}</Link>
+                                <Link to="/retail" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/10 text-white font-bold hover:bg-white/20 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 w-full text-center">{t('kiosks_page.hero.cta_retail')}</Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="400">

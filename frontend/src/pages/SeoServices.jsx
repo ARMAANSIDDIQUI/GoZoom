@@ -46,26 +46,26 @@ const SeoServices = () => {
         </div>
 
         <div className="container relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+          <div className="flex flex-col items-center text-center gap-12">
+            <div className="w-full max-w-4xl flex flex-col items-center" data-aos="fade-down">
               <span className="inline-block py-1 px-3 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('seo_services_page.hero.badge')}</span>
-              <h1 className="text-hero-title text-white mb-6 leading-tight uppercase">
+              <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
                 {t('seo_services_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">{t('seo_services_page.hero.title_gradient')}</span>
               </h1>
-              <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto font-medium">
+              <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium">
                 {t('seo_services_page.hero.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                  {t('seo_services_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                  {t('seo_services_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider">
+                <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                   {t('seo_services_page.hero.cta_about')}
                 </Link>
               </div>
             </div>
-            <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl">
+            <div className="w-full max-w-2xl relative flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
+              <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
                 <img src="/images/seo1.png" alt="SEO Specialist" className="w-full h-auto rounded-[3.5rem] shadow-4xl filter saturate-[1.2]" />
               </div>
             </div>

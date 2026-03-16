@@ -1,4 +1,7 @@
 {
+    "common": {
+        "learn_more": "Learn More"
+    },
     "welcome": "Welcome to GoZoom",
     "service_consulting_page": {
         "hero": {
@@ -6,6 +9,8 @@
             "title_main": "Empowering Your Business with ",
             "title_gradient": "Expert Strategy",
             "desc": "Navigate the complexities of modern technology with GoZoom. We provide high-impact consulting services to streamline your operations and drive digital excellence.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_book": "Book a Consultation",
             "alt_team": "Consulting Team"
         },
@@ -121,7 +126,7 @@
         "nav_workforce": "WORKFORCE SOLUTIONS",
         "nav_blogs": "BLOGS",
         "nav_about": "ABOUT US",
-        "nav_contact": "CONTACT US",
+        "nav_contact": "CONTACT",
         "view_services": "View Services Summary",
         "all_workforce_page": "All Workforce Page",
         "contact_btn": "Contact Us",
@@ -146,7 +151,7 @@
         "nav_workforce": "WORKFORCE SOLUTIONS",
         "nav_blogs": "BLOGS",
         "nav_about": "ABOUT US",
-        "nav_contact": "CONTACT US",
+        "nav_contact": "CONTACT",
         "reach_us": "Reach Us Today",
         "form_name": "Your Name",
         "form_name_placeholder": "Name",
@@ -526,6 +531,8 @@
             "title1": "INTEGRATION",
             "title2": "Solutions",
             "desc": "Fueled by extensive knowledge, thorough research, and broad industry experience — connecting your enterprise systems seamlessly.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "button_connect": "Connect Systems",
             "button_capabilities": "Capabilities"
         },
@@ -570,6 +577,8 @@
             "title1": "Beyond",
             "title2": "Retail",
             "desc": "We aim to revolutionize and enhance the retail experience like never before through innovation and transformation.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "button_contact": "Get In Touch",
             "button_integration": "Integration"
         },
@@ -657,6 +666,8 @@
             "title1": "Web Development Services",
             "title2": "You Can Trust",
             "desc": "Creating powerful, effective, and engaging web experiences for businesses of all sizes",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "button_explore": "Explore Services",
             "button_enquire": "Enquire Now"
         },
@@ -1142,7 +1153,9 @@
             "title_gradient": "Agentic",
             "title_main": " Development",
             "desc": "We design, build, and deploy multi-agent LLM systems capable of reasoning, planning, and executing complex, multi-step tasks autonomously.",
-            "cta_build": "Build Agents"
+            "cta_build": "Build Agents",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us"
         },
         "paradigm": {
             "title": "Beyond Simple Prompts",
@@ -1318,6 +1331,8 @@
                 "featured": "Featured Apps",
                 "published": "Apps Published"
             },
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_expert": "Talk to an Expert",
             "cta_more": "Learn More",
             "img_alt": "Mobile App Mockup"
@@ -1402,6 +1417,7 @@
             "title2": "Android Development",
             "desc": "Building high-performance, native Android applications that leverage the full power of the Google ecosystem.",
             "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_learn": "Learn More",
             "img_alt": "Android Logo"
         },
@@ -1571,6 +1587,8 @@
             "title_main": "Future-Ready ",
             "title_gradient": "Flutter Development",
             "desc": "Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase with Gozoom’s Flutter experts.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_hire": "Hire Flutter Experts",
             "img_alt": "Flutter Logo"
         },
@@ -1624,6 +1642,8 @@
             "title_main": "High-Performance ",
             "title_gradient": "Swift Development",
             "desc": "Unleash the full potential of Apple hardware with native Swift applications that are fast, secure, and intuitive.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_start": "Get Started"
         },
         "expertise": {
@@ -1676,6 +1696,8 @@
             "title_main": "Agile ",
             "title_gradient": "React Native Development",
             "desc": "Combine the speed of web development with the power of native mobile apps through our expert React Native services.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_start": "Get Started",
             "cta_explore": "Explore Services"
         },
@@ -1790,8 +1812,9 @@
             "title_main": "Hire Dedicated ",
             "title_gradient": "React Developers",
             "desc": "Build the future of web applications with GoZooms' React.js developers — performance-first and component-ready.",
-            "cta_start": "Get Started",
-            "cta_about": "About Us"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
+            "cta_start": "Get Started"
         },
         "about": {
             "title_main": "Next Level of ",
@@ -1877,8 +1900,9 @@
             "title_main": "Hire Dedicated ",
             "title_gradient": "Angular Developers",
             "desc": "Everything you need to get your project started in 24 hours — architecture, speed, and reliability.",
-            "cta_start": "Get Started",
-            "cta_about": "About Us"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
+            "cta_start": "Get Started"
         },
         "about": {
             "badge": "About Angular",
@@ -1973,8 +1997,9 @@
             "title_gradient": "Laravel",
             "title_end": " Development Company",
             "desc": "We provide dedicated Laravel developers for your company's projects — building robust, secure, and artisan-crafted applications.",
-            "cta_start": "Get Started",
-            "cta_about": "About Us"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
+            "cta_start": "Get Started"
         },
         "about": {
             "title": "Expert Solutions From an Expert Laravel Development Company",
@@ -2038,6 +2063,8 @@
             "title_main": "Django Web ",
             "title_gradient": "Development",
             "desc": "Build ridiculously fast, secure, and scalable web applications and APIs with Django. Perfect for data-heavy applications, machine learning integrations, and enterprise architectures.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_start": "Start Your Project",
             "cta_services": "Our Services"
         },
@@ -2090,8 +2117,9 @@
             "title_main": "Next.js ",
             "title_gradient": "Development",
             "desc": "Harness the power of React with server-side rendering. We build blazingly fast, SEO-optimized web applications utilizing the modern App Router and Edge compute capabilities.",
-            "cta_start": "Build With Next.js",
-            "cta_about": "About Us"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
+            "cta_start": "Build With Next.js"
         },
         "about": {
             "title": "Why Next.js is the best React framework for production",
@@ -2223,7 +2251,9 @@
             "title_main": "Enterprise ",
             "title_gradient": "Cloud Services",
             "desc": "Unlock unparalleled scalability and security with our managed cloud services across AWS, Google Cloud, Azure, and Oracle environments.",
-            "cta_deploy": "Deploy Now"
+            "cta_deploy": "Deploy Now",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us"
         },
         "ecosystems": {
             "badge": "Ecosystems",
@@ -2330,6 +2360,8 @@
             "title_main": "Cyber ",
             "title_gradient": "Security",
             "desc": "Protect your digital assets, secure your infrastructure, and ensure compliance with our enterprise-grade cybersecurity solutions.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_secure": "Secure Your Data"
         },
         "expertise": {
@@ -2392,6 +2424,8 @@
             "title_main": "Kubernetes ",
             "title_gradient": "& Docker",
             "desc": "Modernize your deployment pipeline. We specialize in containerization, microservices architecture, and deploying high-availability clusters using Kubernetes and Docker.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_scale": "Scale Your App"
         },
         "services": {
@@ -2468,6 +2502,8 @@
             "title_main": "AI Powered ",
             "title_gradient": "Applications",
             "desc": "Transform your business with intelligent applications that learn, adapt, and drive growth. Let data be your ultimate competitive advantage.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_build": "Build AI App"
         },
         "capabilities": {
@@ -2549,8 +2585,9 @@
             "title_main": "Transform Your Online Presence with ",
             "title_gradient": "Expert SEO Services",
             "desc": "Unlock tailored solutions for your company's projects by engaging our dedicated SEO specialists. Elevated visibility and success with top-notch assistance.",
-            "cta_start": "Get Started",
-            "cta_about": "About Us"
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
+            "cta_start": "Get Started"
         },
         "about": {
             "badge": "Our Approach",
@@ -2633,6 +2670,8 @@
             "title_main": "GoZooms ",
             "title_gradient": "Kiosk Technologies!",
             "desc": "Interactive kiosk solutions that enhance customer experience and streamline business operations across all industries.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_integration": "Integration",
             "cta_retail": "Retail"
         },
@@ -2712,6 +2751,8 @@
             "title_main": "UI / UX ",
             "title_gradient": "Design Agency",
             "desc": "We craft intuitive, engaging, and utterly beautiful digital experiences that convert users into loyal brand advocates.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_start": "Start Designing"
         },
         "expertise": {
@@ -2774,6 +2815,8 @@
             "title_main": "Real World ",
             "title_gradient": "Use Cases",
             "desc": "Discover how our customized AI and Cloud solutions are resolving complex challenges across diverse industries worldwide.",
+            "cta_enquire": "Enquire Now",
+            "cta_about": "About Us",
             "cta_explore": "Explore Industries"
         },
         "industries": {
@@ -3286,9 +3329,18 @@
             "playbookTitle": "Our Angular Playbook",
             "advantageTitle": "The Angular Advantage",
             "advantageFeatures": [
-                { "title": "Micro-Frontend Mastery", "text": "Splitting large monolithic apps into manageable, independently deployable modules." },
-                { "title": "CLI-Driven Efficiency", "text": "Leveraging the full power of Angular CLI for consistent, high-quality boilerplate development." },
-                { "title": "Ivy Engine Performance", "text": "Unlocking faster build times and smaller bundle sizes with the latest compiler optimizations." }
+                {
+                    "title": "Micro-Frontend Mastery",
+                    "text": "Splitting large monolithic apps into manageable, independently deployable modules."
+                },
+                {
+                    "title": "CLI-Driven Efficiency",
+                    "text": "Leveraging the full power of Angular CLI for consistent, high-quality boilerplate development."
+                },
+                {
+                    "title": "Ivy Engine Performance",
+                    "text": "Unlocking faster build times and smaller bundle sizes with the latest compiler optimizations."
+                }
             ],
             "transmission_sub": "Our senior lead architect will review your enterprise requirements and reach out within 24 hours."
         },
@@ -3328,9 +3380,18 @@
             ],
             "reasonsTitle": "Reasons to Hire our CodeIgniter Experts",
             "reasons": [
-                { "title": "Speed Oriented", "text": "We build fast, secure backends with minimal overhead for high-performance applications." },
-                { "title": "Clean Architecture", "text": "Adhering to strict MVC patterns ensures your codebase is maintainable for years to come." },
-                { "title": "API Specialists", "text": "Expertise in building lightweight RESTful services that integrate seamlessly with modern frontends." }
+                {
+                    "title": "Speed Oriented",
+                    "text": "We build fast, secure backends with minimal overhead for high-performance applications."
+                },
+                {
+                    "title": "Clean Architecture",
+                    "text": "Adhering to strict MVC patterns ensures your codebase is maintainable for years to come."
+                },
+                {
+                    "title": "API Specialists",
+                    "text": "Expertise in building lightweight RESTful services that integrate seamlessly with modern frontends."
+                }
             ]
         },
         "html": {
@@ -3369,9 +3430,18 @@
             ],
             "featuresTitle": "Standard Features of Our HTML Delivery",
             "features": [
-                { "title": "SEO Optimized", "text": "We use semantic tags to ensure your content is easily indexed by search engines." },
-                { "title": "Performance First", "text": "Optimized asset loading and clean code for near-instant page loads." },
-                { "title": "Cross-Browser", "text": "Perfect rendering across all versions of Chrome, Safari, Firefox, and Edge." }
+                {
+                    "title": "SEO Optimized",
+                    "text": "We use semantic tags to ensure your content is easily indexed by search engines."
+                },
+                {
+                    "title": "Performance First",
+                    "text": "Optimized asset loading and clean code for near-instant page loads."
+                },
+                {
+                    "title": "Cross-Browser",
+                    "text": "Perfect rendering across all versions of Chrome, Safari, Firefox, and Edge."
+                }
             ]
         },
         "jquery": {
@@ -3410,9 +3480,18 @@
             ],
             "reasonsTitle": "Reasons to Hire our Library Veterans",
             "reasons": [
-                { "title": "Legacy Support", "text": "Expertise in maintaining and scaling older enterprise systems with stable jQuery builds." },
-                { "title": "Rapid Interactivity", "text": "Quickly adding complex DOM interactions without the overhead of heavy frameworks." },
-                { "title": "Plugin Masters", "text": "Building and customizing complex plugins for unique UI/UX requirements." }
+                {
+                    "title": "Legacy Support",
+                    "text": "Expertise in maintaining and scaling older enterprise systems with stable jQuery builds."
+                },
+                {
+                    "title": "Rapid Interactivity",
+                    "text": "Quickly adding complex DOM interactions without the overhead of heavy frameworks."
+                },
+                {
+                    "title": "Plugin Masters",
+                    "text": "Building and customizing complex plugins for unique UI/UX requirements."
+                }
             ]
         },
         "laravel": {
@@ -3450,18 +3529,39 @@
                 }
             ],
             "ecosystem": [
-                { "title": "Eloquent ORM", "desc": "Expressive, beautiful database interaction that feels like natural language." },
-                { "title": "Security First", "desc": "Built-in protection against SQL injection, cross-site request forgery, and cross-site scripting." },
-                { "title": "Redis Ready", "desc": "Native support for high-throughput caching and real-time event broadcasting." },
-                { "title": "Forge Deployment", "desc": "Zero-downtime deployments and server management optimized specifically for Laravel." }
+                {
+                    "title": "Eloquent ORM",
+                    "desc": "Expressive, beautiful database interaction that feels like natural language."
+                },
+                {
+                    "title": "Security First",
+                    "desc": "Built-in protection against SQL injection, cross-site request forgery, and cross-site scripting."
+                },
+                {
+                    "title": "Redis Ready",
+                    "desc": "Native support for high-throughput caching and real-time event broadcasting."
+                },
+                {
+                    "title": "Forge Deployment",
+                    "desc": "Zero-downtime deployments and server management optimized specifically for Laravel."
+                }
             ],
             "universeTitle": "The Laravel Universe",
             "universeDesc": "We don't just write PHP; we craft digital art using the most sophisticated backend framework in the world.",
             "whyTitle": "Why Hire Laravel Experts?",
             "whyFeatures": [
-                { "title": "PSR Standard Compliance", "text": "Clean, understandable, and highly maintainable codebases that follow industry best practices." },
-                { "title": "Performance at Scale", "text": "Optimizing database queries and query builders for lightning-fast response times." },
-                { "title": "Seamless Integration", "text": "Connecting with third-party APIs and services with expressive wrapper classes." }
+                {
+                    "title": "PSR Standard Compliance",
+                    "text": "Clean, understandable, and highly maintainable codebases that follow industry best practices."
+                },
+                {
+                    "title": "Performance at Scale",
+                    "text": "Optimizing database queries and query builders for lightning-fast response times."
+                },
+                {
+                    "title": "Seamless Integration",
+                    "text": "Connecting with third-party APIs and services with expressive wrapper classes."
+                }
             ],
             "success_msg": "Our Laravel architect will reach out shortly."
         },
@@ -3500,18 +3600,39 @@
                 }
             ],
             "techStack": [
-                { "title": "Custom Engines", "desc": "Building lightweight, high-speed core systems tailored to your specific logic." },
-                { "title": "Database Optimization", "desc": "Mastering complex MySQL queries and indexing for rapid data retrieval." },
-                { "title": "Cloud Infrastructure", "desc": "Deploying on AWS, Azure, or GCP with optimized server-side configurations." },
-                { "title": "Automation Hooks", "desc": "Integrating CRON jobs and background processes for seamless operations." }
+                {
+                    "title": "Custom Engines",
+                    "desc": "Building lightweight, high-speed core systems tailored to your specific logic."
+                },
+                {
+                    "title": "Database Optimization",
+                    "desc": "Mastering complex MySQL queries and indexing for rapid data retrieval."
+                },
+                {
+                    "title": "Cloud Infrastructure",
+                    "desc": "Deploying on AWS, Azure, or GCP with optimized server-side configurations."
+                },
+                {
+                    "title": "Automation Hooks",
+                    "desc": "Integrating CRON jobs and background processes for seamless operations."
+                }
             ],
             "fullstackTitle": "Full-Stack PHP Mastery",
             "fullstackDesc": "Beyond simple scripts — we deliver integrated web ecosystems that scale with your business growth.",
             "partnerTitle": "Why Partner with Our PHP Vanguards?",
             "partnerFeatures": [
-                { "title": "Security-First Paradigm", "text": "We implement rigorous sanitization, hashing, and encryption protocols to protect your data." },
-                { "title": "High-Concurrency Specs", "text": "Optimized for heavy traffic loads, ensuring fluid performance during peak user activity." },
-                { "title": "Legacy Modernization", "text": "We breathe new life into older PHP codebases, migrating them to modern, secure versions." }
+                {
+                    "title": "Security-First Paradigm",
+                    "text": "We implement rigorous sanitization, hashing, and encryption protocols to protect your data."
+                },
+                {
+                    "title": "High-Concurrency Specs",
+                    "text": "Optimized for heavy traffic loads, ensuring fluid performance during peak user activity."
+                },
+                {
+                    "title": "Legacy Modernization",
+                    "text": "We breathe new life into older PHP codebases, migrating them to modern, secure versions."
+                }
             ],
             "success_msg": "Our senior PHP lead will review your requirements and reach out within 12 hours."
         },
@@ -3550,21 +3671,215 @@
                 }
             ],
             "coreExpertise": [
-                { "title": "Next.js Architecture", "desc": "Server-side rendering and static site generation for ultimate SEO and speed." },
-                { "title": "React Native", "desc": "Cross-platform mobile excellence with a single, high-performance codebase." },
-                { "title": "State Management", "desc": "Redux, Context API, or Zustand for predictable and scalable application flow." },
-                { "title": "Tailored UI", "desc": "Custom design systems built with Tailwind CSS or Styled Components for pixel-perfection." }
+                {
+                    "title": "Next.js Architecture",
+                    "desc": "Server-side rendering and static site generation for ultimate SEO and speed."
+                },
+                {
+                    "title": "React Native",
+                    "desc": "Cross-platform mobile excellence with a single, high-performance codebase."
+                },
+                {
+                    "title": "State Management",
+                    "desc": "Redux, Context API, or Zustand for predictable and scalable application flow."
+                },
+                {
+                    "title": "Tailored UI",
+                    "desc": "Custom design systems built with Tailwind CSS or Styled Components for pixel-perfection."
+                }
             ],
             "ecosystemTitle": "Our React Ecosystem",
             "ecosystemDesc": "We master the entire React galaxy, ensuring your application is not just functional, but built for the future.",
             "why_our_team": "Why Our Team?",
             "advantageTitle": "The GoZoom Advantage",
             "advantageFeatures": [
-                { "title": "Component-Based Architecture", "text": "We build modular, reusable components that make maintenance a breeze and scaling effortless." },
-                { "title": "Virtual DOM Optimization", "text": "Meticulous attention to render cycles ensuring 60FPS user interactions even in heavy data apps." },
-                { "title": "Type-Safe Development", "text": "Using TypeScript to catch bugs early and provide rock-solid documentation for your team." }
+                {
+                    "title": "Component-Based Architecture",
+                    "text": "We build modular, reusable components that make maintenance a breeze and scaling effortless."
+                },
+                {
+                    "title": "Virtual DOM Optimization",
+                    "text": "Meticulous attention to render cycles ensuring 60FPS user interactions even in heavy data apps."
+                },
+                {
+                    "title": "Type-Safe Development",
+                    "text": "Using TypeScript to catch bugs early and provide rock-solid documentation for your team."
+                }
             ],
             "success_msg": "Your inquiry has been received. Our React experts will call you shortly."
+        },
+        "nextjs_dev_page": {
+            "hero": {
+                "badge": "Next.js Development",
+                "title_main": "Next.js ",
+                "title_gradient": "Development",
+                "desc": "Harness the power of React with server-side rendering. We build blazingly fast, SEO-optimized web applications utilizing the modern App Router and Edge compute capabilities.",
+                "cta_start": "Build With Next.js",
+                "cta_about": "Learn More"
+            },
+            "about": {
+                "title": "Next.js Development",
+                "p1": "Next.js is the leading React framework for building high-performance web applications. It provides a seamless developer experience with features like Server-Side Rendering (SSR), Static Site Generation (SSG), and incremental static regeneration.",
+                "p2": "Our team specializes in leveraging the latest Next.js features, including the App Router, Server Components, and optimized image handling, to deliver superior user experiences and search engine visibility."
+            },
+            "services": {
+                "badge": "Our Services",
+                "title": "What we build with Next.js",
+                "items": {
+                    "ssr": {
+                        "title": "Server-Side Rendering",
+                        "desc": "Boost performance and SEO by rendering pages on each request."
+                    },
+                    "static": {
+                        "title": "Static Site Generation",
+                        "desc": "Blazing fast load times with pre-rendered static pages."
+                    },
+                    "pwa": {
+                        "title": "Progressive Web Apps",
+                        "desc": "Offline capabilities and native-like experiences on the web."
+                    },
+                    "seo": {
+                        "title": "SEO Optimization",
+                        "desc": "Advanced metadata and head management for better search rankings."
+                    },
+                    "api": {
+                        "title": "API Routes",
+                        "desc": "Building robust serverless backends directly within Next.js."
+                    },
+                    "enterprise": {
+                        "title": "Enterprise Solutions",
+                        "desc": "Scalable, secure, and maintainable architectures for large organizations."
+                    }
+                }
+            },
+            "why_us": {
+                "title": "Why GoZoom for Next.js?",
+                "items": [
+                    {
+                        "title": "Expert Architects",
+                        "desc": "Our team knows Next.js inside and out, ensuring best practices and clean code."
+                    },
+                    {
+                        "title": "Performance Obsessed",
+                        "desc": "We optimize every byte to ensure your application loads instantly."
+                    },
+                    {
+                        "title": "SEO Focused",
+                        "desc": "Built-in SEO best practices help your site rank higher from day one."
+                    }
+                ]
+            }
+        },
+        "java_dev_page": {
+            "hero": {
+                "badge": "Enterprise Robustness",
+                "title_main": "Java Enterprise ",
+                "title_gradient": "Applications",
+                "desc": "Build secure, highly scalable, and exceptionally reliable software solutions with Java. We specialize in robust enterprise applications, complex architectures, and high-performance backend systems.",
+                "cta_start": "Start Your Project",
+                "cta_about": "About Java"
+            },
+            "expertise": {
+                "badge": "Core Offerings",
+                "title": "What we build with Java",
+                "items": {
+                    "enterprise": {
+                        "title": "Enterprise Web Apps",
+                        "desc": "Secure B2B portals, ERPs, and CRM systems built using robust frameworks like Spring Boot and Java EE."
+                    },
+                    "microservices": {
+                        "title": "Microservices Architecture",
+                        "desc": "Decoupling monolithic applications into scalable, independently deployable microservices."
+                    },
+                    "secure": {
+                        "title": "Secure Systems",
+                        "desc": "Implementing banking-grade security and data protection protocols."
+                    },
+                    "performance": {
+                        "title": "High Performance",
+                        "desc": "Optimizing backend systems for high-throughput and low-latency operations."
+                    },
+                    "cloud": {
+                        "title": "Cloud-Native Java",
+                        "desc": "Optimizing enterprise applications using Kubernetes, Docker, and cloud environments."
+                    },
+                    "legacy": {
+                        "title": "Legacy Modernization",
+                        "desc": "Updating and migrating older Java systems to modern, high-performance architectures."
+                    }
+                }
+            },
+            "why_us": {
+                "title": "Why Choose Java for Your Business?",
+                "list": [
+                    "Exceptional scalability for growing enterprises",
+                    "Strong typing and robust security features",
+                    "Proven reliability in mission-critical systems",
+                    "Large ecosystem and long-term support"
+                ],
+                "tech_cards": [
+                    {
+                        "title": "Spring Boot",
+                        "desc": "Rapid application development with the most popular Java framework."
+                    },
+                    {
+                        "title": "Hibernate",
+                        "desc": "Powerful object-relational mapping for complex data structures."
+                    }
+                ]
+            }
+        },
+        "django_dev_page": {
+            "hero": {
+                "badge": "Rapid Development",
+                "title_main": "Django & Python ",
+                "title_gradient": "Solutions",
+                "desc": "Build secure, scalable, and maintainable web applications faster with Django. The framework for perfectionists with deadlines.",
+                "cta_start": "Start Your Project",
+                "cta_services": "Our Services"
+            },
+            "expertise": {
+                "badge": "Our Expertise",
+                "title": "Django Development Services",
+                "desc": "From startups to enterprises, we deliver high-quality Python/Django solutions.",
+                "items": {
+                    "enterprise": {
+                        "title": "Enterprise Solutions",
+                        "desc": "Robust backends for complex business requirements."
+                    },
+                    "api": {
+                        "title": "RESTful APIs",
+                        "desc": "Scalable APIs built with Django REST Framework (DRF)."
+                    },
+                    "data": {
+                        "title": "Data-Driven Apps",
+                        "desc": "Leveraging Django's powerful ORM for data-heavy applications."
+                    },
+                    "security": {
+                        "title": "Security First",
+                        "desc": "Built-in protection against common web vulnerabilities."
+                    },
+                    "ai": {
+                        "title": "AI Integration",
+                        "desc": "Combining Django with AI and Machine Learning models."
+                    },
+                    "saas": {
+                        "title": "SaaS Development",
+                        "desc": "Building multi-tenant applications with complex logic."
+                    }
+                }
+            },
+            "why_us": {
+                "badge": "Why US",
+                "title": "Why GoZoom for Django?",
+                "desc": "We are experts in the Python ecosystem, delivering clean and efficient code.",
+                "list": [
+                    "Fast time-to-market with rapid prototyping",
+                    "Highly secure and scalable backends",
+                    "Expertise in Django REST Framework",
+                    "Seamless integration with third-party services"
+                ]
+            }
         }
     }
 }

@@ -36,15 +36,18 @@ const Flutter = () => {
                             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('flutter_dev_page.hero.desc')}
                             </p>
-                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('flutter_dev_page.hero.cta_hire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('flutter_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('flutter_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-12 lg:p-16 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[500px] shadow-2xl flex items-center justify-center group hover:scale-105 transition-transform duration-500">
-                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto rounded-[2.5rem] drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/400?text=Flutter"; }} />
+                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto rounded-[2.5rem] drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "/images/placeholder-flutter.png"; }} />
                             </div>
                         </div>
                     </div>
@@ -105,7 +108,7 @@ const Flutter = () => {
                         </div>
                         <div className="flex-1 relative" data-aos="fade-left">
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-cyan-50 rounded-[3rem] transform rotate-[-3deg] scale-105 opacity-50"></div>
-                            <img src="/images/app-mockup.png" alt={t('flutter_dev_page.why_us.img_alt')} className="relative z-10 w-full h-auto rounded-[3rem] shadow-xl" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=App+Design"; }} />
+                            <img src="/images/mobile_app_mockup_realistic_premium.png" alt={t('flutter_dev_page.why_us.img_alt')} className="relative z-10 w-full h-auto rounded-[3rem] shadow-xl" />
                         </div>
                     </div>
                 </div>

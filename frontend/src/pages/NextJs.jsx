@@ -33,19 +33,19 @@ const NextJs = () => {
                 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
                             <span className="inline-block py-2 px-4 rounded-full bg-white/10 text-white border border-white/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('nextjs_dev_page.hero.badge')}</span>
-                            <h1 className="text-hero-title text-white mb-8 leading-[1.1] uppercase">
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
                                 {t('nextjs_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{t('nextjs_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-medium">
                                 {t('nextjs_dev_page.hero.desc')}
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto lg:mx-0">
-                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-white text-black font-black text-center text-lg hover:bg-gray-200 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('nextjs_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white text-black font-black text-center text-lg hover:bg-gray-200 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('nextjs_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-transparent text-white font-black text-center text-lg border border-white/20 hover:bg-white/5 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-transparent text-white font-black text-center text-lg border border-white/20 hover:bg-white/5 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider w-full">
                                     {t('nextjs_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
@@ -53,7 +53,7 @@ const NextJs = () => {
                         <div className="flex-1 relative" data-aos="zoom-in">
                             <div className="relative z-10 p-1 bg-gradient-to-br from-white/20 to-transparent rounded-[3rem] animate-float">
                                 <div className="bg-black rounded-[2.9rem] p-8">
-                                    <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto rounded-[2.5rem]" />
+                                    <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto drop-shadow-2xl rounded-[2.5rem]" />
                                 </div>
                             </div>
                         </div>

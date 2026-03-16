@@ -44,23 +44,26 @@ const UiUxDesign = () => {
 
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                        <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start mx-auto lg:mx-0" data-aos="fade-right">
-                            <span className="block w-fit mx-auto py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('ui_ux_design_page.hero.badge')}</span>
-                            <h1 className="text-hero-title text-white mb-6 leading-tight uppercase">
-                                {t('ui_ux_design_page.hero.title_main')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">{t('ui_ux_design_page.hero.title_gradient')}</span>
+                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
+                            <span className="inline-block py-1 px-3 rounded-full bg-pink-500/20 text-pink-300 border border-pink-500/30 font-bold text-sm mb-6 uppercase tracking-wider" data-aos="fade-down">{t('ui_ux_design_page.hero.badge')}</span>
+                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase" data-aos="fade-down" data-aos-delay="100">
+                                {t('ui_ux_design_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">{t('ui_ux_design_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="200">
                                 {t('ui_ux_design_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[180px] gap-3 px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 text-white font-black text-center text-base sm:text-lg hover:shadow-2xl hover:shadow-rose-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group">
-                                    {t('ui_ux_design_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-gradient-to-r from-rose-600 to-indigo-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-rose-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                                    {t('ui_ux_design_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 min-h-[4rem] py-4 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                    {t('ui_ux_design_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
                         <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-10 bg-gradient-to-br from-white/5 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-md w-full shadow-2xl animate-float">
-                                <img src="/images/app-mockup.png" alt="UI UX Design" className="w-full h-auto rounded-3xl" onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=UI+UX+Design"; }} />
+                                <img src="/images/ui_ux_design_hero_realistic.png" alt="UI UX Design" className="w-full h-auto rounded-3xl" />
                             </div>
                         </div>
                     </div>
