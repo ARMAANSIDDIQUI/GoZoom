@@ -225,7 +225,7 @@ const Integration = () => {
                 </a>
               </div>
             </div>
-            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
               <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px]">
                 <img src="/images/20.png" alt={t('integration_page.hero.subtitle')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] opacity-80" />
               </div>

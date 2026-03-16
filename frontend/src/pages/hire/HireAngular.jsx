@@ -44,7 +44,7 @@ const HireAngular = () => {
 
                 <div className="container mx-auto px-6 lg:px-16 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
-                        <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
+                        <div className="flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-red-600 text-white font-black text-xs mb-8 uppercase tracking-[0.4em] shadow-xl shadow-red-500/20">
                                 <FaAngular className="text-lg" /> {t('hire_common.reliable_enterprise_solutions')}
                             </div>
@@ -54,7 +54,7 @@ const HireAngular = () => {
                             <p className="text-xl text-slate-500 mb-12 max-w-2xl leading-relaxed font-black italic">
                                 "{t('hire_pages.angular.heroDesc')}"
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] justify-center">
                                 <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-12 py-5 bg-[#dd0031] text-white font-black text-lg rounded-2xl shadow-2xl shadow-red-500/30 hover:scale-105 transition-all group uppercase tracking-wider">
                                     {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
@@ -63,7 +63,7 @@ const HireAngular = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="flex-1 relative flex flex-col items-center lg:items-center gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-4 bg-white rounded-[4rem] shadow-4xl border border-slate-100 w-full max-w-[420px] animate-float">
                                 <img src="/images/software-developers.webp" alt="Angular Expert" className="w-full h-auto rounded-[3.5rem] grayscale-[0.3] contrast-125" />
                             </div>

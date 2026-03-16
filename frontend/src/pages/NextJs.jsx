@@ -60,7 +60,7 @@ const NextJs = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in">
                             <div className="relative z-10 p-2 sm:p-4 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[480px]">
                                 <div className="bg-black rounded-[2.5rem] p-4 sm:p-8">
                                     <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto drop-shadow-2xl rounded-[2rem]" />

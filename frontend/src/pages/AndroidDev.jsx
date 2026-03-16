@@ -53,7 +53,7 @@ const AndroidDev = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="400">
                             <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[2.5rem] sm:rounded-[4rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px]">
                                 <img src="/images/android.svg" alt={t('android_dev_page.hero.img_alt')} className="w-full h-auto drop-shadow-[0_25px_60px_rgba(74,222,128,0.4)]" />
                             </div>

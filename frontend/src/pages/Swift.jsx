@@ -52,7 +52,7 @@ const Swift = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="400">
                             <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px] flex flex-col items-center justify-center">
                                 <FaApple className="text-[8rem] sm:text-[12rem] text-white/20 filter blur-[2px]" />
                                 <FaMobileAlt className="absolute text-[6rem] sm:text-[8rem] text-orange-400/80 drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]" />

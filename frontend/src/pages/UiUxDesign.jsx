@@ -68,7 +68,7 @@ const UiUxDesign = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px]">
                                 <img src="/images/ui_ux_design_hero_realistic.png" alt="UI UX Design" className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(244,63,94,0.3)]" />
                             </div>

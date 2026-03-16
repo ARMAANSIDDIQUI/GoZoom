@@ -52,7 +52,7 @@ const ReactNative = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px] flex items-center justify-center group hover:scale-105 transition-transform duration-500">
                                 <img src="/images/react-js-icon.svg" alt={t('react_native_dev_page.hero.title_main')} className="w-[120px] h-auto drop-shadow-[0_20px_50px_rgba(6,182,212,0.5)] animate-[spin_10s_linear_infinite]" />
                             </div>

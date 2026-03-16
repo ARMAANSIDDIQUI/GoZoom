@@ -52,7 +52,7 @@ const Laravel = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
               <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px]">
                 <img src="/images/laravelboy1.svg" alt={t('laravel_dev_page.hero.badge')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
               </div>

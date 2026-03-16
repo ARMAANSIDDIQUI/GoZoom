@@ -116,7 +116,7 @@ const AllServices = () => {
                                 />
                             </div>
                         </div>
-                        <div className="flex-1 relative flex justify-center lg:justify-end w-full" data-aos="zoom-in" data-aos-delay="400">
+                        <div className="flex-1 relative flex justify-center lg:justify-center w-full" data-aos="zoom-in" data-aos-delay="400">
                             <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
                                 <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl flex items-center justify-center p-6 sm:p-8 animate-float">

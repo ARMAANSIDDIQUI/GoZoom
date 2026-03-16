@@ -60,7 +60,7 @@ const Java = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in">
                             <div className="relative z-10 p-4 sm:p-8 bg-white/50 border border-white/20 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px]">
                                 <img src="/java_hero_illustration_1773662119196.png" alt="Java Development" className="w-full h-auto rounded-[2rem] shadow-xl" />
                             </div>

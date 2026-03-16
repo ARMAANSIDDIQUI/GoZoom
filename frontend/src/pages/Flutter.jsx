@@ -52,7 +52,7 @@ const Flutter = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px] flex items-center justify-center group hover:scale-105 transition-transform duration-500">
                                 <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "/images/placeholder-flutter.png"; }} />
                             </div>

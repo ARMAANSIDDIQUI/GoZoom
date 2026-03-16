@@ -54,16 +54,16 @@ const HireHtml = () => {
                             <p className="text-xl text-slate-400 mb-12 max-w-2xl leading-relaxed font-black mx-auto italic">
                                 "{t('hire_pages.html.heroDesc')}"
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-orange-500 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-orange-500/20 hover:scale-105 transition-all group uppercase tracking-wider">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] justify-center">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 px-12 py-5 bg-orange-500 text-white font-black text-center text-lg rounded-2xl shadow-2xl shadow-orange-500/20 hover:scale-105 transition-all group uppercase tracking-wider">
                                     {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#design" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 border border-white/20 text-white text-center font-black text-lg rounded-2xl hover:bg-white/5 transition-all uppercase tracking-wider backdrop-blur-md">
+                                <a href="#design" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 px-12 py-5 border border-white/20 text-white text-center font-black text-lg rounded-2xl hover:bg-white/10 transition-all uppercase tracking-wider backdrop-blur-md">
                                     {t('hire_common.our_capabilities')}
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="flex-1 relative flex flex-col items-center lg:items-center gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-6 bg-gradient-to-br from-white/5 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-md w-full max-w-[400px] shadow-2xl animate-float">
                                 <img src="/images/software-developers.webp" alt="HTML Specialists" className="w-full h-auto rounded-[3.5rem] shadow-4xl filter saturate-[1.2]" />
                             </div>

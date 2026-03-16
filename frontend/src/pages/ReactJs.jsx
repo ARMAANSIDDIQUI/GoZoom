@@ -61,7 +61,7 @@ const ReactJs = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 bg-white/5 p-4 sm:p-10 rounded-[40px] border border-white/10 backdrop-blur-md shadow-2xl w-full max-w-[450px] animate-zoom-in-out">
                                 <img src="/images/react2.png" alt={t('react_js_dev_page.expertise.items.web_app.title')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
                             </div>

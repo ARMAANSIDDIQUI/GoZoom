@@ -71,7 +71,7 @@ const AgenticDevelopment = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex justify-center w-full lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="flex-1 relative flex justify-center w-full lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square animate-float">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-violet-500/20 rounded-[3rem] blur-3xl"></div>
                                 <div className="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl p-8 flex flex-col items-center justify-center gap-8">

@@ -55,16 +55,16 @@ const HireReact = () => {
                             <p className="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed font-black mx-auto italic">
                                 "{t('hire_pages.react.heroDesc')}"
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black text-center px-12 py-5 rounded-2xl shadow-[0_10px_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all group uppercase tracking-wider">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] justify-center">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black text-center px-12 py-5 rounded-2xl shadow-[0_10px_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all group uppercase tracking-wider">
                                     {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#expertise" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 bg-white/5 border border-white/20 text-white font-black text-center px-12 py-5 rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider">
+                                <a href="#expertise" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 bg-white/5 border border-white/20 text-white font-black text-center px-12 py-5 rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md uppercase tracking-wider">
                                     {t('hire_common.our_stack')}
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="flex-1 relative flex flex-col items-center lg:items-center gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 bg-gradient-to-br from-white/10 to-transparent p-4 rounded-[40px] border border-white/10 backdrop-blur-sm shadow-2xl w-full max-w-[400px] animate-float">
                                 <img src="/images/reactboy.svg" alt="React Developer" className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
                             </div>

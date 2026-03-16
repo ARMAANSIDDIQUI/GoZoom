@@ -52,7 +52,7 @@ const Angular = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-center" data-aos="zoom-in" data-aos-delay="200">
               <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px]">
                 <img src="/images/angularboy.svg" alt={t('angular_dev_page.hero.badge')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]" />
               </div>

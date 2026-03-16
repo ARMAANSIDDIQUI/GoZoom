@@ -56,16 +56,16 @@ const HireLaravel = () => {
                             <p className="text-xl text-slate-600 mb-12 max-w-2xl leading-relaxed font-black mx-auto italic">
                                 {t('hire_pages.laravel.heroDesc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 w-full">
-                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-[#ff2d20] text-white font-black text-center text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all group uppercase tracking-wider">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] justify-center">
+                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 px-12 py-5 bg-[#ff2d20] text-white font-black text-center text-lg rounded-2xl shadow-3xl shadow-rose-500/30 hover:scale-105 transition-all group uppercase tracking-wider">
                                     {t('hire_common.enquire_now')} <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <a href="#stack" className="inline-flex items-center justify-center w-full sm:w-auto min-w-[220px] gap-3 px-12 py-5 bg-white border border-rose-100 text-slate-800 font-black text-center text-lg rounded-2xl hover:bg-rose-50 transition-all uppercase tracking-wider">
+                                <a href="#stack" className="inline-flex items-center justify-center w-full sm:w-auto gap-3 px-12 py-5 bg-white border border-rose-100 text-slate-800 font-black text-center text-lg rounded-2xl hover:bg-rose-50 transition-all uppercase tracking-wider">
                                     {t('hire_common.our_stack')} <FaHeart className="text-rose-500" />
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="flex-1 relative flex flex-col items-center lg:items-center gap-6" data-aos="zoom-in" data-aos-delay="200">
                             <div className="relative z-10 p-4 bg-white rounded-[4rem] shadow-3xl border border-rose-50 w-full max-w-[380px] animate-float">
                                 <img src="/images/laravelboy1.svg" alt="Laravel Expert" className="w-full h-auto rounded-[3.5rem]" />
                             </div>
