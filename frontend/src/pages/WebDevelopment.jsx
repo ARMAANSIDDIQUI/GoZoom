@@ -59,7 +59,7 @@ const WebDevelopment = () => {
 
                 <div className="container relative z-10">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8" data-aos="fade-down">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                                 {t('web_dev_page.hero.subtitle')}
@@ -67,14 +67,14 @@ const WebDevelopment = () => {
                             <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase" data-aos="fade-down" data-aos-delay="100">
                                 {t('web_dev_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('web_dev_page.hero.title2')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                                 {t('web_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('web_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('web_dev_page.hero.cta_about')}
                                 </Link>
                             </div>

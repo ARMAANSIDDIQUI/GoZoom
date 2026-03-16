@@ -35,19 +35,19 @@ const Laravel = () => {
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
-            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+            <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
               <span className="inline-block py-2 px-4 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('laravel_dev_page.hero.badge')}</span>
               <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.1] tracking-tight uppercase">
                 {t('laravel_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2d20] to-[#ff7d75]">{t('laravel_dev_page.hero.title_gradient')}</span>{t('laravel_dev_page.hero.title_end')}
               </h1>
-              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                 {t('laravel_dev_page.hero.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
-                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-red-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
+                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-red-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                   {t('laravel_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                 </Link>
-                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                   {t('laravel_dev_page.hero.cta_about')}
                 </Link>
               </div>

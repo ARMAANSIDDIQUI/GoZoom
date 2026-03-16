@@ -35,19 +35,19 @@ const ReactNative = () => {
 
                 <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('react_native_dev_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('react_native_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">{t('react_native_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('react_native_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('react_native_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('react_native_dev_page.hero.cta_about')}
                                 </Link>
                             </div>

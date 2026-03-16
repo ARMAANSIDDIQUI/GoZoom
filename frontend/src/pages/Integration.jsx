@@ -205,7 +205,7 @@ const Integration = () => {
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 w-full">
-            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+            <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
                 {t('integration_page.hero.subtitle')}
@@ -213,14 +213,14 @@ const Integration = () => {
               <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight uppercase">
                 {t('integration_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">{t('integration_page.hero.title2')}</span>
               </h1>
-              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                 {t('integration_page.hero.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
-                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
+                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                   {t('integration_page.hero.button_connect')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                 </Link>
-                <a href="#capabilities" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider w-full">
+                <a href="#capabilities" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider w-full">
                   {t('integration_page.hero.button_capabilities')}
                 </a>
               </div>

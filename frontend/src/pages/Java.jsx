@@ -43,19 +43,19 @@ const Java = () => {
 
                 <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
-                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
                             <span className="inline-block py-2 px-4 rounded-full bg-blue-600/10 text-blue-600 border border-blue-600/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('java_dev_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('java_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-600">{t('java_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-600 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            <p className="text-hero-desc text-slate-600 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                                 {t('java_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px]">
+                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('java_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white text-[#0073b7] font-black text-center text-base sm:text-lg border border-[#0073b7]/20 hover:bg-gray-50 transition-all hover:-translate-y-1 shadow-xl uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white text-[#0073b7] font-black text-center text-base sm:text-lg border border-[#0073b7]/20 hover:bg-gray-50 transition-all hover:-translate-y-1 shadow-xl uppercase tracking-wider w-full">
                                     {t('java_dev_page.hero.cta_about')}
                                 </Link>
                             </div>
