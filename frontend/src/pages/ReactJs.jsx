@@ -28,24 +28,31 @@ const ReactJs = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a192f] overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                     <div className="absolute top-[10%] right-[10%] w-[clamp(200px,45vw,500px)] h-[clamp(200px,45vw,500px)] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse"></div>
                     <div className="absolute bottom-[10%] left-[5%] w-[clamp(150px,40vw,400px)] h-[clamp(150px,40vw,400px)] bg-blue-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#61dafb 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                    <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
                 </div>
 
-                <div className="container mx-auto relative z-10">
-                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
-                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
+                <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('react_js_dev_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('react_js_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">{t('react_js_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('react_js_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
                                 <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-cyan-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('react_js_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
@@ -54,8 +61,8 @@ const ReactJs = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 bg-gradient-to-br from-white/10 to-transparent p-4 rounded-[40px] border border-white/10 backdrop-blur-sm shadow-2xl w-full max-w-[400px] animate-zoom-in-out">
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 bg-white/5 p-4 sm:p-10 rounded-[40px] border border-white/10 backdrop-blur-md shadow-2xl w-full max-w-[450px] animate-zoom-in-out">
                                 <img src="/images/react2.png" alt={t('react_js_dev_page.expertise.items.web_app.title')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
                             </div>
                         </div>

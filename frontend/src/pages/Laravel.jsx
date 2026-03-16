@@ -20,24 +20,30 @@ const Laravel = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#2d0b0b] overflow-hidden">
-        {/* Decorative Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-[10%] -right-[10%] w-[clamp(300px,60vw,800px)] h-[clamp(300px,60vw,800px)] bg-red-600/10 rounded-full blur-[150px] animate-pulse"></div>
           <div className="absolute -bottom-[10%] -left-[10%] w-[clamp(250px,50vw,600px)] h-[clamp(250px,50vw,600px)] bg-orange-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5" style={{ backgroundImage: 'radial-gradient(#ff2d20 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="flex-1 text-center" data-aos="fade-right">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
               <span className="inline-block py-2 px-4 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('laravel_dev_page.hero.badge')}</span>
-              <h1 className="text-hero-title text-white mb-8 leading-[1.1] tracking-tight uppercase">
+              <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.1] tracking-tight uppercase">
                 {t('laravel_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2d20] to-[#ff7d75]">{t('laravel_dev_page.hero.title_gradient')}</span>{t('laravel_dev_page.hero.title_end')}
               </h1>
-              <p className="text-hero-desc text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
+              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                 {t('laravel_dev_page.hero.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
                 <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-red-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-red-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                   {t('laravel_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                 </Link>
@@ -46,11 +52,10 @@ const Laravel = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex-1 relative" data-aos="zoom-in" data-aos-delay="200">
-              <div className="relative z-10 p-4 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] border border-white/10 backdrop-blur-sm shadow-2xl animate-float">
-                <img src="/images/laravelboy1.svg" alt={t('laravel_dev_page.hero.badge')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px]">
+                <img src="/images/laravelboy1.svg" alt={t('laravel_dev_page.hero.badge')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#ff2d20]/20 rounded-full blur-2xl -z-10 animate-pulse"></div>
             </div>
           </div>
         </div>

@@ -31,20 +31,27 @@ const Java = () => {
             <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#f4f7f6] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
                     <div className="absolute -top-[10%] -left-[10%] w-[800px] h-[800px] bg-red-600 rounded-full blur-[150px]"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full" style={{ backgroundImage: 'radial-gradient(#0073b7 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }}></div>
+                    <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0073b7" strokeWidth="0.5" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
+                <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-2 px-4 rounded-full bg-blue-600/10 text-blue-600 border border-blue-600/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('java_dev_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('java_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-600">{t('java_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-slate-600 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('java_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
                                 <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('java_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
@@ -53,9 +60,9 @@ const Java = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative" data-aos="zoom-in">
-                            <div className="relative z-10 p-8 bg-white rounded-[3rem] shadow-2xl animate-float">
-                                <img src="/java_hero_illustration_1773662119196.png" alt="Java Development" className="w-full h-auto rounded-[2.5rem]" />
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in">
+                            <div className="relative z-10 p-4 sm:p-8 bg-white/50 border border-white/20 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[450px]">
+                                <img src="/java_hero_illustration_1773662119196.png" alt="Java Development" className="w-full h-auto rounded-[2rem] shadow-xl" />
                             </div>
                         </div>
                     </div>

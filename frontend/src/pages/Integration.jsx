@@ -180,8 +180,8 @@ const Integration = () => {
   return (
     <div>
       {/* Hero Banner — Sky Blue Integration colors */}
-      <section className="hero-premium">
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none" style={{ backgroundImage: 'url("/images/20.png")' }}></div>
 
         {/* Geometric Background Layer (Lightweight) */}
         <GeometricBackground />
@@ -193,27 +193,42 @@ const Integration = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[-10%] right-[-5%] w-[clamp(400px,60vw,800px)] h-[clamp(400px,60vw,800px)] bg-sky-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
           <div className="absolute bottom-[-10%] left-[-5%] w-[clamp(300px,50vw,600px)] h-[clamp(300px,50vw,600px)] bg-blue-600/15 rounded-full blur-[100px] animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
         </div>
 
-        <div className="container relative z-10 flex flex-col items-center justify-center min-h-[85vh] lg:min-h-screen py-16 lg:py-24">
-          <div className="max-w-4xl text-center mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down" data-aos="fade-down">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
-              {t('integration_page.hero.subtitle')}
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 w-full">
+            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-black uppercase tracking-widest mb-6 lg:mb-8 animate-fade-down">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"></span>
+                {t('integration_page.hero.subtitle')}
+              </div>
+              <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight uppercase">
+                {t('integration_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">{t('integration_page.hero.title2')}</span>
+              </h1>
+              <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                {t('integration_page.hero.desc')}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
+                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                  {t('integration_page.hero.button_connect')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                </Link>
+                <a href="#capabilities" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider w-full">
+                  {t('integration_page.hero.button_capabilities')}
+                </a>
+              </div>
             </div>
-            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-[1.05] tracking-tight uppercase" data-aos="fade-up" data-aos-delay="200">
-              {t('integration_page.hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">{t('integration_page.hero.title2')}</span>
-            </h1>
-            <p className="text-hero-desc text-slate-400 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium" data-aos="fade-up" data-aos-delay="400">
-              {t('integration_page.hero.desc')}
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
-              <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black text-center text-lg shadow-2xl shadow-sky-500/20 hover:shadow-sky-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                {t('integration_page.hero.button_connect')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
-              </Link>
-              <a href="#capabilities" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 border border-white/20 text-white font-black text-center text-lg hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider w-full">
-                {t('integration_page.hero.button_capabilities')}
-              </a>
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px]">
+                <img src="/images/20.png" alt={t('integration_page.hero.subtitle')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] opacity-80" />
+              </div>
             </div>
           </div>
         </div>

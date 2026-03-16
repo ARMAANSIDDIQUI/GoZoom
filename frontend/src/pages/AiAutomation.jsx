@@ -44,30 +44,38 @@ const AiAutomation = () => {
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-[20%] left-[20%] w-[400px] h-[400px] bg-amber-500/20 rounded-full blur-[100px] animate-ping" style={{ animationDuration: '4s' }}></div>
                     <div className="absolute bottom-[20%] right-[20%] w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] animate-pulse"></div>
+                    <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
-                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
+                <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('ai_automation_page.hero.badge')}</span>
                             <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight uppercase">
                                 {t('ai_automation_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">{t('ai_automation_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-slate-300 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('ai_automation_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-amber-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
+                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-amber-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('ai_automation_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
                                     {t('ai_automation_page.hero.cta_about')}
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex items-center justify-center lg:justify-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative w-full max-w-[480px]">
-                                <img src="/images/Home Page - retail.png" alt="Automation Dashboard" className="w-full h-auto rounded-3xl shadow-[0_20px_60px_rgba(245,158,11,0.2)] border border-white/5" />
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+                            <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md shadow-2xl animate-float w-full max-w-[480px]">
+                                <img src="/images/Home Page - retail.png" alt="Automation Dashboard" className="w-full h-auto rounded-3xl shadow-[0_20px_60px_rgba(245,158,11,0.2)]" />
                             </div>
                         </div>
                     </div>

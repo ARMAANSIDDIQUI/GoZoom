@@ -19,42 +19,47 @@ const IosDev = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#0a112f] overflow-hidden">
-                {/* iOS Decorative Elements */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-500/25 blur-[120px] animate-pulse"></div>
-                    <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                    <div className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full bg-sky-400/15 blur-[60px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#0ea5e9 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-                </div>
+      <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#0a112f] overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-blue-500/25 blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-96 h-96 rounded-full bg-cyan-500/25 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
-                        <div className="w-full lg:flex-1 text-center flex flex-col items-center" data-aos="fade-right">
-                            <span className="inline-block py-1 px-4 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('ios_dev_page.hero.badge')}</span>
-                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight uppercase">
-                                {t('ios_dev_page.hero.title1')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">{t('ios_dev_page.hero.title2')}</span>
-                            </h1>
-                            <p className="text-hero-desc text-blue-100 mb-8 lg:mb-12 max-w-2xl mx-auto font-medium">
-                                {t('ios_dev_page.hero.desc')}
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
-                                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
-                                    {t('ios_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
-                                </Link>
-                                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
-                                    {t('ios_dev_page.hero.cta_about')}
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="w-full lg:flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-8 lg:p-12 bg-gradient-to-br from-white/10 to-transparent rounded-[3rem] lg:rounded-[5rem] border border-white/10 backdrop-blur-xl w-full max-w-[300px] lg:max-w-[380px] shadow-2xl flex items-center justify-center group/ios hover:scale-105 transition-transform duration-500">
-                                <img src="/images/mobile_app_mockup_realistic_premium.png" alt={t('ios_dev_page.hero.img_alt')} className="w-full h-auto rounded-[2.5rem] drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] filter brightness-110" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20 w-full">
+            <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
+              <span className="inline-block py-1 px-4 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-xs sm:text-sm mb-6 uppercase tracking-wider">{t('ios_dev_page.hero.badge')}</span>
+              <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight uppercase">
+                {t('ios_dev_page.hero.title1')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">{t('ios_dev_page.hero.title2')}</span>
+              </h1>
+              <p className="text-hero-desc text-blue-100 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                {t('ios_dev_page.hero.desc')}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
+                <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
+                  {t('ios_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+                </Link>
+                <Link to="/about" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white/5 text-white font-black text-center text-lg hover:bg-white/10 transition-all hover:-translate-y-1 backdrop-blur-md border border-white/20 uppercase tracking-wider w-full">
+                  {t('ios_dev_page.hero.cta_about')}
+                </Link>
+              </div>
+            </div>
+            <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="400">
+              <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl flex items-center justify-center group/ios hover:scale-105 transition-transform duration-500 animate-float w-full max-w-[450px]">
+                <img src="/images/mobile_app_mockup_realistic_premium.png" alt={t('ios_dev_page.hero.img_alt')} className="w-full h-auto drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] filter brightness-110" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
             <section className="py-24 bg-white relative">
                 <div className="container relative z-10 block">

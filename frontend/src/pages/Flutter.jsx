@@ -19,24 +19,31 @@ const Flutter = () => {
     return (
         <div className="font-['Lato',sans-serif]">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] lg:min-h-screen flex items-center pt-24 pb-20 bg-[#042b59] overflow-hidden">
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 bg-[#042b59] overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-[120px] animate-pulse"></div>
                     <div className="absolute bottom-[5%] right-[10%] w-[600px] h-[600px] bg-cyan-400/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#60a5fa 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+                    <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-16 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
+                <div className="container relative z-10 mx-auto px-6 lg:px-16 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-1 px-4 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold text-sm mb-6 uppercase tracking-wider">{t('flutter_dev_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('flutter_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">{t('flutter_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                            <p className="text-hero-desc text-blue-100 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('flutter_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto" data-aos="fade-up" data-aos-delay="600">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]" data-aos="fade-up" data-aos-delay="600">
                                 <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white font-black text-center text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('flutter_dev_page.hero.cta_enquire')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
@@ -45,9 +52,9 @@ const Flutter = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative flex flex-col items-center lg:items-end gap-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div className="relative z-10 p-12 lg:p-16 bg-gradient-to-br from-white/10 to-transparent rounded-[4rem] border border-white/10 backdrop-blur-xl w-full max-w-[500px] shadow-2xl flex items-center justify-center group hover:scale-105 transition-transform duration-500">
-                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto rounded-[2.5rem] drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "/images/placeholder-flutter.png"; }} />
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+                            <div className="relative z-10 p-4 sm:p-10 bg-white/5 border border-white/10 rounded-[4rem] backdrop-blur-xl shadow-2xl animate-float w-full max-w-[450px] flex items-center justify-center group hover:scale-105 transition-transform duration-500">
+                                <img src="/images/flutter.svg" alt={t('flutter_dev_page.hero.img_alt')} className="w-[180px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.6)] transform transition-transform group-hover:scale-110" onError={(e) => { e.target.onerror = null; e.target.src = "/images/placeholder-flutter.png"; }} />
                             </div>
                         </div>
                     </div>

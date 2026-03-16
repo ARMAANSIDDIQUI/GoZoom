@@ -28,20 +28,30 @@ const NextJs = () => {
     return (
         <div className="bg-[#000000]">
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#111,000)]"></div>
+            <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-black">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-0 right-0 -mr-40 -mt-20 w-[600px] h-[600px] rounded-full bg-white/5 blur-[120px] animate-pulse"></div>
+                    <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
+                </div>
                 
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center mx-auto" data-aos="fade-right">
+                <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-16 w-full">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 w-full">
+                        <div className="w-full lg:flex-1 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right">
                             <span className="inline-block py-2 px-4 rounded-full bg-white/10 text-white border border-white/20 font-bold text-sm mb-6 uppercase tracking-widest">{t('nextjs_dev_page.hero.badge')}</span>
-                            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
+                            <h1 className="text-hero-title text-white mb-6 lg:mb-8 leading-tight tracking-tight uppercase">
                                 {t('nextjs_dev_page.hero.title_main')}<span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{t('nextjs_dev_page.hero.title_gradient')}</span>
                             </h1>
-                            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-medium">
+                            <p className="text-hero-desc text-gray-400 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                                 {t('nextjs_dev_page.hero.desc')}
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[550px] mx-auto">
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full max-w-[550px]">
                                 <Link to="/contact" className="inline-flex items-center justify-center flex-1 h-16 px-10 rounded-2xl bg-white text-black font-black text-center text-lg hover:bg-gray-200 transition-all hover:-translate-y-1 uppercase tracking-wider group w-full">
                                     {t('nextjs_dev_page.hero.cta_start')} <FaArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
                                 </Link>
@@ -50,10 +60,10 @@ const NextJs = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-1 relative" data-aos="zoom-in">
-                            <div className="relative z-10 p-1 bg-gradient-to-br from-white/20 to-transparent rounded-[3rem] animate-float">
-                                <div className="bg-black rounded-[2.9rem] p-8">
-                                    <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto drop-shadow-2xl rounded-[2.5rem]" />
+                        <div className="w-full lg:flex-1 relative flex justify-center lg:justify-end" data-aos="zoom-in">
+                            <div className="relative z-10 p-2 sm:p-4 bg-white/5 border border-white/10 rounded-[3rem] backdrop-blur-md shadow-2xl animate-float w-full max-w-[480px]">
+                                <div className="bg-black rounded-[2.5rem] p-4 sm:p-8">
+                                    <img src="/nextjs_hero_illustration_1773661241677.png" alt="Next.js Development" className="w-full h-auto drop-shadow-2xl rounded-[2rem]" />
                                 </div>
                             </div>
                         </div>
